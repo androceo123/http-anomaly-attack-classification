@@ -1,0 +1,1126 @@
+[
+  {
+    "path": "10claseResults/multiclase/harvard",
+    "created_at": "2026-06-28T16:45:56-04:00",
+    "dataset": "harvard",
+    "script": "10claseResults.py",
+    "feature_count": 58,
+    "feature_policy": "useful58_intra_request",
+    "feature_set_version": "useful58_request_groups_v1",
+    "job": "3013",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "sqrt_balanced"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__w_sqrt_balanced",
+        "train_rows": "721928",
+        "test_rows": "180483",
+        "n_classes": "10",
+        "n_iter_actual": "296.0",
+        "loss_curve_final_test_error_rate": "0.025479999999999947",
+        "accuracy": "0.9749782527994326",
+        "balanced_accuracy": "0.9632991654450661",
+        "f1_macro": "0.9710062639605667",
+        "mcc": "0.956638627642736"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M6",
+    "config_path": "extraidos/S07/10claseResults/multiclase/harvard/run_config.json",
+    "config_sha256": "27ef1cdc3ef09e308352443560b1b32aeb0073bb26a4d45699b395788515eb93",
+    "metrics_path": "extraidos/S07/10claseResults/multiclase/harvard/metrics_flat.csv",
+    "metrics_sha256": "925ec78aaf35b3843ff01fb14cfbf6d7bae91eb84b9e48542d55b0afc210d046",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "harvard",
+      "rows_before": 907815,
+      "class_distribution_before": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-IGNORED_NOT_TOP14_COMBO": 5404,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      },
+      "operations": [
+        {
+          "op": "harvard_top14_request_group_filter",
+          "removed_rows": 5404,
+          "allowed_labels": [
+            "HARVARD-CAPEC126_PathTraversal",
+            "HARVARD-CAPEC16_DictionaryPasswordAttack",
+            "HARVARD-CAPEC242_CodeInjection",
+            "HARVARD-CAPEC310_VulnerabilityScanning",
+            "HARVARD-CAPEC34_HTTPResponseSplitting",
+            "HARVARD-CAPEC66_SQLInjection",
+            "HARVARD-CAPEC88_OSCommandInjection",
+            "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal",
+            "HARVARD-RequestManipulation",
+            "NORMAL"
+          ],
+          "allowed_combo_keys": [
+            "NORMAL",
+            "CAPEC-66",
+            "CAPEC-194",
+            "CAPEC-34",
+            "CAPEC-126",
+            "CAPEC-242",
+            "CAPEC-272",
+            "CAPEC-274",
+            "CAPEC-88",
+            "CAPEC-88+CAPEC-126",
+            "CAPEC-310",
+            "CAPEC-153",
+            "CAPEC-272+CAPEC-274",
+            "CAPEC-16"
+          ],
+          "ignored_combination_count": 46,
+          "allowed_classes_path": "/home_data/aroman/TFG/waf-ml-starter/10claseResults/multiclase/harvard/harvard_request_group_classes_allowed.csv",
+          "request_group_mapping_path": "/home_data/aroman/TFG/waf-ml-starter/10claseResults/multiclase/harvard/harvard_top14_to_request_groups_mapping.csv",
+          "ignored_combinations_path": "/home_data/aroman/TFG/waf-ml-starter/10claseResults/multiclase/harvard/harvard_ignored_non_top14_combinations.csv"
+        },
+        {
+          "op": "min_class_count",
+          "min_class_count": 20,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 902411,
+      "class_distribution_after": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.025479999999999947
+    },
+    "loss_curve_metadata_path": "extraidos/S07/10claseResults/multiclase/harvard/loss_curve_metadata.json",
+    "features_used_count": 58,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "10claseResults/multiclase/torpeda",
+    "created_at": "2026-06-28T16:34:00-04:00",
+    "dataset": "torpeda",
+    "script": "10claseResults.py",
+    "feature_count": 58,
+    "feature_policy": "useful58_intra_request",
+    "feature_set_version": "useful58_request_groups_v1",
+    "job": "3013",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "none"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting",
+        "train_rows": "59306",
+        "test_rows": "14827",
+        "n_classes": "10",
+        "n_iter_actual": "173.0",
+        "loss_curve_final_test_error_rate": "0.003507115397585525",
+        "accuracy": "0.9964928846024145",
+        "balanced_accuracy": "0.9908728411622711",
+        "f1_macro": "0.9936966894517798",
+        "mcc": "0.9941254707006382"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M6",
+    "config_path": "extraidos/S07/10claseResults/multiclase/torpeda/run_config.json",
+    "config_sha256": "6263fcb91521eb48ca8d6d34a70e3c2b0628fcf2badf12ea2dc4f986d47e18d3",
+    "metrics_path": "extraidos/S07/10claseResults/multiclase/torpeda/metrics_flat.csv",
+    "metrics_sha256": "5fe31480ac20bbcc67d842f0e7e204cd7c2adb125ec8c735f8867ca02a761879",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "torpeda",
+      "rows_before": 74133,
+      "class_distribution_before": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      },
+      "operations": [
+        {
+          "op": "torpeda_only_common_labels",
+          "removed_rows": 0,
+          "allowed_labels": [
+            "NORMAL",
+            "TORPEDA-ANOMALOUS",
+            "TORPEDA-BufferOverflow",
+            "TORPEDA-CRLFi",
+            "TORPEDA-FormatString",
+            "TORPEDA-LDAPi",
+            "TORPEDA-SQLi",
+            "TORPEDA-SSI",
+            "TORPEDA-XPath",
+            "TORPEDA-XSS"
+          ]
+        }
+      ],
+      "rows_after": 74133,
+      "class_distribution_after": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 14827,
+      "train_sampled": true,
+      "test_sampled": false,
+      "final_test_error_rate": 0.003507115397585525
+    },
+    "loss_curve_metadata_path": "extraidos/S07/10claseResults/multiclase/torpeda/loss_curve_metadata.json",
+    "features_used_count": 58,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase/multiclase/egipcios",
+    "created_at": "2026-07-01T20:59:11-04:00",
+    "dataset": "egipcios",
+    "script": "3datasetsMulticlase.py",
+    "feature_count": 58,
+    "feature_policy": "useful58_intra_request",
+    "feature_set_version": "useful58_request_groups_v1",
+    "job": "3068",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "sqrt_balanced"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__w_sqrt_balanced",
+        "train_rows": "563732",
+        "test_rows": "140933",
+        "n_classes": "8",
+        "n_iter_actual": "167.0",
+        "loss_curve_final_test_error_rate": "0.012419999999999987",
+        "accuracy": "0.9901442529428878",
+        "balanced_accuracy": "0.8475526052797785",
+        "f1_macro": "0.8116774719555899",
+        "mcc": "0.978770622764062"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M7",
+    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/run_config.json",
+    "config_sha256": "1112027aabff3f3bc9c39363d1b919e5d0506151dac8e716417017ed8633cf41",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/metrics_flat.csv",
+    "metrics_sha256": "93826001ef40550a9e44552e43c96ddc34d36dd09071d0d0f4c0c8125f1568c0",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "egipcios",
+      "rows_before": 704665,
+      "class_distribution_before": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-CommandInjection": 38711,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      },
+      "operations": [
+        {
+          "op": "min_class_count",
+          "min_class_count": 2,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 704665,
+      "class_distribution_after": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-CommandInjection": 38711,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.012419999999999987
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/loss_curve_metadata.json",
+    "features_used_count": 58,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase/multiclase/harvard",
+    "created_at": "2026-07-01T16:11:25-04:00",
+    "dataset": "harvard",
+    "script": "3datasetsMulticlase.py",
+    "feature_count": 58,
+    "feature_policy": "useful58_intra_request",
+    "feature_set_version": "useful58_request_groups_v1",
+    "job": "3068",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "sqrt_balanced"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__w_sqrt_balanced",
+        "train_rows": "721928",
+        "test_rows": "180483",
+        "n_classes": "10",
+        "n_iter_actual": "296.0",
+        "loss_curve_final_test_error_rate": "0.025479999999999947",
+        "accuracy": "0.9749782527994326",
+        "balanced_accuracy": "0.9632991654450661",
+        "f1_macro": "0.9710062639605667",
+        "mcc": "0.956638627642736"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M7",
+    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/run_config.json",
+    "config_sha256": "58e40f061e555a97862214a71fad4e005df488f571686501cd2d29464fda8713",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/metrics_flat.csv",
+    "metrics_sha256": "efad12ba581565be699bfeebe25b8ac02c70a5e6265b1f494bdfc4b14afa0f03",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "harvard",
+      "rows_before": 907815,
+      "class_distribution_before": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-IGNORED_NOT_TOP14_COMBO": 5404,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      },
+      "operations": [
+        {
+          "op": "harvard_top14_request_group_filter",
+          "removed_rows": 5404,
+          "allowed_labels": [
+            "HARVARD-CAPEC126_PathTraversal",
+            "HARVARD-CAPEC16_DictionaryPasswordAttack",
+            "HARVARD-CAPEC242_CodeInjection",
+            "HARVARD-CAPEC310_VulnerabilityScanning",
+            "HARVARD-CAPEC34_HTTPResponseSplitting",
+            "HARVARD-CAPEC66_SQLInjection",
+            "HARVARD-CAPEC88_OSCommandInjection",
+            "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal",
+            "HARVARD-RequestManipulation",
+            "NORMAL"
+          ],
+          "allowed_combo_keys": [
+            "NORMAL",
+            "CAPEC-66",
+            "CAPEC-194",
+            "CAPEC-34",
+            "CAPEC-126",
+            "CAPEC-242",
+            "CAPEC-272",
+            "CAPEC-274",
+            "CAPEC-88",
+            "CAPEC-88+CAPEC-126",
+            "CAPEC-310",
+            "CAPEC-153",
+            "CAPEC-272+CAPEC-274",
+            "CAPEC-16"
+          ],
+          "ignored_combination_count": 46,
+          "allowed_classes_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase/multiclase/harvard/harvard_request_group_classes_allowed.csv",
+          "request_group_mapping_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase/multiclase/harvard/harvard_top14_to_request_groups_mapping.csv",
+          "ignored_combinations_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase/multiclase/harvard/harvard_ignored_non_top14_combinations.csv"
+        },
+        {
+          "op": "min_class_count",
+          "min_class_count": 20,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 902411,
+      "class_distribution_after": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.025479999999999947
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/loss_curve_metadata.json",
+    "features_used_count": 58,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase/multiclase/torpeda",
+    "created_at": "2026-07-01T11:28:38-04:00",
+    "dataset": "torpeda",
+    "script": "3datasetsMulticlase.py",
+    "feature_count": 58,
+    "feature_policy": "useful58_intra_request",
+    "feature_set_version": "useful58_request_groups_v1",
+    "job": "3068",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "none"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting",
+        "train_rows": "59306",
+        "test_rows": "14827",
+        "n_classes": "10",
+        "n_iter_actual": "173.0",
+        "loss_curve_final_test_error_rate": "0.003507115397585525",
+        "accuracy": "0.9964928846024145",
+        "balanced_accuracy": "0.9908728411622711",
+        "f1_macro": "0.9936966894517798",
+        "mcc": "0.9941254707006382"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M7",
+    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/run_config.json",
+    "config_sha256": "2c8955bf0b72aac861b4f2b04d4ae18b331135ef688c060ef61d50c513572d63",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/metrics_flat.csv",
+    "metrics_sha256": "246ea0388ec671aa13d1c57fb4b780282a806d4f807775f77559bf44d01e99a7",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "torpeda",
+      "rows_before": 74133,
+      "class_distribution_before": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      },
+      "operations": [
+        {
+          "op": "torpeda_only_common_labels",
+          "removed_rows": 0,
+          "allowed_labels": [
+            "NORMAL",
+            "TORPEDA-ANOMALOUS",
+            "TORPEDA-BufferOverflow",
+            "TORPEDA-CRLFi",
+            "TORPEDA-FormatString",
+            "TORPEDA-LDAPi",
+            "TORPEDA-SQLi",
+            "TORPEDA-SSI",
+            "TORPEDA-XPath",
+            "TORPEDA-XSS"
+          ]
+        }
+      ],
+      "rows_after": 74133,
+      "class_distribution_after": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 14827,
+      "train_sampled": true,
+      "test_sampled": false,
+      "final_test_error_rate": 0.003507115397585525
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/loss_curve_metadata.json",
+    "features_used_count": 58,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase2/multiclase/egipcios",
+    "created_at": "2026-07-10T12:48:39-04:00",
+    "dataset": "egipcios",
+    "script": "3datasetsMulticlase2.py",
+    "feature_count": 72,
+    "feature_policy": "useful72_wamm_manual_intra_request",
+    "feature_set_version": "useful72_wamm_manual_request_groups_v2",
+    "job": "3289",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "sqrt_balanced"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__w_sqrt_balanced",
+        "train_rows": "563732",
+        "test_rows": "140933",
+        "n_classes": "8",
+        "n_iter_actual": "163.0",
+        "loss_curve_final_test_error_rate": "0.008079999999999976",
+        "accuracy": "0.9942454925390078",
+        "balanced_accuracy": "0.8638715336101295",
+        "f1_macro": "0.8448665304869277",
+        "mcc": "0.9875785328533918"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M8",
+    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/run_config.json",
+    "config_sha256": "bccee750c2fccf942ed57186ab77e7f9a9711bc750b852df17c1a2e95600ed62",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/metrics_flat.csv",
+    "metrics_sha256": "6cb39462fb81ccfaa05e046c8a85c21be8684ddfca60fcf2da9b183432b28403",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "egipcios",
+      "rows_before": 704665,
+      "class_distribution_before": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-CommandInjection": 38711,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      },
+      "operations": [
+        {
+          "op": "min_class_count",
+          "min_class_count": 2,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 704665,
+      "class_distribution_after": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-CommandInjection": 38711,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.008079999999999976
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/loss_curve_metadata.json",
+    "features_used_count": 72,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase2/multiclase/harvard",
+    "created_at": "2026-07-10T11:08:06-04:00",
+    "dataset": "harvard",
+    "script": "3datasetsMulticlase2.py",
+    "feature_count": 72,
+    "feature_policy": "useful72_wamm_manual_intra_request",
+    "feature_set_version": "useful72_wamm_manual_request_groups_v2",
+    "job": "3289",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "sqrt_balanced"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__w_sqrt_balanced",
+        "train_rows": "721928",
+        "test_rows": "180483",
+        "n_classes": "10",
+        "n_iter_actual": "263.0",
+        "loss_curve_final_test_error_rate": "0.02283999999999997",
+        "accuracy": "0.9774549403544932",
+        "balanced_accuracy": "0.9661923790762572",
+        "f1_macro": "0.9722504983892014",
+        "mcc": "0.9609508624393401"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M8",
+    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/run_config.json",
+    "config_sha256": "f10b0aad3409d3c4f480d2ea9774d008f288c30721a8045b849d0198e9864491",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/metrics_flat.csv",
+    "metrics_sha256": "abaf1ac13f7ccb355fa4aee5f2d6ce8fa6b0dae7ceaf0e17ecc69de0b588c6bb",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "harvard",
+      "rows_before": 907815,
+      "class_distribution_before": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-IGNORED_NOT_TOP14_COMBO": 5404,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      },
+      "operations": [
+        {
+          "op": "harvard_top14_request_group_filter",
+          "removed_rows": 5404,
+          "allowed_labels": [
+            "HARVARD-CAPEC126_PathTraversal",
+            "HARVARD-CAPEC16_DictionaryPasswordAttack",
+            "HARVARD-CAPEC242_CodeInjection",
+            "HARVARD-CAPEC310_VulnerabilityScanning",
+            "HARVARD-CAPEC34_HTTPResponseSplitting",
+            "HARVARD-CAPEC66_SQLInjection",
+            "HARVARD-CAPEC88_OSCommandInjection",
+            "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal",
+            "HARVARD-RequestManipulation",
+            "NORMAL"
+          ],
+          "allowed_combo_keys": [
+            "NORMAL",
+            "CAPEC-66",
+            "CAPEC-194",
+            "CAPEC-34",
+            "CAPEC-126",
+            "CAPEC-242",
+            "CAPEC-272",
+            "CAPEC-274",
+            "CAPEC-88",
+            "CAPEC-88+CAPEC-126",
+            "CAPEC-310",
+            "CAPEC-153",
+            "CAPEC-272+CAPEC-274",
+            "CAPEC-16"
+          ],
+          "ignored_combination_count": 46,
+          "allowed_classes_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase2/multiclase/harvard/harvard_request_group_classes_allowed.csv",
+          "request_group_mapping_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase2/multiclase/harvard/harvard_top14_to_request_groups_mapping.csv",
+          "ignored_combinations_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase2/multiclase/harvard/harvard_ignored_non_top14_combinations.csv"
+        },
+        {
+          "op": "min_class_count",
+          "min_class_count": 20,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 902411,
+      "class_distribution_after": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.02283999999999997
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/loss_curve_metadata.json",
+    "features_used_count": 72,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase2/multiclase/torpeda",
+    "created_at": "2026-07-10T10:53:53-04:00",
+    "dataset": "torpeda",
+    "script": "3datasetsMulticlase2.py",
+    "feature_count": 72,
+    "feature_policy": "useful72_wamm_manual_intra_request",
+    "feature_set_version": "useful72_wamm_manual_request_groups_v2",
+    "job": "3289",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": "none"
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting",
+        "train_rows": "59306",
+        "test_rows": "14827",
+        "n_classes": "10",
+        "n_iter_actual": "167.0",
+        "loss_curve_final_test_error_rate": "0.002225669386929252",
+        "accuracy": "0.9977743306130707",
+        "balanced_accuracy": "0.9782229982526506",
+        "f1_macro": "0.9867857095629311",
+        "mcc": "0.9962720379694179"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "M8",
+    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/run_config.json",
+    "config_sha256": "5aa156500c3ff25b8d2a5bbcb7b6ce083ba19f327ff72ac50c8d90a805dfa262",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/metrics_flat.csv",
+    "metrics_sha256": "7b317409f53dd5f4f83c64edf672925a551989df06cde55b7085ae67c53aa7be",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "torpeda",
+      "rows_before": 74133,
+      "class_distribution_before": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      },
+      "operations": [
+        {
+          "op": "torpeda_only_common_labels",
+          "removed_rows": 0,
+          "allowed_labels": [
+            "NORMAL",
+            "TORPEDA-ANOMALOUS",
+            "TORPEDA-BufferOverflow",
+            "TORPEDA-CRLFi",
+            "TORPEDA-FormatString",
+            "TORPEDA-LDAPi",
+            "TORPEDA-SQLi",
+            "TORPEDA-SSI",
+            "TORPEDA-XPath",
+            "TORPEDA-XSS"
+          ]
+        }
+      ],
+      "rows_after": 74133,
+      "class_distribution_after": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 14827,
+      "train_sampled": true,
+      "test_sampled": false,
+      "final_test_error_rate": 0.002225669386929252
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/loss_curve_metadata.json",
+    "features_used_count": 72,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase3/multiclase/egipcios",
+    "created_at": "2026-07-16T13:41:25-04:00",
+    "dataset": "egipcios",
+    "script": "3datasetsMulticlase3.py",
+    "feature_count": 73,
+    "feature_policy": "compact73_cross_dataset",
+    "feature_set_version": "compact73_cross_dataset_v1",
+    "job": "3361",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": ""
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__sqrt_balanced_p050",
+        "train_rows": "563732",
+        "test_rows": "140933",
+        "n_classes": "9",
+        "n_iter_actual": "171.0",
+        "loss_curve_final_test_error_rate": "0.00871999999999995",
+        "accuracy": "0.9942809703901854",
+        "balanced_accuracy": "0.8515616810383174",
+        "f1_macro": "0.8381754817591107",
+        "mcc": "0.987663804163638"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "EXTENSION_73",
+    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/run_config.json",
+    "config_sha256": "423ce83a37c69550ae92afe123404303f91d6d67a722fa56b013c80fe19c3de0",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv",
+    "metrics_sha256": "d13e1c0abd572e206e55079e9543a32902de13448719067ff05d44c0d5645a70",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "egipcios",
+      "rows_before": 704665,
+      "class_distribution_before": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-OSCommandInjection": 36114,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-CommandInjection": 2597,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      },
+      "operations": [
+        {
+          "op": "min_class_count",
+          "min_class_count": 2,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 704665,
+      "class_distribution_after": {
+        "NORMAL": 493515,
+        "EGIPCIOS-SQLi": 146086,
+        "EGIPCIOS-OSCommandInjection": 36114,
+        "EGIPCIOS-PathTraversal": 17718,
+        "EGIPCIOS-XSS": 2894,
+        "EGIPCIOS-SSRF": 2645,
+        "EGIPCIOS-CommandInjection": 2597,
+        "EGIPCIOS-SSTI": 1897,
+        "EGIPCIOS-CodeInjection": 1199
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.00871999999999995
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/loss_curve_metadata.json",
+    "features_used_count": 73,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase3/multiclase/harvard",
+    "created_at": "2026-07-16T09:17:26-04:00",
+    "dataset": "harvard",
+    "script": "3datasetsMulticlase3.py",
+    "feature_count": 73,
+    "feature_policy": "compact73_cross_dataset",
+    "feature_set_version": "compact73_cross_dataset_v1",
+    "job": "3361",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": ""
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__accuracy_guard_p020",
+        "train_rows": "721928",
+        "test_rows": "180483",
+        "n_classes": "10",
+        "n_iter_actual": "737.0",
+        "loss_curve_final_test_error_rate": "0.021340000000000026",
+        "accuracy": "0.9801033892388756",
+        "balanced_accuracy": "0.9589495511939651",
+        "f1_macro": "0.9721354492244142",
+        "mcc": "0.9655360629957616"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "EXTENSION_73",
+    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/run_config.json",
+    "config_sha256": "9f84524234d94a42c906ec5c82124f9fa0c8c8a715fa5d64e1cf8d6351c4774f",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/metrics_flat.csv",
+    "metrics_sha256": "b9db40a9187199cf1af5f674a82cbd7e92a20fee06e24b044913301aa4e874eb",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "harvard",
+      "rows_before": 907815,
+      "class_distribution_before": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-IGNORED_NOT_TOP14_COMBO": 5404,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      },
+      "operations": [
+        {
+          "op": "harvard_top14_request_group_filter",
+          "removed_rows": 5404,
+          "allowed_labels": [
+            "HARVARD-CAPEC126_PathTraversal",
+            "HARVARD-CAPEC16_DictionaryPasswordAttack",
+            "HARVARD-CAPEC242_CodeInjection",
+            "HARVARD-CAPEC310_VulnerabilityScanning",
+            "HARVARD-CAPEC34_HTTPResponseSplitting",
+            "HARVARD-CAPEC66_SQLInjection",
+            "HARVARD-CAPEC88_OSCommandInjection",
+            "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal",
+            "HARVARD-RequestManipulation",
+            "NORMAL"
+          ],
+          "allowed_combo_keys": [
+            "NORMAL",
+            "CAPEC-66",
+            "CAPEC-194",
+            "CAPEC-34",
+            "CAPEC-126",
+            "CAPEC-242",
+            "CAPEC-272",
+            "CAPEC-274",
+            "CAPEC-88",
+            "CAPEC-88+CAPEC-126",
+            "CAPEC-310",
+            "CAPEC-153",
+            "CAPEC-272+CAPEC-274",
+            "CAPEC-16"
+          ],
+          "ignored_combination_count": 46,
+          "allowed_classes_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/harvard_request_group_classes_allowed.csv",
+          "request_group_mapping_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/harvard_top14_to_request_groups_mapping.csv",
+          "ignored_combinations_path": "/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/harvard_ignored_non_top14_combinations.csv"
+        },
+        {
+          "op": "min_class_count",
+          "min_class_count": 20,
+          "removed_rows": 0,
+          "dropped_classes": []
+        }
+      ],
+      "rows_after": 902411,
+      "class_distribution_after": {
+        "NORMAL": 525195,
+        "HARVARD-CAPEC66_SQLInjection": 248093,
+        "HARVARD-RequestManipulation": 69814,
+        "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+        "HARVARD-CAPEC126_PathTraversal": 17595,
+        "HARVARD-CAPEC242_CodeInjection": 13793,
+        "HARVARD-CAPEC88_OSCommandInjection": 3074,
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+        "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+        "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 50000,
+      "train_sampled": true,
+      "test_sampled": true,
+      "final_test_error_rate": 0.021340000000000026
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/loss_curve_metadata.json",
+    "features_used_count": 73,
+    "features_count_matches_config": true
+  },
+  {
+    "path": "3datasetsMulticlase3/multiclase/torpeda",
+    "created_at": "2026-07-16T09:01:41-04:00",
+    "dataset": "torpeda",
+    "script": "3datasetsMulticlase3.py",
+    "feature_count": 73,
+    "feature_policy": "compact73_cross_dataset",
+    "feature_set_version": "compact73_cross_dataset_v1",
+    "job": "3361",
+    "args": {
+      "harvard_label_mode": "top10-request-groups",
+      "harvard_multiclass_strategy": "severity",
+      "test_size": 0.2,
+      "seed": 42,
+      "histgb_preset": "max",
+      "sample_weight_mode": ""
+    },
+    "metrics": [
+      {
+        "selected_model": "hist_gradient_boosting__sqrt_balanced_p050",
+        "train_rows": "59306",
+        "test_rows": "14827",
+        "n_classes": "10",
+        "n_iter_actual": "170.0",
+        "loss_curve_final_test_error_rate": "0.001146556956902911",
+        "accuracy": "0.9988534430430971",
+        "balanced_accuracy": "0.9991162769046632",
+        "f1_macro": "0.9992206732227086",
+        "mcc": "0.9980793658417759"
+      }
+    ],
+    "source_code": "S07",
+    "book_run_id": "EXTENSION_73",
+    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/run_config.json",
+    "config_sha256": "e9baa4ced7cac60c58793dff06d43cf1bd9ea21e03198849e8efc36403898edb",
+    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/metrics_flat.csv",
+    "metrics_sha256": "58390fc51e47f8eab54d7cfc5dcfee8ccdd18141d1daf9126cac93ea2a3c566c",
+    "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
+    "filtering": {
+      "dataset": "torpeda",
+      "rows_before": 74133,
+      "class_distribution_before": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      },
+      "operations": [
+        {
+          "op": "torpeda_only_common_labels",
+          "removed_rows": 0,
+          "allowed_labels": [
+            "NORMAL",
+            "TORPEDA-ANOMALOUS",
+            "TORPEDA-BufferOverflow",
+            "TORPEDA-CRLFi",
+            "TORPEDA-FormatString",
+            "TORPEDA-LDAPi",
+            "TORPEDA-SQLi",
+            "TORPEDA-SSI",
+            "TORPEDA-XPath",
+            "TORPEDA-XSS"
+          ]
+        }
+      ],
+      "rows_after": 74133,
+      "class_distribution_after": {
+        "TORPEDA-SQLi": 43013,
+        "TORPEDA-ANOMALOUS": 16459,
+        "NORMAL": 8363,
+        "TORPEDA-XSS": 4818,
+        "TORPEDA-SSI": 451,
+        "TORPEDA-BufferOverflow": 412,
+        "TORPEDA-CRLFi": 327,
+        "TORPEDA-XPath": 175,
+        "TORPEDA-LDAPi": 74,
+        "TORPEDA-FormatString": 41
+      }
+    },
+    "loss_curve_denominator": {
+      "train_rows_for_curve": 50000,
+      "test_rows_for_curve": 14827,
+      "train_sampled": true,
+      "test_sampled": false,
+      "final_test_error_rate": 0.001146556956902911
+    },
+    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/loss_curve_metadata.json",
+    "features_used_count": 73,
+    "features_count_matches_config": true
+  }
+]
