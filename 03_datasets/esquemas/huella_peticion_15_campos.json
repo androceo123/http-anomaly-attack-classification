@@ -1,0 +1,35 @@
+{
+  "algorithm": "BLAKE2b-128",
+  "hex_characters": 32,
+  "selected_field_count": 15,
+  "fields": [
+    "method",
+    "uri",
+    "http_version_or_protocol",
+    "User-Agent",
+    "Referer",
+    "Host",
+    "Origin",
+    "Cookie",
+    "Content-Type",
+    "Accept",
+    "Accept-Language",
+    "Accept-Encoding",
+    "DNT",
+    "Connection",
+    "body"
+  ],
+  "normalization": "method uppercase; stable version; header names lowercase; strip leading/trailing spaces/tabs from values; fixed order; length-delimited serialization; study-specific hash configuration",
+  "excluded_metadata": [
+    "timestamp",
+    "IP",
+    "ports",
+    "response"
+  ],
+  "scope": "operational identity under the declared rules, not byte identity or universal semantic equivalence",
+  "pages": [
+    50,
+    51,
+    67
+  ]
+}
