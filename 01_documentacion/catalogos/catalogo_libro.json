@@ -1,0 +1,1102 @@
+{
+  "source": {
+    "path": "/workspace/scratch/2517608154c5/upload/08282026v4.pdf",
+    "sha256": "3921cf32c48e030d9cc1a1a6362bb829a41c83908714baf9728ad946dde008da",
+    "pdf_pages": 108,
+    "title": "Detección y clasificación de ataques en tráfico HTTP mediante enfoques binario, multiclase y multietiqueta",
+    "date_not_inferred_from_filename": true
+  },
+  "status": "Book-derived catalog; source claims are not independent verification of experiment artifacts.",
+  "page_reference_rule": {
+    "arabic_starts_at_pdf_page": 17,
+    "printed_page_offset": -16
+  },
+  "visually_reviewed_pdf_pages": [
+    20,
+    47,
+    51,
+    63,
+    68,
+    80,
+    84,
+    86,
+    91,
+    92,
+    96,
+    97,
+    101
+  ],
+  "contributions": [
+    {
+      "id": "C1",
+      "name": "Common request and output schema adapted to four sources",
+      "pdf_page": 96
+    },
+    {
+      "id": "C2",
+      "name": "Request-only feature sets including ordered request90",
+      "pdf_page": 96
+    },
+    {
+      "id": "C3",
+      "name": "Audit of complete-event duplicates and 15-field fingerprint overlap; grouped L2 split",
+      "pdf_page": 96
+    },
+    {
+      "id": "C4",
+      "name": "Reconstruction of experimental history and previous test use",
+      "pdf_page": 96
+    },
+    {
+      "id": "C5",
+      "name": "Three-formulation analysis, per-class metrics and operational measurements",
+      "pdf_page": 96
+    }
+  ],
+  "datasets": [
+    {
+      "id": "CSIC2010",
+      "aliases": [
+        "CSIC",
+        "CSIC 2010"
+      ],
+      "purpose": [
+        "oneclass_history",
+        "binary_B1",
+        "binary_B2"
+      ],
+      "B2_total_not_explicit_in_book": true,
+      "pages": [
+        46,
+        47,
+        48,
+        68,
+        72,
+        73,
+        74
+      ]
+    },
+    {
+      "id": "TorpEda2012",
+      "aliases": [
+        "TorpEda",
+        "TORPEDA",
+        "TorpEda 2012"
+      ],
+      "source_count": 74133,
+      "development_count": 59306,
+      "test_count": 14827,
+      "classes": 10,
+      "pages": [
+        47,
+        48
+      ]
+    },
+    {
+      "id": "SRBH2020",
+      "aliases": [
+        "SR-BH 2020",
+        "Harvard"
+      ],
+      "source_filename": "data_capec_multilabel.csv",
+      "columns": 38,
+      "version": "1.2",
+      "published_count": 907814,
+      "observed_count": 907815,
+      "original_normal_count": 525195,
+      "observed_attack_count": 382620,
+      "top14_excluded_rows": 5404,
+      "top14_excluded_label_combinations": 46,
+      "top14_retained_rows": 902411,
+      "invalid_empty_rows": 2,
+      "valid_rows": 907813,
+      "consolidated_groups": 542990,
+      "normal_groups": 171348,
+      "attack_groups": 371642,
+      "pages": [
+        47,
+        48,
+        49,
+        51,
+        75
+      ]
+    },
+    {
+      "id": "DSAugmentedV2",
+      "aliases": [
+        "DS-Augmented-v2",
+        "Egipcios"
+      ],
+      "source_filename": "combined_data.csv",
+      "code_taxonomy_alias": "egipcios_col2_canonicalized",
+      "source_count": 704665,
+      "development_count": 563732,
+      "test_count": 140933,
+      "native_total_classes": 9,
+      "experimental_total_classes": 8,
+      "merged_labels": [
+        "Command Injection",
+        "OS Command Injection"
+      ],
+      "pages": [
+        47,
+        49,
+        67,
+        75
+      ]
+    }
+  ],
+  "multilabel": {
+    "capec_order_in_book": [
+      126,
+      153,
+      16,
+      194,
+      242,
+      272,
+      274,
+      310,
+      33,
+      34,
+      66,
+      88
+    ],
+    "normal_derived": true,
+    "capec248_excluded_as_target_not_row": true,
+    "pages": [
+      48,
+      67,
+      83,
+      84
+    ]
+  },
+  "features": {
+    "fixed30_order_from_appendix": [
+      "uri_len",
+      "body_len",
+      "query_len",
+      "path_depth",
+      "n_query_params",
+      "max_param_value_len",
+      "uri_encoded_ratio",
+      "body_encoded_ratio",
+      "invalid_percent_encoding_count",
+      "double_encoding_count",
+      "uri_non_alnum_ratio",
+      "body_non_alnum_ratio",
+      "uri_entropy",
+      "body_entropy",
+      "quote_count",
+      "angle_bracket_count",
+      "paren_count",
+      "semicolon_count",
+      "percent_count",
+      "slash_backslash_count",
+      "max_repeated_char_run",
+      "max_token_len",
+      "sql_token_count",
+      "xss_token_count",
+      "crlf_token_count",
+      "ldap_token_count",
+      "xpath_token_count",
+      "ssi_token_count",
+      "format_string_token_count",
+      "buffer_overflow_token_count"
+    ],
+    "request90_additions_order_from_appendix": [
+      "method_is_get",
+      "method_is_post",
+      "method_is_head",
+      "method_is_put",
+      "method_is_delete",
+      "method_is_patch",
+      "method_is_options",
+      "method_is_trace",
+      "method_is_connect",
+      "method_is_other_or_missing",
+      "http_version_is_1_0",
+      "http_version_is_1_1",
+      "http_version_is_2_plus",
+      "http_version_is_other_or_missing",
+      "request_header_present_count",
+      "request_header_total_len",
+      "request_header_max_value_len",
+      "request_header_control_char_count",
+      "user_agent_len",
+      "user_agent_entropy",
+      "user_agent_product_count",
+      "referer_present",
+      "referer_host_mismatch",
+      "host_is_ip_literal",
+      "origin_present",
+      "origin_host_mismatch",
+      "cookie_len",
+      "cookie_pair_count",
+      "content_type_is_form",
+      "content_type_is_json",
+      "content_type_is_xml",
+      "content_type_is_multipart",
+      "accept_item_count",
+      "connection_nonstandard",
+      "n_body_params",
+      "distinct_param_name_count",
+      "duplicate_param_name_count",
+      "empty_param_name_count",
+      "empty_param_value_count",
+      "max_param_name_len",
+      "mean_param_value_len",
+      "query_body_shared_param_count",
+      "abnormal_param_name_count",
+      "body_is_json",
+      "body_json_valid",
+      "json_max_depth",
+      "json_key_count",
+      "body_is_xml",
+      "xml_tag_count",
+      "body_is_multipart",
+      "multipart_part_count",
+      "content_type_body_mismatch",
+      "plus_encoding_count",
+      "backslash_hex_escape_count",
+      "backslash_unicode_escape_count",
+      "html_entity_count",
+      "null_byte_evasion_count",
+      "decode_replacement_char_count",
+      "decode_once_length_delta_ratio",
+      "decode_twice_additional_delta_ratio"
+    ],
+    "request90_order_from_appendix": [
+      "uri_len",
+      "body_len",
+      "query_len",
+      "path_depth",
+      "n_query_params",
+      "max_param_value_len",
+      "uri_encoded_ratio",
+      "body_encoded_ratio",
+      "invalid_percent_encoding_count",
+      "double_encoding_count",
+      "uri_non_alnum_ratio",
+      "body_non_alnum_ratio",
+      "uri_entropy",
+      "body_entropy",
+      "quote_count",
+      "angle_bracket_count",
+      "paren_count",
+      "semicolon_count",
+      "percent_count",
+      "slash_backslash_count",
+      "max_repeated_char_run",
+      "max_token_len",
+      "sql_token_count",
+      "xss_token_count",
+      "crlf_token_count",
+      "ldap_token_count",
+      "xpath_token_count",
+      "ssi_token_count",
+      "format_string_token_count",
+      "buffer_overflow_token_count",
+      "method_is_get",
+      "method_is_post",
+      "method_is_head",
+      "method_is_put",
+      "method_is_delete",
+      "method_is_patch",
+      "method_is_options",
+      "method_is_trace",
+      "method_is_connect",
+      "method_is_other_or_missing",
+      "http_version_is_1_0",
+      "http_version_is_1_1",
+      "http_version_is_2_plus",
+      "http_version_is_other_or_missing",
+      "request_header_present_count",
+      "request_header_total_len",
+      "request_header_max_value_len",
+      "request_header_control_char_count",
+      "user_agent_len",
+      "user_agent_entropy",
+      "user_agent_product_count",
+      "referer_present",
+      "referer_host_mismatch",
+      "host_is_ip_literal",
+      "origin_present",
+      "origin_host_mismatch",
+      "cookie_len",
+      "cookie_pair_count",
+      "content_type_is_form",
+      "content_type_is_json",
+      "content_type_is_xml",
+      "content_type_is_multipart",
+      "accept_item_count",
+      "connection_nonstandard",
+      "n_body_params",
+      "distinct_param_name_count",
+      "duplicate_param_name_count",
+      "empty_param_name_count",
+      "empty_param_value_count",
+      "max_param_name_len",
+      "mean_param_value_len",
+      "query_body_shared_param_count",
+      "abnormal_param_name_count",
+      "body_is_json",
+      "body_json_valid",
+      "json_max_depth",
+      "json_key_count",
+      "body_is_xml",
+      "xml_tag_count",
+      "body_is_multipart",
+      "multipart_part_count",
+      "content_type_body_mismatch",
+      "plus_encoding_count",
+      "backslash_hex_escape_count",
+      "backslash_unicode_escape_count",
+      "html_entity_count",
+      "null_byte_evasion_count",
+      "decode_replacement_char_count",
+      "decode_once_length_delta_ratio",
+      "decode_twice_additional_delta_ratio"
+    ],
+    "L2_constant_features": [
+      "invalid_percent_encoding_count",
+      "buffer_overflow_token_count",
+      "method_is_delete",
+      "http_version_is_2_plus",
+      "http_version_is_other_or_missing",
+      "request_header_control_char_count",
+      "connection_nonstandard",
+      "body_is_json",
+      "body_json_valid",
+      "json_max_depth",
+      "json_key_count",
+      "multipart_part_count",
+      "backslash_unicode_escape_count",
+      "html_entity_count"
+    ],
+    "order_not_verified_against_code": true,
+    "pages": [
+      71,
+      98,
+      99,
+      100
+    ]
+  },
+  "historical_naming": {
+    "RF-34_in_ablation_is_called_RF-33_in_book": "25 base plus 8 new; preserve original alias and check contents",
+    "OCSVM34_is_not_RF33": true,
+    "multiclass_report_01_and_02": "same run, second corrects first",
+    "M9_not_documented_in_book": true,
+    "pages": [
+      71,
+      72,
+      73
+    ]
+  },
+  "fingerprint": {
+    "algorithm": "BLAKE2b-128",
+    "hex_characters": 32,
+    "selected_field_count": 15,
+    "fields": [
+      "method",
+      "uri",
+      "http_version_or_protocol",
+      "User-Agent",
+      "Referer",
+      "Host",
+      "Origin",
+      "Cookie",
+      "Content-Type",
+      "Accept",
+      "Accept-Language",
+      "Accept-Encoding",
+      "DNT",
+      "Connection",
+      "body"
+    ],
+    "normalization": "method uppercase; stable version; header names lowercase; strip leading/trailing spaces/tabs from values; fixed order; length-delimited serialization; study-specific hash configuration",
+    "excluded_metadata": [
+      "timestamp",
+      "IP",
+      "ports",
+      "response"
+    ],
+    "scope": "operational identity under the declared rules, not byte identity or universal semantic equivalence",
+    "pages": [
+      50,
+      51,
+      67
+    ]
+  },
+  "duplicate_counts": [
+    {
+      "criterion": "full_38_columns",
+      "source_rows": 907815,
+      "repeated_groups": 1415,
+      "additional_rows": 2746,
+      "rows_in_repeated_groups": 4161,
+      "max_group_size": 10
+    },
+    {
+      "criterion": "15_http_fields",
+      "source_rows": 907815,
+      "repeated_groups": 27624,
+      "additional_rows": 364824,
+      "rows_in_repeated_groups": 392448,
+      "max_group_size": 453
+    },
+    {
+      "criterion": "15_http_fields_after_2_empty_removed",
+      "source_rows": 907813,
+      "repeated_groups": 27623,
+      "additional_rows": 364823,
+      "rows_in_repeated_groups": 392446,
+      "max_group_size": 453
+    }
+  ],
+  "label_conflicts": {
+    "variable_label_groups": 288,
+    "rows_in_variable_label_groups": 2331,
+    "normal_and_attack_groups": 284,
+    "rows_in_normal_and_attack_groups": 2322,
+    "attack_only_variable_groups": 4,
+    "manual_adjudication_performed": false,
+    "consolidation": "logical OR",
+    "pages": [
+      51,
+      52,
+      93
+    ]
+  },
+  "overlap_audit": {
+    "pages": [
+      76,
+      85,
+      86,
+      89
+    ],
+    "historical_modes": [
+      {
+        "mode": "Harvard9families",
+        "test_units": 181563,
+        "overlapping_units": 77184,
+        "percent": 42.5109,
+        "normal_overlap": 73909,
+        "normal_test": 105039,
+        "attack_overlap": 3275,
+        "attack_test": 76524
+      },
+      {
+        "mode": "Harvard_top14",
+        "test_units": 180483,
+        "overlapping_units": 76959,
+        "percent": 42.6406,
+        "normal_overlap": 73959,
+        "normal_test": 105039,
+        "attack_overlap": 3000,
+        "attack_test": 75444
+      },
+      {
+        "mode": "Harvard_top11",
+        "test_units": 180483,
+        "overlapping_units": 77060,
+        "percent": 42.6965,
+        "normal_overlap": 73969,
+        "normal_test": 105039,
+        "attack_overlap": 3091,
+        "attack_test": 75444
+      },
+      {
+        "mode": "Harvard_top10",
+        "test_units": 180483,
+        "overlapping_units": 77127,
+        "percent": 42.7337,
+        "normal_overlap": 73957,
+        "normal_test": 105039,
+        "attack_overlap": 3170,
+        "attack_test": 75444
+      },
+      {
+        "mode": "L1",
+        "test_units": 181563,
+        "overlapping_units": 76966,
+        "percent": 42.3908,
+        "normal_overlap": 73915,
+        "normal_test": 105039,
+        "attack_overlap": 3051,
+        "attack_test": 76524
+      },
+      {
+        "mode": "L2",
+        "test_units": 108598,
+        "unit": "consolidated_group",
+        "overlapping_units": 0,
+        "percent": 0
+      }
+    ],
+    "L2_expected_pair_intersections": [
+      {
+        "a": "train",
+        "b": "validation",
+        "expected_common_fingerprints": 0
+      },
+      {
+        "a": "train",
+        "b": "threshold_selection",
+        "expected_common_fingerprints": 0
+      },
+      {
+        "a": "train",
+        "b": "test",
+        "expected_common_fingerprints": 0
+      },
+      {
+        "a": "validation",
+        "b": "threshold_selection",
+        "expected_common_fingerprints": 0
+      },
+      {
+        "a": "validation",
+        "b": "test",
+        "expected_common_fingerprints": 0
+      },
+      {
+        "a": "threshold_selection",
+        "b": "test",
+        "expected_common_fingerprints": 0
+      }
+    ],
+    "B2_Harvard_split_not_reconstructed": true,
+    "other_corpora_not_audited_equivalently": true,
+    "full38_test_overlap": {
+      "Harvard9families": 735,
+      "L1": 719
+    }
+  },
+  "runs": [
+    {
+      "id": "PRE_OCSVM",
+      "task": "oneclass",
+      "representations": [
+        26,
+        34,
+        57
+      ],
+      "datasets": [
+        "CSIC2010"
+      ],
+      "evidence": "historical_different_protocols",
+      "pages": [
+        72,
+        73,
+        77,
+        78
+      ]
+    },
+    {
+      "id": "PRE_IF",
+      "task": "oneclass",
+      "representations": [
+        25
+      ],
+      "datasets": [
+        "CSIC2010"
+      ],
+      "train_normals": 57600,
+      "evidence": "historical_different_protocols",
+      "pages": [
+        73,
+        77,
+        78
+      ]
+    },
+    {
+      "id": "PRE_LR_RF",
+      "task": "binary",
+      "representations": [
+        57
+      ],
+      "datasets": [
+        "CSIC2010"
+      ],
+      "evidence": "historical_different_protocols",
+      "pages": [
+        74,
+        77,
+        78
+      ]
+    },
+    {
+      "id": "B1",
+      "task": "binary",
+      "representations": [
+        "RF-25",
+        "RF-33",
+        "RF-57",
+        "RF-10-Gini"
+      ],
+      "datasets": [
+        "CSIC2010"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        71,
+        72,
+        74,
+        78,
+        79
+      ]
+    },
+    {
+      "id": "B2",
+      "task": "binary",
+      "representations": [
+        "RF-57"
+      ],
+      "datasets": [
+        "CSIC2010",
+        "TorpEda2012",
+        "SRBH2020"
+      ],
+      "evidence": "exploratory",
+      "test_used_for": "threshold_selection",
+      "harvard_fingerprint_overlap_not_reconstructed": true,
+      "pages": [
+        55,
+        68,
+        74,
+        76,
+        79,
+        80
+      ]
+    },
+    {
+      "id": "M1",
+      "task": "multiclass",
+      "dimensions": 30,
+      "datasets": [
+        "TorpEda2012",
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "TorpEda10",
+        "Harvard9families"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        72,
+        74,
+        80
+      ]
+    },
+    {
+      "id": "M2",
+      "task": "multiclass",
+      "dimensions": 30,
+      "datasets": [
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "Harvard_top14"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        72,
+        74,
+        80
+      ]
+    },
+    {
+      "id": "M3",
+      "task": "multiclass",
+      "dimensions": 84,
+      "datasets": [
+        "TorpEda2012",
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "TorpEda10",
+        "Harvard_top14"
+      ],
+      "evidence": "exploratory",
+      "test_used_for": "feature_selection_for_M4",
+      "pages": [
+        72,
+        74,
+        75,
+        80
+      ]
+    },
+    {
+      "id": "M4",
+      "task": "multiclass",
+      "dimensions": 58,
+      "datasets": [
+        "TorpEda2012",
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "TorpEda10",
+        "Harvard_top14"
+      ],
+      "evidence": "exploratory",
+      "reuses_M3_test_indices": true,
+      "pages": [
+        72,
+        75,
+        80
+      ]
+    },
+    {
+      "id": "M5",
+      "task": "multiclass",
+      "dimensions": 58,
+      "datasets": [
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "Harvard_top11"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        55,
+        72,
+        75,
+        80
+      ]
+    },
+    {
+      "id": "M6",
+      "task": "multiclass",
+      "dimensions": 58,
+      "datasets": [
+        "SRBH2020"
+      ],
+      "taxonomies": [
+        "Harvard_top10"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        55,
+        72,
+        75,
+        80
+      ]
+    },
+    {
+      "id": "M7",
+      "task": "multiclass",
+      "dimensions": 58,
+      "datasets": [
+        "TorpEda2012",
+        "SRBH2020",
+        "DSAugmentedV2"
+      ],
+      "taxonomies": [
+        "TorpEda10",
+        "Harvard_top10",
+        "DS8_canonicalized"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        72,
+        75,
+        80
+      ]
+    },
+    {
+      "id": "M8",
+      "task": "multiclass",
+      "dimensions": 72,
+      "datasets": [
+        "TorpEda2012",
+        "SRBH2020",
+        "DSAugmentedV2"
+      ],
+      "taxonomies": [
+        "TorpEda10",
+        "Harvard_top10",
+        "DS8_canonicalized"
+      ],
+      "evidence": "exploratory",
+      "pages": [
+        68,
+        72,
+        75,
+        80,
+        81
+      ]
+    },
+    {
+      "id": "L1",
+      "task": "multilabel",
+      "dimensions": 30,
+      "representation": "fixed30",
+      "datasets": [
+        "SRBH2020"
+      ],
+      "evidence": "historical_row_split_baseline",
+      "split_counts": {
+        "train": 581001,
+        "validation": 145251,
+        "test": 181563
+      },
+      "unit": "original_event_row",
+      "refit_after_thresholds": true,
+      "validation_reused_in_refit": true,
+      "pages": [
+        57,
+        68,
+        69,
+        75,
+        82,
+        83
+      ]
+    },
+    {
+      "id": "L2",
+      "task": "multilabel",
+      "dimensions": 90,
+      "representation": "request90",
+      "datasets": [
+        "SRBH2020"
+      ],
+      "evidence": "main_result_with_fingerprint_group_disjointness",
+      "split_counts": {
+        "train": 347513,
+        "validation": 43439,
+        "threshold_selection": 43440,
+        "test": 108598
+      },
+      "unit": "consolidated_fingerprint_group_OR_labels",
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "refit_after_thresholds": false,
+      "pages": [
+        56,
+        57,
+        58,
+        67,
+        69,
+        75,
+        76,
+        82,
+        84,
+        85,
+        86
+      ]
+    }
+  ],
+  "L2_selection": {
+    "configs_other_9_labels_each": 12,
+    "configs_capec153_272_274_each": 28,
+    "configs_total": 192,
+    "objective": "binary:logistic",
+    "early_stopping_metric": "xgboost aucpr",
+    "selection_score": "(sklearn AP validation + best F1 validation)/2",
+    "threshold_partition_separate": true,
+    "max_coordinate_passes": 6,
+    "threshold_goals": {
+      "F1_each_label": 0.85,
+      "normal_recall": 0.99
+    },
+    "probability_calibration_not_demonstrated": true,
+    "pages": [
+      57,
+      58,
+      69,
+      76
+    ]
+  },
+  "L2_reported_results": {
+    "pdf_pages": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "unit": "consolidated_fingerprint_group",
+    "test_size": 108598,
+    "exact_match_percent": 96.92,
+    "hamming_loss_percent": 0.276,
+    "F1_micro_percent": 97.604,
+    "F1_macro_percent": 93.94,
+    "AP_macro_percent": 96.26,
+    "Jaccard_micro_percent": 95.321,
+    "binary_confusion": {
+      "TN": 33925,
+      "FP": 345,
+      "FN": 2438,
+      "TP": 71890
+    },
+    "normal_recall_percent": 98.9933,
+    "normal_recall_99_goal_achieved": false,
+    "labels_above_85_F1": 10,
+    "total_labels": 12,
+    "CAPEC153_F1_percent": 80.86,
+    "CAPEC272_F1_percent": 58.04,
+    "CAPEC274_F1_percent": 100.0,
+    "attack_only_exact_match_approximate_percent": 95.96,
+    "attack_only_exact_match_is_not_exact_recalculation": true
+  },
+  "M8_reported_results": {
+    "pdf_pages": [
+      80,
+      81
+    ],
+    "F1_macro_percent": {
+      "TorpEda": 98.68,
+      "Harvard": 97.23,
+      "DS": 84.49
+    },
+    "accuracy_percent": {
+      "TorpEda": 99.777,
+      "Harvard": 97.745,
+      "DS": 99.425
+    },
+    "curve_error_percent": {
+      "Harvard": 2.284,
+      "DS": 0.808
+    },
+    "whole_test_error_percent": {
+      "Harvard": 2.2545,
+      "DS": 0.5755
+    },
+    "curve_sample_not_documented": true,
+    "benchmark_sample_count_not_documented": true
+  },
+  "L2_execution": {
+    "launcher": "multietiquetaCorrida2.sh",
+    "program": "multietiquetaCorrida2.py",
+    "slurm_job_id": 3315,
+    "node": "c3",
+    "allocated_cpus": 16,
+    "allocated_memory_GiB": 60,
+    "slurm_walltime": "00:39:10",
+    "slurm_MaxRSS_GiB": 4.87,
+    "process_peak_RSS_MiB": 4098.6,
+    "GPU_used": false,
+    "python_version_reported": "3.11.7",
+    "xgboost_version_reported": "3.2.0",
+    "benchmark_groups": 10000,
+    "latency_ms": {
+      "p50": 7.125,
+      "p95": 7.627,
+      "p99": 8.083
+    },
+    "cases_per_second": {
+      "individual_full_flow": 138.929,
+      "batch_full_flow": 1832.262,
+      "batch_prediction_only": 65010.937
+    },
+    "model_MiB": 12.933,
+    "pages": [
+      63,
+      64,
+      84,
+      85,
+      102
+    ]
+  },
+  "file_anchors": [
+    {
+      "kind": "container",
+      "name": "corridasBinarias(5).zip",
+      "bytes": 189758,
+      "sha256": "71b24e679aea0b8634acf3878b79ab4ca79368666417d000fde6e0166ef37137",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "container",
+      "name": "datasetYCorridasMulticlaseMultietiqueta.zip",
+      "bytes": 15934890,
+      "sha256": "af32f419334d61725b2a7495f9ffb2ea0da04d8e0431aa8241292bb49bcd59f6",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "container",
+      "name": "informesMultilabel.zip",
+      "bytes": 27933,
+      "sha256": "1a1fe9cd6bc75b15ccd414775ad39bf62c547038aa6a70b78cf2613160a7763c",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "container",
+      "name": "multiclaseCorridasInformes(1).zip",
+      "bytes": 195341,
+      "sha256": "2d0eb461abd1e5844d948ec26f13efeda21054ecf1c0fed2f2d3d28c4863f074",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "container",
+      "name": "evidencia_tesis_slurm_20260803T142006.tar.gz",
+      "bytes": 1547959,
+      "sha256": "41625ac4b47566c4ad6cfa91c4a3af1d8cf75dd86378723e1736038480c0ee6e",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "launcher",
+      "name": "multietiquetaCorrida2.sh",
+      "sha256": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "program",
+      "name": "multietiquetaCorrida2.py",
+      "sha256": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    },
+    {
+      "kind": "schema_signature",
+      "name": "sr-bh-request90-v2",
+      "sha256": "0bbc812611513de0952653b398f5533afa6933d32faf3cbfa8ac88ac12a8e51f",
+      "caution": "No se conoce por el libro la serialización exacta sobre la que se calcula.",
+      "pdf_page": 101,
+      "printed_page": 85,
+      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
+    }
+  ],
+  "historical_repository_reference": {
+    "url": "https://github.com/androceo123/TFG",
+    "branch": "implementacion",
+    "project_root": "waf-ml-starter/",
+    "commit_sha_not_given_in_guide": true,
+    "pdf_page": 101
+  },
+  "evidence_status_vocab": [
+    "mentioned_in_book",
+    "artifact_located",
+    "contents_matched",
+    "hash_matched",
+    "recalculated_from_outputs",
+    "reproduced_by_execution",
+    "not_located",
+    "discrepant"
+  ],
+  "important_limits": [
+    "No independent experiment verification performed in this book review",
+    "Historical B/M test-informed development",
+    "L2 grouping and OR consolidation are confounded",
+    "No multiple-seed repeats or confidence intervals",
+    "No train-on-A test-on-B or temporal generalization",
+    "No WAF production validation",
+    "Do not conflate archive hash, script hash, schema signature and request fingerprint",
+    "Do not conflate NORMAL-derived binary metrics and separately trained RF runs"
+  ]
+}

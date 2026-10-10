@@ -1,0 +1,323 @@
+{
+  "source": "cambiosAndres (1).pptx",
+  "reference_basis": "Diapositivas reales 1..71; todas las afirmaciones son extraídas y aún requieren cotejo con los ZIP.",
+  "runs": [
+    {
+      "run_id": "B1",
+      "approach": "binario",
+      "model": "RandomForest",
+      "datasets": [
+        "csic_2010"
+      ],
+      "features": [
+        25,
+        33,
+        57,
+        10
+      ],
+      "report_candidates": [
+        "informe_ablacion_features_csic_randomforest.pdf",
+        "Informe_Metodologico_Enfoque_Binario_Random_Forest_TFG.pdf"
+      ],
+      "slides": [
+        34,
+        36,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "RF-34 es alias histórico ambiguo de RF-33; la presentación usa 33. Test consultado en desarrollo."
+    },
+    {
+      "run_id": "B2",
+      "approach": "binario",
+      "model": "RandomForest",
+      "datasets": [
+        "csic_2010",
+        "torpeda_2012",
+        "sr_bh_2020"
+      ],
+      "features": [
+        57
+      ],
+      "report_candidates": [
+        "documento_cross_dataset_waf.pdf"
+      ],
+      "script_candidates": [
+        "src/waf_ml/features/http_features.py"
+      ],
+      "slides": [
+        27,
+        32,
+        35,
+        36,
+        66,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "split": "80/20_por_filas",
+      "seed": 42,
+      "notes": "Modelo independiente por corpus, 500 árboles y pesos balanceados. Umbral elegido sobre test. No atribuir jobs RF a B2 sin cotejo exacto."
+    },
+    {
+      "run_id": "M1",
+      "approach": "multiclase",
+      "model": "no_identificado_por_corrida_en_ppt",
+      "datasets": [
+        "sr_bh_2020"
+      ],
+      "features": [
+        30
+      ],
+      "report_candidates": [],
+      "slides": [
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "D69 identifica 30 variables y nueve familias SR-BH, sin script ni job. La familia final multiclase es HGB, pero no atribuir M1 a una salida concreta sin cotejar libro y métricas. No distingue selección allmodels preliminar frente a ejecución fixed30.",
+      "model_candidate": "HistGradientBoosting",
+      "additional_dataset_to_verify": [
+        "torpeda_2012"
+      ]
+    },
+    {
+      "run_id": "M2",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "torpeda_2012",
+        "sr_bh_2020"
+      ],
+      "features": [
+        30
+      ],
+      "report_candidates": [
+        "03_Multiclase_Top14_CAPEC_exacto_30_features.pdf"
+      ],
+      "slides": [
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Top-14 de combinaciones exactas Harvard; prefijo 03 no equivale a M3."
+    },
+    {
+      "run_id": "M3",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "torpeda_2012",
+        "sr_bh_2020"
+      ],
+      "features": [
+        84
+      ],
+      "report_candidates": [
+        "04_Multiclase_Expansion_optimized84_Top14.pdf"
+      ],
+      "slides": [
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Expansión a optimized84; la comparación no aísla configuración y variables."
+    },
+    {
+      "run_id": "M4",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "torpeda_2012",
+        "sr_bh_2020"
+      ],
+      "features": [
+        58
+      ],
+      "report_candidates": [
+        "05_Multiclase_Poda_useful58_Top14.pdf"
+      ],
+      "slides": [
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Poda usando importancia calculada en prueba previa. Harvard top-14."
+    },
+    {
+      "run_id": "M5",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "sr_bh_2020"
+      ],
+      "features": [
+        58
+      ],
+      "report_candidates": [
+        "06_Multiclase_Harvard_Top11_operativo_58_features.pdf"
+      ],
+      "slides": [
+        39,
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Harvard top-11: DataManipulation y HTTPProtocolManipulation."
+    },
+    {
+      "run_id": "M6",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "sr_bh_2020"
+      ],
+      "features": [
+        58
+      ],
+      "report_candidates": [
+        "07_Multiclase_Harvard_Top10_RequestManipulation_58_features.pdf"
+      ],
+      "slides": [
+        39,
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Harvard top-10: RequestManipulation."
+    },
+    {
+      "run_id": "M7",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "torpeda_2012",
+        "sr_bh_2020",
+        "ds_augmented_v2"
+      ],
+      "features": [
+        58
+      ],
+      "report_candidates": [
+        "08_Multiclase_Tres_datasets_58_features.pdf"
+      ],
+      "slides": [
+        39,
+        42,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "notes": "Incorpora DS-Augmented-v2/Egipcios con 8 clases."
+    },
+    {
+      "run_id": "M8",
+      "approach": "multiclase",
+      "model": "HistGradientBoosting",
+      "datasets": [
+        "torpeda_2012",
+        "sr_bh_2020",
+        "ds_augmented_v2"
+      ],
+      "features": [
+        72
+      ],
+      "report_candidates": [
+        "09_Multiclase_Tres_datasets_72_features_WAMM_like.pdf"
+      ],
+      "script_candidates": [
+        "3datasetsMulticlase2.py"
+      ],
+      "configuration_candidates": [
+        "3datasetsMulticlase2/multiclase/harvard/run_config.json"
+      ],
+      "feature_set_version": "useful72_wamm_manual_request_groups_v2",
+      "slides": [
+        27,
+        38,
+        41,
+        42,
+        43,
+        44,
+        67,
+        69
+      ],
+      "status": "ultima_multiclase_documentada_exploratoria",
+      "split": "80/20_por_filas",
+      "seed": 42,
+      "metric_signature": {
+        "sr_bh_2020_f1_macro": 0.9722504983892014
+      },
+      "notes": "No inferir M9 por código posterior. Curvas y tablas de informe09 discrepan; diapositiva toma tablas generales."
+    },
+    {
+      "run_id": "L1",
+      "approach": "multietiqueta",
+      "model": "XGBoost_OvR",
+      "datasets": [
+        "sr_bh_2020"
+      ],
+      "features": [
+        30
+      ],
+      "report_candidates": [],
+      "slides": [
+        47,
+        48,
+        69
+      ],
+      "status": "historico_exploratorio",
+      "split": "64/16/20_por_filas",
+      "units_total": 907815,
+      "units_test": 181563,
+      "unit": "fila",
+      "notes": "Reentrenamiento después del ajuste de umbrales. Identificar informes TEX de 30 variables; no mezclarlos con L2."
+    },
+    {
+      "run_id": "L2",
+      "approach": "multietiqueta",
+      "model": "XGBoost_OvR",
+      "datasets": [
+        "sr_bh_2020"
+      ],
+      "features": [
+        90
+      ],
+      "labels": 12,
+      "report_candidates": [],
+      "script_candidates": [
+        "multietiquetaCorrida2.py"
+      ],
+      "configuration_candidates": [
+        "multietiquetaCorrida2/harvard/run_config.json"
+      ],
+      "metrics_candidates": [
+        "multietiquetaCorrida2/harvard/metrics_flat.csv"
+      ],
+      "feature_set_version": "sr-bh-request90-v2",
+      "slides": [
+        27,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        65,
+        68,
+        69
+      ],
+      "status": "principal_agrupada",
+      "split": "64/8/8/20_por_grupos_15_campos",
+      "seed": 42,
+      "units_total": 542990,
+      "units_test": 108598,
+      "unit": "grupo_peticion",
+      "metric_signature": {
+        "f1_micro": 0.9760429217118095,
+        "f1_macro": 0.9393993137175819
+      },
+      "notes": "Cuatro particiones; seis intersecciones cero según la presentación. Sin reentrenamiento tras umbrales. Normal 98.9933% no llega a99%; CAPEC153/272 debajo de85%."
+    }
+  ]
+}
