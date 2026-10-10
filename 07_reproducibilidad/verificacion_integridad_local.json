@@ -1,0 +1,8 @@
+{
+  "checked": 1798,
+  "passed": 1798,
+  "skipped_external": 0,
+  "failures": [],
+  "scope": "original retained artifacts; generated documentation has a separate manifest",
+  "note": "Todos los retenidos formaban parte de la comprobación SHA-256 previa de 1799 archivos; el cierre solo excluye un lock vacío regenerable."
+}
