@@ -13,7 +13,6 @@ Archivo organizado del trabajo **Detección y clasificación de ataques en tráf
 | [05_codigo](05_codigo/README.md) | Base binaria histórica y scripts/lanzadores de las demás etapas, con sus nombres y contenido originales. |
 | [06_resultados_consolidados](06_resultados_consolidados/README.md) | Catálogo de corridas y métricas extraídas de los artefactos, conservando campo, unidad y procedencia. |
 | [07_reproducibilidad](07_reproducibilidad/README.md) | Verificación de integridad, comprobación de resultados y catálogo de archivos externos. |
-| [90_artefactos_pesados](90_artefactos_pesados/README.md) | Datos, modelos y predicciones que se conservan en Drive y se excluyen de Git. |
 
 ## Cómo se refleja la contribución de auditoría
 
@@ -27,7 +26,7 @@ Las tablas y particiones identificadas como `verificacion_20261010` fueron recon
 
 El [historial experimental](04_experimentos/README.md) explica qué cambió en cada etapa. **B1/B2, las etapas multiclase y L1 mantienen el carácter exploratorio descrito por la tesis.** Hubo consultas a prueba durante el desarrollo y cambios de atributos o taxonomías. L2 usa grupos de peticiones y bloques separados de entrenamiento, tuning, calibración y prueba; su resultado no equivale a una validación temporal o a transferencia entre corpus.
 
-Los [README de L1](04_experimentos/multietiqueta/L1_fixed30/README.md) y [L2](04_experimentos/multietiqueta/L2_request90/README.md) presentan las métricas recalculadas desde predicciones y sus denominadores. El antecedente GPU job2625 se conserva separado del principal L1/job3151. La extensión de 73 atributos/job3361 queda en `04_experimentos/extensiones/EXP_73_atributos`, porque el libro y la presentación documentan hasta M8.
+El [README de L1](04_experimentos/multietiqueta/L1_fixed30/README.md) presenta las métricas recalculadas desde predicciones y sus denominadores. El antecedente GPU job2625 se conserva separado del principal L1/job3151. La extensión de 73 atributos/job3361 queda en `04_experimentos/extensiones/EXP_73_atributos`, porque el libro y la presentación documentan hasta M8.
 
 Las metas por clase o etiqueta se conservan junto a los promedios globales. En L2, el recall de NORMAL es 33.925/34.270 (98,9933%); CAPEC-153 y CAPEC-272 quedan por debajo de F1 0,85. La [auditoría](02_auditoria/README.md) explica su alcance sin modificar los resultados originales.
 
@@ -35,7 +34,7 @@ Las metas por clase o etiqueta se conservan junto a los promedios globales. En L
 
 La copia preparada para Git contiene documentación, código, configuraciones, métricas y evidencia liviana. Se adopta un umbral de organización de **20 MiB por archivo**; los modelos serializados y la bibliografía de consulta también se mantienen fuera del repositorio. Este umbral es una decisión de este archivo, no un límite oficial de GitHub.
 
-`.gitignore` excluye los datos y modelos de `90_artefactos_pesados`, los entornos y las cachés. Conserva el README de esa carpeta como índice de los artefactos externos. `.gitattributes` evita conversiones automáticas de saltos de línea para que los hashes originales sigan siendo verificables. El [catálogo externo](07_reproducibilidad/artefactos_externos.csv) permite recuperar los datos y modelos desde su ubicación en Drive. La [guía de reproducibilidad](07_reproducibilidad/README.md) explica cómo comprobar los archivos y qué se puede repetir con la evidencia conservada.
+El [catálogo externo](07_reproducibilidad/artefactos_externos.csv) permite recuperar los datos y modelos desde su ubicación en Drive. La [guía de reproducibilidad](07_reproducibilidad/README.md) explica cómo comprobar los archivos y qué se puede repetir con la evidencia conservada.
 
 Cada sección de la carpeta puede reutilizarse por separado, pero la raíz completa conserva los enlaces relativos entre auditoría, código y corridas. El inventario y los manifiestos deben acompañar cualquier subconjunto publicado. La organización no publica automáticamente el contenido en GitHub.
 
