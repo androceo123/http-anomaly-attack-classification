@@ -1,0 +1,6 @@
+Este paquete separa evidencia historica de inventario actual.
+Los archivos sacct_*.psv corresponden a registros historicos conservados por Slurm.
+Los archivos inventario_actual_*.txt describen el nodo el dia de esta auditoria;
+no prueban por si solos que el nodo tuviera la misma configuracion en mayo-julio de 2026.
+ReqTRES/AllocTRES prueban solicitud/asignacion, no uso efectivo del recurso.
+Los jobs que nunca iniciaron deben documentarse como 'No aplica: no recibio nodo'.

@@ -1,0 +1,2 @@
+[ERROR] Este helper debe ejecutarse en el login node antes de crear el job, no dentro de un job SLURM.
+[ERROR] Usá: ./submit_10claseResults_best_node.sh

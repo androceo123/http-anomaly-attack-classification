@@ -1,0 +1,12 @@
+Nodo: c1
+Directorio: /home_data/aroman/TFG/waf-ml-starter/egipcios
+Python: Python 3.11.7
+Base de datos: DS_Augmented_v2.db
+Salida: DS_Augmented_v2_csv
+Delimitador CSV: ,
+Inicio: Mon Jun 29 12:58:17 PM -04 2026
+Exportando combined_data -> DS_Augmented_v2_csv/combined_data.csv
+  OK: 704,665 filas
+Exportacion completada.
+Fin: Mon Jun 29 01:05:43 PM -04 2026
+Listo. Revisa la salida en: DS_Augmented_v2_csv

@@ -1,0 +1,31 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=scontrol show partitions -dd 
+
+PartitionName=normal
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=YES QoS=N/A
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=2 MaxTime=7-00:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=32 MaxCPUsPerSocket=UNLIMITED
+   Nodes=c[1-3]
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=96 TotalNodes=3 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=2048 MaxMemPerNode=65536
+   TRES=cpu=96,mem=375G,node=3,billing=201,gres/gpu=3
+   TRESBillingWeights=CPU=1.0,Mem=0.25G,GRES/gpu=4
+
+PartitionName=gpu
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=NO QoS=N/A
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO ExclusiveTopo=NO GraceTime=0 Hidden=NO
+   MaxNodes=1 MaxTime=3-00:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=32 MaxCPUsPerSocket=UNLIMITED
+   Nodes=c4
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=32 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=2048 MaxMemPerNode=65536
+   TRES=cpu=32,mem=125G,node=1,billing=67,gres/gpu=1
+   TRESBillingWeights=CPU=1.0,Mem=0.25G,GRES/gpu=4
+

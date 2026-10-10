@@ -1,0 +1,14 @@
+[INFO] HARVARD_TABLE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+================================================================
+[START] 2026-07-02 09:45:19
+[INFO] Host=c1 JOB=3101 PARTITION=normal
+[INFO] PROJECT_DIR=/home_data/aroman/TFG/waf-ml-starter
+[INFO] TRAIN_PY=/home_data/aroman/TFG/waf-ml-starter/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30.py
+[INFO] DEFINITIVO_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO
+[INFO] OUTPUT_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/harvard
+[INFO] Modelo fijo: XGBoost One-vs-Rest, weight_mode=none, preset=max
+[INFO] LABEL_MODE=native TEST_SIZE=0.20 VALID_SIZE=0.20 SEED=42
+[INFO] USE_GPU=auto; CUDA_VISIBLE_DEVICES=unset; SLURM_JOB_GPUS=unset
+[INFO] CPU threads: N_JOBS=2 OMP=2 MKL=2 OPENBLAS=2
+[INFO] Métricas operativas: OPERATIONAL_MAX_ROWS=0; FI_N_REPEATS=3; FI_MAX_ROWS=10000
+================================================================

@@ -1,0 +1,506 @@
+tipo_evidencia=inventario_actual_del_nodo
+advertencia=no_prueba_por_si_solo_la_configuracion_historica
+capturado_en=2026-08-03T13:31:07-04:00
+nodo=c2
+directorio=/home_data/aroman
+
+IDENTIFICACION_Y_SO
+c2
+ Static hostname: c2
+       Icon name: computer-server
+         Chassis: server 🖳
+      Machine ID: 89af03edb39a4516af647ccc3cb10f9e
+         Boot ID: 908bb5674a2b4e15a63aca532ae57933
+Operating System: AlmaLinux 9.4 (Seafoam Ocelot)
+     CPE OS Name: cpe:/o:almalinux:almalinux:9::baseos
+          Kernel: Linux 5.14.0-427.35.1.el9_4.x86_64
+    Architecture: x86-64
+ Hardware Vendor: Dell Inc.
+  Hardware Model: PowerEdge R740
+Firmware Version: 2.24.0
+Linux c2 5.14.0-427.35.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Sep 12 11:21:43 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+NAME="AlmaLinux"
+VERSION="9.4 (Seafoam Ocelot)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.4 (Seafoam Ocelot)"
+ANSI_COLOR="0;34"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:almalinux:almalinux:9::baseos"
+HOME_URL="https://almalinux.org/"
+DOCUMENTATION_URL="https://wiki.almalinux.org/"
+BUG_REPORT_URL="https://bugs.almalinux.org/"
+
+ALMALINUX_MANTISBT_PROJECT="AlmaLinux-9"
+ALMALINUX_MANTISBT_PROJECT_VERSION="9.4"
+REDHAT_SUPPORT_PRODUCT="AlmaLinux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4"
+SUPPORT_END=2032-06-01
+
+ASIGNACION_SLURM_DE_ESTE_INVENTARIO
+OMPI_MCA_mca_base_component_show_load_errors=0
+OMPI_MCA_plm_slurm_args=--external-launcher
+SLURMD_DEBUG=2
+SLURMD_NODENAME=c2
+SLURM_AUDIT_PROJECT_ROOT=/home_data/aroman/TFG/waf-ml-starter
+SLURM_CLUSTER_NAME=cluster
+SLURM_CONF=/var/spool/slurmd/conf-cache/slurm.conf
+SLURM_CPUS_ON_NODE=1
+SLURM_CPUS_PER_TASK=1
+SLURM_CPU_BIND=quiet,mask_cpu:0x00000001
+SLURM_CPU_BIND_LIST=0x00000001
+SLURM_CPU_BIND_TYPE=mask_cpu:
+SLURM_CPU_BIND_VERBOSE=quiet
+SLURM_DISTRIBUTION=cyclic
+SLURM_GTIDS=0
+SLURM_JOBID=3519
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_JOB_END_TIME=1785778567
+SLURM_JOB_GID=1035
+SLURM_JOB_GROUP=aroman
+SLURM_JOB_ID=3519
+SLURM_JOB_NAME=env
+SLURM_JOB_NODELIST=c2
+SLURM_JOB_NUM_NODES=1
+SLURM_JOB_PARTITION=normal
+SLURM_JOB_QOS=normal
+SLURM_JOB_START_TIME=1785778267
+SLURM_JOB_UID=1033
+SLURM_JOB_USER=aroman
+SLURM_LAUNCH_NODE_IPADDR=10.10.10.254
+SLURM_LOCALID=0
+SLURM_MEM_PER_NODE=1024
+SLURM_NNODES=1
+SLURM_NODEID=0
+SLURM_NODELIST=c2
+SLURM_NPROCS=1
+SLURM_NTASKS=1
+SLURM_OOM_KILL_STEP=0
+SLURM_PRIO_PROCESS=0
+SLURM_PROCID=0
+SLURM_SRUN_COMM_HOST=10.10.10.254
+SLURM_SRUN_COMM_PORT=42293
+SLURM_STEPID=0
+SLURM_STEP_ID=0
+SLURM_STEP_LAUNCHER_PORT=42293
+SLURM_STEP_NODELIST=c2
+SLURM_STEP_NUM_NODES=1
+SLURM_STEP_NUM_TASKS=1
+SLURM_STEP_TASKS_PER_NODE=1
+SLURM_SUBMIT_DIR=/home_data/aroman
+SLURM_SUBMIT_HOST=arandu
+SLURM_TASKS_PER_NODE=1
+SLURM_TASK_PID=2701228
+SLURM_TOPOLOGY_ADDR=c2
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_TRES_PER_TASK=cpu=1
+SLURM_UMASK=0022
+JobId=3519 JobName=env
+   UserId=aroman(1033) GroupId=aroman(1035) MCS_label=N/A
+   Priority=1 Nice=0 Account=(null) QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:00 TimeLimit=00:05:00 TimeMin=N/A
+   SubmitTime=2026-08-03T13:31:07 EligibleTime=2026-08-03T13:31:07
+   AccrueTime=Unknown
+   StartTime=2026-08-03T13:31:07 EndTime=2026-08-03T13:36:07 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-03T13:31:07 Scheduler=Main
+   Partition=normal AllocNode:Sid=arandu:3661420
+   ReqNodeList=c2 ExcNodeList=(null)
+   NodeList=c2
+   BatchHost=c2
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=1G,node=1,billing=1
+   AllocTRES=cpu=1,mem=1G,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=c2 CPU_IDs=0 Mem=1024 GRES=
+   MinCPUsNode=1 MinMemoryNode=1G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=env
+   WorkDir=/home_data/aroman
+   TresPerTask=cpu=1
+   
+
+NodeName=c2 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=1 CPUEfctv=32 CPUTot=32 CPULoad=0.01
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:1
+   GresDrain=N/A
+   GresUsed=gpu:0
+   NodeAddr=c2 NodeHostName=c2 Version=24.11.5
+   OS=Linux 5.14.0-427.35.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Sep 12 11:21:43 EDT 2024 
+   RealMemory=128000 AllocMem=1024 FreeMem=42181 Sockets=2 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=normal 
+   BootTime=2025-11-21T10:45:53 SlurmdStartTime=2026-07-08T13:35:27
+   LastBusyTime=2026-08-02T21:39:08 ResumeAfterTime=None
+   CfgTRES=cpu=32,mem=125G,billing=67,gres/gpu=1
+   AllocTRES=cpu=1,mem=1G
+   CurrentWatts=0 AveWatts=0
+   
+
+
+CPU_Y_AFINIDAD
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      46 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             32
+On-line CPU(s) list:                0-31
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+CPU family:                         6
+Model:                              85
+Thread(s) per core:                 1
+Core(s) per socket:                 16
+Socket(s):                          2
+Stepping:                           7
+CPU(s) scaling MHz:                 100%
+CPU max MHz:                        3900.0000
+CPU min MHz:                        1200.0000
+BogoMIPS:                           5600.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+L1d cache:                          1 MiB (32 instances)
+L1i cache:                          1 MiB (32 instances)
+L2 cache:                           32 MiB (32 instances)
+L3 cache:                           44 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):                  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Retbleed:             Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Mitigation; TSX disabled
+nproc_total=32
+nproc_disponible=1
+Cpus_allowed_list:	0
+Mems_allowed_list:	0-1
+available: 2 nodes (0-1)
+node 0 cpus: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30
+node 0 size: 64022 MB
+node 0 free: 31749 MB
+node 1 cpus: 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31
+node 1 size: 64504 MB
+node 1 free: 10429 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+
+MEMORIA
+               total        used        free      shared  buff/cache   available
+Mem:           125Gi       8.9Gi        41Gi       6.2Gi        82Gi       116Gi
+Swap:             0B          0B          0B
+               total        used        free      shared  buff/cache   available
+Mem:     134770978816  9580146688 44227981312  6672404480 88722227200 125190832128
+Swap:              0           0           0
+MemTotal:       131612284 kB
+SwapTotal:             0 kB
+HugePages_Total:       0
+
+GPU
+CUDA_VISIBLE_DEVICES=no_definido
+SLURM_JOB_GPUS=no_definido
+SLURM_GPUS_ON_NODE=no_definido
+03:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. Integrated Matrox G200eW3 Graphics Controller (rev 04)
+3b:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)
+No devices found.
+No devices were found
+No devices were found
+
+ALMACENAMIENTO_Y_LIMITES
+Filesystem       Type  Size  Used Avail Use% Mounted on
+10.10.12.6:/home nfs4  1.4T  1.3T  115G  93% /home_data
+NAME   TYPE   SIZE ROTA MODEL          MOUNTPOINTS
+sda    disk 893.8G    1 PERC H730P Adp 
+├─sda1 part   100M    1                
+├─sda2 part    20G    1                
+├─sda3 part     6G    1                
+├─sda4 part     1K    1                
+├─sda5 part     2G    1                
+├─sda6 part    12G    1                
+└─sda7 part 853.6G    1                
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 513899
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 1048576
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 513899
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+
+COMPILADORES_Y_MODULOS
+autotools
+prun/2.2
+gnu13/13.2.0
+hwloc/2.12.0
+ucx/1.18.0
+libfabric/1.18.0
+openmpi5/5.0.5
+ohpc
+gcc (GCC) 13.2.0
+ldd (GNU libc) 2.34
+
+PYTHON_ACTUAL_DEL_SHELL
+python_executable=/usr/bin/python
+Python 3.9.18 (main, Aug 23 2024, 00:00:00) 
+[GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+sys.executable= /usr/bin/python
+python= 3.9.18 (main, Aug 23 2024, 00:00:00)  [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+platform= Linux-5.14.0-427.35.1.el9_4.x86_64-x86_64-with-glibc2.34
+machine= x86_64
+processor= x86_64
+PyYAML=5.4.1
+/usr/bin/python: No module named pip
+
+VENV_ACTUAL_DEL_PROYECTO
+python_executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+Python 3.11.7 (main, Aug 23 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+sys.executable= /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+python= 3.11.7 (main, Aug 23 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+platform= Linux-5.14.0-427.35.1.el9_4.x86_64-x86_64-with-glibc2.34
+machine= x86_64
+processor= x86_64
+numpy=2.4.0
+pandas=2.3.3
+scipy=1.17.1
+scikit-learn=1.8.0
+xgboost=3.2.0
+joblib=1.5.3
+psutil=7.2.2
+pyarrow=22.0.0
+matplotlib=3.11.0
+PyYAML=6.0.3
+tqdm=4.67.1
+fastapi=0.127.1
+uvicorn=0.40.0
+pip 26.1.2 from /home_data/aroman/TFG/waf-ml-starter/.venv/lib64/python3.11/site-packages/pip (python 3.11)
+# Editable install with no version control (waf-ml-starter==0.1.0)
+-e /home_data/aroman/TFG/waf-ml-starter
+ImageIO==2.37.3
+Jinja2==3.1.6
+Markdown==3.10.2
+MarkupSafe==3.0.3
+PyYAML==6.0.3
+Pygments==2.20.0
+Send2Trash==2.1.0
+aiohappyeyeballs==2.6.2
+aiohttp==3.13.5
+aiosignal==1.4.0
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.13.0
+argon2-cffi-bindings==25.1.0
+argon2-cffi==25.1.0
+arrow==1.4.0
+attrs==26.1.0
+beautifulsoup4==4.14.3
+bleach==6.3.0
+bokeh==3.6.3
+cachetools==7.1.4
+certifi==2026.5.20
+cffi==2.0.0
+charset-normalizer==3.4.7
+click==8.4.1
+cloudpickle==3.1.2
+colorcet==3.2.1
+contourpy==1.3.3
+cucim-cu12==26.4.0
+cuda-bindings==12.9.7
+cuda-core==0.7.0
+cuda-pathfinder==1.5.5
+cuda-python==12.9.7
+cuda-toolkit==12.9.2.0
+cudf-cu12==26.4.0
+cugraph-cu12==26.4.0
+cuml-cu12==26.4.0
+cupy-cuda12x==14.1.0
+cuvs-cu12==26.4.0
+cuxfilter-cu12==26.4.0
+cycler==0.12.1
+dask-cuda==26.4.0
+dask-cudf-cu12==26.4.0
+dask==2026.1.1
+datashader==0.19.1
+defusedxml==0.7.1
+distributed-ucxx-cu12==0.49.0
+distributed==2026.1.1
+fastapi==0.127.1
+fastjsonschema==2.21.2
+fonttools==4.63.0
+fqdn==1.5.1
+frozenlist==1.8.0
+fsspec==2026.4.0
+geopandas==1.1.3
+h11==0.16.0
+holoviews==1.20.2
+idna==3.16
+importlib_metadata==9.0.0
+isoduration==20.11.0
+joblib==1.5.3
+jsonpointer==3.1.1
+jsonschema-specifications==2025.9.1
+jsonschema==4.26.0
+jupyter-events==0.12.1
+jupyter_client==8.8.0
+jupyter_core==5.9.1
+jupyter_server==2.19.0
+jupyter_server_proxy==4.5.0
+jupyter_server_terminals==0.5.4
+jupyterlab_pygments==0.3.0
+kiwisolver==1.5.0
+lark==1.3.1
+lazy-loader==0.5
+libcudf-cu12==26.4.0
+libcugraph-cu12==26.4.0
+libcuml-cu12==26.4.0
+libcuvs-cu12==26.4.0
+libkvikio-cu12==26.4.0
+libnvforest-cu12==26.4.0
+libraft-cu12==26.4.0
+librmm-cu12==26.4.0
+libucx-cu12==1.19.0
+libucxx-cu12==0.49.0
+lightgbm==4.6.0
+linkify-it-py==2.1.0
+llvmlite==0.46.0
+locket==1.0.0
+markdown-it-py==4.2.0
+matplotlib==3.11.0
+mdit-py-plugins==0.6.1
+mdurl==0.1.2
+mistune==3.2.1
+msgpack==1.1.2
+multidict==6.7.1
+multipledispatch==1.0.0
+nbclient==0.10.4
+nbconvert==7.17.1
+nbformat==5.10.4
+networkx==3.6.1
+numba-cuda==0.28.2
+numba==0.64.0
+numpy==2.4.0
+nvforest-cu12==26.4.0
+nvidia-cublas-cu12==12.9.2.10
+nvidia-cuda-cccl-cu12==12.9.27
+nvidia-cuda-nvcc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cufft-cu12==11.4.1.4
+nvidia-curand-cu12==10.3.10.19
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-libnvcomp-cu12==5.1.0.21
+nvidia-ml-py==13.595.45
+nvidia-nccl-cu12==2.30.4
+nvidia-nvimgcodec-cu12==0.7.0.11
+nvidia-nvjitlink-cu12==12.9.86
+nvtx==0.2.15
+nx-cugraph-cu12==26.4.0
+overrides==7.7.0
+packaging==26.2
+pandas==2.3.3
+pandocfilters==1.5.1
+panel==1.7.5
+param==2.4.0
+partd==1.4.2
+pillow==12.2.0
+platformdirs==4.10.0
+prometheus_client==0.25.0
+propcache==0.5.2
+psutil==7.2.2
+ptyprocess==0.7.0
+pyarrow==22.0.0
+pycparser==3.0
+pyct==0.6.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+pylibcudf-cu12==26.4.0
+pylibcugraph-cu12==26.4.0
+pylibraft-cu12==26.4.0
+pyogrio==0.12.1
+pyparsing==3.3.2
+pyproj==3.7.2
+python-dateutil==2.9.0.post0
+python-json-logger==4.1.0
+python-multipart==0.0.21
+pytz==2026.2
+pyviz_comms==3.0.6
+pyzmq==27.1.0
+raft-dask-cu12==26.4.0
+rapids-dask-dependency==26.4.0
+rapids-logger==0.2.3
+referencing==0.37.0
+requests==2.34.2
+rfc3339-validator==0.1.4
+rfc3986-validator==0.1.1
+rfc3987-syntax==1.1.0
+rich==15.0.0
+rmm-cu12==26.4.0
+rpds-py==2026.5.1
+scikit-image==0.26.0
+scikit-learn==1.8.0
+scipy==1.17.1
+shap==0.51.0
+shapely==2.1.2
+simpervisor==1.0.0
+six==1.17.0
+slicer==0.0.8
+sortedcontainers==2.4.0
+soupsieve==2.8.4
+starlette==0.50.0
+tblib==3.2.2
+terminado==0.18.1
+threadpoolctl==3.6.0
+tifffile==2026.3.3
+tinycss2==1.4.0
+toolz==1.1.0
+tornado==6.5.6
+tqdm==4.67.1
+traitlets==5.15.0
+treelite==4.7.0
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2026.2
+uc-micro-py==2.0.0
+ucxx-cu12==0.49.0
+uri-template==1.3.0
+urllib3==2.7.0
+uvicorn==0.40.0
+webcolors==25.10.0
+webencodings==0.5.1
+websocket-client==1.9.0
+xarray==2026.4.0
+xgboost==3.2.0
+xyzservices==2026.3.0
+yarl==1.24.2
+zict==3.0.0
+zipp==4.1.0
+
+GIT_ACTUAL_DEL_PROYECTO
+advertencia=el_commit_actual_no_equivale_al_commit_historico_de_cada_job
+git=no_encontrado_en_/home_data/aroman/TFG/waf-ml-starter

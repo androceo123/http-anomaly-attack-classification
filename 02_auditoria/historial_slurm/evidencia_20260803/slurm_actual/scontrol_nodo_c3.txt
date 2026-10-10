@@ -1,0 +1,22 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=scontrol show node -dd c3 
+
+NodeName=c3 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=0 CPUEfctv=32 CPUTot=32 CPULoad=0.00
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:1
+   GresDrain=N/A
+   GresUsed=gpu:0
+   NodeAddr=c3 NodeHostName=c3 Version=24.11.5
+   OS=Linux 5.14.0-427.35.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Sep 12 11:21:43 EDT 2024 
+   RealMemory=128000 AllocMem=0 FreeMem=54847 Sockets=2 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=normal 
+   BootTime=2025-11-21T16:56:36 SlurmdStartTime=2026-07-08T14:35:07
+   LastBusyTime=2026-07-31T21:30:35 ResumeAfterTime=None
+   CfgTRES=cpu=32,mem=125G,billing=67,gres/gpu=1
+   AllocTRES=
+   CurrentWatts=0 AveWatts=0
+   
+

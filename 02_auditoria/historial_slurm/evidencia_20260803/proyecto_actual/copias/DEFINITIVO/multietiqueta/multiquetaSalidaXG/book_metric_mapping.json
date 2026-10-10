@@ -1,0 +1,137 @@
+{
+  "created_at": "2026-07-05T13:08:02-04:00",
+  "rows": [
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "Exact match ratio / subset accuracy",
+      "campo_salida": "test_metrics.exact_match_accuracy",
+      "archivo_principal": "metrics_multilabel_harvard_xgboost_none_fixed30.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "Hamming loss",
+      "campo_salida": "test_metrics.hamming_loss",
+      "archivo_principal": "metrics_multilabel_harvard_xgboost_none_fixed30.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "Precision micro/macro/weighted/samples",
+      "campo_salida": "test_metrics.precision_micro|macro|weighted|samples",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "Recall/TPR micro/macro/weighted/samples",
+      "campo_salida": "test_metrics.recall_micro|macro|weighted|samples",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "F1 micro/macro/weighted/samples",
+      "campo_salida": "test_metrics.f1_micro|macro|weighted|samples",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "Jaccard micro/macro/weighted/samples",
+      "campo_salida": "test_metrics.jaccard_micro|macro|weighted|samples",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "ROC-AUC micro/macro/weighted",
+      "campo_salida": "test_metrics.roc_auc_micro|macro|weighted",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "funcional_multietiqueta",
+      "metrica_libro": "PR-AUC micro/macro/weighted",
+      "campo_salida": "test_metrics.pr_auc_micro|macro|weighted",
+      "archivo_principal": "test_metrics_multilabel.json"
+    },
+    {
+      "grupo": "por_etiqueta",
+      "metrica_libro": "TP, FP, FN, TN, precision, recall/TPR, specificity/TNR, FPR, FNR, F1, ROC-AUC, PR-AUC",
+      "campo_salida": "per_label_metrics.csv",
+      "archivo_principal": "per_label_metrics.csv"
+    },
+    {
+      "grupo": "confusion_multietiqueta",
+      "metrica_libro": "Matriz 2x2 por etiqueta: TN, FP, FN, TP",
+      "campo_salida": "confusion_matrix_by_label_long.csv|wide.csv|json",
+      "archivo_principal": "confusion_matrix_by_label_wide.csv"
+    },
+    {
+      "grupo": "confusion_multietiqueta",
+      "metrica_libro": "Matriz por conjunto de etiquetas real vs predicho",
+      "campo_salida": "confusion_matrix_labelset.csv",
+      "archivo_principal": "confusion_matrix_labelset.csv"
+    },
+    {
+      "grupo": "auditoria_request",
+      "metrica_libro": "Aciertos parciales por request: N etiquetas reales vs K etiquetas correctas",
+      "campo_salida": "request_match_by_true_and_correct_count.csv y request_level_multilabel_match.csv",
+      "archivo_principal": "request_match_by_true_and_correct_count.csv"
+    },
+    {
+      "grupo": "binario_derivado",
+      "metrica_libro": "Normal vs ataque: accuracy, balanced accuracy, precision, recall/TPR, specificity/TNR, FPR, FNR, F1, MCC, ROC-AUC, PR-AUC",
+      "campo_salida": "test_metrics.binary_normal_vs_attack",
+      "archivo_principal": "binary_normal_vs_attack_metrics.json"
+    },
+    {
+      "grupo": "umbrales",
+      "metrica_libro": "Umbrales por etiqueta optimizados en validación",
+      "campo_salida": "thresholds_validation.csv",
+      "archivo_principal": "thresholds_validation.csv"
+    },
+    {
+      "grupo": "no_funcional_tiempo",
+      "metrica_libro": "Tiempo de carga, extracción de features, selección/entrenamiento, refit final, inferencia batch y total",
+      "campo_salida": "timing.*",
+      "archivo_principal": "metrics_multilabel_harvard_xgboost_none_fixed30.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "Latencia P50/P95/P99/media del pipeline",
+      "campo_salida": "operational_metrics.latency_ms_pipeline_online_*",
+      "archivo_principal": "operational_metrics.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "Throughput req/s pipeline online, pipeline batch e inferencia batch",
+      "campo_salida": "operational_metrics.throughput_req_s_*",
+      "archivo_principal": "operational_metrics.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "CPU time y utilización aproximada",
+      "campo_salida": "operational_metrics.cpu_time_* y cpu_utilization_pipeline_online_percent_of_all_cores",
+      "archivo_principal": "operational_metrics.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "Memoria RSS pico/actual",
+      "campo_salida": "resource_usage.peak_rss_mb|current_rss_mb y operational_metrics.peak_rss_mb|current_rss_mb",
+      "archivo_principal": "metrics_multilabel_harvard_xgboost_none_fixed30.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "Tamaño del modelo",
+      "campo_salida": "resource_usage.model_size_bytes|model_size_mb",
+      "archivo_principal": "metrics_multilabel_harvard_xgboost_none_fixed30.json"
+    },
+    {
+      "grupo": "no_funcional_operativo",
+      "metrica_libro": "Tasa de fallos de la prueba operativa",
+      "campo_salida": "operational_metrics.operational_failure_rate",
+      "archivo_principal": "operational_metrics.json"
+    },
+    {
+      "grupo": "interpretabilidad",
+      "metrica_libro": "Feature importance",
+      "campo_salida": "feature_importance.csv y feature_importance_xgb_gain_aggregated.csv",
+      "archivo_principal": "feature_importance.csv"
+    }
+  ]
+}

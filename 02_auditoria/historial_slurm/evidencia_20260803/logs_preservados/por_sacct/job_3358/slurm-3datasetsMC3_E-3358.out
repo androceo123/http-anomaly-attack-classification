@@ -1,0 +1,145 @@
+[INFO] EGIPCIOS_TABLE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/egipcios/DS_Augmented_v2_csv/combined_data.csv
+================================================================
+[START] 2026-07-15 11:59:44
+[INFO] Host=c3 JOB=3358 PARTITION=normal NODELIST=c3
+[INFO] RUN_DATASET=egipcios
+[INFO] PROJECT_DIR=/home_data/aroman/TFG/waf-ml-starter
+[INFO] TRAIN_PY=/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3.py
+[INFO] RESULT_DIR=/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3
+[INFO] TORPEDA_RAW_DIR=/home_data/aroman/TFG/waf-ml-starter/data/raw/torpeda
+[INFO] HARVARD_RAW_DIR=/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+[INFO] EGIPCIOS_RAW_DIR=/home_data/aroman/TFG/waf-ml-starter/egipcios/DS_Augmented_v2_csv/combined_data.csv
+[INFO] Modelo fijo: HistGradientBoostingClassifier
+[INFO] Weight mode: vacío => TorpEda none, Harvard/Egipcios sqrt_balanced; SAMPLE_WEIGHT_MODE=''
+[INFO] Harvard label mode=top10-request-groups (top10-request-groups => top14 + agrupación operativa en 10 clases finales)
+[INFO] Egipcios CSV: sep=auto, request_col=col1, label_col=col2, min_class_count=2
+[INFO] Features: 58 validadas + 14 manuales previas + 21 contextuales HTTP (93 total)
+[INFO] Alcance features: sólo método, target/URI, query, headers y body de la request actual; sin contexto del aplicativo
+[INFO] Recuperación: resume=1, skip_complete=1, clean_output_dir=0
+[INFO] Checkpoint features: rows=10000, chunksize=64, row_timeout_s=30
+[INFO] FI global: repeats=5, max_rows=10000, scoring=f1_macro
+[INFO] FI por clase: enabled=1, repeats=3, min_rows_per_class=200
+[INFO] FI binaria NORMAL-vs-ataque: enabled=1, repeats=3
+[INFO] Curva pérdida/error: enabled=1, max_rows=50000, min_rows_per_class=200, every_n_iter=1
+[INFO] GPU visible: CUDA_VISIBLE_DEVICES=unset SLURM_JOB_GPUS=unset; HistGB no usa CUDA
+[INFO] CPU threads: OMP=8 MKL=1 OPENBLAS=1
+================================================================
+[INFO] sys.executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.prefix=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] Dependency check: parquet=True
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:1692920
+   ReqNodeList=c3 ExcNodeList=(null)
+   NodeList=c3
+   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=64G,node=1,billing=24
+   AllocTRES=cpu=8,mem=64G,node=1,billing=24
+   MinCPUsNode=8 MinMemoryNode=64G MinTmpDiskNode=0
+No devices were found
+[RUN] /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python -u /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3.py --dataset egipcios --project-dir /home_data/aroman/TFG/waf-ml-starter --result-dir /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3 --torpeda-inputs /home_data/aroman/TFG/waf-ml-starter/data/raw/torpeda --harvard-inputs /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard --egipcios-inputs /home_data/aroman/TFG/waf-ml-starter/egipcios/DS_Augmented_v2_csv/combined_data.csv --harvard-label-mode top10-request-groups --harvard-multiclass-strategy severity --harvard-min-class-count 20 --torpeda-min-class-count 0 --egipcios-min-class-count 2 --sep auto --method-col request_http_method --uri-col request_http_request --body-col request_body --normal-col 000 - Normal --egipcios-sep auto --egipcios-request-col col1 --egipcios-label-col col2 --egipcios-normal-regex ^\s*0+\s*-\s*normal\s*$|\bnormal\b --max-normal-rows 0 --keep-labels-regex  --drop-labels-regex  --test-size 0.20 --seed 42 --histgb-preset max --sample-weight-clip 20 --loss-curve-max-rows 50000 --loss-curve-min-rows-per-class 200 --loss-curve-every-n-iter 1 --use-gpu off --feature-workers 8 --feature-chunksize 64 --feature-checkpoint-rows 10000 --feature-row-timeout-seconds 30 --fi-n-repeats 5 --fi-max-rows 10000 --fi-scoring f1_macro --fi-n-jobs 1 --fi-min-rows-per-class 200 --fi-per-class-n-repeats 3 --fi-per-class-n-jobs 1 --fi-binary-n-repeats 3 --operational-max-rows 0 --resume --skip-complete --torpeda-only-common-labels --loss-curve --fi-per-class --fi-binary-normal-attack
+================================================================
+[START] egipcios 3datasetsMulticlase3 multiclase HistGradientBoosting @ 2026-07-15T11:59:46-04:00
+[OUT] /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios
+================================================================
+[INFO] Egipcios CSV/TSV files: 1
+[INFO] Rows loaded before filters: 704665
+[INFO] Rows after filters: 704665
+[INFO] Calculando curva de pérdida/MSE/RMSE para egipcios: train=50000, test=50000, every_n=1
+
+=== TEST ===
+dataset=egipcios model=hist_gradient_boosting__w_sqrt_balanced acc=0.9942242058283014 balanced_acc=0.863257427547742 f1_macro=0.8438959505369698 f1_weighted=0.9944559813063507 mcc=0.9875327963173531
+
+[OK] Saved artifacts:
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/processed_useful93_contextual_http_request10.parquet
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/model_multiclass_histgb_useful93_contextual_http_request10.joblib
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/selected_model_summary.txt
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/confusion_matrix_test.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/classification_report_test.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/per_class_ovr_metrics.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/test_predictions.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_by_epoch.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/error_curve_mse_rmse_by_epoch.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_log_loss.png
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.png
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_mse.png
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_rmse.png
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/prediction_error_curve_histgb.png
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_metadata.json
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/feature_importance.csv
+  /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/operational_metrics.json
+[MERGE] Agregado conserva métricas existentes de torpeda.
+[MERGE] Agregado conserva métricas existentes de harvard.
+[OK] Aggregate comparison: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/model_comparison_multiclass_3datasetsMulticlase3.csv
+
+================================================================
+[OK] 2026-07-15 13:22:11 3datasetsMulticlase3 multiclase finalizado.
+[OUT_ROOT] /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3
+[ARTIFACTS PRINCIPALES]
+  comparison_csv: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/model_comparison_multiclass_3datasetsMulticlase3.csv
+  comparison_json: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/model_comparison_multiclass_3datasetsMulticlase3.json
+  manifest: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/manifest_3datasetsMulticlase3.json
+  torpeda_metrics: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+  harvard_metrics: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+  egipcios_metrics: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+  torpeda_loss_curve_csv: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_histgb.csv
+  torpeda_loss_curve_png: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_histgb.png
+  harvard_loss_curve_csv: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_histgb.csv
+  harvard_loss_curve_png: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_histgb.png
+  egipcios_loss_curve_csv: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.csv
+  egipcios_loss_curve_png: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.png
+  torpeda_fi_per_class: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/feature_importance_per_class.csv
+  harvard_fi_per_class: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/feature_importance_per_class.csv
+  egipcios_fi_per_class: /home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/feature_importance_per_class.csv
+================================================================
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/error_curve_mse_rmse_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/feature_importance_binary_normal_vs_attack.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/feature_importance.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/feature_importance_per_class.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_log_loss.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_metadata.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_mse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/loss_curve_rmse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/operational_metrics.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/prediction_error_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/egipcios/selected_model_summary.txt
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/error_curve_mse_rmse_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/feature_importance_binary_normal_vs_attack.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/feature_importance.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/feature_importance_per_class.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_histgb.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_log_loss.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_metadata.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_mse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/loss_curve_rmse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/metrics_flat.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/operational_metrics.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/prediction_error_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/harvard/selected_model_summary.txt
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/model_comparison_multiclass_3datasetsMulticlase3.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/error_curve_mse_rmse_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/feature_importance_binary_normal_vs_attack.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/feature_importance.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/feature_importance_per_class.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_by_epoch.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_histgb.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_log_loss.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_metadata.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_mse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/loss_curve_rmse.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/metrics_flat.csv
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/metrics_multiclass_histgb_useful93_contextual_http_request10.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/operational_metrics.json
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/prediction_error_curve_histgb.png
+/home_data/aroman/TFG/waf-ml-starter/3datasetsMulticlase3/multiclase/torpeda/selected_model_summary.txt

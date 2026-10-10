@@ -1,0 +1,122 @@
+tipo_evidencia=estado_actual_del_repositorio
+advertencia=no_prueba_el_commit_historico_de_cada_job
+origin	https://github.com/androceo123/TFG.git (fetch)
+origin	https://github.com/androceo123/TFG.git (push)
+* implementacion                    7ce1132 [origin/implementacion] added a folder for the optimal runs
+  master                            c77067d [origin/master] Added slides from our second presentation, 'defensa_publica'.
+  remotes/origin/HEAD               -> origin/master
+  remotes/origin/adaptarCsicTorpeda 2d6edeb updating the ocsvm for better distribution of training/testing data so there is no overlap
+  remotes/origin/base               8db0517 Dockerfile and datasets to execute old version of this project(original)
+  remotes/origin/implementacion     7ce1132 added a folder for the optimal runs
+  remotes/origin/master             c77067d Added slides from our second presentation, 'defensa_publica'.
+  remotes/origin/propuesta          42417bd changes that were neccesary
+ D data/processed/.gitkeep
+ D data/raw/.gitkeep
+ M requirements.txt
+ M src/waf_ml/features/http_features.py
+ M src/waf_ml/optimo/ocsvmOptimo.py
+ M src/waf_ml/scripts/build_features_csic.py
+?? ../csic_iforest_pipeline_15features.py
+?? ../resultsOptimo/
+?? ../run_csic_iforest_15features.sh
+?? ../run_csic_iforest_eif_gpu.sh
+?? ../run_csic_ocsvm.sh
+?? ../slurm-csic-iforest-15f-2460.out
+?? ../slurm-csic-iforest-2440.out
+?? ../slurm-harvard-dup-audit-3442.out
+?? 10claseResults.py
+?? 10claseResults.sh
+?? 10claseResults/
+?? 11claseResults.py
+?? 11claseResults.sh
+?? 3datasetsMulticlase.py
+?? 3datasetsMulticlase.sh
+?? 3datasetsMulticlase/
+?? 3datasetsMulticlase2.py
+?? 3datasetsMulticlase2.sh
+?? 3datasetsMulticlase2/
+?? 3datasetsMulticlase3.py
+?? 3datasetsMulticlase3.sh
+?? 3datasetsMulticlase3/
+?? DEFINITIVO/
+?? DEFINITIVO_multiclass_histgb_2534.err
+?? DEFINITIVO_multiclass_histgb_2534.out
+?? DEFINITIVO_multilabel_xgboost_gpu_c2_3151.err
+?? DEFINITIVO_multilabel_xgboost_gpu_c2_3151.out
+?? DEFINITIVO_multilabel_xgboost_gpu_nodo3_3104.err
+?? DEFINITIVO_multilabel_xgboost_gpu_nodo3_3104.out
+?? DEFINITIVO_multilabel_xgboost_gpu_nodo3_3150.err
+?? DEFINITIVO_multilabel_xgboost_gpu_nodo3_3150.out
+?? DEFINITIVO_multilabel_xgboost_none_2625.err
+?? DEFINITIVO_multilabel_xgboost_none_2625.out
+?? DEFINITIVO_multilabel_xgboost_none_3101.err
+?? DEFINITIVO_multilabel_xgboost_none_3101.out
+?? DEFINITIVO_multilabel_xgboost_none_3102.err
+?? DEFINITIVO_multilabel_xgboost_none_3102.out
+?? corrida3mejoresResultadosPosibles.py
+?? corrida3mejoresResultadosPosibles.sh
+?? corrida3mejoresResultadosPosibles_featuresUtiles58.py
+?? corrida3mejoresResultadosPosibles_featuresUtiles58.sh
+?? csic_oneclass_gpu_optimo.py
+?? data/tmp/
+?? duplicadosHarvard.py
+?? duplicadosHarvard.sh
+?? duplicadosHarvard/
+?? egipcios/
+?? extraer_evidencia_tesis_slurm.sh
+?? harvard_mc30_allmodels_2518.err
+?? harvard_mc30_allmodels_2518.out
+?? harvard_mc30_allmodels_2531.err
+?? harvard_mc30_allmodels_2531.out
+?? multietiquetaCorrida2.py
+?? multietiquetaCorrida2.sh
+?? multietiquetaCorrida2/
+?? pipeline14classes.py
+?? pipeline14classes.sh
+?? run_DEFINITIVO_multiclass_histgb_fixed30_arandu_safe.sh
+?? run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh
+?? run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh
+?? run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh
+?? run_csic_oneclass_gpu_optimo.sh
+?? run_harvard_multiclass_fixed30_allTorpedaModels_noFI_sbatch_v12.sh
+?? run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh
+?? run_resume_multilabel_xgb_cpu_c2.sh
+?? run_resume_multilabel_xgb_cpu_c3.sh
+?? run_torpeda_multiclass_fixed30_optimo_sbatch_v10_normal_sharedgpu.sh
+?? slurm-2960.out
+?? slurm-2962.out
+?? slurm-3datasetsMC3-3361.err
+?? slurm-3datasetsMC3-3361.out
+?? slurm-3datasetsMC3_E-3358.err
+?? slurm-3datasetsMC3_E-3358.out
+?? slurm-corr3MC3_ALL-3359.err
+?? slurm-corr3MC3_ALL-3359.out
+?? slurm-corr3MC3_ALL-3360.err
+?? slurm-corr3MC3_ALL-3360.out
+?? slurm-duplicadosHarvard-3454.out
+?? slurm-harvard-dup-audit-3443.out
+?? slurm-harvard-dup-audit-3444.out
+?? slurm-harvard-dup-audit-3445.out
+?? slurm-harvard-dup-audit-3446.out
+?? slurm-harvard-dup-audit-3453.out
+?? src/waf_ml/optimo/iforest_eifOptimo.py
+?? submit_10claseResults_best_node.sh
+?? train_waf_multiclass_DEFINITIVO_histgb_fixed30.py
+?? train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py
+?? train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py
+?? train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py
+7ce11321526c07146ba2bff22294849444a15152|2026-05-26T13:35:53-03:00|androceo123|HEAD -> implementacion, origin/implementacion|added a folder for the optimal runs
+a3643616ec288be1d8ed40b393b00779c2a55532|2026-05-25T14:09:07-03:00|androceo123||moved the symbols table to the start of the book
+593ebef9687c5a8d0bc71d7572c36e1e3a050971|2026-05-25T09:30:52-03:00|androceo123||name format change to follow a standard
+8fe2881a52a95c0f0fb70fea3850963a75b135b2|2026-05-24T23:12:08-03:00|Juancho Gonza||Add files via upload
+538cf62a3d64bb624eac3ab213cdcaa2aee9097d|2026-05-18T16:30:36-03:00|androceo123||cambios de andres
+290c30e9d6545f87c4825959c59b4be28a69d5b3|2026-05-17T10:10:41-03:00|androceo123||moved the new correction to the corrections folder
+2cec3e1afa3cbe3213363a63a316794efcfa2aa8|2026-05-17T09:39:44-03:00|androceo123||formato para versionar nuestras revisiones
+b9d1a1bb1a65f350edef9932f02afb2a7959099a|2026-05-16T10:34:48-03:00|androceo123||review history
+87e2e82539d8d80db4e34c3a329158c81c8c82b8|2026-05-12T21:43:39-03:00|androceo123||mis modificaciones
+1d022281d5daab99f457b0c8f298e98fd77859ff|2026-05-12T09:12:05-03:00|Juan Gonzalez||correcciones JA: revisiones 1-26 aplicadas al libro
+482e1f26be020e08245f2b1cec6578571e193db3|2026-05-11T17:32:41-03:00|Juan Gonzalez||chore: Update hasta seccion 4 de primera parte de correcciones.
+a7a9347f063281d217e3e87b0ed605c8c1d051ca|2026-05-11T17:32:08-03:00|Juan Gonzalez||chore: Update hasta seccion 4 de primera parte de correcciones.
+7332c209f11dc2a76e04b599d6d3e13aab090b73|2026-05-11T16:36:38-03:00|androceo123||mis correcciones
+6ea87f6b1a54d270a3868d77e94c49515a2b110b|2026-05-09T12:51:44-03:00|androceo123||archivo de correcciones sobre este voy a trabajar en la parte que me toco, version 1
+4bec571015df804c4ebb92714727d353633ccaac|2026-05-07T13:24:34-03:00|Juan Gonzalez||chore: Se añaden referencias para marco teorico

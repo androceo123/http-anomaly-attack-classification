@@ -1,0 +1,339 @@
+================================================================
+[START] 2026-06-09 09:33:45
+[INFO] Host=c2 DATASET=harvard JOB=2531 PARTITION=normal
+[INFO] GPU Slurm: SLURM_JOB_GPUS=0 CUDA_VISIBLE_DEVICES=0
+[INFO] Recursos pedidos: partition=normal gres/gpu=1 cpus=8 mem=32G time=16:00:00
+[INFO] Modo: probar menú TorpEda completo en Harvard, sin feature importance
+[INFO] Skips: logreg=0 histgb=0 extra_trees=0 random_forest=1
+[INFO] Candidates: XGB GPU/CPU + two-stage + HistGB + ExtraTrees + LogReg; weights=none,sqrt_balanced,balanced_clipped; threshold_grid=0.02:0.98:0.01
+[INFO] Resume=1 checkpoint=1 require_families=xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression
+================================================================
+[INFO] VIRTUAL_ENV=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] command -v python=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] PYTHON_BIN=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.prefix=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] Dependency check: parquet=True xgboost=True
+[INFO] xgboost version=3.2.0
+[INFO] HARVARD_FILE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:1096166
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=c2
+   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=32G,node=1,billing=20,gres/gpu=1
+   AllocTRES=cpu=8,mem=32G,node=1,billing=20,gres/gpu=1
+   MinCPUsNode=8 MinMemoryNode=32G MinTmpDiskNode=0
+   TresPerNode=gres/gpu:1
+Tue Jun  9 09:33:58 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   27C    P0             25W /  250W |       1MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[RUN] /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python -u /home_data/aroman/TFG/waf-ml-starter/train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py --dataset harvard --project-dir /home_data/aroman/TFG/waf-ml-starter --inputs /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard --processed-out /home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet --output-dir /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass --label-prefix HARVARD --harvard-label-mode optimized-family --harvard-multiclass-strategy severity --sep auto --method-col request_http_method --uri-col request_http_request --body-col request_body --normal-col 000 - Normal --preset strong --use-gpu auto --test-size 0.20 --val-size 0.15 --seed 42 --metric-select f1_macro --n-jobs 8 --min-class-count 20 --max-normal-rows 0 --candidate-weight-modes none,sqrt_balanced,balanced_clipped --sample-weight-clip 20 --normal-threshold-grid 0.02:0.98:0.01 --two-stage-binary-weight-mode sqrt_balanced --two-stage-attack-weight-mode balanced_clipped --fi-kind none --fi-n-repeats 0 --fi-max-rows 0 --fi-scoring f1_macro --fi-n-jobs 1 --skip-feature-importance --require-candidate-families xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression --checkpoint-candidate-scores --resume-candidate-scores --xgb-cpu-fallback --add-two-stage --skip-random-forest
+[START] train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py
+[INFO] Arguments: {
+  "dataset": "harvard",
+  "project_dir": "/home_data/aroman/TFG/waf-ml-starter",
+  "inputs": [
+    "/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard"
+  ],
+  "table": null,
+  "label_col": "label_multiclass",
+  "label_prefix": "HARVARD",
+  "output_dir": "/home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass",
+  "processed_out": "/home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet",
+  "only_common_labels": false,
+  "keep_absolute_uri": false,
+  "sample_n": 0,
+  "sep": "auto",
+  "method_col": "request_http_method",
+  "uri_col": "request_http_request",
+  "body_col": "request_body",
+  "normal_col": "000 - Normal",
+  "label_cols": "",
+  "harvard_label_mode": "optimized-family",
+  "harvard_multiclass_strategy": "severity",
+  "min_class_count": 20,
+  "keep_labels_regex": "",
+  "drop_labels_regex": "",
+  "max_normal_rows": 0,
+  "test_size": 0.2,
+  "val_size": 0.15,
+  "seed": 42,
+  "preset": "strong",
+  "use_gpu": "auto",
+  "metric_select": "f1_macro",
+  "n_jobs": 8,
+  "xgb_cpu_fallback": true,
+  "sample_weight_mode": "balanced",
+  "candidate_weight_modes": "none,sqrt_balanced,balanced_clipped",
+  "sample_weight_clip": 20.0,
+  "normal_threshold_grid": "0.02:0.98:0.01",
+  "add_two_stage": true,
+  "two_stage_only": false,
+  "two_stage_binary_weight_mode": "sqrt_balanced",
+  "two_stage_attack_weight_mode": "balanced_clipped",
+  "skip_logreg": false,
+  "skip_histgb": false,
+  "skip_extra_trees": false,
+  "skip_random_forest": true,
+  "require_candidate_families": "xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression",
+  "checkpoint_candidate_scores": true,
+  "resume_candidate_scores": true,
+  "fi_kind": "none",
+  "fi_n_repeats": 0,
+  "fi_max_rows": 0,
+  "fi_scoring": "f1_macro",
+  "fi_n_jobs": 1,
+  "skip_feature_importance": true,
+  "clean_output_dir": false
+}
+[INFO] Harvard/SR-BH files found: 1
+[INFO] First Harvard file: /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard/data_capec_multilabel.csv
+[INFO] Harvard/SR-BH rows before filtering: 907815
+[INFO] Dataset ready: rows=907815 cols=46
+[INFO] Dataset optimization: rows 907815 -> 907815
+[INFO] Dataset optimization operations: [
+  {
+    "op": "min_class_count",
+    "min_class_count": 20,
+    "removed_rows": 0,
+    "dropped_classes": []
+  }
+]
+[INFO] Replaced processed dataset: /home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet
+
+[INFO] Dataset=harvard Feature count fixed: 30
+[INFO] Features: uri_len, body_len, query_len, path_depth, n_query_params, max_param_value_len, uri_encoded_ratio, body_encoded_ratio, invalid_percent_encoding_count, double_encoding_count, uri_non_alnum_ratio, body_non_alnum_ratio, uri_entropy, body_entropy, quote_count, angle_bracket_count, paren_count, semicolon_count, percent_count, slash_backslash_count, max_repeated_char_run, max_token_len, sql_token_count, xss_token_count, crlf_token_count, ldap_token_count, xpath_token_count, ssi_token_count, format_string_token_count, buffer_overflow_token_count
+
+[INFO] Label distribution:
+                           label  count
+                          NORMAL 525195
+                    HARVARD-SQLi 249227
+        HARVARD-DataManipulation  57618
+        HARVARD-CommandInjection  22013
+                   HARVARD-CRLFi  19204
+           HARVARD-PathTraversal  18047
+HARVARD-HTTPProtocolManipulation  13262
+   HARVARD-VulnerabilityScanning   2413
+          HARVARD-PasswordAttack    836
+[INFO] Normal threshold tuning enabled: 97 thresholds + baseline
+
+[INFO] GPU requested=auto; resolved=True
+[INFO] GPU env: CUDA_VISIBLE_DEVICES=0 SLURM_JOB_GPUS=0 SLURM_STEP_GPUS=unset NVIDIA_VISIBLE_DEVICES=unset
+
+[MANIFEST] Candidate model menu:
+[MANIFEST] count=31 families=extra_trees, hist_gradient_boosting, logistic_regression, two_stage_xgboost_d5, two_stage_xgboost_d7, xgboost_d3, xgboost_d5, xgboost_d7
+[MANIFEST] required_families=xgboost_d3, xgboost_d5, xgboost_d7, two_stage_xgboost_d5, two_stage_xgboost_d7, hist_gradient_boosting, extra_trees, logistic_regression
+[RESUME] Reusing 30 completed candidate rows from /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_scores.csv
+[RESUME] Current best before continuing: hist_gradient_boosting__w_sqrt_balanced f1_macro=0.881863
+
+[RESUME] xgb_gpu_d3_1__w_none: status=ok f1_macro=0.8420134326563598
+
+[RESUME] xgb_gpu_d3_1__w_sqrt_balanced: status=ok f1_macro=0.8410386583789206
+
+[RESUME] xgb_gpu_d3_1__w_balanced_clipped: status=ok f1_macro=0.8303581604388774
+
+[RESUME] xgb_gpu_d5_2__w_none: status=ok f1_macro=0.861880168128617
+
+[RESUME] xgb_gpu_d5_2__w_sqrt_balanced: status=ok f1_macro=0.8670344930286773
+
+[RESUME] xgb_gpu_d5_2__w_balanced_clipped: status=ok f1_macro=0.862957853406897
+
+[RESUME] xgb_gpu_d7_3__w_none: status=ok f1_macro=0.8774856876104182
+
+[RESUME] xgb_gpu_d7_3__w_sqrt_balanced: status=ok f1_macro=0.8804915322851934
+
+[RESUME] xgb_gpu_d7_3__w_balanced_clipped: status=ok f1_macro=0.8747916798004175
+
+[RESUME] xgb_cpu_d3_1__w_none: status=ok f1_macro=0.8434247096178275
+
+[RESUME] xgb_cpu_d3_1__w_sqrt_balanced: status=ok f1_macro=0.8408216365302242
+
+[RESUME] xgb_cpu_d3_1__w_balanced_clipped: status=ok f1_macro=0.8314962411482142
+
+[RESUME] xgb_cpu_d5_2__w_none: status=ok f1_macro=0.8655317887803452
+
+[RESUME] xgb_cpu_d5_2__w_sqrt_balanced: status=ok f1_macro=0.8671905232809352
+
+[RESUME] xgb_cpu_d5_2__w_balanced_clipped: status=ok f1_macro=0.8634050272326246
+
+[RESUME] xgb_cpu_d7_3__w_none: status=ok f1_macro=0.8783787093615707
+
+[RESUME] xgb_cpu_d7_3__w_sqrt_balanced: status=ok f1_macro=0.8781854360929238
+
+[RESUME] xgb_cpu_d7_3__w_balanced_clipped: status=ok f1_macro=0.8745906178286964
+
+[RESUME] two_stage_xgb_gpu_d5_1: status=ok f1_macro=0.8473943228410192
+
+[RESUME] two_stage_xgb_gpu_d7_2: status=ok f1_macro=0.8537781350002156
+
+[RESUME] two_stage_xgb_cpu_d5_1: status=ok f1_macro=0.8499000940137178
+
+[RESUME] two_stage_xgb_cpu_d7_2: status=ok f1_macro=0.8512451336610184
+
+[RESUME] hist_gradient_boosting__w_none: status=ok f1_macro=0.873690214583982
+
+[RESUME] hist_gradient_boosting__w_sqrt_balanced: status=ok f1_macro=0.881862762404477
+
+[RESUME] hist_gradient_boosting__w_balanced_clipped: status=ok f1_macro=0.8664682960605877
+
+[RESUME] extra_trees__w_none: status=ok f1_macro=0.8694868495641611
+
+[RESUME] extra_trees__w_sqrt_balanced: status=ok f1_macro=0.8219954124925298
+
+[RESUME] extra_trees__w_balanced_clipped: status=ok f1_macro=0.7958101629589646
+
+[RESUME] logreg_balanced__w_none: status=ok f1_macro=0.7022287169759862
+
+[RESUME] logreg_balanced__w_sqrt_balanced: status=ok f1_macro=0.7022287169759862
+
+[TRAIN] logreg_balanced__w_balanced_clipped
+[VAL] logreg_balanced__w_balanced_clipped: f1_macro=0.702426 f1_macro=0.7024258466872754 acc=0.8718321546855837 threshold=0.04 weight=balanced_clipped secs=2923.4
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[SELECTED] hist_gradient_boosting__w_sqrt_balanced by f1_macro=0.881863 threshold=0.21 weight=sqrt_balanced
+
+=== TEST ===
+accuracy=0.967983564933384 balanced_accuracy=0.8739427472037419 f1_macro=0.8723619026437391 f1_weighted=0.9656273855017605 mcc=0.9450293791563245
+
+                                  precision    recall  f1-score   support
+
+                   HARVARD-CRLFi     0.9979    0.9995    0.9987      3841
+        HARVARD-CommandInjection     0.9928    0.9752    0.9840      4403
+        HARVARD-DataManipulation     0.9523    0.9259    0.9389     11524
+HARVARD-HTTPProtocolManipulation     0.6884    0.2941    0.4122      2652
+          HARVARD-PasswordAttack     0.6964    0.9341    0.7980       167
+           HARVARD-PathTraversal     0.9756    0.9432    0.9591      3609
+                    HARVARD-SQLi     0.9983    0.9549    0.9761     49845
+   HARVARD-VulnerabilityScanning     0.7752    0.8427    0.8075       483
+                          NORMAL     0.9585    0.9958    0.9768    105039
+
+                        accuracy                         0.9680    181563
+                       macro avg     0.8928    0.8739    0.8724    181563
+                    weighted avg     0.9663    0.9680    0.9656    181563
+
+
+[FI] Skipped feature importance completely (--fi-kind none / --skip-feature-importance).
+[INFO] Cross-dataset comparison written: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/multiclass_fixed30_model_comparison.json
+
+[SUMMARY] Best Harvard model:
+BEST_MODEL_SUMMARY
+dataset=harvard
+best_model=hist_gradient_boosting__w_sqrt_balanced
+best_model_family=hist_gradient_boosting
+selection_metric=f1_macro
+validation_selection_score=0.881863
+selected_normal_threshold=0.21
+selected_weight_mode=sqrt_balanced
+test_f1_macro=0.8723619026437391
+test_accuracy=0.967983564933384
+test_balanced_accuracy=0.8739427472037419
+test_mcc=0.9450293791563245
+feature_importance_skipped=True
+torpeda_reference_found=True
+torpeda_selected_model=hist_gradient_boosting
+torpeda_selected_model_family=hist_gradient_boosting
+torpeda_test_f1_macro=0.9520888201893009
+matches_torpeda_exact_model=False
+matches_torpeda_model_family=True
+
+[OK] Saved artifacts:
+  /home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/model_multiclass_fixed30.joblib
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/metrics_multiclass_fixed30.json
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_scores.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_scores_ranked.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_manifest.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_manifest.json
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/selected_model_summary.json
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/selected_model_summary.txt
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/confusion_matrix_test.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/classification_report_test.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/test_predictions.csv
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/feature_importance_skipped.json
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/multiclass_fixed30_model_comparison.json
+  /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/multiclass_fixed30_model_comparison.csv
+
+================================================================
+[OK] 2026-06-09 10:29:26 Harvard all-models noFI finalizado. Resultados en /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass
+[BEST] Resumen compacto:
+BEST_MODEL_SUMMARY
+dataset=harvard
+best_model=hist_gradient_boosting__w_sqrt_balanced
+best_model_family=hist_gradient_boosting
+selection_metric=f1_macro
+validation_selection_score=0.881863
+selected_normal_threshold=0.21
+selected_weight_mode=sqrt_balanced
+test_f1_macro=0.8723619026437391
+test_accuracy=0.967983564933384
+test_balanced_accuracy=0.8739427472037419
+test_mcc=0.9450293791563245
+feature_importance_skipped=True
+torpeda_reference_found=True
+torpeda_selected_model=hist_gradient_boosting
+torpeda_selected_model_family=hist_gradient_boosting
+torpeda_test_f1_macro=0.9520888201893009
+matches_torpeda_exact_model=False
+matches_torpeda_model_family=True
+[ARTIFACTS]
+  metrics: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/metrics_multiclass_fixed30.json
+  summary_json: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/selected_model_summary.json
+  candidate_scores_ranked: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_scores_ranked.csv
+  candidate_manifest: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_manifest.csv
+  model: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/model_multiclass_fixed30.joblib
+  comparison_json: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/multiclass_fixed30_model_comparison.json
+  comparison_csv: /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/multiclass_fixed30_model_comparison.csv
+================================================================

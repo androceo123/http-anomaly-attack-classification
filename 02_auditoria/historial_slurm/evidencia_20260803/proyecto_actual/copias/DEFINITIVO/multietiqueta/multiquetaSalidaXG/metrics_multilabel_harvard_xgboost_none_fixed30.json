@@ -1,0 +1,561 @@
+{
+  "created_at": "2026-07-05T13:08:02-04:00",
+  "task": "multilabel",
+  "dataset": "harvard",
+  "dataset_label_mode": "native",
+  "feature_policy": "fixed_compact_intra_request",
+  "feature_count": 30,
+  "features_used": [
+    "uri_len",
+    "body_len",
+    "query_len",
+    "path_depth",
+    "n_query_params",
+    "max_param_value_len",
+    "uri_encoded_ratio",
+    "body_encoded_ratio",
+    "invalid_percent_encoding_count",
+    "double_encoding_count",
+    "uri_non_alnum_ratio",
+    "body_non_alnum_ratio",
+    "uri_entropy",
+    "body_entropy",
+    "quote_count",
+    "angle_bracket_count",
+    "paren_count",
+    "semicolon_count",
+    "percent_count",
+    "slash_backslash_count",
+    "max_repeated_char_run",
+    "max_token_len",
+    "sql_token_count",
+    "xss_token_count",
+    "crlf_token_count",
+    "ldap_token_count",
+    "xpath_token_count",
+    "ssi_token_count",
+    "format_string_token_count",
+    "buffer_overflow_token_count"
+  ],
+  "selected_model": "xgboost_ovr__w_none",
+  "selected_model_family": "one_vs_rest_binary_classifiers",
+  "backend": "xgboost",
+  "weight_mode": "none",
+  "model_backend": "xgboost.XGBClassifier por etiqueta; usa CUDA si hay GPU visible",
+  "gpu_requested": "off",
+  "gpu_visible": true,
+  "gpu_used": false,
+  "gpu_note": "XGBoost intenta CUDA cuando hay GPU visible; si CUDA falla hace fallback por etiqueta a CPU.",
+  "labels": [
+    "CAPEC-126 Path Traversal",
+    "CAPEC-153 Input Data Manipulation",
+    "CAPEC-16 Dictionary-based Password Attack",
+    "CAPEC-194 Fake the Source of Data",
+    "CAPEC-242 Code Injection",
+    "CAPEC-272 Protocol Manipulation",
+    "CAPEC-274 HTTP Verb Tampering",
+    "CAPEC-310 Scanning for Vulnerable Software",
+    "CAPEC-33 HTTP Request Smuggling",
+    "CAPEC-34 HTTP Response Splitting",
+    "CAPEC-66 SQL Injection",
+    "CAPEC-88 OS Command Injection"
+  ],
+  "n_labels": 12,
+  "target_meta": [
+    {
+      "label": "CAPEC-126 Path Traversal",
+      "target_col": "target__CAPEC_126_Path_Traversal",
+      "source_label_cols": [
+        "126 - Path Traversal"
+      ],
+      "positive_count": 20992,
+      "negative_count": 886823,
+      "prevalence": 0.02312365404845701
+    },
+    {
+      "label": "CAPEC-153 Input Data Manipulation",
+      "target_col": "target__CAPEC_153_Input_Data_Manipulation",
+      "source_label_cols": [
+        "153 - Input Data Manipulation"
+      ],
+      "positive_count": 2272,
+      "negative_count": 905543,
+      "prevalence": 0.002502712557073853
+    },
+    {
+      "label": "CAPEC-16 Dictionary-based Password Attack",
+      "target_col": "target__CAPEC_16_Dictionary_based_Password_Attack",
+      "source_label_cols": [
+        "16 - Dictionary-based Password Attack"
+      ],
+      "positive_count": 1847,
+      "negative_count": 905968,
+      "prevalence": 0.0020345554986423444
+    },
+    {
+      "label": "CAPEC-194 Fake the Source of Data",
+      "target_col": "target__CAPEC_194_Fake_the_Source_of_Data",
+      "source_label_cols": [
+        "194 - Fake the Source of Data"
+      ],
+      "positive_count": 56145,
+      "negative_count": 851670,
+      "prevalence": 0.061846301283851886
+    },
+    {
+      "label": "CAPEC-242 Code Injection",
+      "target_col": "target__CAPEC_242_Code_Injection",
+      "source_label_cols": [
+        "242 - Code Injection"
+      ],
+      "positive_count": 15827,
+      "negative_count": 891988,
+      "prevalence": 0.01743416885598938
+    },
+    {
+      "label": "CAPEC-272 Protocol Manipulation",
+      "target_col": "target__CAPEC_272_Protocol_Manipulation",
+      "source_label_cols": [
+        "272 - Protocol Manipulation"
+      ],
+      "positive_count": 9153,
+      "negative_count": 898662,
+      "prevalence": 0.010082450719584938
+    },
+    {
+      "label": "CAPEC-274 HTTP Verb Tampering",
+      "target_col": "target__CAPEC_274_HTTP_Verb_Tampering",
+      "source_label_cols": [
+        "274 - HTTP Verb Tampering"
+      ],
+      "positive_count": 5437,
+      "negative_count": 902378,
+      "prevalence": 0.005989105709863794
+    },
+    {
+      "label": "CAPEC-310 Scanning for Vulnerable Software",
+      "target_col": "target__CAPEC_310_Scanning_for_Vulnerable_Software",
+      "source_label_cols": [
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "positive_count": 2718,
+      "negative_count": 905097,
+      "prevalence": 0.0029940020819219774
+    },
+    {
+      "label": "CAPEC-33 HTTP Request Smuggling",
+      "target_col": "target__CAPEC_33_HTTP_Request_Smuggling",
+      "source_label_cols": [
+        "33 - HTTP Request Smuggling"
+      ],
+      "positive_count": 1059,
+      "negative_count": 906756,
+      "prevalence": 0.0011665372350093356
+    },
+    {
+      "label": "CAPEC-34 HTTP Response Splitting",
+      "target_col": "target__CAPEC_34_HTTP_Response_Splitting",
+      "source_label_cols": [
+        "34 - HTTP Response Splitting"
+      ],
+      "positive_count": 19738,
+      "negative_count": 888077,
+      "prevalence": 0.0217423153395791
+    },
+    {
+      "label": "CAPEC-66 SQL Injection",
+      "target_col": "target__CAPEC_66_SQL_Injection",
+      "source_label_cols": [
+        "66 - SQL Injection"
+      ],
+      "positive_count": 250311,
+      "negative_count": 657504,
+      "prevalence": 0.2757290857718808
+    },
+    {
+      "label": "CAPEC-88 OS Command Injection",
+      "target_col": "target__CAPEC_88_OS_Command_Injection",
+      "source_label_cols": [
+        "88 - OS Command Injection"
+      ],
+      "positive_count": 7482,
+      "negative_count": 900333,
+      "prevalence": 0.00824176732043423
+    }
+  ],
+  "train_rows": 581001,
+  "valid_rows": 145251,
+  "test_rows": 181563,
+  "test_size": 0.2,
+  "valid_size_inside_train": 0.2,
+  "split_info": {
+    "test_stratify": "primary_label",
+    "valid_stratify": "primary_label",
+    "train_rows": 581001,
+    "valid_rows": 145251,
+    "test_rows": 181563,
+    "train_positive_counts": {
+      "CAPEC-126 Path Traversal": 13435,
+      "CAPEC-153 Input Data Manipulation": 1458,
+      "CAPEC-16 Dictionary-based Password Attack": 1175,
+      "CAPEC-194 Fake the Source of Data": 35932,
+      "CAPEC-242 Code Injection": 10128,
+      "CAPEC-272 Protocol Manipulation": 5858,
+      "CAPEC-274 HTTP Verb Tampering": 3456,
+      "CAPEC-310 Scanning for Vulnerable Software": 1733,
+      "CAPEC-33 HTTP Request Smuggling": 679,
+      "CAPEC-34 HTTP Response Splitting": 12637,
+      "CAPEC-66 SQL Injection": 160180,
+      "CAPEC-88 OS Command Injection": 4795
+    },
+    "valid_positive_counts": {
+      "CAPEC-126 Path Traversal": 3359,
+      "CAPEC-153 Input Data Manipulation": 366,
+      "CAPEC-16 Dictionary-based Password Attack": 304,
+      "CAPEC-194 Fake the Source of Data": 8983,
+      "CAPEC-242 Code Injection": 2531,
+      "CAPEC-272 Protocol Manipulation": 1462,
+      "CAPEC-274 HTTP Verb Tampering": 874,
+      "CAPEC-310 Scanning for Vulnerable Software": 440,
+      "CAPEC-33 HTTP Request Smuggling": 169,
+      "CAPEC-34 HTTP Response Splitting": 3160,
+      "CAPEC-66 SQL Injection": 40040,
+      "CAPEC-88 OS Command Injection": 1178
+    },
+    "test_positive_counts": {
+      "CAPEC-126 Path Traversal": 4198,
+      "CAPEC-153 Input Data Manipulation": 448,
+      "CAPEC-16 Dictionary-based Password Attack": 368,
+      "CAPEC-194 Fake the Source of Data": 11230,
+      "CAPEC-242 Code Injection": 3168,
+      "CAPEC-272 Protocol Manipulation": 1833,
+      "CAPEC-274 HTTP Verb Tampering": 1107,
+      "CAPEC-310 Scanning for Vulnerable Software": 545,
+      "CAPEC-33 HTTP Request Smuggling": 211,
+      "CAPEC-34 HTTP Response Splitting": 3941,
+      "CAPEC-66 SQL Injection": 50091,
+      "CAPEC-88 OS Command Injection": 1509
+    }
+  },
+  "seed": 42,
+  "thresholds": {
+    "CAPEC-126 Path Traversal": 0.3564646542072296,
+    "CAPEC-153 Input Data Manipulation": 0.2327272742986679,
+    "CAPEC-16 Dictionary-based Password Attack": 0.9405050277709961,
+    "CAPEC-194 Fake the Source of Data": 0.5643434524536133,
+    "CAPEC-242 Code Injection": 0.851414144039154,
+    "CAPEC-272 Protocol Manipulation": 0.23767676949501038,
+    "CAPEC-274 HTTP Verb Tampering": 0.1881818175315857,
+    "CAPEC-310 Scanning for Vulnerable Software": 0.43070706725120544,
+    "CAPEC-33 HTTP Request Smuggling": 0.2624242305755615,
+    "CAPEC-34 HTTP Response Splitting": 0.7722222208976746,
+    "CAPEC-66 SQL Injection": 0.4208080768585205,
+    "CAPEC-88 OS Command Injection": 0.4406060576438904
+  },
+  "threshold_objective": "f1",
+  "candidate_selection": {
+    "selection_metric": "f1_macro",
+    "selection_score": 0.8362706376316701,
+    "candidate_summary": [
+      {
+        "backend": "xgboost",
+        "weight_mode": "none",
+        "fit_status": "ok",
+        "selection_metric": "f1_macro",
+        "selection_score": 0.8362706376316701,
+        "gpu_used_any": false,
+        "validation_metrics": {
+          "exact_match_accuracy": 0.9659967917604698,
+          "hamming_loss": 0.003234056908386173,
+          "label_density_true": 0.03606745105598814,
+          "label_density_pred": 0.03437784708309524,
+          "avg_true_labels_per_row": 0.4328094126718577,
+          "avg_pred_labels_per_row": 0.41253416499714285,
+          "precision_micro": 0.9775370905024949,
+          "recall_micro": 0.931743708841027,
+          "f1_micro": 0.9540912311563928,
+          "jaccard_micro": 0.9122126705288731,
+          "precision_macro": 0.8753879348113882,
+          "recall_macro": 0.8152822380815574,
+          "f1_macro": 0.8362706376316701,
+          "jaccard_macro": 0.773519316361977,
+          "precision_weighted": 0.9734276259321798,
+          "recall_weighted": 0.931743708841027,
+          "f1_weighted": 0.9505857460864927,
+          "jaccard_weighted": 0.9200399172318572,
+          "precision_samples": 0.3929485281799551,
+          "recall_samples": 0.3933420997675288,
+          "f1_samples": 0.39289050054896757,
+          "jaccard_samples": 0.3923741202011231,
+          "roc_auc_micro": 0.9990732912894148,
+          "pr_auc_micro": 0.9858701731733576,
+          "roc_auc_macro": 0.9932579421228409,
+          "pr_auc_macro": 0.8400804519770958,
+          "roc_auc_weighted": 0.997704149791312,
+          "pr_auc_weighted": 0.9691404809424295,
+          "per_label_macro_f1_manual": 0.8362706376316701,
+          "per_label_macro_roc_auc_manual": 0.9932579421228409,
+          "per_label_macro_pr_auc_manual": 0.8400804519770958,
+          "binary_normal_vs_attack": {
+            "tn": 83541,
+            "fp": 491,
+            "fn": 3540,
+            "tp": 57679,
+            "accuracy": 0.9722480396004158,
+            "balanced_accuracy": 0.9681659014112892,
+            "precision": 0.9915592229671653,
+            "recall_tpr": 0.9421748150084124,
+            "specificity_tnr": 0.9941569878141661,
+            "fpr": 0.005843012185833968,
+            "fnr": 0.05782518499158758,
+            "f1": 0.9662364204407441,
+            "mcc": 0.9435914662435241,
+            "roc_auc": 0.996154538718802,
+            "pr_auc": 0.9953744107273887
+          }
+        },
+        "train_select_seconds": 20343.918032862246,
+        "resumed_from_checkpoint": true
+      }
+    ]
+  },
+  "timing": {
+    "load_seconds": 11.364785049110651,
+    "feature_extraction_seconds": 124.90638007968664,
+    "train_select_seconds": 0.665832806378603,
+    "final_refit_seconds": 21648.2045269832,
+    "t_apply_inference_batch_seconds": 7.017837293446064,
+    "t_apply_inference_batch_cpu_seconds": 55.806432379,
+    "run_total_seconds": 1930.4524821676314
+  },
+  "resource_usage": {
+    "peak_rss_mb": 3931.359375,
+    "current_rss_mb": 3684.2734375,
+    "model_size_bytes": 15327435,
+    "model_size_mb": 14.61738109588623
+  },
+  "test_metrics": {
+    "exact_match_accuracy": 0.9653068081051757,
+    "hamming_loss": 0.0033000482844338696,
+    "label_density_true": 0.036098122047627176,
+    "label_density_pred": 0.03455228579978667,
+    "avg_true_labels_per_row": 0.4331774645715261,
+    "avg_pred_labels_per_row": 0.41462742959744003,
+    "precision_micro": 0.9746151087259733,
+    "recall_micro": 0.932878994011367,
+    "f1_micro": 0.9532904567010979,
+    "jaccard_micro": 0.9107497517378351,
+    "precision_macro": 0.8674951716966471,
+    "recall_macro": 0.8219670567015475,
+    "f1_macro": 0.834976684071172,
+    "jaccard_macro": 0.7718047819789251,
+    "precision_weighted": 0.9721567007654948,
+    "recall_weighted": 0.932878994011367,
+    "f1_weighted": 0.9506695637174619,
+    "jaccard_weighted": 0.9201679027163784,
+    "precision_samples": 0.3928333415949285,
+    "recall_samples": 0.39369667828797716,
+    "f1_samples": 0.3929517315647749,
+    "jaccard_samples": 0.3923124021230463,
+    "roc_auc_micro": 0.9990944076784831,
+    "pr_auc_micro": 0.9862195731291657,
+    "roc_auc_macro": 0.993777934082091,
+    "pr_auc_macro": 0.8416901574868599,
+    "roc_auc_weighted": 0.9977696464946972,
+    "pr_auc_weighted": 0.9694659776801715,
+    "per_label_macro_f1_manual": 0.834976684071172,
+    "per_label_macro_roc_auc_manual": 0.993777934082091,
+    "per_label_macro_pr_auc_manual": 0.8416901574868599,
+    "binary_normal_vs_attack": {
+      "tn": 104382,
+      "fp": 657,
+      "fn": 4369,
+      "tp": 72155,
+      "accuracy": 0.9723181485214498,
+      "balanced_accuracy": 0.9683259904212375,
+      "precision": 0.9909767620721859,
+      "recall_tpr": 0.9429068004808949,
+      "specificity_tnr": 0.99374518036158,
+      "fpr": 0.006254819638420016,
+      "fnr": 0.05709319951910512,
+      "f1": 0.9663443509937323,
+      "mcc": 0.9437006776534427,
+      "roc_auc": 0.9963088447218169,
+      "pr_auc": 0.9955441348281859
+    }
+  },
+  "request_match_metrics": {
+    "test_rows": 181563,
+    "n_labels": 12,
+    "exact_match_count": 175264,
+    "exact_match_rate": 0.9653068081051757,
+    "partial_match_count": 700,
+    "partial_match_rate": 0.0038554110694359535,
+    "any_correct_label_count": 71582,
+    "any_correct_label_rate": 0.39425433596052056,
+    "all_true_labels_found_rate": 0.9716627286396458,
+    "no_extra_labels_rate": 0.9903779955167077,
+    "mean_row_precision": 0.9677412248090195,
+    "mean_row_recall": 0.9686045615020682,
+    "mean_row_f1": 0.967859614778866,
+    "mean_row_jaccard": 0.9672202853371374,
+    "attack_rows": 76524,
+    "attack_exact_match_rate": 0.9262714965239663,
+    "attack_any_correct_label_rate": 0.9354189535309184,
+    "attack_all_true_labels_found_rate": 0.9327661909989023,
+    "normal_rows": 105039,
+    "normal_exact_match_rate": 0.99374518036158,
+    "by_true_label_count_and_correct_count": [
+      {
+        "n_true_labels": 0,
+        "n_correct_labels": 0,
+        "count": 105039,
+        "pct_within_true_label_count": 1.0,
+        "pct_of_test": 0.5785264618892616
+      },
+      {
+        "n_true_labels": 1,
+        "n_correct_labels": 0,
+        "count": 4818,
+        "pct_within_true_label_count": 0.06455156890591923,
+        "pct_of_test": 0.02653624361791775
+      },
+      {
+        "n_true_labels": 1,
+        "n_correct_labels": 1,
+        "count": 69820,
+        "pct_within_true_label_count": 0.9354484310940807,
+        "pct_of_test": 0.38454971552574035
+      },
+      {
+        "n_true_labels": 2,
+        "n_correct_labels": 0,
+        "count": 124,
+        "pct_within_true_label_count": 0.07515151515151515,
+        "pct_of_test": 0.0006829585323000831
+      },
+      {
+        "n_true_labels": 2,
+        "n_correct_labels": 1,
+        "count": 184,
+        "pct_within_true_label_count": 0.11151515151515151,
+        "pct_of_test": 0.0010134223382517362
+      },
+      {
+        "n_true_labels": 2,
+        "n_correct_labels": 2,
+        "count": 1342,
+        "pct_within_true_label_count": 0.8133333333333334,
+        "pct_of_test": 0.007391373793118642
+      },
+      {
+        "n_true_labels": 3,
+        "n_correct_labels": 1,
+        "count": 8,
+        "pct_within_true_label_count": 0.034334763948497854,
+        "pct_of_test": 4.4061840793553755e-05
+      },
+      {
+        "n_true_labels": 3,
+        "n_correct_labels": 2,
+        "count": 8,
+        "pct_within_true_label_count": 0.034334763948497854,
+        "pct_of_test": 4.4061840793553755e-05
+      },
+      {
+        "n_true_labels": 3,
+        "n_correct_labels": 3,
+        "count": 217,
+        "pct_within_true_label_count": 0.9313304721030042,
+        "pct_of_test": 0.0011951774315251454
+      },
+      {
+        "n_true_labels": 4,
+        "n_correct_labels": 1,
+        "count": 1,
+        "pct_within_true_label_count": 0.3333333333333333,
+        "pct_of_test": 5.507730099194219e-06
+      },
+      {
+        "n_true_labels": 4,
+        "n_correct_labels": 3,
+        "count": 2,
+        "pct_within_true_label_count": 0.6666666666666666,
+        "pct_of_test": 1.1015460198388439e-05
+      }
+    ],
+    "artifacts": {
+      "confusion_matrix_by_label_long": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label_long.csv",
+      "confusion_matrix_by_label_wide": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label_wide.csv",
+      "confusion_matrix_by_label_json": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label.json",
+      "confusion_matrix_binary_normal_vs_attack_csv": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_binary_normal_vs_attack.csv",
+      "confusion_matrix_binary_normal_vs_attack_json": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_binary_normal_vs_attack.json",
+      "request_level_multilabel_match": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_level_multilabel_match.csv",
+      "request_match_by_true_and_correct_count": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_by_true_and_correct_count.csv",
+      "request_match_error_distribution": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_error_distribution.csv",
+      "confusion_matrix_labelset": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_labelset.csv",
+      "confusion_matrix_labelset_wide": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_labelset_wide.csv",
+      "request_match_summary": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_summary.json"
+    }
+  },
+  "operational_metrics": {
+    "available": true,
+    "measured_rows": 181563,
+    "operational_failures": 0,
+    "operational_failure_rate": 0.0,
+    "successful_rows": 181563,
+    "test_rows_total": 181563,
+    "sampled": false,
+    "operational_max_rows": 0,
+    "latency_ms_pipeline_online_p50": 9.29301232099533,
+    "latency_ms_pipeline_online_p95": 9.83966626226902,
+    "latency_ms_pipeline_online_p99": 10.251286625862122,
+    "latency_ms_pipeline_online_mean": 9.344156394717997,
+    "throughput_req_s_pipeline_online": 106.97922138105581,
+    "throughput_req_s_pipeline_batch": 3344.9598495051105,
+    "throughput_req_s_inference_batch": 25974.380812984768,
+    "t_apply_pipeline_online_seconds": 1697.1800472661853,
+    "t_apply_pipeline_batch_seconds": 54.279575292021036,
+    "t_apply_inference_batch_seconds": 6.990080006420612,
+    "cpu_time_pipeline_online_seconds": 13531.385424303,
+    "cpu_time_pipeline_batch_seconds": 102.94836108300001,
+    "cpu_time_inference_batch_seconds": 55.71439057700002,
+    "cpu_utilization_pipeline_online_percent_of_all_cores": 24.91519949168647,
+    "peak_rss_mb": 3920.859375,
+    "current_rss_mb": 3920.859375,
+    "model_size_bytes": 15327435,
+    "model_size_mb": 14.61738109588623
+  },
+  "feature_importance_config": {
+    "fi_n_repeats": 3,
+    "fi_max_rows": 10000,
+    "fi_scoring": "f1_macro"
+  },
+  "artifacts": {
+    "processed_features": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/processed_fixed30_multilabel.parquet",
+    "model": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/model_multilabel_harvard_xgboost_none_fixed30.joblib",
+    "metrics": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_multilabel_harvard_xgboost_none_fixed30.json",
+    "metrics_flat": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_flat.csv",
+    "test_metrics": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/test_metrics_multilabel.json",
+    "per_label_metrics": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/per_label_metrics.csv",
+    "thresholds": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/thresholds_validation.csv",
+    "predictions": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/test_predictions.csv",
+    "operational_metrics": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.json",
+    "book_metric_mapping_csv": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.csv",
+    "book_metric_mapping_json": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.json",
+    "confusion_matrix_by_label_long": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label_long.csv",
+    "confusion_matrix_by_label_wide": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label_wide.csv",
+    "confusion_matrix_by_label_json": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_by_label.json",
+    "confusion_matrix_binary_normal_vs_attack_csv": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_binary_normal_vs_attack.csv",
+    "confusion_matrix_binary_normal_vs_attack_json": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_binary_normal_vs_attack.json",
+    "request_level_multilabel_match": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_level_multilabel_match.csv",
+    "request_match_by_true_and_correct_count": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_by_true_and_correct_count.csv",
+    "request_match_error_distribution": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_error_distribution.csv",
+    "confusion_matrix_labelset": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_labelset.csv",
+    "confusion_matrix_labelset_wide": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/confusion_matrix_labelset_wide.csv",
+    "request_match_summary": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/request_match_summary.json",
+    "feature_importance_xgb_by_label": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/feature_importance_xgb_by_label.csv",
+    "feature_importance_xgb_gain_aggregated": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/feature_importance_xgb_gain_aggregated.csv",
+    "feature_importance_permutation": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/feature_importance.csv"
+  }
+}

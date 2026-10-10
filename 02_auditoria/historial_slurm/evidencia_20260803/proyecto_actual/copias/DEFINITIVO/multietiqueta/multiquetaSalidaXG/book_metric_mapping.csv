@@ -1,0 +1,23 @@
+grupo,metrica_libro,campo_salida,archivo_principal
+funcional_multietiqueta,Exact match ratio / subset accuracy,test_metrics.exact_match_accuracy,metrics_multilabel_harvard_xgboost_none_fixed30.json
+funcional_multietiqueta,Hamming loss,test_metrics.hamming_loss,metrics_multilabel_harvard_xgboost_none_fixed30.json
+funcional_multietiqueta,Precision micro/macro/weighted/samples,test_metrics.precision_micro|macro|weighted|samples,test_metrics_multilabel.json
+funcional_multietiqueta,Recall/TPR micro/macro/weighted/samples,test_metrics.recall_micro|macro|weighted|samples,test_metrics_multilabel.json
+funcional_multietiqueta,F1 micro/macro/weighted/samples,test_metrics.f1_micro|macro|weighted|samples,test_metrics_multilabel.json
+funcional_multietiqueta,Jaccard micro/macro/weighted/samples,test_metrics.jaccard_micro|macro|weighted|samples,test_metrics_multilabel.json
+funcional_multietiqueta,ROC-AUC micro/macro/weighted,test_metrics.roc_auc_micro|macro|weighted,test_metrics_multilabel.json
+funcional_multietiqueta,PR-AUC micro/macro/weighted,test_metrics.pr_auc_micro|macro|weighted,test_metrics_multilabel.json
+por_etiqueta,"TP, FP, FN, TN, precision, recall/TPR, specificity/TNR, FPR, FNR, F1, ROC-AUC, PR-AUC",per_label_metrics.csv,per_label_metrics.csv
+confusion_multietiqueta,"Matriz 2x2 por etiqueta: TN, FP, FN, TP",confusion_matrix_by_label_long.csv|wide.csv|json,confusion_matrix_by_label_wide.csv
+confusion_multietiqueta,Matriz por conjunto de etiquetas real vs predicho,confusion_matrix_labelset.csv,confusion_matrix_labelset.csv
+auditoria_request,Aciertos parciales por request: N etiquetas reales vs K etiquetas correctas,request_match_by_true_and_correct_count.csv y request_level_multilabel_match.csv,request_match_by_true_and_correct_count.csv
+binario_derivado,"Normal vs ataque: accuracy, balanced accuracy, precision, recall/TPR, specificity/TNR, FPR, FNR, F1, MCC, ROC-AUC, PR-AUC",test_metrics.binary_normal_vs_attack,binary_normal_vs_attack_metrics.json
+umbrales,Umbrales por etiqueta optimizados en validación,thresholds_validation.csv,thresholds_validation.csv
+no_funcional_tiempo,"Tiempo de carga, extracción de features, selección/entrenamiento, refit final, inferencia batch y total",timing.*,metrics_multilabel_harvard_xgboost_none_fixed30.json
+no_funcional_operativo,Latencia P50/P95/P99/media del pipeline,operational_metrics.latency_ms_pipeline_online_*,operational_metrics.json
+no_funcional_operativo,"Throughput req/s pipeline online, pipeline batch e inferencia batch",operational_metrics.throughput_req_s_*,operational_metrics.json
+no_funcional_operativo,CPU time y utilización aproximada,operational_metrics.cpu_time_* y cpu_utilization_pipeline_online_percent_of_all_cores,operational_metrics.json
+no_funcional_operativo,Memoria RSS pico/actual,resource_usage.peak_rss_mb|current_rss_mb y operational_metrics.peak_rss_mb|current_rss_mb,metrics_multilabel_harvard_xgboost_none_fixed30.json
+no_funcional_operativo,Tamaño del modelo,resource_usage.model_size_bytes|model_size_mb,metrics_multilabel_harvard_xgboost_none_fixed30.json
+no_funcional_operativo,Tasa de fallos de la prueba operativa,operational_metrics.operational_failure_rate,operational_metrics.json
+interpretabilidad,Feature importance,feature_importance.csv y feature_importance_xgb_gain_aggregated.csv,feature_importance.csv

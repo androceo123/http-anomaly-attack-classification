@@ -1,0 +1,120 @@
+{
+  "derived_on": "2026-10-10",
+  "summary": {
+    "file_count": 491,
+    "bytes": 26288653,
+    "per_source": {
+      "S01": {
+        "files": 391,
+        "bytes": 11034112,
+        "unique_sha256": 227
+      },
+      "S05": {
+        "files": 100,
+        "bytes": 15254541,
+        "unique_sha256": 93
+      }
+    },
+    "unique_sha256": 309,
+    "duplicate_groups": 37,
+    "additional_identical_occurrences": 182,
+    "all_files_verified_against_extraction_inventory": true,
+    "job_count": 133,
+    "job_and_step_rows": 369,
+    "job_states": {
+      "FAILED": 55,
+      "TIMEOUT": 9,
+      "COMPLETED": 57,
+      "CANCELLED by 1033": 12
+    },
+    "jobs_without_node": [
+      "2488",
+      "2489",
+      "2532",
+      "2533",
+      "2564",
+      "2585",
+      "2963",
+      "2964",
+      "2965",
+      "3065",
+      "3066",
+      "3067",
+      "3103",
+      "3148",
+      "3149",
+      "3357"
+    ],
+    "job_ids_with_preserved_logs": [
+      "2440",
+      "2460",
+      "2518",
+      "2531",
+      "2534",
+      "2625",
+      "2960",
+      "2962",
+      "3045",
+      "3101",
+      "3102",
+      "3104",
+      "3150",
+      "3151",
+      "3315",
+      "3358",
+      "3359",
+      "3360",
+      "3361",
+      "3442",
+      "3443",
+      "3444",
+      "3445",
+      "3446",
+      "3453",
+      "3454"
+    ],
+    "log_files": 59,
+    "distinct_log_contents": 37,
+    "batch_error_count": 133,
+    "recovered_batch_shell_count": 0,
+    "script_basename_groups": 55,
+    "submitted_script_names_absent_in_S01_S05": [
+      "run_csic_iforest_eif_gpu.sh",
+      "run_csic_iforest_15features.sh",
+      "run_torpeda_multiclass_fixed30_resultsOptimo_sbatch.sh",
+      "run_torpeda_multiclass_fixed30_resultsOptimo_sbatch_v4.sh",
+      "run_torpeda_multiclass_fixed30_resultsOptimo_sbatch_v5_normal_sharedgpu.sh",
+      "run_torpeda_multiclass_fixed30_resultsOptimo_sbatch_v7_normal_sharedgpu.sh",
+      "run_harvard_multiclass_fixed30_resultsOptimo_sbatch_v9_normal_sharedgpu.sh",
+      "run_harvard_multiclass_fixed30_optimo_sbatch_v10_normal_sharedgpu.sh",
+      "run_harvard_multiclass_fixed30_bestmodel_noFI_sbatch_v11.sh",
+      "run_DEFINITIVO_multiclass_histgb_fixed30.sh",
+      "run_DEFINITIVO_multilabel_harvard_multifamily_resume_resultsOptimo_fixed30.sh",
+      "run_DEFINITIVO_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu.sh",
+      "run_db_to_csv.sbatch",
+      "3datasetsMulticlase3_egipcios9.sh",
+      "run_auditar_duplicados_harvard.sh"
+    ],
+    "same_relative_path_variants": 15,
+    "different_relative_path_contents": [
+      "requirements.txt",
+      "src/waf_ml/features/http_features.py",
+      "src/waf_ml/optimo/ocsvmOptimo.py",
+      "src/waf_ml/scripts/build_features_csic.py"
+    ]
+  },
+  "integrity_summary": [
+    {
+      "manifest": "manifest_sha256.txt",
+      "matches": 389,
+      "entries": 390
+    },
+    {
+      "manifest": "proyecto_actual/hashes_codigo_config_y_resultados.sha256",
+      "matches": 167,
+      "entries": 167
+    }
+  ],
+  "note": "La captura original permanece íntegra en evidencia_20260803. Las correcciones de interpretación se registran aquí; no se reescribe resultado.tsv."
+}

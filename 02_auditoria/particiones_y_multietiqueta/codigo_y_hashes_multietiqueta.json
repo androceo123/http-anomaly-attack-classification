@@ -1,0 +1,178 @@
+{
+  "scripts": [
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+      "name": "train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+      "sha256_actual": "7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+      "name": "train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+      "sha256_actual": "4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py"
+        }
+      ],
+      "identity_status": "antecedente_multifamilia_sin_atribucion_a_corrida_final",
+      "run": "L1",
+      "variant": "antecedente_multifamilia"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_resume_multilabel_xgb_cpu_c3.sh",
+      "name": "run_resume_multilabel_xgb_cpu_c3.sh",
+      "sha256_actual": "b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c3.sh"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_resume_multilabel_xgb_cpu_c2.sh",
+      "name": "run_resume_multilabel_xgb_cpu_c2.sh",
+      "sha256_actual": "d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c2.sh"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "name": "run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "sha256_actual": "1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh"
+        }
+      ],
+      "identity_status": "antecedente_multifamilia_sin_atribucion_a_corrida_final",
+      "run": "L1",
+      "variant": "antecedente_multifamilia"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+      "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+      "sha256_actual": "90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+      "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+      "sha256_actual": "4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+      "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+      "sha256_actual": "4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73",
+      "sha256_en_libro": null,
+      "matches_book": null,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh"
+        }
+      ],
+      "identity_status": "nombre_en_configuracion_y_copia_S01_identica; sin_hash_historico_en_configuracion_L1",
+      "run": "L1",
+      "variant": "principal_job3151"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/multietiquetaCorrida2.sh",
+      "name": "multietiquetaCorrida2.sh",
+      "sha256_actual": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
+      "sha256_en_libro": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
+      "matches_book": true,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2.sh"
+        }
+      ],
+      "identity_status": "hash_de_script_coincide_con_libro",
+      "run": "L2",
+      "variant": "principal_job3315"
+    },
+    {
+      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/multietiquetaCorrida2.py",
+      "name": "multietiquetaCorrida2.py",
+      "sha256_actual": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
+      "sha256_en_libro": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
+      "matches_book": true,
+      "exact_S01_copies": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2.py"
+        }
+      ],
+      "identity_status": "hash_de_script_coincide_con_libro",
+      "run": "L2",
+      "variant": "principal_job3315"
+    }
+  ],
+  "feature_and_schema_checks": {
+    "method": "AST literal inspection only; no import or execution of source modules",
+    "L1_fixed30_matches_book_order": true,
+    "L2_base30_matches_book_order": true,
+    "L2_add60_matches_book_order": true,
+    "L2_code_concatenated_features_match_run_config": true,
+    "schema_serialization": "UTF8(version + '\\n' + '\\n'.join(ordered_features))",
+    "schema_sha256_actual": "0bbc812611513de0952653b398f5533afa6933d32faf3cbfa8ac88ac12a8e51f",
+    "schema_matches_config": true,
+    "schema_matches_book": true,
+    "input_signature_caution": "L2 _input_signature hashes resolved file path, size and mtime_ns; it is NOT raw file content SHA256 (source lines 836-845).",
+    "raw_csv_sha256_actual": "9c73c90ce6564ae48b14f7179cd864d037a6a130ef69c68c1626ec5d7ce4a910",
+    "raw_csv_historical_content_hash_in_L2_config": null
+  }
+}

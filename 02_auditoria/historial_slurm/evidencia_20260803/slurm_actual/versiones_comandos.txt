@@ -1,0 +1,8 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=bash -c sacct\ --version\;\ scontrol\ --version\;\ sinfo\ --version\;\ srun\ --version\;\ sbatch\ --version 
+
+slurm 24.11.5
+slurm 24.11.5
+slurm 24.11.5
+slurm 24.11.5
+slurm 24.11.5

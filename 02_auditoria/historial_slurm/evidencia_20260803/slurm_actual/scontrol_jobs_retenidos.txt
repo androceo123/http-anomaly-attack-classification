@@ -1,0 +1,4 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=scontrol show jobs -dd 
+
+No jobs in the system

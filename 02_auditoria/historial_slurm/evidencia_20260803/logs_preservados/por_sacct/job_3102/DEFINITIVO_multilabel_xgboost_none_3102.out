@@ -1,0 +1,55 @@
+[INFO] HARVARD_TABLE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+================================================================
+[START] 2026-07-02 09:58:22
+[INFO] Host=c3 JOB=3102 PARTITION=normal
+[INFO] PROJECT_DIR=/home_data/aroman/TFG/waf-ml-starter
+[INFO] TRAIN_PY=/home_data/aroman/TFG/waf-ml-starter/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30.py
+[INFO] DEFINITIVO_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO
+[INFO] OUTPUT_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/harvard
+[INFO] Modelo fijo: XGBoost One-vs-Rest, weight_mode=none, preset=max
+[INFO] LABEL_MODE=native TEST_SIZE=0.20 VALID_SIZE=0.20 SEED=42
+[INFO] USE_GPU=auto; CUDA_VISIBLE_DEVICES=unset; SLURM_JOB_GPUS=unset
+[INFO] CPU threads: N_JOBS=2 OMP=2 MKL=2 OPENBLAS=2
+[INFO] Métricas operativas: OPERATIONAL_MAX_ROWS=0; FI_N_REPEATS=3; FI_MAX_ROWS=10000
+================================================================
+[INFO] sys.executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.prefix=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] Dependency check: xgboost=True parquet=True
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:1436559
+   ReqNodeList=c3 ExcNodeList=(null)
+   NodeList=c3
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=32G,node=1,billing=12
+   AllocTRES=cpu=4,mem=32G,node=1,billing=12
+   MinCPUsNode=4 MinMemoryNode=32G MinTmpDiskNode=0
+Thu Jul  2 09:58:22 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   32C    P0             26W /  250W |       1MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[INFO] Ejecutando Python...
+[INFO] catboost no está instalado: se omite esa familia opcional.
+================================================================
+[START] Harvard multietiqueta definitivo fixed30 @ 2026-07-02T09:58:37-04:00
+[OUT] /home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/harvard
+================================================================
+[INFO] GPU visible: se intentarán backends GPU disponibles dentro de la búsqueda multifamilia.
+[INFO] Harvard/SR-BH files: 1
+[INFO] Rows loaded: 907815
+[INFO] Label columns discovered: 14

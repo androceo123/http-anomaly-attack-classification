@@ -1,0 +1,23 @@
+{
+  "tn": 33925,
+  "fp": 345,
+  "fn": 2438,
+  "tp": 71890,
+  "accuracy": 0.9743733770419345,
+  "precision": 0.9952239219215062,
+  "recall_tpr": 0.9671994403185878,
+  "specificity_tnr": 0.9899328859060402,
+  "fpr": 0.010067114093959731,
+  "fnr": 0.03280055968141212,
+  "f1": 0.9810115786385377,
+  "mcc": 0.9425438598178612,
+  "normal_support": 34270,
+  "normal_pred_support": 36363,
+  "normal_precision": 0.9329538266919671,
+  "normal_recall": 0.9899328859060402,
+  "normal_f1": 0.9605991533702377,
+  "normal_recall_target_99_met": false,
+  "normal_f1_target_99_met": false,
+  "roc_auc": 0.9835332802904196,
+  "pr_auc": 0.9933171555172601
+}

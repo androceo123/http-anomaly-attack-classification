@@ -1,0 +1,304 @@
+{
+  "created_at": "2026-07-05T12:36:04-04:00",
+  "task": "multilabel",
+  "dataset": "harvard",
+  "script": "train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+  "inputs": [
+    "/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard/data_capec_multilabel.csv"
+  ],
+  "features": [
+    "uri_len",
+    "body_len",
+    "query_len",
+    "path_depth",
+    "n_query_params",
+    "max_param_value_len",
+    "uri_encoded_ratio",
+    "body_encoded_ratio",
+    "invalid_percent_encoding_count",
+    "double_encoding_count",
+    "uri_non_alnum_ratio",
+    "body_non_alnum_ratio",
+    "uri_entropy",
+    "body_entropy",
+    "quote_count",
+    "angle_bracket_count",
+    "paren_count",
+    "semicolon_count",
+    "percent_count",
+    "slash_backslash_count",
+    "max_repeated_char_run",
+    "max_token_len",
+    "sql_token_count",
+    "xss_token_count",
+    "crlf_token_count",
+    "ldap_token_count",
+    "xpath_token_count",
+    "ssi_token_count",
+    "format_string_token_count",
+    "buffer_overflow_token_count"
+  ],
+  "feature_count": 30,
+  "target_labels": [
+    "CAPEC-126 Path Traversal",
+    "CAPEC-153 Input Data Manipulation",
+    "CAPEC-16 Dictionary-based Password Attack",
+    "CAPEC-194 Fake the Source of Data",
+    "CAPEC-242 Code Injection",
+    "CAPEC-272 Protocol Manipulation",
+    "CAPEC-274 HTTP Verb Tampering",
+    "CAPEC-310 Scanning for Vulnerable Software",
+    "CAPEC-33 HTTP Request Smuggling",
+    "CAPEC-34 HTTP Response Splitting",
+    "CAPEC-66 SQL Injection",
+    "CAPEC-88 OS Command Injection"
+  ],
+  "target_meta": [
+    {
+      "label": "CAPEC-126 Path Traversal",
+      "target_col": "target__CAPEC_126_Path_Traversal",
+      "source_label_cols": [
+        "126 - Path Traversal"
+      ],
+      "positive_count": 20992,
+      "negative_count": 886823,
+      "prevalence": 0.02312365404845701
+    },
+    {
+      "label": "CAPEC-153 Input Data Manipulation",
+      "target_col": "target__CAPEC_153_Input_Data_Manipulation",
+      "source_label_cols": [
+        "153 - Input Data Manipulation"
+      ],
+      "positive_count": 2272,
+      "negative_count": 905543,
+      "prevalence": 0.002502712557073853
+    },
+    {
+      "label": "CAPEC-16 Dictionary-based Password Attack",
+      "target_col": "target__CAPEC_16_Dictionary_based_Password_Attack",
+      "source_label_cols": [
+        "16 - Dictionary-based Password Attack"
+      ],
+      "positive_count": 1847,
+      "negative_count": 905968,
+      "prevalence": 0.0020345554986423444
+    },
+    {
+      "label": "CAPEC-194 Fake the Source of Data",
+      "target_col": "target__CAPEC_194_Fake_the_Source_of_Data",
+      "source_label_cols": [
+        "194 - Fake the Source of Data"
+      ],
+      "positive_count": 56145,
+      "negative_count": 851670,
+      "prevalence": 0.061846301283851886
+    },
+    {
+      "label": "CAPEC-242 Code Injection",
+      "target_col": "target__CAPEC_242_Code_Injection",
+      "source_label_cols": [
+        "242 - Code Injection"
+      ],
+      "positive_count": 15827,
+      "negative_count": 891988,
+      "prevalence": 0.01743416885598938
+    },
+    {
+      "label": "CAPEC-272 Protocol Manipulation",
+      "target_col": "target__CAPEC_272_Protocol_Manipulation",
+      "source_label_cols": [
+        "272 - Protocol Manipulation"
+      ],
+      "positive_count": 9153,
+      "negative_count": 898662,
+      "prevalence": 0.010082450719584938
+    },
+    {
+      "label": "CAPEC-274 HTTP Verb Tampering",
+      "target_col": "target__CAPEC_274_HTTP_Verb_Tampering",
+      "source_label_cols": [
+        "274 - HTTP Verb Tampering"
+      ],
+      "positive_count": 5437,
+      "negative_count": 902378,
+      "prevalence": 0.005989105709863794
+    },
+    {
+      "label": "CAPEC-310 Scanning for Vulnerable Software",
+      "target_col": "target__CAPEC_310_Scanning_for_Vulnerable_Software",
+      "source_label_cols": [
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "positive_count": 2718,
+      "negative_count": 905097,
+      "prevalence": 0.0029940020819219774
+    },
+    {
+      "label": "CAPEC-33 HTTP Request Smuggling",
+      "target_col": "target__CAPEC_33_HTTP_Request_Smuggling",
+      "source_label_cols": [
+        "33 - HTTP Request Smuggling"
+      ],
+      "positive_count": 1059,
+      "negative_count": 906756,
+      "prevalence": 0.0011665372350093356
+    },
+    {
+      "label": "CAPEC-34 HTTP Response Splitting",
+      "target_col": "target__CAPEC_34_HTTP_Response_Splitting",
+      "source_label_cols": [
+        "34 - HTTP Response Splitting"
+      ],
+      "positive_count": 19738,
+      "negative_count": 888077,
+      "prevalence": 0.0217423153395791
+    },
+    {
+      "label": "CAPEC-66 SQL Injection",
+      "target_col": "target__CAPEC_66_SQL_Injection",
+      "source_label_cols": [
+        "66 - SQL Injection"
+      ],
+      "positive_count": 250311,
+      "negative_count": 657504,
+      "prevalence": 0.2757290857718808
+    },
+    {
+      "label": "CAPEC-88 OS Command Injection",
+      "target_col": "target__CAPEC_88_OS_Command_Injection",
+      "source_label_cols": [
+        "88 - OS Command Injection"
+      ],
+      "positive_count": 7482,
+      "negative_count": 900333,
+      "prevalence": 0.00824176732043423
+    }
+  ],
+  "args": {
+    "project_dir": "/home_data/aroman/TFG/waf-ml-starter",
+    "definitivo_dir": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO",
+    "inputs": null,
+    "harvard_inputs": [
+      "/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard"
+    ],
+    "output_dir": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG",
+    "sample_n": 0,
+    "sep": "auto",
+    "method_col": "request_http_method",
+    "uri_col": "request_http_request",
+    "body_col": "request_body",
+    "normal_col": "000 - Normal",
+    "label_cols": "",
+    "label_mode": "native",
+    "min_positive_count": 20,
+    "max_negative_positive_ratio": 0.0,
+    "max_normal_rows": 0,
+    "keep_labels_regex": "",
+    "drop_labels_regex": "",
+    "test_size": 0.2,
+    "valid_size": 0.2,
+    "seed": 42,
+    "selection_metric": "f1_macro",
+    "search_level": "none",
+    "candidate_weight_modes": "none",
+    "refit_full_after_thresholds": true,
+    "model_backend": "xgboost",
+    "use_gpu": "off",
+    "xgb_preset": "max",
+    "xgb_early_stopping_rounds": 80,
+    "lgbm_preset": "strong",
+    "lgbm_early_stopping_rounds": 60,
+    "catboost_preset": "strong",
+    "catboost_early_stopping_rounds": 60,
+    "histgb_preset": "strong",
+    "forest_preset": "strong",
+    "linear_preset": "strong",
+    "scale_pos_weight_cap": 100.0,
+    "n_jobs": 8,
+    "threshold_objective": "f1",
+    "threshold_grid_size": 199,
+    "threshold_min": 0.01,
+    "threshold_max": 0.99,
+    "threshold_min_recall": 0.0,
+    "min_attack_score": 0.0,
+    "feature_workers": 8,
+    "feature_chunksize": 512,
+    "operational_max_rows": 0,
+    "fi_n_repeats": 3,
+    "fi_max_rows": 10000,
+    "fi_scoring": "f1_macro",
+    "resume": true,
+    "checkpoint_dir": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/checkpoints",
+    "checkpoint_compress": 3,
+    "force_reprocess": false,
+    "resume_skip_complete": true,
+    "clean_output_dir": false,
+    "check_only": false
+  },
+  "split_info": {
+    "test_stratify": "primary_label",
+    "valid_stratify": "primary_label",
+    "train_rows": 581001,
+    "valid_rows": 145251,
+    "test_rows": 181563,
+    "train_positive_counts": {
+      "CAPEC-126 Path Traversal": 13435,
+      "CAPEC-153 Input Data Manipulation": 1458,
+      "CAPEC-16 Dictionary-based Password Attack": 1175,
+      "CAPEC-194 Fake the Source of Data": 35932,
+      "CAPEC-242 Code Injection": 10128,
+      "CAPEC-272 Protocol Manipulation": 5858,
+      "CAPEC-274 HTTP Verb Tampering": 3456,
+      "CAPEC-310 Scanning for Vulnerable Software": 1733,
+      "CAPEC-33 HTTP Request Smuggling": 679,
+      "CAPEC-34 HTTP Response Splitting": 12637,
+      "CAPEC-66 SQL Injection": 160180,
+      "CAPEC-88 OS Command Injection": 4795
+    },
+    "valid_positive_counts": {
+      "CAPEC-126 Path Traversal": 3359,
+      "CAPEC-153 Input Data Manipulation": 366,
+      "CAPEC-16 Dictionary-based Password Attack": 304,
+      "CAPEC-194 Fake the Source of Data": 8983,
+      "CAPEC-242 Code Injection": 2531,
+      "CAPEC-272 Protocol Manipulation": 1462,
+      "CAPEC-274 HTTP Verb Tampering": 874,
+      "CAPEC-310 Scanning for Vulnerable Software": 440,
+      "CAPEC-33 HTTP Request Smuggling": 169,
+      "CAPEC-34 HTTP Response Splitting": 3160,
+      "CAPEC-66 SQL Injection": 40040,
+      "CAPEC-88 OS Command Injection": 1178
+    },
+    "test_positive_counts": {
+      "CAPEC-126 Path Traversal": 4198,
+      "CAPEC-153 Input Data Manipulation": 448,
+      "CAPEC-16 Dictionary-based Password Attack": 368,
+      "CAPEC-194 Fake the Source of Data": 11230,
+      "CAPEC-242 Code Injection": 3168,
+      "CAPEC-272 Protocol Manipulation": 1833,
+      "CAPEC-274 HTTP Verb Tampering": 1107,
+      "CAPEC-310 Scanning for Vulnerable Software": 545,
+      "CAPEC-33 HTTP Request Smuggling": 211,
+      "CAPEC-34 HTTP Response Splitting": 3941,
+      "CAPEC-66 SQL Injection": 50091,
+      "CAPEC-88 OS Command Injection": 1509
+    }
+  },
+  "environment": {
+    "python": "3.11.7 (main, Aug 23 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]",
+    "executable": "/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python",
+    "cwd": "/home_data/aroman/TFG/waf-ml-starter",
+    "cpu_count": 32,
+    "gpu_visible": true,
+    "CUDA_VISIBLE_DEVICES": null,
+    "SLURM_JOB_ID": "3151",
+    "SLURM_JOB_GPUS": null,
+    "OMP_NUM_THREADS": "8",
+    "MKL_NUM_THREADS": "8",
+    "OPENBLAS_NUM_THREADS": "8"
+  },
+  "load_seconds": 11.364785049110651,
+  "feature_extraction_seconds": 124.90638007968664,
+  "processed_path": "/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/processed_fixed30_multilabel.parquet"
+}

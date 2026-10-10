@@ -1,0 +1,8 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=sinfo -N -o %N\|%P\|%c\|%m\|%G\|%f\|%t 
+
+NODELIST|PARTITION|CPUS|MEMORY|GRES|AVAIL_FEATURES|STATE
+c1|normal*|32|128000|gpu:1|(null)|idle
+c2|normal*|32|128000|gpu:1|(null)|idle
+c3|normal*|32|128000|gpu:1|(null)|idle
+c4|gpu|32|128000|gpu:1|(null)|idle

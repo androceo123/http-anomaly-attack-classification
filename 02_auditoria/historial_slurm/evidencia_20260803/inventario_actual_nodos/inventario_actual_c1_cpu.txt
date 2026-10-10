@@ -1,0 +1,299 @@
+tipo_evidencia=inventario_actual_del_nodo
+advertencia=no_prueba_por_si_solo_la_configuracion_historica
+capturado_en=2026-08-03T13:20:30-04:00
+nodo=c1
+directorio=/home_data/aroman
+
+IDENTIFICACION_Y_SO
+c1
+ Static hostname: c1
+       Icon name: computer-server
+         Chassis: server 🖳
+      Machine ID: 89af03edb39a4516af647ccc3cb10f9e
+         Boot ID: 5af46184186a44b2a6f5eeafd234cc31
+Operating System: AlmaLinux 9.4 (Seafoam Ocelot)
+     CPE OS Name: cpe:/o:almalinux:almalinux:9::baseos
+          Kernel: Linux 5.14.0-427.35.1.el9_4.x86_64
+    Architecture: x86-64
+ Hardware Vendor: Dell Inc.
+  Hardware Model: PowerEdge R740
+Firmware Version: 2.24.0
+Linux c1 5.14.0-427.35.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Sep 12 11:21:43 EDT 2024 x86_64 x86_64 x86_64 GNU/Linux
+NAME="AlmaLinux"
+VERSION="9.4 (Seafoam Ocelot)"
+ID="almalinux"
+ID_LIKE="rhel centos fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="AlmaLinux 9.4 (Seafoam Ocelot)"
+ANSI_COLOR="0;34"
+LOGO="fedora-logo-icon"
+CPE_NAME="cpe:/o:almalinux:almalinux:9::baseos"
+HOME_URL="https://almalinux.org/"
+DOCUMENTATION_URL="https://wiki.almalinux.org/"
+BUG_REPORT_URL="https://bugs.almalinux.org/"
+
+ALMALINUX_MANTISBT_PROJECT="AlmaLinux-9"
+ALMALINUX_MANTISBT_PROJECT_VERSION="9.4"
+REDHAT_SUPPORT_PRODUCT="AlmaLinux"
+REDHAT_SUPPORT_PRODUCT_VERSION="9.4"
+SUPPORT_END=2032-06-01
+
+ASIGNACION_SLURM_DE_ESTE_INVENTARIO
+OMPI_MCA_mca_base_component_show_load_errors=0
+OMPI_MCA_plm_slurm_args=--external-launcher
+SLURMD_DEBUG=2
+SLURMD_NODENAME=c1
+SLURM_AUDIT_PROJECT_ROOT=/home_data/aroman/TFG/waf-ml-starter
+SLURM_CLUSTER_NAME=cluster
+SLURM_CONF=/var/spool/slurmd/conf-cache/slurm.conf
+SLURM_CPUS_ON_NODE=1
+SLURM_CPUS_PER_TASK=1
+SLURM_CPU_BIND=quiet,mask_cpu:0x00000001
+SLURM_CPU_BIND_LIST=0x00000001
+SLURM_CPU_BIND_TYPE=mask_cpu:
+SLURM_CPU_BIND_VERBOSE=quiet
+SLURM_DISTRIBUTION=cyclic
+SLURM_GTIDS=0
+SLURM_JOBID=3517
+SLURM_JOB_CPUS_PER_NODE=1
+SLURM_JOB_END_TIME=1785777928
+SLURM_JOB_GID=1035
+SLURM_JOB_GROUP=aroman
+SLURM_JOB_ID=3517
+SLURM_JOB_NAME=env
+SLURM_JOB_NODELIST=c1
+SLURM_JOB_NUM_NODES=1
+SLURM_JOB_PARTITION=normal
+SLURM_JOB_QOS=normal
+SLURM_JOB_START_TIME=1785777628
+SLURM_JOB_UID=1033
+SLURM_JOB_USER=aroman
+SLURM_LAUNCH_NODE_IPADDR=10.10.10.254
+SLURM_LOCALID=0
+SLURM_MEM_PER_NODE=1024
+SLURM_NNODES=1
+SLURM_NODEID=0
+SLURM_NODELIST=c1
+SLURM_NPROCS=1
+SLURM_NTASKS=1
+SLURM_OOM_KILL_STEP=0
+SLURM_PRIO_PROCESS=0
+SLURM_PROCID=0
+SLURM_SRUN_COMM_HOST=10.10.10.254
+SLURM_SRUN_COMM_PORT=37433
+SLURM_STEPID=0
+SLURM_STEP_ID=0
+SLURM_STEP_LAUNCHER_PORT=37433
+SLURM_STEP_NODELIST=c1
+SLURM_STEP_NUM_NODES=1
+SLURM_STEP_NUM_TASKS=1
+SLURM_STEP_TASKS_PER_NODE=1
+SLURM_SUBMIT_DIR=/home_data/aroman
+SLURM_SUBMIT_HOST=arandu
+SLURM_TASKS_PER_NODE=1
+SLURM_TASK_PID=1662461
+SLURM_TOPOLOGY_ADDR=c1
+SLURM_TOPOLOGY_ADDR_PATTERN=node
+SLURM_TRES_PER_TASK=cpu=1
+SLURM_UMASK=0022
+JobId=3517 JobName=env
+   UserId=aroman(1033) GroupId=aroman(1035) MCS_label=N/A
+   Priority=1 Nice=0 Account=(null) QOS=normal
+   JobState=RUNNING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=0 Reboot=0 ExitCode=0:0
+   DerivedExitCode=0:0
+   RunTime=00:00:03 TimeLimit=00:05:00 TimeMin=N/A
+   SubmitTime=2026-08-03T13:20:28 EligibleTime=2026-08-03T13:20:28
+   AccrueTime=Unknown
+   StartTime=2026-08-03T13:20:28 EndTime=2026-08-03T13:25:28 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-08-03T13:20:28 Scheduler=Main
+   Partition=normal AllocNode:Sid=arandu:3661420
+   ReqNodeList=c1 ExcNodeList=(null)
+   NodeList=c1
+   BatchHost=c1
+   NumNodes=1 NumCPUs=1 NumTasks=1 CPUs/Task=1 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=1,mem=1G,node=1,billing=1
+   AllocTRES=cpu=1,mem=1G,node=1,billing=1
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   JOB_GRES=(null)
+     Nodes=c1 CPU_IDs=0 Mem=1024 GRES=
+   MinCPUsNode=1 MinMemoryNode=1G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) Network=(null)
+   Command=env
+   WorkDir=/home_data/aroman
+   TresPerTask=cpu=1
+   
+
+NodeName=c1 Arch=x86_64 CoresPerSocket=16 
+   CPUAlloc=1 CPUEfctv=32 CPUTot=32 CPULoad=0.00
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:1
+   GresDrain=N/A
+   GresUsed=gpu:0
+   NodeAddr=c1 NodeHostName=c1 Version=24.11.5
+   OS=Linux 5.14.0-427.35.1.el9_4.x86_64 #1 SMP PREEMPT_DYNAMIC Thu Sep 12 11:21:43 EDT 2024 
+   RealMemory=128000 AllocMem=1024 FreeMem=28557 Sockets=2 Boards=1
+   State=MIXED ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=normal 
+   BootTime=2025-11-28T11:09:44 SlurmdStartTime=2026-07-08T13:35:07
+   LastBusyTime=2026-08-02T18:47:39 ResumeAfterTime=None
+   CfgTRES=cpu=32,mem=125G,billing=67,gres/gpu=1
+   AllocTRES=cpu=1,mem=1G
+   CurrentWatts=0 AveWatts=0
+   
+
+
+CPU_Y_AFINIDAD
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Address sizes:                      46 bits physical, 48 bits virtual
+Byte Order:                         Little Endian
+CPU(s):                             32
+On-line CPU(s) list:                0-31
+Vendor ID:                          GenuineIntel
+Model name:                         Intel(R) Xeon(R) Gold 6242 CPU @ 2.80GHz
+CPU family:                         6
+Model:                              85
+Thread(s) per core:                 1
+Core(s) per socket:                 16
+Socket(s):                          2
+Stepping:                           7
+CPU(s) scaling MHz:                 98%
+CPU max MHz:                        3900.0000
+CPU min MHz:                        1200.0000
+BogoMIPS:                           5600.00
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 intel_ppin ssbd mba ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke avx512_vnni md_clear flush_l1d arch_capabilities
+L1d cache:                          1 MiB (32 instances)
+L1i cache:                          1 MiB (32 instances)
+L2 cache:                           32 MiB (32 instances)
+L3 cache:                           44 MiB (2 instances)
+NUMA node(s):                       2
+NUMA node0 CPU(s):                  0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30
+NUMA node1 CPU(s):                  1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                 Not affected
+Vulnerability Mds:                  Not affected
+Vulnerability Meltdown:             Not affected
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT disabled
+Vulnerability Retbleed:             Mitigation; Enhanced IBRS
+Vulnerability Spec rstack overflow: Not affected
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; Enhanced / Automatic IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Mitigation; TSX disabled
+nproc_total=32
+nproc_disponible=1
+Cpus_allowed_list:	0
+Mems_allowed_list:	0-1
+available: 2 nodes (0-1)
+node 0 cpus: 0 2 4 6 8 10 12 14 16 18 20 22 24 26 28 30
+node 0 size: 64022 MB
+node 0 free: 15399 MB
+node 1 cpus: 1 3 5 7 9 11 13 15 17 19 21 23 25 27 29 31
+node 1 size: 64504 MB
+node 1 free: 13157 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+
+MEMORIA
+               total        used        free      shared  buff/cache   available
+Mem:           125Gi        12Gi        27Gi       9.8Gi        96Gi       113Gi
+Swap:             0B          0B          0B
+               total        used        free      shared  buff/cache   available
+Mem:     134770982912 12935864320 29943394304 10544349184 103523045376 121835118592
+Swap:              0           0           0
+MemTotal:       131612288 kB
+SwapTotal:             0 kB
+HugePages_Total:       0
+
+GPU
+CUDA_VISIBLE_DEVICES=no_definido
+SLURM_JOB_GPUS=no_definido
+SLURM_GPUS_ON_NODE=no_definido
+03:00.0 VGA compatible controller: Matrox Electronics Systems Ltd. Integrated Matrox G200eW3 Graphics Controller (rev 04)
+3b:00.0 3D controller: NVIDIA Corporation GV100GL [Tesla V100 PCIe 16GB] (rev a1)
+No devices found.
+No devices were found
+No devices were found
+
+ALMACENAMIENTO_Y_LIMITES
+Filesystem       Type  Size  Used Avail Use% Mounted on
+10.10.12.6:/home nfs4  1.4T  1.4T   13G 100% /home_data
+NAME   TYPE   SIZE ROTA MODEL          MOUNTPOINTS
+sda    disk 893.8G    1 PERC H730P Adp 
+├─sda1 part   512M    1                
+├─sda2 part     1K    1                
+└─sda5 part 893.2G    1                
+real-time non-blocking time  (microseconds, -R) unlimited
+core file size              (blocks, -c) unlimited
+data seg size               (kbytes, -d) unlimited
+scheduling priority                 (-e) 0
+file size                   (blocks, -f) unlimited
+pending signals                     (-i) 513899
+max locked memory           (kbytes, -l) unlimited
+max memory size             (kbytes, -m) 1048576
+open files                          (-n) 1024
+pipe size                (512 bytes, -p) 8
+POSIX message queues         (bytes, -q) 819200
+real-time priority                  (-r) 0
+stack size                  (kbytes, -s) 8192
+cpu time                   (seconds, -t) unlimited
+max user processes                  (-u) 513899
+virtual memory              (kbytes, -v) unlimited
+file locks                          (-x) unlimited
+
+COMPILADORES_Y_MODULOS
+autotools
+prun/2.2
+gnu13/13.2.0
+hwloc/2.12.0
+ucx/1.18.0
+libfabric/1.18.0
+openmpi5/5.0.5
+ohpc
+gcc (GCC) 13.2.0
+ldd (GNU libc) 2.34
+
+PYTHON_ACTUAL_DEL_SHELL
+python_executable=/usr/bin/python
+Python 3.9.18 (main, Aug 23 2024, 00:00:00) 
+[GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+sys.executable= /usr/bin/python
+python= 3.9.18 (main, Aug 23 2024, 00:00:00)  [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+platform= Linux-5.14.0-427.35.1.el9_4.x86_64-x86_64-with-glibc2.34
+machine= x86_64
+processor= x86_64
+PyYAML=5.4.1
+/usr/bin/python: No module named pip
+
+VENV_ACTUAL_DEL_PROYECTO
+python_executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+Python 3.11.7 (main, Aug 23 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+sys.executable= /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+python= 3.11.7 (main, Aug 23 2024, 00:00:00) [GCC 11.4.1 20231218 (Red Hat 11.4.1-3)]
+platform= Linux-5.14.0-427.35.1.el9_4.x86_64-x86_64-with-glibc2.34
+machine= x86_64
+processor= x86_64
+numpy=2.4.0
+pandas=2.3.3
+scipy=1.17.1
+scikit-learn=1.8.0
+xgboost=3.2.0
+joblib=1.5.3
+psutil=7.2.2
+pyarrow=22.0.0
+matplotlib=3.11.0
+PyYAML=6.0.3
+tqdm=4.67.1
+fastapi=0.127.1
+uvicorn=0.40.0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd-c1: error: *** STEP 3517.0 ON c1 CANCELLED AT 2026-08-03T13:25:37 DUE TO TIME LIMIT ***
+srun: error: c1: task 0: Terminated

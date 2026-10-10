@@ -1,0 +1,33 @@
+{
+  "source": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S10/harvard_duplicados.xlsx",
+  "method": "openpyxl read_only for structure/dictionary; lxml streaming row aggregation of first14 audit columns only",
+  "duplicate_event_rows": 392448,
+  "group_count": 27624,
+  "max_group_size": 453,
+  "source_record_min": 1,
+  "source_record_max": 907815,
+  "source_records_unique": 392448,
+  "source_records_in_original_ascending_order": true,
+  "row_sums": {
+    "rows": 392448,
+    "representative_rows": 27624,
+    "excess_rows": 364824,
+    "empty_rows": 2,
+    "label_variation_rows": 2331,
+    "normal_attack_mix_rows": 2322,
+    "exact_duplicate_rows": 4161
+  },
+  "label_variation_groups": 288,
+  "normal_attack_mix_groups": 284,
+  "empty_groups": 1,
+  "empty_source_records_1based": [
+    14411,
+    163885
+  ],
+  "raw_http_variants_counts": {
+    "1": 27624
+  },
+  "invariant_errors": [],
+  "invariant_error_count": 0,
+  "elapsed_seconds": 45.460304737091064
+}

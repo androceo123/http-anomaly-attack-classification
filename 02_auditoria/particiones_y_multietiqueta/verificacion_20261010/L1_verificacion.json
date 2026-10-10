@@ -1,0 +1,282 @@
+{
+  "metrics_recalculated": {
+    "rows": 181563,
+    "unit": "fila_evento",
+    "exact_match_accuracy": 0.9653068081051757,
+    "exact_match_count": 175264,
+    "hamming_loss": 0.0033000482844338696,
+    "wrong_label_decisions": 7190,
+    "f1_micro": 0.9532904567010979,
+    "f1_macro": 0.834976684071172,
+    "f1_weighted": 0.9506695637174619,
+    "precision_micro": 0.9746151087259733,
+    "recall_micro": 0.932878994011367,
+    "jaccard_micro": 0.9107497517378351,
+    "pr_auc_macro": 0.8416901574868599,
+    "roc_auc_macro": 0.993777934082091,
+    "attack_only_exact_match_count": 70882,
+    "attack_only_support": 76524,
+    "attack_only_exact_match": 0.9262714965239663,
+    "normal_support": 105039,
+    "normal_recall": 0.99374518036158,
+    "normal_99_goal_met": true,
+    "binary_confusion": {
+      "tn": 104382,
+      "fp": 657,
+      "fn": 4369,
+      "tp": 72155
+    },
+    "labels_meeting_f1_85": 9,
+    "duplicate_row_indices": 0,
+    "duplicate_sample_ids": 0
+  },
+  "checks": [
+    {
+      "check": "exact_match_accuracy",
+      "recalculated": 0.9653068081051757,
+      "saved": 0.9653068081051757,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "hamming_loss",
+      "recalculated": 0.0033000482844338696,
+      "saved": 0.0033000482844338696,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "f1_micro",
+      "recalculated": 0.9532904567010979,
+      "saved": 0.9532904567010979,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "f1_macro",
+      "recalculated": 0.834976684071172,
+      "saved": 0.834976684071172,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "f1_weighted",
+      "recalculated": 0.9506695637174619,
+      "saved": 0.9506695637174619,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "precision_micro",
+      "recalculated": 0.9746151087259733,
+      "saved": 0.9746151087259733,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "recall_micro",
+      "recalculated": 0.932878994011367,
+      "saved": 0.932878994011367,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "jaccard_micro",
+      "recalculated": 0.9107497517378351,
+      "saved": 0.9107497517378351,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "pr_auc_macro",
+      "recalculated": 0.8416901574868599,
+      "saved": 0.8416901574868599,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "roc_auc_macro",
+      "recalculated": 0.993777934082091,
+      "saved": 0.993777934082091,
+      "delta": 0.0,
+      "match": true
+    },
+    {
+      "check": "binary_tn",
+      "recalculated": 104382,
+      "saved": 104382,
+      "match": true
+    },
+    {
+      "check": "binary_fp",
+      "recalculated": 657,
+      "saved": 657,
+      "match": true
+    },
+    {
+      "check": "binary_fn",
+      "recalculated": 4369,
+      "saved": 4369,
+      "match": true
+    },
+    {
+      "check": "binary_tp",
+      "recalculated": 72155,
+      "saved": 72155,
+      "match": true
+    },
+    {
+      "check": "all_per_label_counts",
+      "match": true
+    },
+    {
+      "check": "all_per_label_f1",
+      "match": true
+    },
+    {
+      "check": "predictions_reproduced_by_saved_scores_and_thresholds",
+      "match": true
+    }
+  ],
+  "operational": {
+    "unit": "fila_evento",
+    "sample_size": 181563,
+    "sample_matches_saved_count": true,
+    "percentile_method": "numpy.percentile default linear",
+    "recorded_online_seconds": 1697.1800472661853,
+    "sum_individual_seconds": 1696.5530674941838,
+    "model_size_bytes_actual": 15327435,
+    "latency_ms_pipeline_online_p50": {
+      "recalculated": 9.29301232099533,
+      "saved": 9.29301232099533,
+      "match": true
+    },
+    "latency_ms_pipeline_online_p95": {
+      "recalculated": 9.83966626226902,
+      "saved": 9.83966626226902,
+      "match": true
+    },
+    "latency_ms_pipeline_online_p99": {
+      "recalculated": 10.251286625862122,
+      "saved": 10.251286625862122,
+      "match": true
+    },
+    "throughput_req_s_pipeline_online": {
+      "recalculated": 106.97922138105581,
+      "saved": 106.97922138105581,
+      "match": true
+    },
+    "throughput_req_s_pipeline_batch": {
+      "recalculated": 3344.9598495051105,
+      "saved": 3344.9598495051105,
+      "match": true
+    },
+    "throughput_req_s_inference_batch": {
+      "recalculated": 25974.380812984768,
+      "saved": 25974.380812984768,
+      "match": true
+    }
+  },
+  "source_prediction_sha256": "b84ab6f2164c82ddebd3d4dabfad6ecb366b6eaf0b2043dc33370d290a1c84f8",
+  "source_folder": "extraidos/S06/DEFINITIVO/multietiqueta/multiquetaSalidaXG",
+  "run_config_sha256": "633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417",
+  "partitions": {
+    "origin": "reconstructed_in_this_audit_not_historical_split_files",
+    "methods": {
+      "test": "primary_label",
+      "validation": "primary_label"
+    },
+    "checks": {
+      "test_indices_same_order": true,
+      "test_indices_same_set": true,
+      "test_labels_match_processed": true,
+      "test_sample_ids_match": true,
+      "partitions_cover_all_rows": true
+    },
+    "counts": {
+      "train": {
+        "rows": 581001,
+        "expected_rows": 581001,
+        "all_positive_counts_match": true,
+        "positive_counts": {
+          "CAPEC-126 Path Traversal": 13435,
+          "CAPEC-153 Input Data Manipulation": 1458,
+          "CAPEC-16 Dictionary-based Password Attack": 1175,
+          "CAPEC-194 Fake the Source of Data": 35932,
+          "CAPEC-242 Code Injection": 10128,
+          "CAPEC-272 Protocol Manipulation": 5858,
+          "CAPEC-274 HTTP Verb Tampering": 3456,
+          "CAPEC-310 Scanning for Vulnerable Software": 1733,
+          "CAPEC-33 HTTP Request Smuggling": 679,
+          "CAPEC-34 HTTP Response Splitting": 12637,
+          "CAPEC-66 SQL Injection": 160180,
+          "CAPEC-88 OS Command Injection": 4795
+        },
+        "sorted_index_sha256": "8ac9f34de48db3cea22cfe5cb8743e745cf3a0775f16e03251ec8c80576c2a88"
+      },
+      "valid": {
+        "rows": 145251,
+        "expected_rows": 145251,
+        "all_positive_counts_match": true,
+        "positive_counts": {
+          "CAPEC-126 Path Traversal": 3359,
+          "CAPEC-153 Input Data Manipulation": 366,
+          "CAPEC-16 Dictionary-based Password Attack": 304,
+          "CAPEC-194 Fake the Source of Data": 8983,
+          "CAPEC-242 Code Injection": 2531,
+          "CAPEC-272 Protocol Manipulation": 1462,
+          "CAPEC-274 HTTP Verb Tampering": 874,
+          "CAPEC-310 Scanning for Vulnerable Software": 440,
+          "CAPEC-33 HTTP Request Smuggling": 169,
+          "CAPEC-34 HTTP Response Splitting": 3160,
+          "CAPEC-66 SQL Injection": 40040,
+          "CAPEC-88 OS Command Injection": 1178
+        },
+        "sorted_index_sha256": "29bc380f6f984114299c2567de605dc7da461a9171f3684c7b45282a79bfff9c"
+      },
+      "test": {
+        "rows": 181563,
+        "expected_rows": 181563,
+        "all_positive_counts_match": true,
+        "positive_counts": {
+          "CAPEC-126 Path Traversal": 4198,
+          "CAPEC-153 Input Data Manipulation": 448,
+          "CAPEC-16 Dictionary-based Password Attack": 368,
+          "CAPEC-194 Fake the Source of Data": 11230,
+          "CAPEC-242 Code Injection": 3168,
+          "CAPEC-272 Protocol Manipulation": 1833,
+          "CAPEC-274 HTTP Verb Tampering": 1107,
+          "CAPEC-310 Scanning for Vulnerable Software": 545,
+          "CAPEC-33 HTTP Request Smuggling": 211,
+          "CAPEC-34 HTTP Response Splitting": 3941,
+          "CAPEC-66 SQL Injection": 50091,
+          "CAPEC-88 OS Command Injection": 1509
+        },
+        "sorted_index_sha256": "e5515bc8be1d276fe59e307f7e87811bb95feb949f40a52bf75f0c4873b9a839"
+      }
+    },
+    "intersections": [
+      {
+        "partition_a": "train",
+        "partition_b": "valid",
+        "shared_indices": 0
+      },
+      {
+        "partition_a": "train",
+        "partition_b": "test",
+        "shared_indices": 0
+      },
+      {
+        "partition_a": "valid",
+        "partition_b": "test",
+        "shared_indices": 0
+      }
+    ],
+    "qualification": "Agreement of test index order, sample IDs, labels and every saved split support is checked. Historical training memberships are reconstructed; no original full partition lists were found."
+  },
+  "raw_labels_intermediate": {
+    "path": "analisis/sr_bh_raw_labels.npy",
+    "metadata_path": "analisis/sr_bh_raw_profile.json",
+    "sha256": "3d7b0e7c7ad19cd0016a5859d71048d73ab012397fcb125e8f57d1b6998bbe10"
+  }
+}

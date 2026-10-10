@@ -1,0 +1,34 @@
+
+[2026-08-03T14:20:06-03:00] Inicio de la auditoria
+usuario=aroman
+periodo=2026-01-01 a 2027-01-01
+jobs_esperados=133
+nodos=c1,c2,c3
+proyecto=/home_data/aroman/TFG/waf-ml-starter
+salida=/home_data/aroman/evidencia_tesis_slurm_20260803T142006
+
+[2026-08-03T14:20:06-03:00] Version y campos admitidos por Slurm
+
+[2026-08-03T14:20:06-03:00] Extraccion historica de asignaciones
+
+[2026-08-03T14:20:06-03:00] Extraccion historica de jobs y pasos
+
+[2026-08-03T14:20:06-03:00] Instantanea actual del controlador y de c1/c2/c3
+
+[2026-08-03T14:20:06-03:00] Intento de recuperar los batch scripts originales
+
+[2026-08-03T14:20:21-03:00] Inventario del repositorio y copia de evidencia textual preservada
+
+[2026-08-03T14:20:28-03:00] Inventario actual de los nodos mediante trabajos Slurm breves
+Inventariando CPU/SO/RAM actuales de c1
+Inventariando GPU actual asignada brevemente en c1
+Inventariando CPU/SO/RAM actuales de c2
+Inventariando GPU actual asignada brevemente en c2
+Inventariando CPU/SO/RAM actuales de c3
+Inventariando GPU actual asignada brevemente en c3
+
+[2026-08-03T14:42:08-03:00] Manifest y paquete final
+
+Auditoria terminada. Enviame estos dos archivos:
+  /home_data/aroman/evidencia_tesis_slurm_20260803T142006.tar.gz
+  /home_data/aroman/evidencia_tesis_slurm_20260803T142006.tar.gz.sha256

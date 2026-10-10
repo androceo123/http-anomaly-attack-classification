@@ -1,0 +1,63 @@
+[INFO] HARVARD_TABLE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+================================================================
+[START] 2026-07-02 10:51:01
+[INFO] Host=c3 JOB=3104 PARTITION=normal
+[INFO] PROJECT_DIR=/home_data/aroman/TFG/waf-ml-starter
+[INFO] TRAIN_PY=/home_data/aroman/TFG/waf-ml-starter/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py
+[INFO] DEFINITIVO_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO
+[INFO] OUTPUT_DIR=/home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG
+[INFO] Modelo fijo: XGBoost One-vs-Rest, weight_mode=none, preset=max, GPU=off
+[INFO] LABEL_MODE=native TEST_SIZE=0.20 VALID_SIZE=0.20 SEED=42
+[INFO] USE_GPU=off; CUDA_VISIBLE_DEVICES=unset; SLURM_JOB_GPUS=unset
+[INFO] CPU threads: N_JOBS=8 OMP=8 MKL=8 OPENBLAS=8
+[INFO] Métricas operativas: OPERATIONAL_MAX_ROWS=0; FI_N_REPEATS=3; FI_MAX_ROWS=10000
+================================================================
+[INFO] sys.executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.prefix=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] Dependency check: xgboost=True parquet=True
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:1436559
+   ReqNodeList=c3 ExcNodeList=(null)
+   NodeList=c3
+   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=32G,node=1,billing=16
+   AllocTRES=cpu=8,mem=32G,node=1,billing=16
+   MinCPUsNode=8 MinMemoryNode=32G MinTmpDiskNode=0
+Thu Jul  2 10:51:01 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   32C    P0             26W /  250W |       1MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[INFO] Ejecutando Python...
+[INFO] catboost no está instalado: se omite esa familia opcional.
+================================================================
+[START] Harvard multietiqueta definitivo fixed30 @ 2026-07-02T10:51:07-04:00
+[OUT] /home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG
+================================================================
+[INFO] GPU visible: se intentarán backends GPU disponibles dentro de la búsqueda multifamilia.
+[INFO] Harvard/SR-BH files: 1
+[INFO] Rows loaded: 907815
+[INFO] Label columns discovered: 14
+[INFO] Rows after filters: 907815 | targets kept: 12
+[INFO] Backend availability: xgboost=True(3.2.0) lightgbm=True(4.6.0) catboost=False(None); selected=['xgboost']
+[INFO] Resume/checkpoints activos en: /home_data/aroman/TFG/waf-ml-starter/DEFINITIVO/multietiqueta/multiquetaSalidaXG/checkpoints
+[INFO] Candidate backends=['xgboost'] weight_modes=['none']
+[INFO] Entrenando candidato backend=xgboost weight_mode=none
+[VAL] backend=xgboost weight_mode=none f1_macro=0.8362706376316701 f1_macro=0.8362706376316701 f1_micro=0.9540912311563928 exact_match=0.9659967917604698 gpu_used=False
+[BEST] backend=xgboost weight_mode=none f1_macro=0.8362706376316701 gpu_used=False
+[INFO] Refit final con train+valid backend=xgboost weight_mode=none

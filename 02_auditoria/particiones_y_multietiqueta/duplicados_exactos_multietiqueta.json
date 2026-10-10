@@ -1,0 +1,921 @@
+{
+  "scope_sources": [
+    "S01",
+    "S04",
+    "S06",
+    "S11"
+  ],
+  "groups": [
+    {
+      "group_id": "SHA256_060bf90865d66299a0118f434e15ae2cfa7954d13cc7271e5f2b4865e96f8748",
+      "sha256": "060bf90865d66299a0118f434e15ae2cfa7954d13cc7271e5f2b4865e96f8748",
+      "bytes_per_copy": 2014,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/tuning_metrics_multilabel.json",
+          "bytes": 2014
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/tuning_metrics_multilabel.json",
+          "bytes": 2014
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_0bd7ea191069368f8a7b575eb898ed74780477b4b48a234ab3b87672f41f96de",
+      "sha256": "0bd7ea191069368f8a7b575eb898ed74780477b4b48a234ab3b87672f41f96de",
+      "bytes_per_copy": 2049,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/candidate_tuning_summary.csv",
+          "bytes": 2049
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/candidate_validation_summary.csv",
+          "bytes": 2049
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/candidate_validation_summary.partial.csv",
+          "bytes": 2049
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
+      "sha256": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
+      "bytes_per_copy": 277565,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2.py",
+          "bytes": 277565
+        },
+        {
+          "source_code": "S11",
+          "original_path": "multietiquetaCorrida2.py",
+          "bytes": 277565
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_167d68b74cbdcd0022ea733278745c0fe6a74013329ad326242282f45b652303",
+      "sha256": "167d68b74cbdcd0022ea733278745c0fe6a74013329ad326242282f45b652303",
+      "bytes_per_copy": 430,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.json",
+          "bytes": 430
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.json",
+          "bytes": 430
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_194cbd8f8bec4049a52ee6110a1fe6750113bb0df964c296612f31ae9ad9b7db",
+      "sha256": "194cbd8f8bec4049a52ee6110a1fe6750113bb0df964c296612f31ae9ad9b7db",
+      "bytes_per_copy": 1698,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/metrics_flat.csv",
+          "bytes": 1698
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/metrics_flat.csv",
+          "bytes": 1698
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/multietiqueta/model_comparison_multilabel_definitivo.csv",
+          "bytes": 1698
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20",
+      "sha256": "1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20",
+      "bytes_per_copy": 16245,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+          "bytes": 16245
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+          "bytes": 16245
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_1b7b8e8425dc6aca672ed0b5847c68265c527f29d6e525e10ba0ff658e263bb5",
+      "sha256": "1b7b8e8425dc6aca672ed0b5847c68265c527f29d6e525e10ba0ff658e263bb5",
+      "bytes_per_copy": 6573,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/multietiquetaCorrida2/logs/slurm-multietq_c2-3315.err",
+          "bytes": 6573
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3315/slurm-multietq_c2-3315.err",
+          "bytes": 6573
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/logs/multietiquetaCorrida2_3315.err",
+          "bytes": 6573
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/logs/slurm-multietq_c2-3315.err",
+          "bytes": 6573
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_1cb4f8d3462bac5f84b95208e4f12594a25d6de40eec35b8b5bb5304be0c9b6f",
+      "sha256": "1cb4f8d3462bac5f84b95208e4f12594a25d6de40eec35b8b5bb5304be0c9b6f",
+      "bytes_per_copy": 511,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.csv",
+          "bytes": 511
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.csv",
+          "bytes": 511
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_2ebb912567add728f794659f4b6dbcb1b7427557172ea51cde7de28a4b402aae",
+      "sha256": "2ebb912567add728f794659f4b6dbcb1b7427557172ea51cde7de28a4b402aae",
+      "bytes_per_copy": 1680,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/target_attainment.csv",
+          "bytes": 1680
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/target_attainment_f1_85_normal_99.csv",
+          "bytes": 1680
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_347d5fa1706d82787a2e0cb173233ee946b0150bad3de48e945abd255bb1814a",
+      "sha256": "347d5fa1706d82787a2e0cb173233ee946b0150bad3de48e945abd255bb1814a",
+      "bytes_per_copy": 62157,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/metrics_multilabel_xgb_request90.json",
+          "bytes": 62157
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/metrics_multilabel_xgb_request90.json",
+          "bytes": 62157
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73",
+      "sha256": "4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73",
+      "bytes_per_copy": 12686,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+          "bytes": 12686
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+          "bytes": 12686
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_48ac0d34e9e56f716b8582b5a8be1837450481370e2f369c199247b67eaf95be",
+      "sha256": "48ac0d34e9e56f716b8582b5a8be1837450481370e2f369c199247b67eaf95be",
+      "bytes_per_copy": 2023,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_flat.csv",
+          "bytes": 2023
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/model_comparison_multilabel_definitivo.csv",
+          "bytes": 2023
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_flat.csv",
+          "bytes": 2023
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_4adab3eb77e105e8eb79cfbb3a85c1890308685d633c5a3a5f34e2d4a5635f66",
+      "sha256": "4adab3eb77e105e8eb79cfbb3a85c1890308685d633c5a3a5f34e2d4a5635f66",
+      "bytes_per_copy": 2832,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/tuning_per_label_metrics.csv",
+          "bytes": 2832
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/tuning_per_label_metrics.csv",
+          "bytes": 2832
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612",
+      "sha256": "4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612",
+      "bytes_per_copy": 159902,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+          "bytes": 159902
+        },
+        {
+          "source_code": "S11",
+          "original_path": "train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+          "bytes": 159902
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57",
+      "sha256": "4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57",
+      "bytes_per_copy": 12743,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+          "bytes": 12743
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+          "bytes": 12743
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_4f126d9ad25252b965ed419440c7e5cb32cfa5000daace9870253c03ec4a424a",
+      "sha256": "4f126d9ad25252b965ed419440c7e5cb32cfa5000daace9870253c03ec4a424a",
+      "bytes_per_copy": 946,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.csv",
+          "bytes": 946
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.csv",
+          "bytes": 946
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_5459499eff29247d881400ef0e640a8452c7d17d09b8bc822689779a5c1fc569",
+      "sha256": "5459499eff29247d881400ef0e640a8452c7d17d09b8bc822689779a5c1fc569",
+      "bytes_per_copy": 3532,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/xgb_best_params_by_label.csv",
+          "bytes": 3532
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/xgb_best_params_by_label.csv",
+          "bytes": 3532
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_5df066e5bb24249900d0116f8f41358e229bf0c3242d70b7f6bc062817765f0c",
+      "sha256": "5df066e5bb24249900d0116f8f41358e229bf0c3242d70b7f6bc062817765f0c",
+      "bytes_per_copy": 28054,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/multietiquetaCorrida2/logs/slurm-multietq_c2-3315.out",
+          "bytes": 28054
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3315/slurm-multietq_c2-3315.out",
+          "bytes": 28054
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/logs/multietiquetaCorrida2_3315.out",
+          "bytes": 28054
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/logs/slurm-multietq_c2-3315.out",
+          "bytes": 28054
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417",
+      "sha256": "633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417",
+      "bytes_per_copy": 9900,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/run_config.json",
+          "bytes": 9900
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/run_config.json",
+          "bytes": 9900
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_64ba459ef68673d111dca3b8e3a961c8eb27647601b117c537d79a67fcb93272",
+      "sha256": "64ba459ef68673d111dca3b8e3a961c8eb27647601b117c537d79a67fcb93272",
+      "bytes_per_copy": 338,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.csv",
+          "bytes": 338
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.csv",
+          "bytes": 338
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_67419949cf14d9cedcfa94c802ec56bdc899039a5ebe0cc360e56ca83e9fe418",
+      "sha256": "67419949cf14d9cedcfa94c802ec56bdc899039a5ebe0cc360e56ca83e9fe418",
+      "bytes_per_copy": 3325,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/per_label_metrics.csv",
+          "bytes": 3325
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/per_label_metrics.csv",
+          "bytes": 3325
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_691807987a2ebd149d81baf96b1cf4b1e8e75d4d6d9803385c496cefb8ffbda3",
+      "sha256": "691807987a2ebd149d81baf96b1cf4b1e8e75d4d6d9803385c496cefb8ffbda3",
+      "bytes_per_copy": 1162,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.json",
+          "bytes": 1162
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.json",
+          "bytes": 1162
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_69b743ec2d7d0be81c36b6227baffe5616c10ab37785b470df94464cba2bf410",
+      "sha256": "69b743ec2d7d0be81c36b6227baffe5616c10ab37785b470df94464cba2bf410",
+      "bytes_per_copy": 876,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/operational_metrics.csv",
+          "bytes": 876
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/operational_metrics.csv",
+          "bytes": 876
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_77a94592cd3da2c8a5220fd76e975f58d08235257dd121481bb9600271d6788f",
+      "sha256": "77a94592cd3da2c8a5220fd76e975f58d08235257dd121481bb9600271d6788f",
+      "bytes_per_copy": 1693,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/thresholds_tuning.csv",
+          "bytes": 1693
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/thresholds_validation.csv",
+          "bytes": 1693
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0",
+      "sha256": "7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0",
+      "bytes_per_copy": 184379,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+          "bytes": 184379
+        },
+        {
+          "source_code": "S11",
+          "original_path": "train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+          "bytes": 184379
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_8694f582592dcbfc0b99bd0037752cdb24778ce678529c123e00ce298b99b998",
+      "sha256": "8694f582592dcbfc0b99bd0037752cdb24778ce678529c123e00ce298b99b998",
+      "bytes_per_copy": 1882,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/candidate_validation_summary.csv",
+          "bytes": 1882
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/candidate_validation_summary.partial.csv",
+          "bytes": 1882
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155",
+      "sha256": "90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155",
+      "bytes_per_copy": 12684,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+          "bytes": 12684
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+          "bytes": 12684
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_9a3e72ba316db967f998708abc60e006b8002081a88388d6d084bf1187485529",
+      "sha256": "9a3e72ba316db967f998708abc60e006b8002081a88388d6d084bf1187485529",
+      "bytes_per_copy": 23624,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_multilabel_harvard_xgboost_none_fixed30.json",
+          "bytes": 23624
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_multilabel_harvard_xgboost_none_fixed30.json",
+          "bytes": 23624
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_9c0ca90cc3dd2df91b6e3b5504a6666b017ce3b78db09a71f07643a35d680cc3",
+      "sha256": "9c0ca90cc3dd2df91b6e3b5504a6666b017ce3b78db09a71f07643a35d680cc3",
+      "bytes_per_copy": 1794,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/test_metrics_multilabel.json",
+          "bytes": 1794
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/test_metrics_multilabel.json",
+          "bytes": 1794
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_9dee112d86e2af1702265fb620df9cfafe4147ad05d35f89b0ec793868b24c75",
+      "sha256": "9dee112d86e2af1702265fb620df9cfafe4147ad05d35f89b0ec793868b24c75",
+      "bytes_per_copy": 3060,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/calibration_per_label_metrics.csv",
+          "bytes": 3060
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/calibration_per_label_metrics.csv",
+          "bytes": 3060
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_a75b2e3cf0f92f0386b9c452849babc71d402e2fafb0a1cb45410e4d6f5a9158",
+      "sha256": "a75b2e3cf0f92f0386b9c452849babc71d402e2fafb0a1cb45410e4d6f5a9158",
+      "bytes_per_copy": 5777,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.json",
+          "bytes": 5777
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.json",
+          "bytes": 5777
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376",
+      "sha256": "b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376",
+      "bytes_per_copy": 12725,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c3.sh",
+          "bytes": 12725
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_resume_multilabel_xgb_cpu_c3.sh",
+          "bytes": 12725
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_b647488c9ba0cbe356fc1d7af89e5a11110545dab88b5094e98436bfd49393cd",
+      "sha256": "b647488c9ba0cbe356fc1d7af89e5a11110545dab88b5094e98436bfd49393cd",
+      "bytes_per_copy": 2011,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/calibration_metrics_multilabel.json",
+          "bytes": 2011
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/calibration_metrics_multilabel.json",
+          "bytes": 2011
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_b938d306742298bb13e537b5742da0650d0e57680118ad3819d096e65bf54882",
+      "sha256": "b938d306742298bb13e537b5742da0650d0e57680118ad3819d096e65bf54882",
+      "bytes_per_copy": 3213,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/per_label_metrics.csv",
+          "bytes": 3213
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/per_label_metrics.csv",
+          "bytes": 3213
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_bd202c3e7d2a0e8501026eb12909e5e72760c58b0d38ff539f30887b5df3383d",
+      "sha256": "bd202c3e7d2a0e8501026eb12909e5e72760c58b0d38ff539f30887b5df3383d",
+      "bytes_per_copy": 639,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.json",
+          "bytes": 639
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.json",
+          "bytes": 639
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_bdb66ef7bb136ca3b88449d85abe90cc2adca298f45d351167a9853dcf98a691",
+      "sha256": "bdb66ef7bb136ca3b88449d85abe90cc2adca298f45d351167a9853dcf98a691",
+      "bytes_per_copy": 2655,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/candidate_tuning_summary.json",
+          "bytes": 2655
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/candidate_validation_summary.json",
+          "bytes": 2655
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_c5e41571999329b8b5747cd97e4d3ec87872bc6e8a1d8b9a5c6bd59703439f42",
+      "sha256": "c5e41571999329b8b5747cd97e4d3ec87872bc6e8a1d8b9a5c6bd59703439f42",
+      "bytes_per_copy": 16412,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/run_config.json",
+          "bytes": 16412
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/run_config.json",
+          "bytes": 16412
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_d6d01d325d4f8316a5102410647143e250662b48ff89a351168f83bdb7496337",
+      "sha256": "d6d01d325d4f8316a5102410647143e250662b48ff89a351168f83bdb7496337",
+      "bytes_per_copy": 1075,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/operational_metrics.json",
+          "bytes": 1075
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/operational_metrics.json",
+          "bytes": 1075
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c",
+      "sha256": "d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c",
+      "bytes_per_copy": 12710,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c2.sh",
+          "bytes": 12710
+        },
+        {
+          "source_code": "S11",
+          "original_path": "run_resume_multilabel_xgb_cpu_c2.sh",
+          "bytes": 12710
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_dcd5f92216d80424c29a71088c490245f355ae3935270f7535a94d489c4396f1",
+      "sha256": "dcd5f92216d80424c29a71088c490245f355ae3935270f7535a94d489c4396f1",
+      "bytes_per_copy": 3333,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.csv",
+          "bytes": 3333
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.csv",
+          "bytes": 3333
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_per_copy": 0,
+      "empty_file": true,
+      "policy": "archivo_vacio; no_consolidar_por_hash_solo",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3045/db_to_csv_3045.err",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3359/slurm-corr3MC3_ALL-3359.out",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3360/slurm-corr3MC3_ALL-3360.out",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/slurm-corr3MC3_ALL-3359.out",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/slurm-corr3MC3_ALL-3360.out",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/src/waf_ml/scripts/__init__.py",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/sacct/rutas_salida_por_job.err",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/sacct/sacct_jobs_asignacion.err",
+          "bytes": 0
+        },
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/sacct/sacct_jobs_y_steps.err",
+          "bytes": 0
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/logs/definitivo_multilabel_harvard_xgboost_gpu_nodo3_3150.err",
+          "bytes": 0
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_ecc1b808ccb5d071d0ab2830718b3978bbd8f0eaff867aa5bb8b1ee0e9c75ea9",
+      "sha256": "ecc1b808ccb5d071d0ab2830718b3978bbd8f0eaff867aa5bb8b1ee0e9c75ea9",
+      "bytes_per_copy": 43471,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/logs_preservados/por_sacct/job_3151/DEFINITIVO_multilabel_xgboost_gpu_c2_3151.err",
+          "bytes": 43471
+        },
+        {
+          "source_code": "S06",
+          "original_path": "DEFINITIVO/multietiqueta/logs/definitivo_multilabel_harvard_xgboost_gpu_c2_3151.err",
+          "bytes": 43471
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
+      "sha256": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
+      "bytes_per_copy": 11118,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2.sh",
+          "bytes": 11118
+        },
+        {
+          "source_code": "S11",
+          "original_path": "multietiquetaCorrida2.sh",
+          "bytes": 11118
+        }
+      ]
+    },
+    {
+      "group_id": "SHA256_ff509844e7add65d5f36a45293f14dc12c9ba5fbc2a2c217129e6e925a0a10cb",
+      "sha256": "ff509844e7add65d5f36a45293f14dc12c9ba5fbc2a2c217129e6e925a0a10cb",
+      "bytes_per_copy": 2016,
+      "empty_file": false,
+      "policy": "duplicado_binario_exacto; conservar_mapa_de_alias_y_snapshot_S01_integro",
+      "members": [
+        {
+          "source_code": "S01",
+          "original_path": "evidencia_tesis_slurm_20260803T142006/proyecto_actual/copias/multietiquetaCorrida2/harvard/test_metrics_multilabel.json",
+          "bytes": 2016
+        },
+        {
+          "source_code": "S06",
+          "original_path": "multietiquetaCorrida2/harvard/test_metrics_multilabel.json",
+          "bytes": 2016
+        }
+      ]
+    }
+  ]
+}

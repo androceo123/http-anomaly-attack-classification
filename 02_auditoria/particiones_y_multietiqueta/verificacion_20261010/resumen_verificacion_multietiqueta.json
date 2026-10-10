@@ -1,0 +1,680 @@
+{
+  "created_at_utc": "2026-10-10T15:07:16.044515+00:00",
+  "operation": "Read-only recomputation from saved predictions and deterministic split reconstruction. No model unpickling, no experiment script execution, no training.",
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "sklearn": "1.8.0"
+  },
+  "runs": {
+    "L1": {
+      "metrics_recalculated": {
+        "rows": 181563,
+        "unit": "fila_evento",
+        "exact_match_accuracy": 0.9653068081051757,
+        "exact_match_count": 175264,
+        "hamming_loss": 0.0033000482844338696,
+        "wrong_label_decisions": 7190,
+        "f1_micro": 0.9532904567010979,
+        "f1_macro": 0.834976684071172,
+        "f1_weighted": 0.9506695637174619,
+        "precision_micro": 0.9746151087259733,
+        "recall_micro": 0.932878994011367,
+        "jaccard_micro": 0.9107497517378351,
+        "pr_auc_macro": 0.8416901574868599,
+        "roc_auc_macro": 0.993777934082091,
+        "attack_only_exact_match_count": 70882,
+        "attack_only_support": 76524,
+        "attack_only_exact_match": 0.9262714965239663,
+        "normal_support": 105039,
+        "normal_recall": 0.99374518036158,
+        "normal_99_goal_met": true,
+        "binary_confusion": {
+          "tn": 104382,
+          "fp": 657,
+          "fn": 4369,
+          "tp": 72155
+        },
+        "labels_meeting_f1_85": 9,
+        "duplicate_row_indices": 0,
+        "duplicate_sample_ids": 0
+      },
+      "checks": [
+        {
+          "check": "exact_match_accuracy",
+          "recalculated": 0.9653068081051757,
+          "saved": 0.9653068081051757,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "hamming_loss",
+          "recalculated": 0.0033000482844338696,
+          "saved": 0.0033000482844338696,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_micro",
+          "recalculated": 0.9532904567010979,
+          "saved": 0.9532904567010979,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_macro",
+          "recalculated": 0.834976684071172,
+          "saved": 0.834976684071172,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_weighted",
+          "recalculated": 0.9506695637174619,
+          "saved": 0.9506695637174619,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "precision_micro",
+          "recalculated": 0.9746151087259733,
+          "saved": 0.9746151087259733,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "recall_micro",
+          "recalculated": 0.932878994011367,
+          "saved": 0.932878994011367,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "jaccard_micro",
+          "recalculated": 0.9107497517378351,
+          "saved": 0.9107497517378351,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "pr_auc_macro",
+          "recalculated": 0.8416901574868599,
+          "saved": 0.8416901574868599,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "roc_auc_macro",
+          "recalculated": 0.993777934082091,
+          "saved": 0.993777934082091,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "binary_tn",
+          "recalculated": 104382,
+          "saved": 104382,
+          "match": true
+        },
+        {
+          "check": "binary_fp",
+          "recalculated": 657,
+          "saved": 657,
+          "match": true
+        },
+        {
+          "check": "binary_fn",
+          "recalculated": 4369,
+          "saved": 4369,
+          "match": true
+        },
+        {
+          "check": "binary_tp",
+          "recalculated": 72155,
+          "saved": 72155,
+          "match": true
+        },
+        {
+          "check": "all_per_label_counts",
+          "match": true
+        },
+        {
+          "check": "all_per_label_f1",
+          "match": true
+        },
+        {
+          "check": "predictions_reproduced_by_saved_scores_and_thresholds",
+          "match": true
+        }
+      ],
+      "operational": {
+        "unit": "fila_evento",
+        "sample_size": 181563,
+        "sample_matches_saved_count": true,
+        "percentile_method": "numpy.percentile default linear",
+        "recorded_online_seconds": 1697.1800472661853,
+        "sum_individual_seconds": 1696.5530674941838,
+        "model_size_bytes_actual": 15327435,
+        "latency_ms_pipeline_online_p50": {
+          "recalculated": 9.29301232099533,
+          "saved": 9.29301232099533,
+          "match": true
+        },
+        "latency_ms_pipeline_online_p95": {
+          "recalculated": 9.83966626226902,
+          "saved": 9.83966626226902,
+          "match": true
+        },
+        "latency_ms_pipeline_online_p99": {
+          "recalculated": 10.251286625862122,
+          "saved": 10.251286625862122,
+          "match": true
+        },
+        "throughput_req_s_pipeline_online": {
+          "recalculated": 106.97922138105581,
+          "saved": 106.97922138105581,
+          "match": true
+        },
+        "throughput_req_s_pipeline_batch": {
+          "recalculated": 3344.9598495051105,
+          "saved": 3344.9598495051105,
+          "match": true
+        },
+        "throughput_req_s_inference_batch": {
+          "recalculated": 25974.380812984768,
+          "saved": 25974.380812984768,
+          "match": true
+        }
+      },
+      "source_prediction_sha256": "b84ab6f2164c82ddebd3d4dabfad6ecb366b6eaf0b2043dc33370d290a1c84f8",
+      "source_folder": "extraidos/S06/DEFINITIVO/multietiqueta/multiquetaSalidaXG",
+      "run_config_sha256": "633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417",
+      "partitions": {
+        "origin": "reconstructed_in_this_audit_not_historical_split_files",
+        "methods": {
+          "test": "primary_label",
+          "validation": "primary_label"
+        },
+        "checks": {
+          "test_indices_same_order": true,
+          "test_indices_same_set": true,
+          "test_labels_match_processed": true,
+          "test_sample_ids_match": true,
+          "partitions_cover_all_rows": true
+        },
+        "counts": {
+          "train": {
+            "rows": 581001,
+            "expected_rows": 581001,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 13435,
+              "CAPEC-153 Input Data Manipulation": 1458,
+              "CAPEC-16 Dictionary-based Password Attack": 1175,
+              "CAPEC-194 Fake the Source of Data": 35932,
+              "CAPEC-242 Code Injection": 10128,
+              "CAPEC-272 Protocol Manipulation": 5858,
+              "CAPEC-274 HTTP Verb Tampering": 3456,
+              "CAPEC-310 Scanning for Vulnerable Software": 1733,
+              "CAPEC-33 HTTP Request Smuggling": 679,
+              "CAPEC-34 HTTP Response Splitting": 12637,
+              "CAPEC-66 SQL Injection": 160180,
+              "CAPEC-88 OS Command Injection": 4795
+            },
+            "sorted_index_sha256": "8ac9f34de48db3cea22cfe5cb8743e745cf3a0775f16e03251ec8c80576c2a88"
+          },
+          "valid": {
+            "rows": 145251,
+            "expected_rows": 145251,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 3359,
+              "CAPEC-153 Input Data Manipulation": 366,
+              "CAPEC-16 Dictionary-based Password Attack": 304,
+              "CAPEC-194 Fake the Source of Data": 8983,
+              "CAPEC-242 Code Injection": 2531,
+              "CAPEC-272 Protocol Manipulation": 1462,
+              "CAPEC-274 HTTP Verb Tampering": 874,
+              "CAPEC-310 Scanning for Vulnerable Software": 440,
+              "CAPEC-33 HTTP Request Smuggling": 169,
+              "CAPEC-34 HTTP Response Splitting": 3160,
+              "CAPEC-66 SQL Injection": 40040,
+              "CAPEC-88 OS Command Injection": 1178
+            },
+            "sorted_index_sha256": "29bc380f6f984114299c2567de605dc7da461a9171f3684c7b45282a79bfff9c"
+          },
+          "test": {
+            "rows": 181563,
+            "expected_rows": 181563,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 4198,
+              "CAPEC-153 Input Data Manipulation": 448,
+              "CAPEC-16 Dictionary-based Password Attack": 368,
+              "CAPEC-194 Fake the Source of Data": 11230,
+              "CAPEC-242 Code Injection": 3168,
+              "CAPEC-272 Protocol Manipulation": 1833,
+              "CAPEC-274 HTTP Verb Tampering": 1107,
+              "CAPEC-310 Scanning for Vulnerable Software": 545,
+              "CAPEC-33 HTTP Request Smuggling": 211,
+              "CAPEC-34 HTTP Response Splitting": 3941,
+              "CAPEC-66 SQL Injection": 50091,
+              "CAPEC-88 OS Command Injection": 1509
+            },
+            "sorted_index_sha256": "e5515bc8be1d276fe59e307f7e87811bb95feb949f40a52bf75f0c4873b9a839"
+          }
+        },
+        "intersections": [
+          {
+            "partition_a": "train",
+            "partition_b": "valid",
+            "shared_indices": 0
+          },
+          {
+            "partition_a": "train",
+            "partition_b": "test",
+            "shared_indices": 0
+          },
+          {
+            "partition_a": "valid",
+            "partition_b": "test",
+            "shared_indices": 0
+          }
+        ],
+        "qualification": "Agreement of test index order, sample IDs, labels and every saved split support is checked. Historical training memberships are reconstructed; no original full partition lists were found."
+      },
+      "raw_labels_intermediate": {
+        "path": "analisis/sr_bh_raw_labels.npy",
+        "metadata_path": "analisis/sr_bh_raw_profile.json",
+        "sha256": "3d7b0e7c7ad19cd0016a5859d71048d73ab012397fcb125e8f57d1b6998bbe10"
+      }
+    },
+    "L2": {
+      "metrics_recalculated": {
+        "rows": 108598,
+        "unit": "grupo_por_huella",
+        "exact_match_accuracy": 0.9691983277776755,
+        "exact_match_count": 105253,
+        "hamming_loss": 0.002761714457602043,
+        "wrong_label_decisions": 3599,
+        "f1_micro": 0.9760429217118095,
+        "f1_macro": 0.9393993137175819,
+        "f1_weighted": 0.974976520975685,
+        "precision_micro": 0.9915336759534757,
+        "recall_micro": 0.9610287467065162,
+        "jaccard_micro": 0.9532068700999831,
+        "pr_auc_macro": 0.9625993082593888,
+        "roc_auc_macro": 0.9989021540519625,
+        "attack_only_exact_match_count": 71328,
+        "attack_only_support": 74328,
+        "attack_only_exact_match": 0.9596383597029383,
+        "normal_support": 34270,
+        "normal_recall": 0.9899328859060402,
+        "normal_99_goal_met": false,
+        "binary_confusion": {
+          "tn": 33925,
+          "fp": 345,
+          "fn": 2438,
+          "tp": 71890
+        },
+        "labels_meeting_f1_85": 10,
+        "duplicate_row_indices": 0,
+        "duplicate_sample_ids": 0,
+        "duplicate_test_fingerprints": 0
+      },
+      "checks": [
+        {
+          "check": "exact_match_accuracy",
+          "recalculated": 0.9691983277776755,
+          "saved": 0.9691983277776755,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "hamming_loss",
+          "recalculated": 0.002761714457602043,
+          "saved": 0.002761714457602043,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_micro",
+          "recalculated": 0.9760429217118095,
+          "saved": 0.9760429217118095,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_macro",
+          "recalculated": 0.9393993137175819,
+          "saved": 0.9393993137175819,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "f1_weighted",
+          "recalculated": 0.974976520975685,
+          "saved": 0.974976520975685,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "precision_micro",
+          "recalculated": 0.9915336759534757,
+          "saved": 0.9915336759534757,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "recall_micro",
+          "recalculated": 0.9610287467065162,
+          "saved": 0.9610287467065162,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "jaccard_micro",
+          "recalculated": 0.9532068700999831,
+          "saved": 0.9532068700999831,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "pr_auc_macro",
+          "recalculated": 0.9625993082593888,
+          "saved": 0.9625993082593888,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "roc_auc_macro",
+          "recalculated": 0.9989021540519625,
+          "saved": 0.9989021540519625,
+          "delta": 0.0,
+          "match": true
+        },
+        {
+          "check": "binary_tn",
+          "recalculated": 33925,
+          "saved": 33925,
+          "match": true
+        },
+        {
+          "check": "binary_fp",
+          "recalculated": 345,
+          "saved": 345,
+          "match": true
+        },
+        {
+          "check": "binary_fn",
+          "recalculated": 2438,
+          "saved": 2438,
+          "match": true
+        },
+        {
+          "check": "binary_tp",
+          "recalculated": 71890,
+          "saved": 71890,
+          "match": true
+        },
+        {
+          "check": "all_per_label_counts",
+          "match": true
+        },
+        {
+          "check": "all_per_label_f1",
+          "match": true
+        },
+        {
+          "check": "predictions_reproduced_by_saved_scores_and_thresholds",
+          "match": true
+        }
+      ],
+      "operational": {
+        "unit": "grupo_por_huella",
+        "sample_size": 10000,
+        "sample_matches_saved_count": true,
+        "percentile_method": "numpy.percentile default linear",
+        "recorded_online_seconds": 71.97933772578835,
+        "sum_individual_seconds": 71.9490973688662,
+        "model_size_bytes_actual": 13561468,
+        "latency_ms_pipeline_online_p50": {
+          "recalculated": 7.124563679099083,
+          "saved": 7.124563679099083,
+          "match": true
+        },
+        "latency_ms_pipeline_online_p95": {
+          "recalculated": 7.627084106206894,
+          "saved": 7.627084106206894,
+          "match": true
+        },
+        "latency_ms_pipeline_online_p99": {
+          "recalculated": 8.083367235958576,
+          "saved": 8.083367235958576,
+          "match": true
+        },
+        "throughput_req_s_pipeline_online": {
+          "recalculated": 138.92875811244448,
+          "saved": 138.92875811244448,
+          "match": true
+        },
+        "throughput_req_s_pipeline_batch": {
+          "recalculated": 1832.2620675693445,
+          "saved": 1832.2620675693445,
+          "match": true
+        },
+        "throughput_req_s_inference_batch": {
+          "recalculated": 65010.93669379013,
+          "saved": 65010.93669379013,
+          "match": true
+        }
+      },
+      "source_prediction_sha256": "f5e58998c37fad8a6a57a89cb65ccd8e1f209e5b9745693721364fe6b374b8ff",
+      "source_folder": "extraidos/S06/multietiquetaCorrida2/harvard",
+      "run_config_sha256": "c5e41571999329b8b5747cd97e4d3ec87872bc6e8a1d8b9a5c6bd59703439f42",
+      "partitions": {
+        "origin": "reconstructed_in_this_audit_not_historical_split_files",
+        "methods": {
+          "test": "primary_label",
+          "validation": "primary_label",
+          "calibration": "primary_label"
+        },
+        "checks": {
+          "test_indices_same_order": true,
+          "test_indices_same_set": true,
+          "test_labels_match_processed": true,
+          "test_sample_ids_match": true,
+          "partitions_cover_all_rows": true,
+          "all_processed_fingerprints_unique": true,
+          "test_fingerprints_match_processed": true
+        },
+        "counts": {
+          "train": {
+            "rows": 347513,
+            "expected_rows": 347513,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 12141,
+              "CAPEC-153 Input Data Manipulation": 1453,
+              "CAPEC-16 Dictionary-based Password Attack": 1155,
+              "CAPEC-194 Fake the Source of Data": 34128,
+              "CAPEC-242 Code Injection": 10079,
+              "CAPEC-272 Protocol Manipulation": 5008,
+              "CAPEC-274 HTTP Verb Tampering": 3193,
+              "CAPEC-310 Scanning for Vulnerable Software": 1610,
+              "CAPEC-33 HTTP Request Smuggling": 669,
+              "CAPEC-34 HTTP Response Splitting": 12630,
+              "CAPEC-66 SQL Injection": 157220,
+              "CAPEC-88 OS Command Injection": 4739
+            },
+            "sorted_index_sha256": "195570ce2b1e221de48916eec3ef4ad5d049173009b4e7f62d169b18fc1e609b"
+          },
+          "tune": {
+            "rows": 43439,
+            "expected_rows": 43439,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 1517,
+              "CAPEC-153 Input Data Manipulation": 183,
+              "CAPEC-16 Dictionary-based Password Attack": 153,
+              "CAPEC-194 Fake the Source of Data": 4266,
+              "CAPEC-242 Code Injection": 1260,
+              "CAPEC-272 Protocol Manipulation": 617,
+              "CAPEC-274 HTTP Verb Tampering": 399,
+              "CAPEC-310 Scanning for Vulnerable Software": 194,
+              "CAPEC-33 HTTP Request Smuggling": 90,
+              "CAPEC-34 HTTP Response Splitting": 1577,
+              "CAPEC-66 SQL Injection": 19664,
+              "CAPEC-88 OS Command Injection": 592
+            },
+            "sorted_index_sha256": "0f9557edc12b25742238ffba9ac69a23955465f45d140dd3d0600759e99d3097"
+          },
+          "calibration": {
+            "rows": 43440,
+            "expected_rows": 43440,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 1518,
+              "CAPEC-153 Input Data Manipulation": 178,
+              "CAPEC-16 Dictionary-based Password Attack": 140,
+              "CAPEC-194 Fake the Source of Data": 4269,
+              "CAPEC-242 Code Injection": 1261,
+              "CAPEC-272 Protocol Manipulation": 626,
+              "CAPEC-274 HTTP Verb Tampering": 399,
+              "CAPEC-310 Scanning for Vulnerable Software": 201,
+              "CAPEC-33 HTTP Request Smuggling": 83,
+              "CAPEC-34 HTTP Response Splitting": 1578,
+              "CAPEC-66 SQL Injection": 19622,
+              "CAPEC-88 OS Command Injection": 632
+            },
+            "sorted_index_sha256": "422f27a61fad71ed32d2e36713a763a0780211fb573b751ea0959165dc0f7f81"
+          },
+          "test": {
+            "rows": 108598,
+            "expected_rows": 108598,
+            "all_positive_counts_match": true,
+            "positive_counts": {
+              "CAPEC-126 Path Traversal": 3794,
+              "CAPEC-153 Input Data Manipulation": 452,
+              "CAPEC-16 Dictionary-based Password Attack": 375,
+              "CAPEC-194 Fake the Source of Data": 10679,
+              "CAPEC-242 Code Injection": 3151,
+              "CAPEC-272 Protocol Manipulation": 1568,
+              "CAPEC-274 HTTP Verb Tampering": 994,
+              "CAPEC-310 Scanning for Vulnerable Software": 503,
+              "CAPEC-33 HTTP Request Smuggling": 215,
+              "CAPEC-34 HTTP Response Splitting": 3949,
+              "CAPEC-66 SQL Injection": 49118,
+              "CAPEC-88 OS Command Injection": 1489
+            },
+            "sorted_index_sha256": "10ef0754f6bcffa718a3904a4e3f474212bf4288eb2dcd3834c768158fef8c9a"
+          }
+        },
+        "intersections": [
+          {
+            "partition_a": "train",
+            "partition_b": "tune",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          },
+          {
+            "partition_a": "train",
+            "partition_b": "calibration",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          },
+          {
+            "partition_a": "train",
+            "partition_b": "test",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          },
+          {
+            "partition_a": "tune",
+            "partition_b": "calibration",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          },
+          {
+            "partition_a": "tune",
+            "partition_b": "test",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          },
+          {
+            "partition_a": "calibration",
+            "partition_b": "test",
+            "shared_indices": 0,
+            "shared_fingerprints": 0
+          }
+        ],
+        "qualification": "Agreement of test index order, sample IDs, labels and every saved split support is checked. Historical training memberships are reconstructed; no original full partition lists were found."
+      },
+      "deduplication_internal_reconciliation": {
+        "groups": 542990,
+        "valid_original_rows_by_group_size_sum": 907813,
+        "duplicate_groups": 27623,
+        "duplicate_rows_beyond_first": 364823,
+        "max_duplicate_group_size": 453,
+        "normal_groups": 171348,
+        "attack_groups": 371642,
+        "duplicate_audit_csv_rows": 27623,
+        "label_disagreement_count": 288,
+        "normal_attack_conflict_after_or_count": 284,
+        "recorded_counts_match": true,
+        "duplicate_csv_fingerprints_and_sizes_match_processed": true
+      },
+      "tuning_trials": {
+        "count": 192,
+        "by_label": {
+          "CAPEC-126 Path Traversal": 12,
+          "CAPEC-153 Input Data Manipulation": 28,
+          "CAPEC-16 Dictionary-based Password Attack": 12,
+          "CAPEC-194 Fake the Source of Data": 12,
+          "CAPEC-242 Code Injection": 12,
+          "CAPEC-272 Protocol Manipulation": 28,
+          "CAPEC-274 HTTP Verb Tampering": 28,
+          "CAPEC-310 Scanning for Vulnerable Software": 12,
+          "CAPEC-33 HTTP Request Smuggling": 12,
+          "CAPEC-34 HTTP Response Splitting": 12,
+          "CAPEC-66 SQL Injection": 12,
+          "CAPEC-88 OS Command Injection": 12
+        },
+        "status_counts": {
+          "ok": 192
+        },
+        "selected_count": 12,
+        "selected_by_label": {
+          "CAPEC-126 Path Traversal": 1,
+          "CAPEC-153 Input Data Manipulation": 1,
+          "CAPEC-16 Dictionary-based Password Attack": 1,
+          "CAPEC-194 Fake the Source of Data": 1,
+          "CAPEC-242 Code Injection": 1,
+          "CAPEC-272 Protocol Manipulation": 1,
+          "CAPEC-274 HTTP Verb Tampering": 1,
+          "CAPEC-310 Scanning for Vulnerable Software": 1,
+          "CAPEC-33 HTTP Request Smuggling": 1,
+          "CAPEC-34 HTTP Response Splitting": 1,
+          "CAPEC-66 SQL Injection": 1,
+          "CAPEC-88 OS Command Injection": 1
+        }
+      },
+      "schema_hash_recomputed": {
+        "sha256": "0bbc812611513de0952653b398f5533afa6933d32faf3cbfa8ac88ac12a8e51f",
+        "matches_run_config": true
+      },
+      "prediction_reconstruction": {
+        "csv_float_parser": "round_trip",
+        "score_threshold_dtype": "float32",
+        "operator": ">="
+      },
+      "numeric_reading_note": {
+        "default_csv_float64_threshold_mismatches": 1880,
+        "round_trip_float64_mismatches": 0,
+        "original_float32_mismatches": 0,
+        "interpretation": "La discrepancia inicial era del parser de verificación. Los artefactos guardados son consistentes al conservar los decimales o usar el dtype original."
+      }
+    }
+  }
+}

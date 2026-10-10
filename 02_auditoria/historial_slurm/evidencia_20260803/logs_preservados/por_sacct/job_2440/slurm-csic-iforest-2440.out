@@ -1,0 +1,95 @@
+[ENV] backend=cupy_iforest
+[ENV] result_dir=resultsOptimo/csic/oneclass/cupy_iforest
+[ENV] python=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+Python: /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+CuPy: 14.1.0
+CUDA devices: 1
+GPU CuPy OK: 6
+cuML: 26.04.000
+Mon Jun  1 21:59:14 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   46C    P0            108W /  250W |    1472MiB /  16384MiB |     86%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A   3258552      C   python                                       1468MiB |
++-----------------------------------------------------------------------------------------+
+[BUILD] data/processed/csic/csic_features.parquet ya existe; no se regenera.
+[BUILD] Para regenerar: FORCE_REBUILD_FEATURES=1 sbatch run_csic_iforest_eif_gpu.sh
+[CHECK] data/processed/csic/csic_features.parquet: rows=97065 cols=37 top25_ok=25
+[CHECK] features_used=body_encoded_ratio,uri_encoded_ratio,path_depth,uri_non_alnum_ratio,max_param_value_len,body_len,uri_len,query_len,n_query_params,req_content_length,uri_entropy,body_entropy,invalid_percent_encoding_count,double_encoding_count,path_traversal_token_count,sql_token_count,xss_token_count,cmd_injection_token_count,file_inclusion_token_count,quote_comment_operator_count,repeated_param_name_count,empty_param_value_ratio,avg_param_value_len,content_length_body_mismatch,content_type_body_mismatch
+[CHECK] labels= {0: 72000, 1: 25065}
+[START] backend=cupy_iforest data=data/processed/csic/csic_features.parquet
+[GPU] {"cupy_import_error": null, "cupy_cuda_device_count": 1, "cupy_cuda_device_name": "Tesla V100-PCIE-16GB", "nvidia_smi": "Tesla V100-PCIE-16GB, 16384 MiB, 560.35.03"}
+[DATA] rows=97065 cols=25 normal=72000 anomaly=25065
+[DATA] features=body_encoded_ratio,uri_encoded_ratio,path_depth,uri_non_alnum_ratio,max_param_value_len,body_len,uri_len,query_len,n_query_params,req_content_length,uri_entropy,body_entropy,invalid_percent_encoding_count,double_encoding_count,path_traversal_token_count,sql_token_count,xss_token_count,cmd_injection_token_count,file_inclusion_token_count,quote_comment_operator_count,repeated_param_name_count,empty_param_value_ratio,avg_param_value_len,content_length_body_mismatch,content_type_body_mismatch
+[SPLIT] train=77652 test=19413 train_normals=57600
+[TUNE] backend=cupy_iforest candidates=48 cv=3 rows=30000 metric=auto
+[TUNE] 0001/48 score=0.41116 f1=0.35459 pr_auc=0.58087 params={'n_estimators': 400, 'max_samples': 128, 'max_depth': 12, 'threshold_percentile': 97.0}
+[TUNE] 0002/48 score=0.49897 f1=0.46383 pr_auc=0.60440 params={'n_estimators': 200, 'max_samples': 256, 'max_depth': 12, 'threshold_percentile': 90.0}
+[TUNE] 0003/48 score=0.45555 f1=0.40657 pr_auc=0.60250 params={'n_estimators': 200, 'max_samples': 256, 'max_depth': 16, 'threshold_percentile': 95.0}
+[TUNE] 0004/48 score=0.40331 f1=0.34381 pr_auc=0.58179 params={'n_estimators': 200, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 97.0}
+[TUNE] 0005/48 score=0.46883 f1=0.41979 pr_auc=0.61593 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 8, 'threshold_percentile': 95.0}
+[TUNE] 0006/48 score=0.26491 f1=0.16227 pr_auc=0.57280 params={'n_estimators': 200, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 99.5}
+[TUNE] 0007/48 score=0.53683 f1=0.50556 pr_auc=0.63063 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 90.0}
+[TUNE] 0008/48 score=0.56214 f1=0.55022 pr_auc=0.59790 params={'n_estimators': 100, 'max_samples': 256, 'max_depth': 16, 'threshold_percentile': 85.0}
+[TUNE] 0009/48 score=0.46506 f1=0.41074 pr_auc=0.62802 params={'n_estimators': 100, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 97.0}
+[TUNE] 0010/48 score=0.47940 f1=0.44573 pr_auc=0.58039 params={'n_estimators': 100, 'max_samples': 128, 'max_depth': 12, 'threshold_percentile': 90.0}
+[TUNE] 0011/48 score=0.40799 f1=0.34214 pr_auc=0.60554 params={'n_estimators': 100, 'max_samples': 256, 'max_depth': 8, 'threshold_percentile': 98.0}
+[TUNE] 0012/48 score=0.42948 f1=0.35805 pr_auc=0.64375 params={'n_estimators': 200, 'max_samples': 1024, 'max_depth': 12, 'threshold_percentile': 99.0}
+[TUNE] 0013/48 score=0.56524 f1=0.55322 pr_auc=0.60131 params={'n_estimators': 400, 'max_samples': 256, 'max_depth': 16, 'threshold_percentile': 80.0}
+[TUNE] 0014/48 score=0.54537 f1=0.53373 pr_auc=0.58028 params={'n_estimators': 100, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 85.0}
+[TUNE] 0015/48 score=0.51857 f1=0.47754 pr_auc=0.64165 params={'n_estimators': 200, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 95.0}
+[TUNE] 0016/48 score=0.36097 f1=0.27259 pr_auc=0.62610 params={'n_estimators': 400, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 99.5}
+[TUNE] 0017/48 score=0.49454 f1=0.45841 pr_auc=0.60293 params={'n_estimators': 400, 'max_samples': 256, 'max_depth': 8, 'threshold_percentile': 90.0}
+[TUNE] 0018/48 score=0.56268 f1=0.54897 pr_auc=0.60382 params={'n_estimators': 200, 'max_samples': 256, 'max_depth': 12, 'threshold_percentile': 80.0}
+[TUNE] 0019/48 score=0.50160 f1=0.46781 pr_auc=0.60297 params={'n_estimators': 100, 'max_samples': 256, 'max_depth': 12, 'threshold_percentile': 90.0}
+[TUNE] 0020/48 score=0.30575 f1=0.20770 pr_auc=0.59989 params={'n_estimators': 200, 'max_samples': 256, 'max_depth': 16, 'threshold_percentile': 99.5}
+[TUNE] 0021/48 score=0.53782 f1=0.50857 pr_auc=0.62556 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 12, 'threshold_percentile': 90.0}
+[TUNE] 0022/48 score=0.47963 f1=0.43131 pr_auc=0.62459 params={'n_estimators': 400, 'max_samples': 512, 'max_depth': 12, 'threshold_percentile': 95.0}
+[TUNE] 0023/48 score=0.58065 f1=0.56025 pr_auc=0.64183 params={'n_estimators': 400, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 80.0}
+[TUNE] 0024/48 score=0.31565 f1=0.21872 pr_auc=0.60647 params={'n_estimators': 400, 'max_samples': 256, 'max_depth': 12, 'threshold_percentile': 99.5}
+[TUNE] 0025/48 score=0.50959 f1=0.47364 pr_auc=0.61742 params={'n_estimators': 100, 'max_samples': 512, 'max_depth': 12, 'threshold_percentile': 92.0}
+[TUNE] 0026/48 score=0.57182 f1=0.55759 pr_auc=0.61451 params={'n_estimators': 100, 'max_samples': 256, 'max_depth': 12, 'threshold_percentile': 85.0}
+[TUNE] 0027/48 score=0.56355 f1=0.55138 pr_auc=0.60006 params={'n_estimators': 400, 'max_samples': 256, 'max_depth': 16, 'threshold_percentile': 85.0}
+[TUNE] 0028/48 score=0.57258 f1=0.55458 pr_auc=0.62657 params={'n_estimators': 100, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 80.0}
+[TUNE] 0029/48 score=0.38077 f1=0.31403 pr_auc=0.58097 params={'n_estimators': 400, 'max_samples': 128, 'max_depth': 12, 'threshold_percentile': 98.0}
+[TUNE] 0030/48 score=0.53716 f1=0.52602 pr_auc=0.57058 params={'n_estimators': 100, 'max_samples': 128, 'max_depth': 8, 'threshold_percentile': 85.0}
+[TUNE] 0031/48 score=0.40518 f1=0.34238 pr_auc=0.59359 params={'n_estimators': 400, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 98.0}
+[TUNE] 0032/48 score=0.39667 f1=0.33806 pr_auc=0.57250 params={'n_estimators': 400, 'max_samples': 128, 'max_depth': 8, 'threshold_percentile': 97.0}
+[TUNE] 0033/48 score=0.32004 f1=0.22398 pr_auc=0.60824 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 8, 'threshold_percentile': 99.5}
+[TUNE] 0034/48 score=0.40992 f1=0.33866 pr_auc=0.62370 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 99.0}
+[TUNE] 0035/48 score=0.58082 f1=0.56563 pr_auc=0.62639 params={'n_estimators': 400, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 85.0}
+[TUNE] 0036/48 score=0.58960 f1=0.57225 pr_auc=0.64166 params={'n_estimators': 100, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 85.0}
+[TUNE] 0037/48 score=0.57563 f1=0.57372 pr_auc=0.58137 params={'n_estimators': 100, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 80.0}
+[TUNE] 0038/48 score=0.48661 f1=0.44050 pr_auc=0.62493 params={'n_estimators': 400, 'max_samples': 512, 'max_depth': 16, 'threshold_percentile': 95.0}
+[TUNE] 0039/48 score=0.53358 f1=0.49949 pr_auc=0.63586 params={'n_estimators': 200, 'max_samples': 1024, 'max_depth': 8, 'threshold_percentile': 92.0}
+[TUNE] 0040/48 score=0.47658 f1=0.44018 pr_auc=0.58577 params={'n_estimators': 400, 'max_samples': 128, 'max_depth': 8, 'threshold_percentile': 90.0}
+[TUNE] 0041/48 score=0.45248 f1=0.38945 pr_auc=0.64159 params={'n_estimators': 200, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 98.0}
+[TUNE] 0042/48 score=0.33495 f1=0.24045 pr_auc=0.61845 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 12, 'threshold_percentile': 99.5}
+[TUNE] 0043/48 score=0.36979 f1=0.28309 pr_auc=0.62991 params={'n_estimators': 400, 'max_samples': 1024, 'max_depth': 8, 'threshold_percentile': 99.5}
+[TUNE] 0044/48 score=0.55676 f1=0.52674 pr_auc=0.64685 params={'n_estimators': 400, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 92.0}
+[TUNE] 0045/48 score=0.32545 f1=0.24006 pr_auc=0.58160 params={'n_estimators': 100, 'max_samples': 128, 'max_depth': 16, 'threshold_percentile': 99.0}
+[TUNE] 0046/48 score=0.51631 f1=0.48166 pr_auc=0.62027 params={'n_estimators': 200, 'max_samples': 512, 'max_depth': 8, 'threshold_percentile': 92.0}
+[TUNE] 0047/48 score=0.47842 f1=0.42456 pr_auc=0.64002 params={'n_estimators': 100, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 97.0}
+[TUNE] 0048/48 score=0.44191 f1=0.37883 pr_auc=0.63114 params={'n_estimators': 100, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 98.0}
+[TUNE] done seconds=10667.38 best={'n_estimators': 100, 'max_samples': 1024, 'max_depth': 16, 'threshold_percentile': 85.0}
+[FIT] seconds=72.56 threshold=0.52728975
+[TEST] acc=0.77201 f1_anom=0.55881 tpr=0.55915 fpr=0.15389 pr_auc=0.62175 roc_auc=0.81248
+[FI] permutation rows=1000 features=25 baseline_auto=0.56621
+[FI] seconds=178.01 out=resultsOptimo/csic/oneclass/cupy_iforest/feature_importance.csv
+[BENCH] {'rows': 19413, 'batch_size': 4096, 'total_seconds': 42.44258739054203, 'throughput_rows_per_second': 457.3943577324417, 'latency_ms_per_row_estimated': {'p50': 2.103569906012126, 'p95': 2.810826689895327, 'p99': 2.810826689895327, 'mean': 2.1862947900489735}, 'seconds_including_overhead': 50.760430194437504}
+[SAVE] model=resultsOptimo/csic/oneclass/cupy_iforest/model.joblib metrics=resultsOptimo/csic/oneclass/cupy_iforest/metrics.json pred=resultsOptimo/csic/oneclass/cupy_iforest/pred.csv
+[DONE]

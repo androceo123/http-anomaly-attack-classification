@@ -1,0 +1,30 @@
+{
+  "available": true,
+  "positive_class": "attack_or_anomalous",
+  "negative_class": "NORMAL",
+  "tn": 98675,
+  "fp": 28,
+  "fn": 18,
+  "tp": 42212,
+  "accuracy": 0.9996736037691669,
+  "balanced_accuracy": 0.9996450417035639,
+  "precision": 0.9993371212121213,
+  "recall_tpr": 0.9995737627279185,
+  "f1": 0.9994554279625902,
+  "specificity_tnr": 0.9997163206792093,
+  "fpr": 0.0002836793207906548,
+  "fnr": 0.0004262372720814587,
+  "mcc": 0.9992224081401835,
+  "confusion_matrix_labels_0normal_1attack": [
+    [
+      98675,
+      28
+    ],
+    [
+      18,
+      42212
+    ]
+  ],
+  "roc_auc": 0.9999958201659565,
+  "pr_auc": 0.9999907078528897
+}

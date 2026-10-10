@@ -1,0 +1,805 @@
+{
+  "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/data_capec_multilabel.csv",
+  "rows": 907815,
+  "columns": [
+    "timestamp",
+    "src_ip",
+    "src_port",
+    "dst_ip",
+    "dst_port",
+    "request_http_method",
+    "request_http_request",
+    "request_http_protocol",
+    "request_user_agent",
+    "request_referer",
+    "request_host",
+    "request_origin",
+    "request_cookie",
+    "request_content_type",
+    "request_accept",
+    "request_accept_language",
+    "request_accept_encoding",
+    "request_do_not_track",
+    "request_connection",
+    "request_body",
+    "response_http_protocol",
+    "response_http_status_code",
+    "response_http_status_message",
+    "response_content_length",
+    "000 - Normal",
+    "272 - Protocol Manipulation",
+    "242 - Code Injection",
+    "88 - OS Command Injection",
+    "126 - Path Traversal",
+    "66 - SQL Injection",
+    "16 - Dictionary-based Password Attack",
+    "310 - Scanning for Vulnerable Software",
+    "153 - Input Data Manipulation",
+    "248 - Command Injection",
+    "274 - HTTP Verb Tampering",
+    "194 - Fake the Source of Data",
+    "34 - HTTP Response Splitting",
+    "33 - HTTP Request Smuggling"
+  ],
+  "label_columns": [
+    "000 - Normal",
+    "272 - Protocol Manipulation",
+    "242 - Code Injection",
+    "88 - OS Command Injection",
+    "126 - Path Traversal",
+    "66 - SQL Injection",
+    "16 - Dictionary-based Password Attack",
+    "310 - Scanning for Vulnerable Software",
+    "153 - Input Data Manipulation",
+    "248 - Command Injection",
+    "274 - HTTP Verb Tampering",
+    "194 - Fake the Source of Data",
+    "34 - HTTP Response Splitting",
+    "33 - HTTP Request Smuggling"
+  ],
+  "label_counts": {
+    "000 - Normal": 525195,
+    "272 - Protocol Manipulation": 9153,
+    "242 - Code Injection": 15827,
+    "88 - OS Command Injection": 7482,
+    "126 - Path Traversal": 20992,
+    "66 - SQL Injection": 250311,
+    "16 - Dictionary-based Password Attack": 1847,
+    "310 - Scanning for Vulnerable Software": 2718,
+    "153 - Input Data Manipulation": 2272,
+    "248 - Command Injection": 1,
+    "274 - HTTP Verb Tampering": 5437,
+    "194 - Fake the Source of Data": 56145,
+    "34 - HTTP Response Splitting": 19738,
+    "33 - HTTP Request Smuggling": 1059
+  },
+  "normal_rows": 525195,
+  "any_attack_rows": 382620,
+  "normal_and_attack_rows": 0,
+  "all_zero_label_rows": 0,
+  "label_combination_count": 60,
+  "method_counts": {
+    "GET": 869268,
+    "POST": 28381,
+    "OPTIONS": 1284,
+    "THBQ": 1,
+    "HEAD": 1103,
+    "": 2,
+    "TRACE": 2340,
+    "TRACK": 906,
+    "CONNECT": 453,
+    "PATCH": 453,
+    "PUT": 453,
+    "COPY": 453,
+    "LOCK": 453,
+    "MKCOL": 453,
+    "MOVE": 453,
+    "PROPFIND": 453,
+    "PROPPATCH": 453,
+    "UNLOCK": 453
+  },
+  "missing_http_fields_literal_empty": {
+    "request_referer": 616421,
+    "request_origin": 906206,
+    "request_cookie": 462553,
+    "request_content_type": 879271,
+    "request_accept_language": 891955,
+    "request_do_not_track": 907110,
+    "request_body": 881072,
+    "request_accept_encoding": 541515,
+    "request_accept": 526032,
+    "request_connection": 424955,
+    "request_user_agent": 3834,
+    "request_host": 34,
+    "request_http_method": 2,
+    "request_http_request": 2,
+    "request_http_protocol": 2
+  },
+  "empty_all15_field_row_indices": [
+    14410,
+    163884
+  ],
+  "empty_method_uri_body_row_indices": [
+    14410,
+    163884
+  ],
+  "malformed_records": [],
+  "label_array_path": "/workspace/scratch/2517608154c5/organizacion_tesis/analisis/sr_bh_raw_labels.npy",
+  "top_label_combinations": [
+    {
+      "column_indices_in14": [],
+      "labels": [],
+      "count": 525195
+    },
+    {
+      "column_indices_in14": [
+        5
+      ],
+      "labels": [
+        "66 - SQL Injection"
+      ],
+      "count": 248093
+    },
+    {
+      "column_indices_in14": [
+        11
+      ],
+      "labels": [
+        "194 - Fake the Source of Data"
+      ],
+      "count": 55983
+    },
+    {
+      "column_indices_in14": [
+        12
+      ],
+      "labels": [
+        "34 - HTTP Response Splitting"
+      ],
+      "count": 19134
+    },
+    {
+      "column_indices_in14": [
+        4
+      ],
+      "labels": [
+        "126 - Path Traversal"
+      ],
+      "count": 17595
+    },
+    {
+      "column_indices_in14": [
+        2
+      ],
+      "labels": [
+        "242 - Code Injection"
+      ],
+      "count": 13793
+    },
+    {
+      "column_indices_in14": [
+        1
+      ],
+      "labels": [
+        "272 - Protocol Manipulation"
+      ],
+      "count": 7019
+    },
+    {
+      "column_indices_in14": [
+        10
+      ],
+      "labels": [
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 4055
+    },
+    {
+      "column_indices_in14": [
+        3
+      ],
+      "labels": [
+        "88 - OS Command Injection"
+      ],
+      "count": 3074
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal"
+      ],
+      "count": 2464
+    },
+    {
+      "column_indices_in14": [
+        7
+      ],
+      "labels": [
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 2413
+    },
+    {
+      "column_indices_in14": [
+        8
+      ],
+      "labels": [
+        "153 - Input Data Manipulation"
+      ],
+      "count": 1387
+    },
+    {
+      "column_indices_in14": [
+        1,
+        10
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 1370
+    },
+    {
+      "column_indices_in14": [
+        6
+      ],
+      "labels": [
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 836
+    },
+    {
+      "column_indices_in14": [
+        2,
+        3
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "88 - OS Command Injection"
+      ],
+      "count": 760
+    },
+    {
+      "column_indices_in14": [
+        2,
+        5
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "66 - SQL Injection"
+      ],
+      "count": 673
+    },
+    {
+      "column_indices_in14": [
+        5,
+        8
+      ],
+      "labels": [
+        "66 - SQL Injection",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 612
+    },
+    {
+      "column_indices_in14": [
+        12,
+        13
+      ],
+      "labels": [
+        "34 - HTTP Response Splitting",
+        "33 - HTTP Request Smuggling"
+      ],
+      "count": 534
+    },
+    {
+      "column_indices_in14": [
+        2,
+        3,
+        13
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "88 - OS Command Injection",
+        "33 - HTTP Request Smuggling"
+      ],
+      "count": 510
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4,
+        5
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "66 - SQL Injection"
+      ],
+      "count": 380
+    },
+    {
+      "column_indices_in14": [
+        5,
+        6
+      ],
+      "labels": [
+        "66 - SQL Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 352
+    },
+    {
+      "column_indices_in14": [
+        1,
+        4
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "126 - Path Traversal"
+      ],
+      "count": 267
+    },
+    {
+      "column_indices_in14": [
+        1,
+        7
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 253
+    },
+    {
+      "column_indices_in14": [
+        6,
+        11
+      ],
+      "labels": [
+        "16 - Dictionary-based Password Attack",
+        "194 - Fake the Source of Data"
+      ],
+      "count": 162
+    },
+    {
+      "column_indices_in14": [
+        1,
+        5
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "66 - SQL Injection"
+      ],
+      "count": 124
+    },
+    {
+      "column_indices_in14": [
+        4,
+        8
+      ],
+      "labels": [
+        "126 - Path Traversal",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 108
+    },
+    {
+      "column_indices_in14": [
+        3,
+        6
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 94
+    },
+    {
+      "column_indices_in14": [
+        6,
+        8
+      ],
+      "labels": [
+        "16 - Dictionary-based Password Attack",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 86
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4,
+        6
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 78
+    },
+    {
+      "column_indices_in14": [
+        6,
+        12
+      ],
+      "labels": [
+        "16 - Dictionary-based Password Attack",
+        "34 - HTTP Response Splitting"
+      ],
+      "count": 50
+    },
+    {
+      "column_indices_in14": [
+        5,
+        6,
+        8
+      ],
+      "labels": [
+        "66 - SQL Injection",
+        "16 - Dictionary-based Password Attack",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 38
+    },
+    {
+      "column_indices_in14": [
+        4,
+        6
+      ],
+      "labels": [
+        "126 - Path Traversal",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 34
+    },
+    {
+      "column_indices_in14": [
+        1,
+        3
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "88 - OS Command Injection"
+      ],
+      "count": 32
+    },
+    {
+      "column_indices_in14": [
+        3,
+        8
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 32
+    },
+    {
+      "column_indices_in14": [
+        2,
+        3,
+        6
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "88 - OS Command Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 24
+    },
+    {
+      "column_indices_in14": [
+        2,
+        6
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 24
+    },
+    {
+      "column_indices_in14": [
+        1,
+        6
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 21
+    },
+    {
+      "column_indices_in14": [
+        1,
+        12
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "34 - HTTP Response Splitting"
+      ],
+      "count": 20
+    },
+    {
+      "column_indices_in14": [
+        1,
+        4,
+        7
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "126 - Path Traversal",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 19
+    },
+    {
+      "column_indices_in14": [
+        2,
+        5,
+        6
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "66 - SQL Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 19
+    },
+    {
+      "column_indices_in14": [
+        1,
+        2
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "242 - Code Injection"
+      ],
+      "count": 18
+    },
+    {
+      "column_indices_in14": [
+        4,
+        7
+      ],
+      "labels": [
+        "126 - Path Traversal",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 18
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "66 - SQL Injection",
+        "16 - Dictionary-based Password Attack"
+      ],
+      "count": 12
+    },
+    {
+      "column_indices_in14": [
+        6,
+        10
+      ],
+      "labels": [
+        "16 - Dictionary-based Password Attack",
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 8
+    },
+    {
+      "column_indices_in14": [
+        4,
+        6,
+        8
+      ],
+      "labels": [
+        "126 - Path Traversal",
+        "16 - Dictionary-based Password Attack",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 6
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4,
+        13
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "33 - HTTP Request Smuggling"
+      ],
+      "count": 6
+    },
+    {
+      "column_indices_in14": [
+        3,
+        13
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "33 - HTTP Request Smuggling"
+      ],
+      "count": 6
+    },
+    {
+      "column_indices_in14": [
+        5,
+        7
+      ],
+      "labels": [
+        "66 - SQL Injection",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 5
+    },
+    {
+      "column_indices_in14": [
+        1,
+        3,
+        4,
+        7
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 3
+    },
+    {
+      "column_indices_in14": [
+        1,
+        2,
+        3,
+        13
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "242 - Code Injection",
+        "88 - OS Command Injection",
+        "33 - HTTP Request Smuggling"
+      ],
+      "count": 3
+    },
+    {
+      "column_indices_in14": [
+        2,
+        7
+      ],
+      "labels": [
+        "242 - Code Injection",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 2
+    },
+    {
+      "column_indices_in14": [
+        3,
+        6,
+        8
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "16 - Dictionary-based Password Attack",
+        "153 - Input Data Manipulation"
+      ],
+      "count": 2
+    },
+    {
+      "column_indices_in14": [
+        1,
+        5,
+        10
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "66 - SQL Injection",
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 2
+    },
+    {
+      "column_indices_in14": [
+        1,
+        2,
+        7
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "242 - Code Injection",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        7,
+        8,
+        9
+      ],
+      "labels": [
+        "310 - Scanning for Vulnerable Software",
+        "153 - Input Data Manipulation",
+        "248 - Command Injection"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        3,
+        7
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        7,
+        10
+      ],
+      "labels": [
+        "310 - Scanning for Vulnerable Software",
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        3,
+        4,
+        7
+      ],
+      "labels": [
+        "88 - OS Command Injection",
+        "126 - Path Traversal",
+        "310 - Scanning for Vulnerable Software"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        4,
+        5
+      ],
+      "labels": [
+        "126 - Path Traversal",
+        "66 - SQL Injection"
+      ],
+      "count": 1
+    },
+    {
+      "column_indices_in14": [
+        1,
+        6,
+        10
+      ],
+      "labels": [
+        "272 - Protocol Manipulation",
+        "16 - Dictionary-based Password Attack",
+        "274 - HTTP Verb Tampering"
+      ],
+      "count": 1
+    }
+  ],
+  "elapsed_seconds": 10.604092121124268
+}

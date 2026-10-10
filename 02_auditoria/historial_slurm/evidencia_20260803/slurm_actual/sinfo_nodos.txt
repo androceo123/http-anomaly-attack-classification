@@ -1,0 +1,9 @@
+capturado_en=2026-08-03T14:20:06-03:00
+comando=sinfo -Nel 
+
+Mon Aug 03 14:20:06 2026
+NODELIST   NODES PARTITION       STATE CPUS    S:C:T MEMORY TMP_DISK WEIGHT AVAIL_FE REASON              
+c1             1   normal*        idle 32     2:16:1 128000        0      1   (null) none                
+c2             1   normal*        idle 32     2:16:1 128000        0      1   (null) none                
+c3             1   normal*        idle 32     2:16:1 128000        0      1   (null) none                
+c4             1       gpu        idle 32     2:16:1 128000        0      1   (null) none                

@@ -1,0 +1,562 @@
+================================================================
+[START] 2026-06-08 11:22:37
+[INFO] Host=c2 DATASET=harvard JOB=2518 PARTITION=normal
+[INFO] GPU Slurm: SLURM_JOB_GPUS=0 CUDA_VISIBLE_DEVICES=0
+[INFO] Recursos pedidos: partition=normal gres/gpu=1 cpus=8 mem=32G time=16:00:00
+[INFO] Modo: probar menú TorpEda completo en Harvard, sin feature importance
+[INFO] Skips: logreg=0 histgb=0 extra_trees=0 random_forest=1
+[INFO] Candidates: XGB GPU/CPU + two-stage + HistGB + ExtraTrees + LogReg; weights=none,sqrt_balanced,balanced_clipped; threshold_grid=0.02:0.98:0.01
+[INFO] Resume=1 checkpoint=1 require_families=xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression
+================================================================
+[INFO] VIRTUAL_ENV=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] command -v python=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] PYTHON_BIN=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python
+[INFO] sys.prefix=/home_data/aroman/TFG/waf-ml-starter/.venv
+[INFO] Dependency check: parquet=True xgboost=True
+[INFO] xgboost version=3.2.0
+[INFO] HARVARD_FILE_COUNT=1 en /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:725059
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=c2
+   NumNodes=1 NumCPUs=8 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=8,mem=32G,node=1,billing=20,gres/gpu=1
+   AllocTRES=cpu=8,mem=32G,node=1,billing=20,gres/gpu=1
+   MinCPUsNode=8 MinMemoryNode=32G MinTmpDiskNode=0
+   TresPerNode=gres/gpu:1
+Mon Jun  8 11:22:38 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 560.35.03              Driver Version: 560.35.03      CUDA Version: 12.6     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-16GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   28C    P0             25W /  250W |       1MiB /  16384MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI        PID   Type   Process name                              GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+[RUN] /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python -u /home_data/aroman/TFG/waf-ml-starter/train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py --dataset harvard --project-dir /home_data/aroman/TFG/waf-ml-starter --inputs /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard --processed-out /home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet --output-dir /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass --label-prefix HARVARD --harvard-label-mode optimized-family --harvard-multiclass-strategy severity --sep auto --method-col request_http_method --uri-col request_http_request --body-col request_body --normal-col 000 - Normal --preset strong --use-gpu auto --test-size 0.20 --val-size 0.15 --seed 42 --metric-select f1_macro --n-jobs 8 --min-class-count 20 --max-normal-rows 0 --candidate-weight-modes none,sqrt_balanced,balanced_clipped --sample-weight-clip 20 --normal-threshold-grid 0.02:0.98:0.01 --two-stage-binary-weight-mode sqrt_balanced --two-stage-attack-weight-mode balanced_clipped --fi-kind none --fi-n-repeats 0 --fi-max-rows 0 --fi-scoring f1_macro --fi-n-jobs 1 --skip-feature-importance --require-candidate-families xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression --checkpoint-candidate-scores --resume-candidate-scores --xgb-cpu-fallback --add-two-stage --skip-random-forest
+[START] train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py
+[INFO] Arguments: {
+  "dataset": "harvard",
+  "project_dir": "/home_data/aroman/TFG/waf-ml-starter",
+  "inputs": [
+    "/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard"
+  ],
+  "table": null,
+  "label_col": "label_multiclass",
+  "label_prefix": "HARVARD",
+  "output_dir": "/home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass",
+  "processed_out": "/home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet",
+  "only_common_labels": false,
+  "keep_absolute_uri": false,
+  "sample_n": 0,
+  "sep": "auto",
+  "method_col": "request_http_method",
+  "uri_col": "request_http_request",
+  "body_col": "request_body",
+  "normal_col": "000 - Normal",
+  "label_cols": "",
+  "harvard_label_mode": "optimized-family",
+  "harvard_multiclass_strategy": "severity",
+  "min_class_count": 20,
+  "keep_labels_regex": "",
+  "drop_labels_regex": "",
+  "max_normal_rows": 0,
+  "test_size": 0.2,
+  "val_size": 0.15,
+  "seed": 42,
+  "preset": "strong",
+  "use_gpu": "auto",
+  "metric_select": "f1_macro",
+  "n_jobs": 8,
+  "xgb_cpu_fallback": true,
+  "sample_weight_mode": "balanced",
+  "candidate_weight_modes": "none,sqrt_balanced,balanced_clipped",
+  "sample_weight_clip": 20.0,
+  "normal_threshold_grid": "0.02:0.98:0.01",
+  "add_two_stage": true,
+  "two_stage_only": false,
+  "two_stage_binary_weight_mode": "sqrt_balanced",
+  "two_stage_attack_weight_mode": "balanced_clipped",
+  "skip_logreg": false,
+  "skip_histgb": false,
+  "skip_extra_trees": false,
+  "skip_random_forest": true,
+  "require_candidate_families": "xgboost_d3,xgboost_d5,xgboost_d7,two_stage_xgboost_d5,two_stage_xgboost_d7,hist_gradient_boosting,extra_trees,logistic_regression",
+  "checkpoint_candidate_scores": true,
+  "resume_candidate_scores": true,
+  "fi_kind": "none",
+  "fi_n_repeats": 0,
+  "fi_max_rows": 0,
+  "fi_scoring": "f1_macro",
+  "fi_n_jobs": 1,
+  "skip_feature_importance": true,
+  "clean_output_dir": false
+}
+[INFO] Harvard/SR-BH files found: 1
+[INFO] First Harvard file: /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard/data_capec_multilabel.csv
+[INFO] Harvard/SR-BH rows before filtering: 907815
+[INFO] Dataset ready: rows=907815 cols=46
+[INFO] Dataset optimization: rows 907815 -> 907815
+[INFO] Dataset optimization operations: [
+  {
+    "op": "min_class_count",
+    "min_class_count": 20,
+    "removed_rows": 0,
+    "dropped_classes": []
+  }
+]
+[INFO] Replaced processed dataset: /home_data/aroman/TFG/waf-ml-starter/data/processed/harvard/harvard_features.parquet
+
+[INFO] Dataset=harvard Feature count fixed: 30
+[INFO] Features: uri_len, body_len, query_len, path_depth, n_query_params, max_param_value_len, uri_encoded_ratio, body_encoded_ratio, invalid_percent_encoding_count, double_encoding_count, uri_non_alnum_ratio, body_non_alnum_ratio, uri_entropy, body_entropy, quote_count, angle_bracket_count, paren_count, semicolon_count, percent_count, slash_backslash_count, max_repeated_char_run, max_token_len, sql_token_count, xss_token_count, crlf_token_count, ldap_token_count, xpath_token_count, ssi_token_count, format_string_token_count, buffer_overflow_token_count
+
+[INFO] Label distribution:
+                           label  count
+                          NORMAL 525195
+                    HARVARD-SQLi 249227
+        HARVARD-DataManipulation  57618
+        HARVARD-CommandInjection  22013
+                   HARVARD-CRLFi  19204
+           HARVARD-PathTraversal  18047
+HARVARD-HTTPProtocolManipulation  13262
+   HARVARD-VulnerabilityScanning   2413
+          HARVARD-PasswordAttack    836
+[INFO] Normal threshold tuning enabled: 97 thresholds + baseline
+
+[INFO] GPU requested=auto; resolved=True
+[INFO] GPU env: CUDA_VISIBLE_DEVICES=0 SLURM_JOB_GPUS=0 SLURM_STEP_GPUS=unset NVIDIA_VISIBLE_DEVICES=unset
+
+[MANIFEST] Candidate model menu:
+[MANIFEST] count=31 families=extra_trees, hist_gradient_boosting, logistic_regression, two_stage_xgboost_d5, two_stage_xgboost_d7, xgboost_d3, xgboost_d5, xgboost_d7
+[MANIFEST] required_families=xgboost_d3, xgboost_d5, xgboost_d7, two_stage_xgboost_d5, two_stage_xgboost_d7, hist_gradient_boosting, extra_trees, logistic_regression
+[RESUME] Reusing 11 completed candidate rows from /home_data/aroman/TFG/waf-ml-starter/resultsOptimo/harvard/multiclass/candidate_scores.csv
+[RESUME] Current best before continuing: xgb_gpu_d7_3__w_sqrt_balanced f1_macro=0.880492
+
+[RESUME] xgb_gpu_d3_1__w_none: status=ok f1_macro=0.8420134326563598
+
+[RESUME] xgb_gpu_d3_1__w_sqrt_balanced: status=ok f1_macro=0.8410386583789206
+
+[RESUME] xgb_gpu_d3_1__w_balanced_clipped: status=ok f1_macro=0.8303581604388774
+
+[RESUME] xgb_gpu_d5_2__w_none: status=ok f1_macro=0.861880168128617
+
+[RESUME] xgb_gpu_d5_2__w_sqrt_balanced: status=ok f1_macro=0.8670344930286773
+
+[RESUME] xgb_gpu_d5_2__w_balanced_clipped: status=ok f1_macro=0.862957853406897
+
+[RESUME] xgb_gpu_d7_3__w_none: status=ok f1_macro=0.8774856876104182
+
+[RESUME] xgb_gpu_d7_3__w_sqrt_balanced: status=ok f1_macro=0.8804915322851934
+
+[RESUME] xgb_gpu_d7_3__w_balanced_clipped: status=ok f1_macro=0.8747916798004175
+
+[TRAIN] xgb_cpu_d3_1__w_none
+[VAL] xgb_cpu_d3_1__w_none: f1_macro=0.843425 f1_macro=0.8434247096178275 acc=0.9555271603034375 threshold=0.6 weight=none secs=489.4
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    5 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    6             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+    7           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+    8           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+    9             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   10             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   11    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   12 xgb_gpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.830358  0.935978     0.932283     471.971732
+
+[TRAIN] xgb_cpu_d3_1__w_sqrt_balanced
+[VAL] xgb_cpu_d3_1__w_sqrt_balanced: f1_macro=0.840822 f1_macro=0.8408216365302242 acc=0.9530964288074728 threshold=0.21 weight=sqrt_balanced secs=490.2
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    5 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    6             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+    7           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+    8           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+    9             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   10             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   11    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   12    xgb_cpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.840822  0.953096     0.949157     490.203981
+   13 xgb_gpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.830358  0.935978     0.932283     471.971732
+
+[TRAIN] xgb_cpu_d3_1__w_balanced_clipped
+[VAL] xgb_cpu_d3_1__w_balanced_clipped: f1_macro=0.831496 f1_macro=0.8314962411482142 acc=0.9360078723388631 threshold=0.05 weight=balanced_clipped secs=490.1
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    5 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    6             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+    7           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+    8           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+    9             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   10             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   11    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   12    xgb_cpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.840822  0.953096     0.949157     490.203981
+   13 xgb_cpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.831496  0.936008     0.932334     490.055647
+   14 xgb_gpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.830358  0.935978     0.932283     471.971732
+
+[TRAIN] xgb_cpu_d5_2__w_none
+[VAL] xgb_cpu_d5_2__w_none: f1_macro=0.865532 f1_macro=0.8655317887803452 acc=0.9649416551004971 threshold=0.55 weight=none secs=505.5
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    5             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+    6 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    7             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+    8           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+    9           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   10             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   11             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   12    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   13    xgb_cpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.840822  0.953096     0.949157     490.203981
+   14 xgb_cpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.831496  0.936008     0.932334     490.055647
+   15 xgb_gpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.830358  0.935978     0.932283     471.971732
+
+[TRAIN] xgb_cpu_d5_2__w_sqrt_balanced
+[VAL] xgb_cpu_d5_2__w_sqrt_balanced: f1_macro=0.867191 f1_macro=0.8671905232809352 acc=0.9630323191822168 threshold=0.24 weight=sqrt_balanced secs=514.5
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    5    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    6             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+    7 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    8             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+    9           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   10           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   11             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   12             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   13    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   14    xgb_cpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.840822  0.953096     0.949157     490.203981
+   15 xgb_cpu_d3_1__w_balanced_clipped           xgboost_d3 balanced_clipped              0.05  0.831496  0.936008     0.932334     490.055647
+
+[TRAIN] xgb_cpu_d5_2__w_balanced_clipped
+[VAL] xgb_cpu_d5_2__w_balanced_clipped: f1_macro=0.863405 f1_macro=0.8634050272326246 acc=0.9561440226770358 threshold=0.05 weight=balanced_clipped secs=514.7
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    3 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    4    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    5    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    6             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+    7 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+    8 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+    9             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   10           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   11           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   12             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   13             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   14    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+   15    xgb_cpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.840822  0.953096     0.949157     490.203981
+
+[TRAIN] xgb_cpu_d7_3__w_none
+[VAL] xgb_cpu_d7_3__w_none: f1_macro=0.878379 f1_macro=0.8783787093615707 acc=0.966241472244865 threshold=0.65 weight=none secs=560.5
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none           xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    4 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    5    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    6    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    7             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+    8 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+    9 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   10             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   11           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   12           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   13             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   14             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+   15    xgb_gpu_d3_1__w_sqrt_balanced           xgboost_d3    sqrt_balanced              0.21  0.841039  0.953464     0.949524     470.994189
+
+[TRAIN] xgb_cpu_d7_3__w_sqrt_balanced
+[VAL] xgb_cpu_d7_3__w_sqrt_balanced: f1_macro=0.878185 f1_macro=0.8781854360929238 acc=0.9669170834159488 threshold=0.24 weight=sqrt_balanced secs=526.7
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none           xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3    xgb_cpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    4             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    5 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    6    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    7    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    8             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+    9 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   10 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   11             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   12           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   13           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   14             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+   15             xgb_gpu_d3_1__w_none           xgboost_d3             none              0.63  0.842013  0.955388     0.951495     471.208564
+
+[TRAIN] xgb_cpu_d7_3__w_balanced_clipped
+[VAL] xgb_cpu_d7_3__w_balanced_clipped: f1_macro=0.874591 f1_macro=0.8745906178286964 acc=0.9631791911759306 threshold=0.05 weight=balanced_clipped secs=528.8
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none           xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3    xgb_cpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    4             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    5 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    6 xgb_cpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    7    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    8    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    9             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   10 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   11 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   12             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   13           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   14           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+   15             xgb_cpu_d3_1__w_none           xgboost_d3             none              0.60  0.843425  0.955527     0.951558     489.398701
+
+[RESUME] two_stage_xgb_gpu_d5_1: status=ok f1_macro=0.8473943228410192
+
+[RESUME] two_stage_xgb_gpu_d7_2: status=ok f1_macro=0.8537781350002156
+
+[TRAIN] two_stage_xgb_cpu_d5_1
+[VAL] two_stage_xgb_cpu_d5_1: f1_macro=0.849900 f1_macro=0.8499000940137178 acc=0.9583911641808581 threshold=0.6 weight=none secs=488.1
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none           xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3    xgb_cpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    4             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    5 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    6 xgb_cpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    7    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    8    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    9             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   10 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   11 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   12             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   13           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   14           two_stage_xgb_cpu_d5_1 two_stage_xgboost_d5             none              0.60  0.849900  0.958391     0.956128     488.088973
+   15           two_stage_xgb_gpu_d5_1 two_stage_xgboost_d5             none              0.58  0.847394  0.958729     0.956221     481.919263
+
+[TRAIN] two_stage_xgb_cpu_d7_2
+[VAL] two_stage_xgb_cpu_d7_2: f1_macro=0.851245 f1_macro=0.8512451336610184 acc=0.9596248889280548 threshold=0.58 weight=none secs=497.2
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate         model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none           xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3    xgb_cpu_d7_3__w_sqrt_balanced           xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    4             xgb_gpu_d7_3__w_none           xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    5 xgb_gpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    6 xgb_cpu_d7_3__w_balanced_clipped           xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    7    xgb_cpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    8    xgb_gpu_d5_2__w_sqrt_balanced           xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+    9             xgb_cpu_d5_2__w_none           xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   10 xgb_cpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   11 xgb_gpu_d5_2__w_balanced_clipped           xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   12             xgb_gpu_d5_2__w_none           xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   13           two_stage_xgb_gpu_d7_2 two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   14           two_stage_xgb_cpu_d7_2 two_stage_xgboost_d7             none              0.58  0.851245  0.959625     0.957026     497.154720
+   15           two_stage_xgb_cpu_d5_1 two_stage_xgboost_d5             none              0.60  0.849900  0.958391     0.956128     488.088973
+
+[TRAIN] hist_gradient_boosting__w_none
+[VAL] hist_gradient_boosting__w_none: f1_macro=0.873690 f1_macro=0.873690214583982 acc=0.9676661305838896 threshold=0.62 weight=none secs=550.8
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                        candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    2             xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    3    xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    4             xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    5 xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    6 xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    7   hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    8    xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+    9    xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   10             xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   11 xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   12 xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   13             xgb_gpu_d5_2__w_none             xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   14           two_stage_xgb_gpu_d7_2   two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+   15           two_stage_xgb_cpu_d7_2   two_stage_xgboost_d7             none              0.58  0.851245  0.959625     0.957026     497.154720
+
+[TRAIN] hist_gradient_boosting__w_sqrt_balanced
+[VAL] hist_gradient_boosting__w_sqrt_balanced: f1_macro=0.881863 f1_macro=0.881862762404477 acc=0.9676661305838896 threshold=0.21 weight=sqrt_balanced secs=551.1
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                               candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1 hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2           xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                    xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4           xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                    xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6        xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7        xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8          hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9           xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   10           xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   11                    xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   12        xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   13        xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   14                    xgb_gpu_d5_2__w_none             xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+   15                  two_stage_xgb_gpu_d7_2   two_stage_xgboost_d7             none              0.63  0.853778  0.958002     0.956274     483.286237
+
+[TRAIN] hist_gradient_boosting__w_balanced_clipped
+[VAL] hist_gradient_boosting__w_balanced_clipped: f1_macro=0.866468 f1_macro=0.8664682960605877 acc=0.9592283345450273 threshold=0.07 weight=balanced_clipped secs=518.2
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   10              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   11 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   12                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   13           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   14           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+   15                       xgb_gpu_d5_2__w_none             xgboost_d5             none              0.68  0.861880  0.959860     0.958419     473.052210
+
+[TRAIN] extra_trees__w_none
+[VAL] extra_trees__w_none: f1_macro=0.869487 f1_macro=0.8694868495641611 acc=0.9638033971492146 threshold=0.04 weight=none secs=523.2
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[TRAIN] extra_trees__w_sqrt_balanced
+[VAL] extra_trees__w_sqrt_balanced: f1_macro=0.821995 f1_macro=0.8219954124925298 acc=0.9444823863761539 threshold=0.03 weight=sqrt_balanced secs=536.3
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[TRAIN] extra_trees__w_balanced_clipped
+[VAL] extra_trees__w_balanced_clipped: f1_macro=0.795810 f1_macro=0.7958101629589646 acc=0.9147187768500363 threshold=0.05 weight=balanced_clipped secs=531.1
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[TRAIN] logreg_balanced__w_none
+[VAL] logreg_balanced__w_none: f1_macro=0.702229 f1_macro=0.7022287169759862 acc=0.8718174674862124 threshold=0.04 weight=none secs=2987.2
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[TRAIN] logreg_balanced__w_sqrt_balanced
+[VAL] logreg_balanced__w_sqrt_balanced: f1_macro=0.702229 f1_macro=0.7022287169759862 acc=0.8718174674862124 threshold=0.04 weight=sqrt_balanced secs=2976.7
+
+[LEADERBOARD] Top candidates by validation metric:
+ rank                                  candidate           model_family      weight_mode  normal_threshold  f1_macro  accuracy  f1_weighted  train_seconds
+    1    hist_gradient_boosting__w_sqrt_balanced hist_gradient_boosting    sqrt_balanced              0.21  0.881863  0.967666     0.965400     551.066884
+    2              xgb_gpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.880492  0.966998     0.964844     485.652487
+    3                       xgb_cpu_d7_3__w_none             xgboost_d7             none              0.65  0.878379  0.966241     0.964400     560.492801
+    4              xgb_cpu_d7_3__w_sqrt_balanced             xgboost_d7    sqrt_balanced              0.24  0.878185  0.966917     0.964830     526.653136
+    5                       xgb_gpu_d7_3__w_none             xgboost_d7             none              0.64  0.877486  0.966778     0.964797     482.629752
+    6           xgb_gpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874792  0.963106     0.960923     486.468929
+    7           xgb_cpu_d7_3__w_balanced_clipped             xgboost_d7 balanced_clipped              0.05  0.874591  0.963179     0.960997     528.796833
+    8             hist_gradient_boosting__w_none hist_gradient_boosting             none              0.62  0.873690  0.967666     0.965525     550.797621
+    9                        extra_trees__w_none            extra_trees             none              0.04  0.869487  0.963803     0.962141     523.215947
+   10              xgb_cpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867191  0.963032     0.960840     514.482600
+   11              xgb_gpu_d5_2__w_sqrt_balanced             xgboost_d5    sqrt_balanced              0.24  0.867034  0.963106     0.960807     474.092578
+   12 hist_gradient_boosting__w_balanced_clipped hist_gradient_boosting balanced_clipped              0.07  0.866468  0.959228     0.958802     518.172925
+   13                       xgb_cpu_d5_2__w_none             xgboost_d5             none              0.55  0.865532  0.964942     0.961650     505.522971
+   14           xgb_cpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.863405  0.956144     0.953708     514.682171
+   15           xgb_gpu_d5_2__w_balanced_clipped             xgboost_d5 balanced_clipped              0.05  0.862958  0.955931     0.953500     474.471055
+
+[TRAIN] logreg_balanced__w_balanced_clipped

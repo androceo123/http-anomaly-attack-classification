@@ -1,0 +1,271 @@
+================================================================
+[START] 2026-07-14 07:39:02 -0400
+[HOST] c3 job=3315 partition=normal
+[PROJECT_DIR] /home_data/aroman/TFG/waf-ml-starter
+[TRAIN_PY] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2.py
+[HARVARD_RAW_DIR] /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard
+[OUTPUT_DIR] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard
+[CHECKPOINT_DIR] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/checkpoints
+[CPU] n_jobs=16 feature_workers=8
+[MODEL] XGBoost OVR; preset=max; trials=12; weak_trials=28
+[FEATURES] request90 (30 base + 60 HTTP request-only)
+[SPLIT] test=0.20; holdout tune+cal=0.20; calibration_share=0.50 (defaults efectivos 64/8/8/20)
+[DEDUP] enabled=1 group_split=1 fingerprint=canonical-request-only
+[TARGETS] label_f1>=0.85; NORMAL recall>=0.99; joint=1
+================================================================
+   JobState=RUNNING Reason=None Dependency=(null)
+   Partition=normal AllocNode:Sid=arandu:1002331
+   ReqNodeList=c3 ExcNodeList=(null)
+   NodeList=c3
+   NumNodes=1 NumCPUs=16 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   MinCPUsNode=16 MinMemoryNode=60G MinTmpDiskNode=0
+[DATA] archivos tabulares detectados=1
+/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard/data_capec_multilabel.csv
+[PYTHON] executable=/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python version=3.11.7 xgboost=3.2.0 parquet=True
+[RUN] /home_data/aroman/TFG/waf-ml-starter/.venv/bin/python -u /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2.py --project-dir /home_data/aroman/TFG/waf-ml-starter --definitivo-dir /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2 --output-dir /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard --harvard-inputs /home_data/aroman/TFG/waf-ml-starter/data/raw/harvard --sep auto --method-col request_http_method --uri-col request_http_request --protocol-col request_http_protocol --body-col request_body --normal-col 000 - Normal --label-mode native --min-positive-count 20 --drop-invalid-rows --test-size 0.20 --valid-size 0.20 --calibration-share 0.50 --min-calibration-positives 3 --seed 42 --selection-metric f1_macro --search-level none --candidate-weight-modes none --model-backend xgboost --use-gpu off --xgb-preset max --xgb-early-stopping-rounds 100 --xgb-per-label-tuning --xgb-tuning-trials 12 --xgb-weak-label-trials 28 --xgb-weak-label-regex CAPEC-(153|272|274)\b --xgb-label-selection-metric blend --scale-pos-weight-cap 100 --n-jobs 16 --threshold-objective f1 --threshold-min 0.001 --threshold-max 0.999 --threshold-min-recall 0.0 --target-label-f1 0.85 --target-normal 0.99 --target-normal-metric recall --joint-threshold-max-passes 6 --min-attack-score 0.0 --feature-workers 8 --feature-chunksize 256 --fi-n-repeats 2 --fi-max-rows 10000 --operational-max-rows 10000 --checkpoint-dir /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/checkpoints --checkpoint-compress 3 --no-refit-full-after-thresholds --joint-threshold-optimization --deduplicate-requests --group-split-by-request --resume --resume-skip-complete
+[INFO] catboost no está instalado: se omite esa familia opcional.
+================================================================
+[START] Harvard multietiqueta XGBoost request90 @ 2026-07-14T07:39:27-04:00
+[OUT] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard
+================================================================
+[INFO] GPU no visible: se usará CPU/fallback.
+[INFO] Harvard/SR-BH files: 1
+[INFO] Rows loaded: 907815
+[INFO] Label columns discovered: 14
+[DEDUP] rows=907813 unique=542990 duplicate_groups=27623 label_conflicts=288 normal_attack_conflicts=284 after=542990 enabled=True fingerprint_s=6.1
+[INFO] Rows after filters: 542990 | targets kept: 12
+[WARN] No pude escribir parquet (ArrowTypeError: ("Expected bytes, got a 'float' object", 'Conversion failed for column request_do_not_track with type object')); guardo CSV en /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/processed_request90_multilabel.csv
+[INFO] Backend availability: xgboost=True(3.2.0) lightgbm=True(4.6.0) catboost=False(None); selected=['xgboost']
+[INFO] Resume/checkpoints activos en: /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/checkpoints
+[INFO] Candidate backends=['xgboost'] weight_modes=['none']
+[INFO] Entrenando candidato backend=xgboost weight_mode=none
+[XGB-TUNE] CAPEC-126 Path Traversal trial=1/12 AP=0.998336 F1*=0.986428 weight=none best=yes
+[XGB-TUNE] CAPEC-126 Path Traversal trial=2/12 AP=0.998088 F1*=0.988134 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-126 Path Traversal trial=3/12 AP=0.998073 F1*=0.986807 weight=sqrt best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=4/12 AP=0.998085 F1*=0.987150 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=5/12 AP=0.998122 F1*=0.987450 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=6/12 AP=0.998071 F1*=0.987107 weight=balanced best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=7/12 AP=0.998125 F1*=0.986428 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=8/12 AP=0.998566 F1*=0.988483 weight=half_balanced best=yes
+[XGB-TUNE] CAPEC-126 Path Traversal trial=9/12 AP=0.998196 F1*=0.986120 weight=balanced best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=10/12 AP=0.998385 F1*=0.987508 weight=balanced best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=11/12 AP=0.998213 F1*=0.986464 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-126 Path Traversal trial=12/12 AP=0.998516 F1*=0.988453 weight=balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=1/28 AP=0.901130 F1*=0.805556 weight=none best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=2/28 AP=0.904495 F1*=0.806045 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=3/28 AP=0.904136 F1*=0.807601 weight=sqrt best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=4/28 AP=0.902639 F1*=0.800000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=5/28 AP=0.892785 F1*=0.783290 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=6/28 AP=0.904923 F1*=0.805556 weight=sqrt best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=7/28 AP=0.907896 F1*=0.806723 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=8/28 AP=0.900286 F1*=0.795866 weight=none best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=9/28 AP=0.901036 F1*=0.796954 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=10/28 AP=0.905043 F1*=0.800937 weight=none best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=11/28 AP=0.905681 F1*=0.799107 weight=none best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=12/28 AP=0.904177 F1*=0.803783 weight=sqrt best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=13/28 AP=0.901502 F1*=0.795970 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=14/28 AP=0.905191 F1*=0.811060 weight=quarter_balanced best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=15/28 AP=0.903431 F1*=0.810185 weight=none best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=16/28 AP=0.900806 F1*=0.802721 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=17/28 AP=0.901452 F1*=0.796163 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=18/28 AP=0.904021 F1*=0.803695 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=19/28 AP=0.906292 F1*=0.817552 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=20/28 AP=0.900774 F1*=0.797066 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=21/28 AP=0.904378 F1*=0.801822 weight=sqrt best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=22/28 AP=0.913542 F1*=0.806683 weight=sqrt best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=23/28 AP=0.898587 F1*=0.795238 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=24/28 AP=0.905320 F1*=0.790816 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=25/28 AP=0.903062 F1*=0.801034 weight=sqrt best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=26/28 AP=0.908593 F1*=0.804545 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=27/28 AP=0.907227 F1*=0.804020 weight=none best=no
+[XGB-TUNE] CAPEC-153 Input Data Manipulation trial=28/28 AP=0.902439 F1*=0.804878 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=1/12 AP=1.000000 F1*=1.000000 weight=none best=yes
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=2/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=3/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=4/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=5/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=6/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=7/12 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=8/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=9/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=10/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=11/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-16 Dictionary-based Password Attack trial=12/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=1/12 AP=0.998968 F1*=0.988551 weight=none best=yes
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=2/12 AP=0.998990 F1*=0.988433 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=3/12 AP=0.998992 F1*=0.988796 weight=sqrt best=yes
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=4/12 AP=0.998984 F1*=0.988155 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=5/12 AP=0.998986 F1*=0.988216 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=6/12 AP=0.998950 F1*=0.988559 weight=balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=7/12 AP=0.998952 F1*=0.988180 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=8/12 AP=0.998101 F1*=0.981980 weight=none best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=9/12 AP=0.998829 F1*=0.987019 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=10/12 AP=0.999172 F1*=0.990755 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=11/12 AP=0.999130 F1*=0.990187 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-194 Fake the Source of Data trial=12/12 AP=0.999143 F1*=0.991217 weight=half_balanced best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=1/12 AP=0.999835 F1*=0.998014 weight=none best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=2/12 AP=0.999941 F1*=0.998014 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=3/12 AP=0.999954 F1*=0.998413 weight=sqrt best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=4/12 AP=0.999944 F1*=0.998017 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=5/12 AP=0.999920 F1*=0.998809 weight=half_balanced best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=6/12 AP=0.999929 F1*=0.998809 weight=balanced best=yes
+[XGB-TUNE] CAPEC-242 Code Injection trial=7/12 AP=0.999287 F1*=0.995637 weight=sqrt best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=8/12 AP=0.999888 F1*=0.998411 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=9/12 AP=0.999809 F1*=0.997615 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=10/12 AP=0.999598 F1*=0.997219 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=11/12 AP=0.999736 F1*=0.997615 weight=none best=no
+[XGB-TUNE] CAPEC-242 Code Injection trial=12/12 AP=0.999782 F1*=0.997615 weight=balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=1/28 AP=0.676804 F1*=0.598626 weight=none best=yes
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=2/28 AP=0.673573 F1*=0.595086 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=3/28 AP=0.668520 F1*=0.590074 weight=sqrt best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=4/28 AP=0.664127 F1*=0.587387 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=5/28 AP=0.657958 F1*=0.578592 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=6/28 AP=0.650070 F1*=0.570320 weight=balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=7/28 AP=0.678573 F1*=0.601167 weight=none best=yes
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=8/28 AP=0.645115 F1*=0.559380 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=9/28 AP=0.645962 F1*=0.557085 weight=balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=10/28 AP=0.659833 F1*=0.576994 weight=sqrt best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=11/28 AP=0.676117 F1*=0.602871 weight=none best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=12/28 AP=0.646370 F1*=0.560290 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=13/28 AP=0.673952 F1*=0.588665 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=14/28 AP=0.662910 F1*=0.581959 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=15/28 AP=0.631836 F1*=0.548769 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=16/28 AP=0.612720 F1*=0.536243 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=17/28 AP=0.614410 F1*=0.540379 weight=none best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=18/28 AP=0.678004 F1*=0.595010 weight=none best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=19/28 AP=0.649254 F1*=0.566816 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=20/28 AP=0.672266 F1*=0.587646 weight=sqrt best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=21/28 AP=0.675235 F1*=0.591692 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=22/28 AP=0.395862 F1*=0.363942 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=23/28 AP=0.656798 F1*=0.577123 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=24/28 AP=0.662315 F1*=0.583257 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=25/28 AP=0.609141 F1*=0.534810 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=26/28 AP=0.655241 F1*=0.574040 weight=balanced best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=27/28 AP=0.664895 F1*=0.588859 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-272 Protocol Manipulation trial=28/28 AP=0.641802 F1*=0.558800 weight=balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=1/28 AP=1.000000 F1*=1.000000 weight=none best=yes
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=2/28 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=3/28 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=4/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=5/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=6/28 AP=1.000000 F1*=1.000000 weight=balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=7/28 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=8/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=9/28 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=10/28 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=11/28 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=12/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=13/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=14/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=15/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=16/28 AP=1.000000 F1*=1.000000 weight=balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=17/28 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=18/28 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=19/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=20/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=21/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=22/28 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=23/28 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=24/28 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=25/28 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=26/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=27/28 AP=1.000000 F1*=1.000000 weight=balanced best=no
+[XGB-TUNE] CAPEC-274 HTTP Verb Tampering trial=28/28 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=1/12 AP=1.000000 F1*=1.000000 weight=none best=yes
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=2/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=3/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=4/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=5/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=6/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=7/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=8/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=9/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=10/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=11/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-310 Scanning for Vulnerable Software trial=12/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=1/12 AP=1.000000 F1*=1.000000 weight=none best=yes
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=2/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=3/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=4/12 AP=0.926491 F1*=0.956989 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=5/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=6/12 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=7/12 AP=0.998396 F1*=0.988764 weight=sqrt best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=8/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=9/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=10/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=11/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-33 HTTP Request Smuggling trial=12/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=1/12 AP=1.000000 F1*=1.000000 weight=none best=yes
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=2/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=3/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=4/12 AP=1.000000 F1*=1.000000 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=5/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=6/12 AP=1.000000 F1*=1.000000 weight=balanced best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=7/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=8/12 AP=1.000000 F1*=1.000000 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=9/12 AP=1.000000 F1*=1.000000 weight=sqrt best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=10/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=11/12 AP=1.000000 F1*=1.000000 weight=cuberoot best=yes
+[XGB-TUNE] CAPEC-34 HTTP Response Splitting trial=12/12 AP=1.000000 F1*=1.000000 weight=none best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=1/12 AP=0.999777 F1*=0.994252 weight=none best=yes
+[XGB-TUNE] CAPEC-66 SQL Injection trial=2/12 AP=0.999773 F1*=0.994223 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=3/12 AP=0.999778 F1*=0.994281 weight=sqrt best=yes
+[XGB-TUNE] CAPEC-66 SQL Injection trial=4/12 AP=0.999781 F1*=0.994179 weight=balanced best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=5/12 AP=0.999855 F1*=0.995167 weight=sqrt best=yes
+[XGB-TUNE] CAPEC-66 SQL Injection trial=6/12 AP=0.999720 F1*=0.993632 weight=sqrt best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=7/12 AP=0.998684 F1*=0.983056 weight=sqrt best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=8/12 AP=0.999642 F1*=0.992235 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=9/12 AP=0.999752 F1*=0.993746 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=10/12 AP=0.999558 F1*=0.990652 weight=none best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=11/12 AP=0.999826 F1*=0.995095 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-66 SQL Injection trial=12/12 AP=0.999231 F1*=0.987114 weight=sqrt best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=1/12 AP=0.996233 F1*=0.983885 weight=none best=yes
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=2/12 AP=0.996728 F1*=0.983022 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=3/12 AP=0.997013 F1*=0.982993 weight=sqrt best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=4/12 AP=0.996966 F1*=0.982158 weight=quarter_balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=5/12 AP=0.997010 F1*=0.982158 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=6/12 AP=0.996542 F1*=0.981387 weight=balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=7/12 AP=0.996509 F1*=0.982097 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=8/12 AP=0.996133 F1*=0.982993 weight=cuberoot best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=9/12 AP=0.997046 F1*=0.982188 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=10/12 AP=0.996465 F1*=0.982158 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=11/12 AP=0.996145 F1*=0.982218 weight=half_balanced best=no
+[XGB-TUNE] CAPEC-88 OS Command Injection trial=12/12 AP=0.997204 F1*=0.982188 weight=balanced best=no
+[VAL] backend=xgboost weight_mode=none f1_macro=0.9480233059464759 f1_macro=0.9480233059464759 f1_micro=0.9866776180698152 exact_match=0.9823430557793688 gpu_used=False
+[BEST] backend=xgboost weight_mode=none f1_macro=0.9480233059464759 gpu_used=False
+[CAL] rows=43440 f1_macro=0.9375023367123352 f1_micro=0.9765452033359413 fallbacks=0
+
+=== TEST MULTILABEL ===
+model=xgboost_ovr__w_per_label_tuned exact_match=0.9691983277776755 hamming_loss=0.002761714457602043 f1_macro=0.9393993137175819 f1_micro=0.9760429217118095 pr_auc_macro=0.9625993082593888 gpu_used=False
+
+[OK] Saved artifacts:
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/processed_request90_multilabel.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/model_multilabel_xgb_request90.joblib
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/metrics_multilabel_xgb_request90.json
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/metrics_flat.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/selected_model_summary.txt
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/per_label_metrics.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/thresholds_tuning.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/thresholds_calibration.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/tuning_metrics_multilabel.json
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/calibration_metrics_multilabel.json
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/threshold_joint_optimization_calibration.json
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/threshold_joint_optimization_calibration.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/target_attainment.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/test_predictions.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/feature_importance.csv
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/operational_metrics.json
+  /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/multietiqueta/model_comparison_multilabel_definitivo.csv
+================================================================
+[OK] 2026-07-14 08:18:10 -0400
+[METRICS] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/metrics_multilabel_xgb_request90.json
+[MODEL] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/model_multilabel_xgb_request90.joblib
+[PER_LABEL] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/per_label_metrics.csv
+[TARGETS] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/target_attainment.csv
+[TUNING] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/xgb_best_params_by_label.csv
+[TRIALS] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/xgb_tuning_trials_by_label.csv
+[TUNE] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/tuning_metrics_multilabel.json
+[CALIBRATION] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/calibration_metrics_multilabel.json
+[THRESHOLDS] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/thresholds_calibration.csv
+[JOINT_REPORT] /home_data/aroman/TFG/waf-ml-starter/multietiquetaCorrida2/harvard/threshold_joint_optimization_calibration.json
+================================================================
