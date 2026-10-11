@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Auditoría portable L1/L2 para la carpeta tesis_http_organizada.
+"""Auditoría L1/L2 de los resultados experimentales HTTP.
 
 Lee CSV/JSON originales, recalcula métricas desde predicciones ya guardadas y
 reconstruye particiones con el procedimiento documentado y las semillas guardadas.
@@ -7,7 +7,7 @@ Las particiones reconstruidas son productos de esta auditoría, no archivos
 históricos encontrados. La identidad se contrasta con índices test conservados.
 
 Resuelve cada fuente y su SHA-256 mediante inventario_archivos.json. Los archivos
-pesados pueden estar en el espejo 90 dentro de --root o en --external-root.
+referenciados pueden estar dentro de --root o en --external-root.
 L1 lee las etiquetas del CSV raw por bloques: no depende de NPY temporales.
 
 Uso desde la raíz del repositorio:
@@ -90,22 +90,20 @@ class InventoryResolver:
 
     def candidate_paths(self, entry):
         # organized_path refleja también consolidación de duplicados. logical_path
-        # permite ubicar un espejo pesado guardado fuera del árbol del repositorio.
+        # permite ubicar artefactos conservados fuera del árbol del repositorio.
         for field in ("organized_path", "logical_path", "canonical_path"):
             value = entry.get(field)
             if not isinstance(value, str) or not value.strip():
                 continue
             rel = PurePosixPath(value)
             if rel.is_absolute() or ".." in rel.parts:
-                raise AuditInputError(f"Ruta de inventario no relativa al paquete: {value}")
+                raise AuditInputError(f"Ruta de inventario no relativa al proyecto: {value}")
             if "://" in value:
                 continue
             suffix = Path(*rel.parts)
             yield self.root / suffix
             for external in self.external_roots:
                 yield external / suffix
-                if rel.parts and rel.parts[0] == "90_artefactos_pesados":
-                    yield external / Path(*rel.parts[1:])
 
     def resolve(self, entry):
         key = (entry.get("source_code"), entry.get("original_path"))
@@ -127,7 +125,7 @@ class InventoryResolver:
             raise AuditInputError(
                 f"Falta {entry.get('source_code')}:{entry.get('original_path')}. "
                 f"SHA-256 esperado: {expected}.\n  {shown}\n"
-                "Restaurar el espejo 90_artefactos_pesados o indicar --external-root."
+                "Proporcionar el artefacto identificado por su hash e indicar --external-root si está en otro almacenamiento."
             )
         path = path.resolve()
         size = path.stat().st_size
@@ -435,19 +433,19 @@ def parse_args(argv=None):
         description=("Recalcula métricas L1/L2 desde predicciones guardadas y reconstruye "
                      "sus particiones. No carga modelos ni ejecuta entrenamiento."),
         epilog=("Requiere Python >= 3.11 con las versiones de requisitos, numpy, pandas y scikit-learn. "
-                "Necesita los CSV grandes y modelos finales del espejo pesado; "
+                "Necesita los CSV de predicciones y modelos finales de las corridas; "
                 "los modelos se leen solo como bytes para verificar integridad. "
                 "El resultado identifica las particiones como reconstruidas."),
     )
     parser.add_argument("--root", required=True, type=Path,
-                        help="Raíz de tesis_http_organizada (repositorio documental).")
+                        help="Raíz del repositorio de código, documentación y evidencia experimental.")
     parser.add_argument("--output", required=True, type=Path,
                         help="Carpeta nueva o vacía para verificaciones derivadas; relativa al directorio actual.")
     parser.add_argument("--inventory", type=Path, default=DEFAULT_INVENTORY,
                         help="Inventario JSON; ruta relativa a --root o absoluta (default: %(default)s).")
     parser.add_argument("--external-root", action="append", default=[], type=Path,
-                        help=("Ubicación local del espejo pesado, si está separado del repositorio. "
-                              "Acepta el padre de 90_artefactos_pesados o esa carpeta; repetible."))
+                        help=("Almacenamiento de artefactos experimentales adicional al repositorio. "
+                              "Conserva las rutas relativas del inventario; repetible."))
     return parser.parse_args(argv)
 
 

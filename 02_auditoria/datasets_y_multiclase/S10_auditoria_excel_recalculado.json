@@ -1,5 +1,5 @@
 {
-  "source": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S10/harvard_duplicados.xlsx",
+  "source": "S10:harvard_duplicados.xlsx",
   "method": "openpyxl read_only for structure/dictionary; lxml streaming row aggregation of first14 audit columns only",
   "duplicate_event_rows": 392448,
   "group_count": 27624,

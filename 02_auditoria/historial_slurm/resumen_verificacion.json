@@ -18,7 +18,7 @@
     "unique_sha256": 309,
     "duplicate_groups": 37,
     "additional_identical_occurrences": 182,
-    "all_files_verified_against_extraction_inventory": true,
+    "all_files_verified_against_inventory": true,
     "job_count": 133,
     "job_and_step_rows": 369,
     "job_states": {

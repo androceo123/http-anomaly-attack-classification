@@ -1,0 +1,2884 @@
+{
+  "schema_version": 1,
+  "revision_date": "2026-10-11",
+  "base_commit": "483f3db5c64153ae075700d7285f9cea467ec59d",
+  "scope": "Archivos publicados de esta revisión de código, documentación y evidencia experimental.",
+  "algorithm": "SHA-256",
+  "excluded_paths": [
+    "07_reproducibilidad/manifest_repositorio.json",
+    "07_reproducibilidad/verificacion_integridad_local.json"
+  ],
+  "exclusion_reason": "Se excluyen el manifiesto y su informe para evitar referencias circulares.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 262,
+      "sha256": "624c7c9b534141f2cc2c22ce14e6c47673a88747151749d43b44f778fcd46bc0"
+    },
+    {
+      "path": "01_documentacion/README.md",
+      "bytes": 2340,
+      "sha256": "839e84c835ef236b8c998a83dc881bccc529d1120a59b97c4d2b052c73f1bdbf"
+    },
+    {
+      "path": "01_documentacion/catalogos/catalogo_libro.json",
+      "bytes": 25036,
+      "sha256": "27a688e4854933625644d20ef55e4e9518d83ccbb53a1aefe12dd44186dbc2bf"
+    },
+    {
+      "path": "01_documentacion/catalogos/catalogo_presentacion.json",
+      "bytes": 8453,
+      "sha256": "34e97f373bd91c04a16049228f355cce5438b65d8650a13e3150bfe5352bc4fa"
+    },
+    {
+      "path": "01_documentacion/catalogos/referencias_presentacion.csv",
+      "bytes": 1929,
+      "sha256": "c7515ee7fb26efee1c7fa868136c3041307b0694723dbd9049eb4d3c2ced34fb"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/Logistic Regression multiclase/Explicacion ML multiclase",
+      "bytes": 6099,
+      "sha256": "b59533d24156a29b437d9fc0ad5d11360c9052097afb75fa0b46bf0f25eb4dec"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/Logistic Regression multiclase/MultiClassFlow.md",
+      "bytes": 7851,
+      "sha256": "a96b2550d3d00d175c318f45f494d6866e372d4c66e9ee9570c28603e5c656eb"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/Logistic Regression multiclase/PorqueMulticlase.md",
+      "bytes": 11769,
+      "sha256": "895113b9a044d9a10548d12425e3f6a4487831741ef51fda710fb8cb1fa50c28"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/One-vs-RestOvR/Explicacion ML multilabel",
+      "bytes": 5544,
+      "sha256": "cf34aa68bbe8719c7edd6a8bd639d4b34b805219b55858e42c2383be81512501"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/One-vs-RestOvR/MultiLabelFlow.md",
+      "bytes": 5556,
+      "sha256": "ce4ba932fe4a9140377a6a5446e851c57dbeb22ce411fcfb27f8956c7b9a5a5d"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/One-vs-RestOvR/Porque.md",
+      "bytes": 10936,
+      "sha256": "e62449cb22381a9b4c93993f8648778b449c95938f8372425222659fe5d4301e"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Justificaciones/justificacionHarvardDataset/justificacion_dataset_SR-BH_2020_v2.md",
+      "bytes": 36774,
+      "sha256": "ab10d3772ad3422df15105a2942d2bdbb73145785f1cac237923569f59f10f82"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/README.md",
+      "bytes": 20576,
+      "sha256": "f0e4e56c7973951dc58b16af8b62da938f2209432e3f86ddbe6edb98ff81c7e0"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/Referencias",
+      "bytes": 188,
+      "sha256": "10cc65e48f8db41a201fc0d7c1cf5a1252a7f320a9eabb91ba4ae5413c36c34f"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/__init__.py",
+      "bytes": 2398,
+      "sha256": "60c04d66e23cfe91b824092ee9272811f71ebde672150905c6e2db1dc294beaf"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/images/Escudo_FPUNA.jpg",
+      "bytes": 22800,
+      "sha256": "f319e73ac4fb650f4f0194c5edbdb5b51448603f0eb50023ecbee11e9b125b8d"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/images/venn-AreasDeEstudio.png",
+      "bytes": 81671,
+      "sha256": "fb1ac26ceb9037522fcc34d4640d65ac921f07c7b1264122a9806a25a6cab877"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/images/waf-diagram.png",
+      "bytes": 436354,
+      "sha256": "06113bf8bf8f06f49d03fa8897c047a9cd1886df2db15dcdaabdec00d03ef262"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/p0_acronyms.tex",
+      "bytes": 2768,
+      "sha256": "4b0682b2793922ad1e6a293a896caa79439b853220decd148512c072dda0de4d"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/p3_contenido.tex",
+      "bytes": 10587,
+      "sha256": "7ec3c13c2be9f0ae151363c9148e6ec61e1d19c5b29b006d54ef0194a015b1a2"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/p5_references.bib",
+      "bytes": 5254,
+      "sha256": "e9eee21a50d3248d8f3925d91b0a5b8a4c1751f6195328e7fbcfa06013d38404"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/propuesta.tex",
+      "bytes": 3480,
+      "sha256": "8ebc0ddc8055d8c0dd7dc478a718ec4c61abdba35f6d25f90feebf8770878c95"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/spanish.dtx",
+      "bytes": 90652,
+      "sha256": "b659238ed7cf7651bd59aa84aef98c94c55d02ebc10f45c2a567ff46cca5c940"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/latex/propuesta/thesis.cls",
+      "bytes": 11360,
+      "sha256": "0e115f2736b05c54f59d41810e82a17b61a0f785426324510e0c9569334f1cd8"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroLatex.txt",
+      "bytes": 126714,
+      "sha256": "4ffe7f7089fee609b0c43bda942a3aafa6a3feeb532bb14e9632caa0d745b11a"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/CORRECCIONES_JA.md",
+      "bytes": 10060,
+      "sha256": "ec66fdf8716330723c2334eed44d759aa9e015ff0644f2dfc1067058af11ac39"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/libroVersion1Correcion1.1Andres.tex",
+      "bytes": 155233,
+      "sha256": "008e4fc303008cf4d507901402c6f2e56fd8ba8990eb8177c3cfa58081fcfdd6"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/libroVersion1Correcion1.1JA.tex",
+      "bytes": 145324,
+      "sha256": "92927e9e8e13b2bc7d875621e907dd265129d3a4b75ab1ac597c7164793fae1e"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/libroVersion1Correcion1.2Andres.tex",
+      "bytes": 205684,
+      "sha256": "c5d8b3fe58536b01a946d38ec243b2323ed85f22f4b66037f696d16c7e3496db"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/libroVersion1Merge1.1_JA_Andres.tex",
+      "bytes": 172646,
+      "sha256": "0b136d0dcbd154f0a9e03a0933c52687f79dad7d7282e9b63218c7fc5a67c827"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/libroTFG/version1/libroVersion1Merge1.2_JA_Andres.tex",
+      "bytes": 227632,
+      "sha256": "587f56f030bc101f06d3d4434275675a372e3d76c10b5aaf2fb45e1e27a7514a"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/propuestaAndresJuan.pdf",
+      "bytes": 184016,
+      "sha256": "9c377cbdf9766be6795e4323395e4f417d851a3cbe0db96e6b8787761b58859f"
+    },
+    {
+      "path": "01_documentacion/historial/revisiones/2026-04-29-libroTesisAndresJuan.pdf",
+      "bytes": 719064,
+      "sha256": "e18b90d48ba7ae7adbdcf31019ca1449539e7f9c2c694ee4df7d709999f627be"
+    },
+    {
+      "path": "01_documentacion/historial/revisiones/2026-05-13-libroTesisAndresJuan.pdf",
+      "bytes": 822253,
+      "sha256": "f1fa8cb502d48e271438d73495ec08e7f80ecf06580cdd20ac1495b116e9a92a"
+    },
+    {
+      "path": "01_documentacion/libro/08282026v4.pdf",
+      "bytes": 2287144,
+      "sha256": "ff84c9265e840165b819e31aa1464843cfa45bc331a27a82e29151e38a78a061"
+    },
+    {
+      "path": "01_documentacion/presentacion/cambiosAndres.pptx",
+      "bytes": 3990950,
+      "sha256": "a52ffdcec170611f0cc6f02769f28359885918ac3c1def6495d37e5237662f4e"
+    },
+    {
+      "path": "02_auditoria/README.md",
+      "bytes": 18950,
+      "sha256": "e27c8eaedabaa6be8b1be11242574aee01ba66a08586e99ac2a24f6295ac1661"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md",
+      "bytes": 18190,
+      "sha256": "c335327432df7c01116a4ee32a1fd59ccef32f8f54d122e8173932cbd258e310"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/S09_multiclase_recalculado.json",
+      "bytes": 44169,
+      "sha256": "9e514afdec956c58863488b35135b7b78dbe42461a213e7ab94d06804ae8e12e"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/S10_auditoria_excel_recalculado.json",
+      "bytes": 922,
+      "sha256": "a3a61d75636e9da7222b46e4d38290acdf5391c47a03e91a0546349565770baa"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/S13_multiclase_evidencia.json",
+      "bytes": 196113,
+      "sha256": "03dc4d9e1a33a480dc9f0de366583628df4d6711a30835769295537493137556"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/S13_multiclase_evidencia.md",
+      "bytes": 7051,
+      "sha256": "0a0a5e47e9791d982a418613323ddc5b6963b3fd156922152d25ce0eb75f71b4"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/mapa_datasets_y_multiclase.json",
+      "bytes": 817926,
+      "sha256": "c37eb740e2418757d48b22269d4049be145f67f3a137242cb9cd206c9c6950f6"
+    },
+    {
+      "path": "02_auditoria/datasets_y_multiclase/sr_bh_raw_profile.json",
+      "bytes": 15669,
+      "sha256": "1c5ba4e911e1e9c4b4689564088fcfd4eca0e153b98d14cd375cbbd7efff90fd"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/REVISION_SLURM_Y_BINARIO.md",
+      "bytes": 19858,
+      "sha256": "9a13b3aaeb111b3ef76e79d5965c5618a67f017385fd77e676ff5c07879b7281"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/catalogo_jobs.csv",
+      "bytes": 19438,
+      "sha256": "c2ba9c86ef2ad718ba4170785c24598853310fbac71a97f7a652d40924547bd1"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/LEEME.txt",
+      "bytes": 477,
+      "sha256": "8c2d79b75327eb1b79e3eb9a8d62ea06465c9190156aefe3bedb9c15a0034674"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2312.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2313.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2314.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2315.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2399.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2400.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2401.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2402.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2403.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2404.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2405.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2406.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2407.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2408.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2409.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2410.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2411.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2412.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2413.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2414.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2416.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2418.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2419.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2420.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2421.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2422.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2426.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2427.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2428.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2429.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2430.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2431.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2432.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2433.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2434.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2440.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2448.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2455.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2457.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2458.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2459.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2460.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2462.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2464.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2465.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2466.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2467.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2468.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2469.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2470.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2471.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2472.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2473.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2474.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2475.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2476.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2477.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2478.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2488.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2489.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2490.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2491.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2496.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2497.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2498.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2499.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2508.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2515.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2518.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2528.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2529.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2530.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2531.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2532.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2533.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2534.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2564.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2565.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2569.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2585.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2586.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2593.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2594.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2625.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2657.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2687.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2766.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2883.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2927.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2960.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2962.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2963.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2964.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2965.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_2966.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3009.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3010.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3011.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3012.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3013.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3045.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3046.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3053.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3065.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3066.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3067.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3068.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3101.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3102.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3103.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3104.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3148.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3149.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3150.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3151.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3289.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3296.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3305.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3315.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3331.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3332.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3357.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3358.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3359.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3360.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3361.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3442.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3443.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3444.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3445.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3446.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3453.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/job_3454.err",
+      "bytes": 54,
+      "sha256": "d46c9a59de43b199cecee7a5013528718fcaf2579e64af09ec7b5410e327e27e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/batch_scripts_recuperados/resultado.tsv",
+      "bytes": 2144,
+      "sha256": "6dff9cca531af310b5e451a3eb3d28c00aa5588453aad4fa6437f5041443efdd"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/ejecucion_auditoria.log",
+      "bytes": 1298,
+      "sha256": "a3fbf0800334f2623336ca4942c6e35388c06181707b4a14afd181610032f575"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c1_cpu.txt",
+      "bytes": 11578,
+      "sha256": "5b25112a476313e7a4112da398339a03666816bb876eff5ff5d1938e442e4711"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c1_gpu.txt",
+      "bytes": 13717,
+      "sha256": "f31f7b41b6fdb0ca195657133d6d61c76d9b3a88f66c462e4ab1793e60b690ec"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c2_cpu.txt",
+      "bytes": 15802,
+      "sha256": "83d48c5c2288111de2cd56aa361e89cfd600aac12c52f8f0d394c9ff6bfaea9f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c2_gpu.txt",
+      "bytes": 17941,
+      "sha256": "eb0b1b40efa33a244f2fb043e0c3d7d6e6b1853fae4f499b05cb8046ae35fa1d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c3_cpu.txt",
+      "bytes": 11753,
+      "sha256": "e51b1825f64e9f81c7f3b6c76926d4b1d2aac3fb3f52d2705fde2100abeed23d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/inventario_actual_nodos/inventario_actual_c3_gpu.txt",
+      "bytes": 13892,
+      "sha256": "93a018fad958503a4b87a12986d13ddc700c06b4c43d60e429a5d43abb774b21"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/job_ids_tesis.txt",
+      "bytes": 665,
+      "sha256": "febd712e5348565b84a917e217eecf2be09a8d3bb2fa7d6ba4f3cc948494edff"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/multietiquetaCorrida2/logs/slurm-multietq_c2-3315.err",
+      "bytes": 6573,
+      "sha256": "1b7b8e8425dc6aca672ed0b5847c68265c527f29d6e525e10ba0ff658e263bb5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/multietiquetaCorrida2/logs/slurm-multietq_c2-3315.out",
+      "bytes": 28054,
+      "sha256": "5df066e5bb24249900d0116f8f41358e229bf0c3242d70b7f6bc062817765f0c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2440/slurm-csic-iforest-2440.out",
+      "bytes": 11942,
+      "sha256": "35c456a6c42f1b99e9f0d589adc5070a74781eb2413f3bad353d8d7af9eb6c32"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2460/slurm-csic-iforest-15f-2460.out",
+      "bytes": 35105,
+      "sha256": "204f95064fcd688ebf47518d6b124f9a857dc3f978da7db2898a2bdc116ca839"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2518/harvard_mc30_allmodels_2518.err",
+      "bytes": 214707,
+      "sha256": "98feca34b33ec9f1aef9289f0f8f6ca423e3bbee363fe536f311dd068d73a611"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2518/harvard_mc30_allmodels_2518.out",
+      "bytes": 58788,
+      "sha256": "b6eed0b6e3dc186b88c98bc94c73fa40c6b5e00f7af0e778b4113e1e067b20ba"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2531/harvard_mc30_allmodels_2531.err",
+      "bytes": 212999,
+      "sha256": "6ed0ae98dec05c30ba6aed7e96fd26fa5b827062505af88bff348cf34690a2c9"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2531/harvard_mc30_allmodels_2531.out",
+      "bytes": 22431,
+      "sha256": "04d266606f4a924e93586f62649347613ced6caf0942e04cecc3d8de1dd267ac"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2534/DEFINITIVO_multiclass_histgb_2534.err",
+      "bytes": 144472,
+      "sha256": "488acdce411101af0fe205a618bbf1ecabf4f3eba1566bc0abfbd4ee25be8fdc"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2534/DEFINITIVO_multiclass_histgb_2534.out",
+      "bytes": 9851,
+      "sha256": "8f228d50dbec2a4aa4f850f4403edb3119872ba3286213c05cb682b0ffdfac3f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2625/DEFINITIVO_multilabel_xgboost_none_2625.err",
+      "bytes": 339621,
+      "sha256": "85cde5241c120912c748543adc12298f601de682cfd95c4aa008f343af227269"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2625/DEFINITIVO_multilabel_xgboost_none_2625.out",
+      "bytes": 7687,
+      "sha256": "c6615386b2ae52bec9fb401e763697fd9af86d9ab32985d716e39a508a3fbd4c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2960/slurm-2960.out",
+      "bytes": 154,
+      "sha256": "3dcad00a813abfdcd09e7d91a6b12ffebf741029e06a5ce0c23a262c47a829b6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_2962/slurm-2962.out",
+      "bytes": 154,
+      "sha256": "3dcad00a813abfdcd09e7d91a6b12ffebf741029e06a5ce0c23a262c47a829b6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3045/db_to_csv_3045.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3045/db_to_csv_3045.out",
+      "bytes": 405,
+      "sha256": "7debe0d8ccbd9525498c1baeb3540c4cc9b1e1d26e42d622b692b99ad1769747"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3101/DEFINITIVO_multilabel_xgboost_none_3101.err",
+      "bytes": 78,
+      "sha256": "9cc991dcb3048de9b109f5c566224c05a59b3dc522e1357318b8956bba27451f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3101/DEFINITIVO_multilabel_xgboost_none_3101.out",
+      "bytes": 959,
+      "sha256": "4f2f31a8798aaa0bd4e16edf481659c3ab35a92f412d28abdfde1373350fa0d6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3102/DEFINITIVO_multilabel_xgboost_none_3102.err",
+      "bytes": 318,
+      "sha256": "950eeeca6d1c6db0199e1ff819f44f96719f52353a5e1b1cb90874f30bb28aa0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3102/DEFINITIVO_multilabel_xgboost_none_3102.out",
+      "bytes": 3850,
+      "sha256": "bc8e3ae0217d24e5631a9bd969f04044baed9fa76bd9d2ee73759ec92c457ae8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3104/DEFINITIVO_multilabel_xgboost_gpu_nodo3_3104.err",
+      "bytes": 4910721,
+      "sha256": "9871f23d2edb8fd805dd3a647c59d1568cf861adb8046366fcd606bdb64eb7c8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3104/DEFINITIVO_multilabel_xgboost_gpu_nodo3_3104.out",
+      "bytes": 4630,
+      "sha256": "2a3bdcd1b476accf41c96dd052eb678fb6d9200eeb640f842b5182efe5f88367"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3150/DEFINITIVO_multilabel_xgboost_gpu_nodo3_3150.err",
+      "bytes": 78,
+      "sha256": "3b6116328b5ef6105ee7042244e23fe3067d7c9cbfb99e81d275dcdad76ba232"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3150/DEFINITIVO_multilabel_xgboost_gpu_nodo3_3150.out",
+      "bytes": 6463,
+      "sha256": "4c9e75258e962cce81798d2675d21684c4ace2613520ee8e6dd35264dd6ec5ab"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3151/DEFINITIVO_multilabel_xgboost_gpu_c2_3151.err",
+      "bytes": 43471,
+      "sha256": "ecc1b808ccb5d071d0ab2830718b3978bbd8f0eaff867aa5bb8b1ee0e9c75ea9"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3151/DEFINITIVO_multilabel_xgboost_gpu_c2_3151.out",
+      "bytes": 9871,
+      "sha256": "53666f68ed5f85107f0b1d351cd4bf41a925b84c9130e0de4eecb930e86a98c3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3315/slurm-multietq_c2-3315.err",
+      "bytes": 6573,
+      "sha256": "1b7b8e8425dc6aca672ed0b5847c68265c527f29d6e525e10ba0ff658e263bb5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3315/slurm-multietq_c2-3315.out",
+      "bytes": 28054,
+      "sha256": "5df066e5bb24249900d0116f8f41358e229bf0c3242d70b7f6bc062817765f0c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3358/slurm-3datasetsMC3_E-3358.err",
+      "bytes": 65772,
+      "sha256": "88184e8da266ca44c49d3d2437346ab18c48bb95299189b016ff32b894da5450"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3358/slurm-3datasetsMC3_E-3358.out",
+      "bytes": 14857,
+      "sha256": "e303467b9593cf9ef8a71df16031df13224e9663e3cf5bb04ada69e4361f1b18"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3359/slurm-corr3MC3_ALL-3359.err",
+      "bytes": 240,
+      "sha256": "81f284ca774ec671b8401838a6028dca49e0f23112b502d3888ec4453c92bb7c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3359/slurm-corr3MC3_ALL-3359.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3360/slurm-corr3MC3_ALL-3360.err",
+      "bytes": 240,
+      "sha256": "81f284ca774ec671b8401838a6028dca49e0f23112b502d3888ec4453c92bb7c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3360/slurm-corr3MC3_ALL-3360.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3361/slurm-3datasetsMC3-3361.err",
+      "bytes": 375682,
+      "sha256": "cf266d37f3c2d501a2d16ee714ddb2e5c5953b9bc645994c36b8c0a8525c2875"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3361/slurm-3datasetsMC3-3361.out",
+      "bytes": 12367,
+      "sha256": "7e93e646dbdda7dec81a14b778511f6fdbb2e5b0437998c62183c92d65daeab4"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3442/slurm-harvard-dup-audit-3442.out",
+      "bytes": 143,
+      "sha256": "622ea3dd68297998ec14c5245b3c7eeb7294cf48844f99e72cc8de9f80a55ceb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3443/slurm-harvard-dup-audit-3443.out",
+      "bytes": 465,
+      "sha256": "a7d81b4450760056c8c8e65960042d66341a6dcbc2b8f0c3a10907899480be52"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3444/slurm-harvard-dup-audit-3444.out",
+      "bytes": 465,
+      "sha256": "20140bba6b56312078734d52dc223f11bd6d3adaed9ef5be0e57a604c63c262a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3445/slurm-harvard-dup-audit-3445.out",
+      "bytes": 465,
+      "sha256": "79f9e6ff12ecdd836446b6b1131367721c4413024e0447019b8880550687c064"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3446/slurm-harvard-dup-audit-3446.out",
+      "bytes": 3242,
+      "sha256": "52460ac22b60a436fb7a94c979a5d32cdd2cf3e9c5d08b6336fc7ac11a83e587"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3453/slurm-harvard-dup-audit-3453.out",
+      "bytes": 465,
+      "sha256": "48cea4d92e3dbe2b42c74012864e092ee0ca0a28c21e3331faf3fd32ed8df3d0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/por_sacct/job_3454/slurm-duplicadosHarvard-3454.out",
+      "bytes": 3560,
+      "sha256": "1c2052228bdae6599674e078166b50eda908aeeba6bf0efa70fa5fa9785adbab"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-2960.out",
+      "bytes": 154,
+      "sha256": "3dcad00a813abfdcd09e7d91a6b12ffebf741029e06a5ce0c23a262c47a829b6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-2962.out",
+      "bytes": 154,
+      "sha256": "3dcad00a813abfdcd09e7d91a6b12ffebf741029e06a5ce0c23a262c47a829b6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-3datasetsMC3-3361.err",
+      "bytes": 375682,
+      "sha256": "cf266d37f3c2d501a2d16ee714ddb2e5c5953b9bc645994c36b8c0a8525c2875"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-3datasetsMC3-3361.out",
+      "bytes": 12367,
+      "sha256": "7e93e646dbdda7dec81a14b778511f6fdbb2e5b0437998c62183c92d65daeab4"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-3datasetsMC3_E-3358.err",
+      "bytes": 65772,
+      "sha256": "88184e8da266ca44c49d3d2437346ab18c48bb95299189b016ff32b894da5450"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-3datasetsMC3_E-3358.out",
+      "bytes": 14857,
+      "sha256": "e303467b9593cf9ef8a71df16031df13224e9663e3cf5bb04ada69e4361f1b18"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-corr3MC3_ALL-3359.err",
+      "bytes": 240,
+      "sha256": "81f284ca774ec671b8401838a6028dca49e0f23112b502d3888ec4453c92bb7c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-corr3MC3_ALL-3359.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-corr3MC3_ALL-3360.err",
+      "bytes": 240,
+      "sha256": "81f284ca774ec671b8401838a6028dca49e0f23112b502d3888ec4453c92bb7c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-corr3MC3_ALL-3360.out",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-duplicadosHarvard-3454.out",
+      "bytes": 3560,
+      "sha256": "1c2052228bdae6599674e078166b50eda908aeeba6bf0efa70fa5fa9785adbab"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-harvard-dup-audit-3443.out",
+      "bytes": 465,
+      "sha256": "a7d81b4450760056c8c8e65960042d66341a6dcbc2b8f0c3a10907899480be52"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-harvard-dup-audit-3444.out",
+      "bytes": 465,
+      "sha256": "20140bba6b56312078734d52dc223f11bd6d3adaed9ef5be0e57a604c63c262a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-harvard-dup-audit-3445.out",
+      "bytes": 465,
+      "sha256": "79f9e6ff12ecdd836446b6b1131367721c4413024e0447019b8880550687c064"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-harvard-dup-audit-3446.out",
+      "bytes": 3242,
+      "sha256": "52460ac22b60a436fb7a94c979a5d32cdd2cf3e9c5d08b6336fc7ac11a83e587"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/logs_preservados/slurm-harvard-dup-audit-3453.out",
+      "bytes": 465,
+      "sha256": "48cea4d92e3dbe2b42c74012864e092ee0ca0a28c21e3331faf3fd32ed8df3d0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/manifest_sha256.txt",
+      "bytes": 71323,
+      "sha256": "e002437d0da124cf31844b12db3f5147118d35a9965e64016a0a0b757daf4858"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/archivos_codigo_config_y_resultados.tsv",
+      "bytes": 16671,
+      "sha256": "94508ca58e32ab16c774c257d1cce210552766439c66492a28f6361ff3c89593"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults.py",
+      "bytes": 152142,
+      "sha256": "840b1496c626587aa2a836b2725417683d1990f8c2d176e20fc71987ea0298e7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults.sh",
+      "bytes": 14459,
+      "sha256": "c8c7645fc5b2001fecc8723ef7a755398dc61b07e808819cdfb0da1a209528cd"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 484,
+      "sha256": "93c999d14e2de4e6561bcd4d0f48170c31342c1a9929209b38448221100260cb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 650,
+      "sha256": "61c45988931ad970deee5956bf376a28f9df43cb00241cb6ddd50b778d4bf08d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/metrics_flat.csv",
+      "bytes": 2191,
+      "sha256": "925ec78aaf35b3843ff01fb14cfbf6d7bae91eb84b9e48542d55b0afc210d046"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/metrics_multiclass_histgb_useful58_request10.json",
+      "bytes": 19682,
+      "sha256": "b89c79eb5a92062d55d0689d026db615e82b9f37cd56b1a2d9619f2dd65ff342"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/operational_metrics.csv",
+      "bytes": 1099,
+      "sha256": "f182ac9423c4818451755b42324f0918c404a1e81a191a43ad9adbefb24b0d1e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/operational_metrics.json",
+      "bytes": 1257,
+      "sha256": "825265a6deb6e67d8f73901456efba51629612505cb712aa782ba1c72b3d6eaa"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/per_class_ovr_metrics.csv",
+      "bytes": 2115,
+      "sha256": "86941b1f1700ba14a08435dc0bd5c68b003aa02802558975dd13373816bb8638"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/run_config.json",
+      "bytes": 5394,
+      "sha256": "27ef1cdc3ef09e308352443560b1b32aeb0073bb26a4d45699b395788515eb93"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/binary_normal_vs_attack_metrics.csv",
+      "bytes": 474,
+      "sha256": "9bd29c6e46ed8a2f1c9f15180acfa03c29ebdc4da3b96491c9c639bad8b30a24"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/binary_normal_vs_attack_metrics.json",
+      "bytes": 640,
+      "sha256": "93fbe0dfa31ba84d8fb06f77d007953a4b05dcc20da462529b2837ee01a3c2f3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/metrics_flat.csv",
+      "bytes": 2164,
+      "sha256": "5fe31480ac20bbcc67d842f0e7e204cd7c2adb125ec8c735f8867ca02a761879"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/metrics_multiclass_histgb_useful58_request10.json",
+      "bytes": 18805,
+      "sha256": "c1392005a9116fef98b675443e4d1f297015ea3ed4e7322ac5294ea9aaf6be9d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/operational_metrics.csv",
+      "bytes": 1094,
+      "sha256": "0fb0dd4aa328c94336988cedad5201b93d72539f9f3bed471523f8f1716eb6a3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/operational_metrics.json",
+      "bytes": 1252,
+      "sha256": "48717cd60650827f5d6b44e2fd7e4f1d067b4df098cd8b2dbf80f6d4fcd1fa5c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/per_class_ovr_metrics.csv",
+      "bytes": 1221,
+      "sha256": "8d68dbd8b6a7cbadc29bba1deee7489438c7564acabbf5025f1660dd6d84bb30"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/run_config.json",
+      "bytes": 5919,
+      "sha256": "6263fcb91521eb48ca8d6d34a70e3c2b0628fcf2badf12ea2dc4f986d47e18d3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/11claseResults.py",
+      "bytes": 133514,
+      "sha256": "eea4f2b64e68c486da73acd507c0915e78af7fc75eb19a78dbaea3f583b5a245"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/11claseResults.sh",
+      "bytes": 12944,
+      "sha256": "e9f2a12d37483be1fa2052c29cf959e186a021a71a351d3b4aa57e566faf8ac1"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase.py",
+      "bytes": 162579,
+      "sha256": "b97441cf003464d0c5e1a2f05be1d838174e4d433425497b752189a65f27ad98"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase.sh",
+      "bytes": 16499,
+      "sha256": "39aac85a98812beb45c62ec92a0bd18825d8aed4911389bf1c416f74939b5cd7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/binary_normal_vs_attack_metrics.csv",
+      "bytes": 479,
+      "sha256": "aadcbcc052d937c773e385508141490fc3a8c18ca47ef2ed34204f4103743375"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/binary_normal_vs_attack_metrics.json",
+      "bytes": 645,
+      "sha256": "ff5771abdfbd74f2e45a1f78af26452b6bfe98c459b97e96534760e5a4eda986"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/metrics_flat.csv",
+      "bytes": 2206,
+      "sha256": "93826001ef40550a9e44552e43c96ddc34d36dd09071d0d0f4c0c8125f1568c0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/metrics_multiclass_histgb_useful58_request10.json",
+      "bytes": 18472,
+      "sha256": "9f2b2051ba5ba933c723b7b842767571d950775737ad358db690c11fb029fe37"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/operational_metrics.csv",
+      "bytes": 1106,
+      "sha256": "fc38a5c33d9982666e084c8a5d7a4ab040dd66a19188a79a9264832c321f5832"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/operational_metrics.json",
+      "bytes": 1264,
+      "sha256": "9137214186fb7ac1996998531ab84ade5ffe9bb72b1f3e2388fc53bc6448f21f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/per_class_ovr_metrics.csv",
+      "bytes": 1738,
+      "sha256": "69f01b463e1bf2bec02afa3f6775599085ce6a5574e377b56f06e6f1f194777c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/run_config.json",
+      "bytes": 5751,
+      "sha256": "1112027aabff3f3bc9c39363d1b919e5d0506151dac8e716417017ed8633cf41"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 484,
+      "sha256": "93c999d14e2de4e6561bcd4d0f48170c31342c1a9929209b38448221100260cb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 650,
+      "sha256": "61c45988931ad970deee5956bf376a28f9df43cb00241cb6ddd50b778d4bf08d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/metrics_flat.csv",
+      "bytes": 2195,
+      "sha256": "efad12ba581565be699bfeebe25b8ac02c70a5e6265b1f494bdfc4b14afa0f03"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/metrics_multiclass_histgb_useful58_request10.json",
+      "bytes": 19906,
+      "sha256": "9c6de3cbd3b97dc0a8a895c19f24b02de2e9f0ef8d53adce9cae83beaed3ac6f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/operational_metrics.csv",
+      "bytes": 1102,
+      "sha256": "54571e2545f0200246251b95c4afa4fba964753d8d3af14bfcdd521c5442ce3e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/operational_metrics.json",
+      "bytes": 1260,
+      "sha256": "7028797439706dfb17243f9703f48ce7a44be27eccf95cddc66245856d33e56d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/per_class_ovr_metrics.csv",
+      "bytes": 2115,
+      "sha256": "86941b1f1700ba14a08435dc0bd5c68b003aa02802558975dd13373816bb8638"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/run_config.json",
+      "bytes": 5744,
+      "sha256": "58e40f061e555a97862214a71fad4e005df488f571686501cd2d29464fda8713"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/binary_normal_vs_attack_metrics.csv",
+      "bytes": 474,
+      "sha256": "9bd29c6e46ed8a2f1c9f15180acfa03c29ebdc4da3b96491c9c639bad8b30a24"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/binary_normal_vs_attack_metrics.json",
+      "bytes": 640,
+      "sha256": "93fbe0dfa31ba84d8fb06f77d007953a4b05dcc20da462529b2837ee01a3c2f3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/metrics_flat.csv",
+      "bytes": 2162,
+      "sha256": "246ea0388ec671aa13d1c57fb4b780282a806d4f807775f77559bf44d01e99a7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/metrics_multiclass_histgb_useful58_request10.json",
+      "bytes": 19006,
+      "sha256": "0e4d75b0613c98ed20326e26f234f9ee9fffacddc4ea29c6e6d7304a748d0652"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/operational_metrics.csv",
+      "bytes": 1088,
+      "sha256": "42d2406a98951668bba33dbad339110666ae6cb61d3c4ebeae093cff32af9cf1"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/operational_metrics.json",
+      "bytes": 1246,
+      "sha256": "476878f5c9cfb5c026a47911bdc6668d349b40e20312279ea880af955fad951e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/per_class_ovr_metrics.csv",
+      "bytes": 1221,
+      "sha256": "8d68dbd8b6a7cbadc29bba1deee7489438c7564acabbf5025f1660dd6d84bb30"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/run_config.json",
+      "bytes": 6267,
+      "sha256": "2c8955bf0b72aac861b4f2b04d4ae18b331135ef688c060ef61d50c513572d63"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2.py",
+      "bytes": 168703,
+      "sha256": "a76de7b667c504ab309ec8e07398e80cb585ca2137fcec1b251b592859a13f0c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2.sh",
+      "bytes": 16654,
+      "sha256": "d132f91bc7e87124ffad6b037eababbee2ea17c768a13e9789974833cc6d37ec"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/binary_normal_vs_attack_metrics.csv",
+      "bytes": 481,
+      "sha256": "b75c5d02babadd5addcd2f9703414bdc4ea24ab23b91f734092c4014e8a4398e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/binary_normal_vs_attack_metrics.json",
+      "bytes": 647,
+      "sha256": "9926e9e4bbc1ccc89ae9fc96d89f970be3c60099d9ca33b206125aa6947f0654"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/metrics_flat.csv",
+      "bytes": 2218,
+      "sha256": "6cb39462fb81ccfaa05e046c8a85c21be8684ddfca60fcf2da9b183432b28403"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/metrics_multiclass_histgb_useful72_wamm_manual_request10.json",
+      "bytes": 18997,
+      "sha256": "9fafa8dee966c6409504726ebf390c538534cfb5e6b4e8d72ad4c7b20931465e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/operational_metrics.csv",
+      "bytes": 1103,
+      "sha256": "60f9905240581731391dc1f97df0a5d85e16128b11206ad68cd026792e684dd5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/operational_metrics.json",
+      "bytes": 1261,
+      "sha256": "08debc8865728151c0660865c88adb787d57fffe3896118ac7230f61bb2e8d12"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/per_class_ovr_metrics.csv",
+      "bytes": 1741,
+      "sha256": "3cb9e9732fb9ffe31f0c2d7482a7a73fb364a8dd686a56956f465aba55b95c6c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/run_config.json",
+      "bytes": 6747,
+      "sha256": "bccee750c2fccf942ed57186ab77e7f9a9711bc750b852df17c1a2e95600ed62"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 486,
+      "sha256": "cba7d204c3c16b88bfa1695758337597ae010a0720cdf7a22d450d0f0bf1e588"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 652,
+      "sha256": "692cef059b5777440f4077711a55fd8ea4aa8c15f7d57bbcce2fac75e0df4c11"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/metrics_flat.csv",
+      "bytes": 2210,
+      "sha256": "abaf1ac13f7ccb355fa4aee5f2d6ce8fa6b0dae7ceaf0e17ecc69de0b588c6bb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/metrics_multiclass_histgb_useful72_wamm_manual_request10.json",
+      "bytes": 20451,
+      "sha256": "c15bab14ca557d0a8eaa9269a4f237019eeed2576a2a6de434bdf09580dcc91b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/operational_metrics.csv",
+      "bytes": 1100,
+      "sha256": "0051849ca49406d88140408c67feaccb9cac6a1f9adb12dcc7de78dab4e2c3e0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/operational_metrics.json",
+      "bytes": 1258,
+      "sha256": "643c48cab810fc57d6e5e61a8074fe05e34e8320d00312e2eaa5bd7cb3d28542"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/per_class_ovr_metrics.csv",
+      "bytes": 2180,
+      "sha256": "dc91be8b827409090ee33e8a3bb62f61f86dcd26e5fbacc55d8d249cd9a0fcbd"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/run_config.json",
+      "bytes": 6741,
+      "sha256": "f10b0aad3409d3c4f480d2ea9774d008f288c30721a8045b849d0198e9864491"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/binary_normal_vs_attack_metrics.csv",
+      "bytes": 474,
+      "sha256": "91152fb2b81239c2298b82bd21adb42e67760cfddcf9721e0835ab0f6c590a97"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/binary_normal_vs_attack_metrics.json",
+      "bytes": 640,
+      "sha256": "a9f83d124cd028f77697f616ab037483c1c44051a4d0704ee07b1e931adb1e54"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/metrics_flat.csv",
+      "bytes": 2180,
+      "sha256": "7b317409f53dd5f4f83c64edf672925a551989df06cde55b7085ae67c53aa7be"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/metrics_multiclass_histgb_useful72_wamm_manual_request10.json",
+      "bytes": 19670,
+      "sha256": "67bb10fa890dfcc958091cbf19f271dc6f2d8a7fe2d89ed9b1c80d0fe186dd17"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/operational_metrics.csv",
+      "bytes": 1101,
+      "sha256": "b59fa355a5710eea9988dc4e1178d2d9c4e1abc4bc4030ca7739a5af188c9611"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/operational_metrics.json",
+      "bytes": 1259,
+      "sha256": "be9113dcf5365f19a3230ffb700b05f6edb10207a156ecef1946c2e476a588f6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/per_class_ovr_metrics.csv",
+      "bytes": 1476,
+      "sha256": "85400518aac0a5c73fb0d34c58c1ec9cc8e6d23b296178a1075a5b1734440e42"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/run_config.json",
+      "bytes": 7265,
+      "sha256": "5aa156500c3ff25b8d2a5bbcb7b6ce083ba19f327ff72ac50c8d90a805dfa262"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3.py",
+      "bytes": 261362,
+      "sha256": "c930f2a2b7a02d054c11d6a2f6693fec915b238fd9513fea25923dcc4b47efb4"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3.sh",
+      "bytes": 41362,
+      "sha256": "f1fd7dd76d1edd0d6d1be7826c6561729f8691856b7922cb538775224ff53b7c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/binary_normal_vs_attack_metrics.csv",
+      "bytes": 480,
+      "sha256": "4820584168ba39a67e94f32f4f281c90005501c0fd8549e5f144c59f64fc2a8c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/binary_normal_vs_attack_metrics.json",
+      "bytes": 646,
+      "sha256": "d7eb720feb05fbe100bd94db07fe5693a0640681fdb8b40ee4239b852f1d8292"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv",
+      "bytes": 2283,
+      "sha256": "d13e1c0abd572e206e55079e9543a32902de13448719067ff05d44c0d5645a70"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/metrics_multiclass_histgb_compact73_unified_inner_weight_selection.json",
+      "bytes": 25691,
+      "sha256": "3e38f40edfc9f298fb53fd67669c5cdc1dd8516dbc31e951783ca612d9427948"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/operational_metrics.csv",
+      "bytes": 1109,
+      "sha256": "8a46ebd9a7b0de2d46565477777c6119cb558f744ec48680430f133d9f1eed7a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/operational_metrics.json",
+      "bytes": 1267,
+      "sha256": "69ff9dbfa6671ac29f56a5c573561b5d4027b09fa732cedcf07472aadf3ddb2c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/per_class_ovr_metrics.csv",
+      "bytes": 1943,
+      "sha256": "7dfc9fc326a2b9fb9c97d83bd690df91a357330338e6c22942204535f1add5ab"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/run_config.json",
+      "bytes": 20299,
+      "sha256": "423ce83a37c69550ae92afe123404303f91d6d67a722fa56b013c80fe19c3de0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 484,
+      "sha256": "d490ef3ff74b12f51c8f2114c4997c232488ed2e830d3e16a0d11c88f9366337"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 650,
+      "sha256": "d5f2b019d0c56fe8c2a979c7aa31c5a31e174deeeba4a845f202a286adf46ea8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/metrics_flat.csv",
+      "bytes": 2273,
+      "sha256": "b9db40a9187199cf1af5f674a82cbd7e92a20fee06e24b044913301aa4e874eb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/metrics_multiclass_histgb_compact73_unified_inner_weight_selection.json",
+      "bytes": 25835,
+      "sha256": "59fd5888138e2a4116f907646dff5c459545e145be39f11e16340a884a7ebda9"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/operational_metrics.csv",
+      "bytes": 1096,
+      "sha256": "25b084469093074caea08a185d1b7ad59e732e92d069f869eb7d6ae4449fd0af"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/operational_metrics.json",
+      "bytes": 1254,
+      "sha256": "1ee6281d74a445ef0df60229294948cc740389b8895b5ce2a4b640d6c9e1326b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/per_class_ovr_metrics.csv",
+      "bytes": 2160,
+      "sha256": "c64e6591e409a4bfb1c8c3046379db999a0e0c9799d7aef8c33161ab4ee265c9"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/run_config.json",
+      "bytes": 21019,
+      "sha256": "9f84524234d94a42c906ec5c82124f9fa0c8c8a715fa5d64e1cf8d6351c4774f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/binary_normal_vs_attack_metrics.csv",
+      "bytes": 476,
+      "sha256": "e6a00e4c2137c75a8e0b189d083cb42468ecec6327e0059f4825ab3dc43273b7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/binary_normal_vs_attack_metrics.json",
+      "bytes": 642,
+      "sha256": "a6213a4e66a34563f7ec55ebd91b81e3ea1722b56bfee41e57705ac37c54a071"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/metrics_flat.csv",
+      "bytes": 2280,
+      "sha256": "58390fc51e47f8eab54d7cfc5dcfee8ccdd18141d1daf9126cac93ea2a3c566c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/metrics_multiclass_histgb_compact73_unified_inner_weight_selection.json",
+      "bytes": 26308,
+      "sha256": "b081b273baf92d0f7cf8b771048d086eb7baae4a646fb21e49a35973a7010293"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/operational_metrics.csv",
+      "bytes": 1090,
+      "sha256": "98cd488894d71e6eb751082780dda6332fac8f9e221ab290aacc0231f0108862"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/operational_metrics.json",
+      "bytes": 1248,
+      "sha256": "738ebfd7d3df89ca0cde67634bcca37d4d42e6f5e588563bd995cb5de6c133a6"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/per_class_ovr_metrics.csv",
+      "bytes": 1179,
+      "sha256": "d399986f714dd15d997c98118f99fa6154e567cde561fda29e91a8d6c96e34bf"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/run_config.json",
+      "bytes": 22489,
+      "sha256": "e9baa4ced7cac60c58793dff06d43cf1bd9ea21e03198849e8efc36403898edb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.csv",
+      "bytes": 338,
+      "sha256": "64ba459ef68673d111dca3b8e3a961c8eb27647601b117c537d79a67fcb93272"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/binary_normal_vs_attack_metrics.json",
+      "bytes": 430,
+      "sha256": "167d68b74cbdcd0022ea733278745c0fe6a74013329ad326242282f45b652303"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.csv",
+      "bytes": 3333,
+      "sha256": "dcd5f92216d80424c29a71088c490245f355ae3935270f7535a94d489c4396f1"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/book_metric_mapping.json",
+      "bytes": 5777,
+      "sha256": "a75b2e3cf0f92f0386b9c452849babc71d402e2fafb0a1cb45410e4d6f5a9158"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_flat.csv",
+      "bytes": 2023,
+      "sha256": "48ac0d34e9e56f716b8582b5a8be1837450481370e2f369c199247b67eaf95be"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/metrics_multilabel_harvard_xgboost_none_fixed30.json",
+      "bytes": 23624,
+      "sha256": "9a3e72ba316db967f998708abc60e006b8002081a88388d6d084bf1187485529"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.csv",
+      "bytes": 946,
+      "sha256": "4f126d9ad25252b965ed419440c7e5cb32cfa5000daace9870253c03ec4a424a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/operational_metrics.json",
+      "bytes": 1162,
+      "sha256": "691807987a2ebd149d81baf96b1cf4b1e8e75d4d6d9803385c496cefb8ffbda3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/per_label_metrics.csv",
+      "bytes": 3325,
+      "sha256": "67419949cf14d9cedcfa94c802ec56bdc899039a5ebe0cc360e56ca83e9fe418"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/run_config.json",
+      "bytes": 9900,
+      "sha256": "633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/DEFINITIVO/multietiqueta/multiquetaSalidaXG/test_metrics_multilabel.json",
+      "bytes": 1794,
+      "sha256": "9c0ca90cc3dd2df91b6e3b5504a6666b017ce3b78db09a71f07643a35d680cc3"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/configs/config.example.yaml",
+      "bytes": 408,
+      "sha256": "ddac8f5346b3770a180cc845d14ac1658d4ace14cc714684fd789e567d2c9588"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/corrida3mejoresResultadosPosibles.py",
+      "bytes": 125368,
+      "sha256": "d648280b4ae487d69d7a58707c67c4968b9450c0a5e7ec0d7669dc69208f27d8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/corrida3mejoresResultadosPosibles.sh",
+      "bytes": 13260,
+      "sha256": "5b1d343dc1f97d8196d8a1cee7668380a788b34fc96f2047d38a5b0a970152c7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/corrida3mejoresResultadosPosibles_featuresUtiles58.py",
+      "bytes": 128593,
+      "sha256": "5cc347d824f7d6f89ce5ff9592e174b9448518154f30104008d0e59e26ac011b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/corrida3mejoresResultadosPosibles_featuresUtiles58.sh",
+      "bytes": 13494,
+      "sha256": "8659c90dfe0ac15fe36c5b57ef6271b7b46451fb0d9cbdaab960ebed428111e8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/csic_oneclass_gpu_optimo.py",
+      "bytes": 82399,
+      "sha256": "e8cc64fe34d06aa68eec61bc36864df13ef9cb76b8260e4db6e44c090ba65e40"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/duplicadosHarvard.py",
+      "bytes": 59048,
+      "sha256": "0b3a14cfa3dc0be3b22f6c567ee54f019d86bae9fa0fc55dccba112f26783844"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/duplicadosHarvard.sh",
+      "bytes": 3982,
+      "sha256": "b06d19b80fd9a290559ece851c93fe31accf706c8e240b0360ec8a95a12bd769"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/egipcios/export_db_to_csv.py",
+      "bytes": 6993,
+      "sha256": "b59870e1d8752e3025c4635ccf767c14749d9adec5ef0aa3d1503d2d14245120"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/extraer_evidencia_tesis_slurm.sh",
+      "bytes": 18421,
+      "sha256": "8053495e5a58df9fcc0e055db396a092633f6e19397f91534c3e9c29b22bf384"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2.py",
+      "bytes": 277565,
+      "sha256": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2.sh",
+      "bytes": 11118,
+      "sha256": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 511,
+      "sha256": "1cb4f8d3462bac5f84b95208e4f12594a25d6de40eec35b8b5bb5304be0c9b6f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 639,
+      "sha256": "bd202c3e7d2a0e8501026eb12909e5e72760c58b0d38ff539f30887b5df3383d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/calibration_metrics_multilabel.json",
+      "bytes": 2011,
+      "sha256": "b647488c9ba0cbe356fc1d7af89e5a11110545dab88b5094e98436bfd49393cd"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/calibration_per_label_metrics.csv",
+      "bytes": 3060,
+      "sha256": "9dee112d86e2af1702265fb620df9cfafe4147ad05d35f89b0ec793868b24c75"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/metrics_flat.csv",
+      "bytes": 1698,
+      "sha256": "194cbd8f8bec4049a52ee6110a1fe6750113bb0df964c296612f31ae9ad9b7db"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/metrics_multilabel_xgb_request90.json",
+      "bytes": 62157,
+      "sha256": "347d5fa1706d82787a2e0cb173233ee946b0150bad3de48e945abd255bb1814a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/operational_metrics.csv",
+      "bytes": 876,
+      "sha256": "69b743ec2d7d0be81c36b6227baffe5616c10ab37785b470df94464cba2bf410"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/operational_metrics.json",
+      "bytes": 1075,
+      "sha256": "d6d01d325d4f8316a5102410647143e250662b48ff89a351168f83bdb7496337"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/per_label_metrics.csv",
+      "bytes": 3213,
+      "sha256": "b938d306742298bb13e537b5742da0650d0e57680118ad3819d096e65bf54882"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/run_config.json",
+      "bytes": 16412,
+      "sha256": "c5e41571999329b8b5747cd97e4d3ec87872bc6e8a1d8b9a5c6bd59703439f42"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/test_metrics_multilabel.json",
+      "bytes": 2016,
+      "sha256": "ff509844e7add65d5f36a45293f14dc12c9ba5fbc2a2c217129e6e925a0a10cb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/tuning_metrics_multilabel.json",
+      "bytes": 2014,
+      "sha256": "060bf90865d66299a0118f434e15ae2cfa7954d13cc7271e5f2b4865e96f8748"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/tuning_per_label_metrics.csv",
+      "bytes": 2832,
+      "sha256": "4adab3eb77e105e8eb79cfbb3a85c1890308685d633c5a3a5f34e2d4a5635f66"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/multietiquetaCorrida2/harvard/xgb_best_params_by_label.csv",
+      "bytes": 3532,
+      "sha256": "5459499eff29247d881400ef0e640a8452c7d17d09b8bc822689779a5c1fc569"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/pipeline14classes.py",
+      "bytes": 101658,
+      "sha256": "e90848fcdf2487bd43a069c6bc3b4406b8c280e2587fc2cb38b57058aac75145"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/pipeline14classes.sh",
+      "bytes": 11751,
+      "sha256": "d6b16179721942eba8985df9d7a12351fd8a27bb5ccb9d746ff823f07d7daa86"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/requirements.txt",
+      "bytes": 214,
+      "sha256": "ba216b4e7749e21e170b9df58a52a00b1799deca5732b9a7e4b90ca8ef54ee3f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_DEFINITIVO_multiclass_histgb_fixed30_arandu_safe.sh",
+      "bytes": 11317,
+      "sha256": "5561574e20ab303e58b1cc30376042fd5556d3675f1e76af66f0615609a19db5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+      "bytes": 12743,
+      "sha256": "4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+      "bytes": 12686,
+      "sha256": "4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+      "bytes": 12684,
+      "sha256": "90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_csic_oneclass_gpu_optimo.sh",
+      "bytes": 6365,
+      "sha256": "faf96529bc11a72ba39cb7fc49d37879b36863f253db9bb2669f3702c43f99b1"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_harvard_multiclass_fixed30_allTorpedaModels_noFI_sbatch_v12.sh",
+      "bytes": 12685,
+      "sha256": "19d9e0d4bc81ba8df0d2473649922fc5175a3f4ab4efaa228cc23581640c342e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "bytes": 16245,
+      "sha256": "1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c2.sh",
+      "bytes": 12710,
+      "sha256": "d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_resume_multilabel_xgb_cpu_c3.sh",
+      "bytes": 12725,
+      "sha256": "b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/run_torpeda_multiclass_fixed30_optimo_sbatch_v10_normal_sharedgpu.sh",
+      "bytes": 7463,
+      "sha256": "175bb527772b7870a31a597244f83819fe6f5339b91fef26c052c486ea0d13a4"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/__init__.py",
+      "bytes": 13,
+      "sha256": "75ad4f4c2943325f88064ad2beae890b59674be2bf0404b30afc5584dc4de4bb"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/data/csic_loader.py",
+      "bytes": 5475,
+      "sha256": "131be53f0a0a0337c79e13995d85c37888534fd73173baf37ec81f48bfe475e8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/data/srbh_loader.py",
+      "bytes": 7848,
+      "sha256": "509d3e8b398ede007c408512abbf6e274d81972cdd50f2c6f600ded4be143e9a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/data/torpeda_loader.py",
+      "bytes": 6186,
+      "sha256": "08ea1f09a04ca1b8ad897a791ccba95f09caa12a4a1e238fb7797940cf228f76"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/features/http_features.py",
+      "bytes": 11233,
+      "sha256": "c8c5d6ac63e11185d2af6492773a70ee08970d87cab0722e4bd39de60ad850f5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/optimo/iforest_eifOptimo.py",
+      "bytes": 36285,
+      "sha256": "00c0802651e5e84f50ce94f18f69c5d5121e18d9405586812fe204ac61cf56d5"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/optimo/ocsvmOptimo.py",
+      "bytes": 79144,
+      "sha256": "ec01a9a0305d8a0b2373009a71f5cc833e5ef23ca19a15b0a1a00bf3e405522b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/build_features.py",
+      "bytes": 4936,
+      "sha256": "9b2411bd0a98c560a29a95cd73f532474d4d4da8d30eca393a054c6ff880294c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/build_features_csic.py",
+      "bytes": 7831,
+      "sha256": "3aafb750bb460f37a028df4167849f0225049a8324886926fc918a04adad6388"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/build_features_torpeda.py",
+      "bytes": 3999,
+      "sha256": "ca9b1335a83c140ed07b20c1162c16ff4895f795d80238098440d252abdc7aff"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/train_multilabel_lr_harvard_thesis.py",
+      "bytes": 59406,
+      "sha256": "a701799277a6ea7fd3e3a7f289fdd589da52f37f282930fad74735e0dd856508"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/train_ocsvm_updated.py",
+      "bytes": 44752,
+      "sha256": "85b2953772fab033ba19e609955e577565fb4f57bf423f892cd9f81948ba6914"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/src/waf_ml/scripts/train_supervised.py",
+      "bytes": 55565,
+      "sha256": "da0d1db788cf24991866dd55a50d10c68f805d62574b570da7512ae49e232c85"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/submit_10claseResults_best_node.sh",
+      "bytes": 6989,
+      "sha256": "cf7052792a94bc0cc661f272ef1fd80a68ea135a543d9ece93cb622b9ea0de87"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/train_waf_multiclass_DEFINITIVO_histgb_fixed30.py",
+      "bytes": 91885,
+      "sha256": "95cd696f920481446be30dc5d954641025c679a4cf6f452e75707f4b0a58d055"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py",
+      "bytes": 122966,
+      "sha256": "5f423fe5ec45ae1c73dd4db2614a80c550aa4a89fd2933ca8c995636ca9f1d9e"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+      "bytes": 184379,
+      "sha256": "7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+      "bytes": 159902,
+      "sha256": "4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/git_actual_e_historial_candidato.txt",
+      "bytes": 6493,
+      "sha256": "81714f4bb0091507242a63506dd4738c179c971f90b97907c579fdef71c2aa46"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/hashes_codigo_config_y_resultados.sha256",
+      "bytes": 26992,
+      "sha256": "ad784fe98f04a636b5e3dbc3715377dada02896899d2a4c3f9e516a88ab69134"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/campos_sacct_disponibles.txt",
+      "bytes": 2360,
+      "sha256": "8df2036028ddab26248d37f63735b0ab29c380bb60a2d15cd6993c6adc7af84b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/campos_solicitados_no_disponibles.txt",
+      "bytes": 39,
+      "sha256": "903d47a8eab441785557796f3c0ea2663ec3349974de0358e0d47c34f37c769a"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/rutas_salida_por_job.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/rutas_salida_por_job.psv",
+      "bytes": 17802,
+      "sha256": "830cfa7d3958290317ed56562ef166a8eab286ebd02a7fd3f2cce680cff5a0b0"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/sacct_jobs_asignacion.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/sacct_jobs_asignacion.psv",
+      "bytes": 73535,
+      "sha256": "11c11c35faee0f686abfa6e7c037a25bc2c0c6291abbb8f211d80c26854c4d7d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/sacct_jobs_y_steps.err",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/sacct_jobs_y_steps.psv",
+      "bytes": 191546,
+      "sha256": "494839c7a3f91324b309186e46934cdf2891581b0f65ffa630bc44cdd37e401c"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/sacct/sacct_resumen_legible.txt",
+      "bytes": 29754,
+      "sha256": "c6ab461a37d0221dc1ecc893e0cc0d3e1a08495185c8197c1160a75d09c9184b"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_config.txt",
+      "bytes": 8229,
+      "sha256": "bfdd3208316e68356edbb13079ed790dabea5cdab5249977b62ef96910f8c008"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_jobs_retenidos.txt",
+      "bytes": 94,
+      "sha256": "2d11d8bc532a9ec582f997d477551712131211447353231273de9ceeda16bb14"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_nodo_c1.txt",
+      "bytes": 793,
+      "sha256": "1526a7f67fcf68eab98ae28f5f3f5885abb5af4bf21413b7fc3560b015308c21"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_nodo_c2.txt",
+      "bytes": 793,
+      "sha256": "b073d29f3bb6f8eb40ae5954d91273fcc0cc62c8fc39d90882700ba6e9ec832f"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_nodo_c3.txt",
+      "bytes": 793,
+      "sha256": "5eaf12af1a5371e1326fac8a742604e73f5b2c0c9082e06276b2dbce1c593b1d"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/scontrol_particiones.txt",
+      "bytes": 1401,
+      "sha256": "028dd63cc498b2fbd9e19ca224ffeee880a120c7741d759b3b5ea73a05a55494"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/sinfo_nodos.txt",
+      "bytes": 615,
+      "sha256": "0175309edafea1eaedf463947f595bf0de06b5c93452c3f4e097376a91f923b8"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/sinfo_resumen.txt",
+      "bytes": 297,
+      "sha256": "20aeac0ea85c80508477a7719aa9f628265bea05110f677dfca593f9e34161df"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/evidencia_20260803/slurm_actual/versiones_comandos.txt",
+      "bytes": 227,
+      "sha256": "dcb73bef6f9c727492f6c4944007ba4622534b435c94d290191f58681412bdde"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/resumen_verificacion.json",
+      "bytes": 3234,
+      "sha256": "716a4e2be1e5fa384b0a9ce394151533a203b98c286081657e857b14f0168b06"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/revision_slurm_y_binario.json",
+      "bytes": 2006727,
+      "sha256": "da034d2acbd7fb75db13206a9f45a5173c548c09c34ea121dc0f8740304944b7"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/variantes_codigo.csv",
+      "bytes": 5210,
+      "sha256": "bc545a6cec39d16e24bb3fc92ca763b56f7e245c9f26583bcd5681705e548dbc"
+    },
+    {
+      "path": "02_auditoria/historial_slurm/vinculos_config_job.csv",
+      "bytes": 4062,
+      "sha256": "c4d4d60ef04172c500f9d2cb1ad68d82d14dd58060575e7099b17cf592c458ea"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/ALCANCE_DE_AUDITORIA.md",
+      "bytes": 11305,
+      "sha256": "ebf9b05be0640027b7372b2c6cdf692c8860b9703fae0e82ba02f332466196cf"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/CRITERIOS_DE_LIMPIEZA.md",
+      "bytes": 5068,
+      "sha256": "debb6ac374a429cfda519100c23e2c77ecb6e07590a35bc887802d70314d3fcc"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/archivos_descartados.csv",
+      "bytes": 55642,
+      "sha256": "166f666ea3a876ad8131e254c5347078a54773132a7b323f2ac262b2fe2e8252"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/coincidencias_hash_libro.json",
+      "bytes": 1877,
+      "sha256": "7d89a3884a263c034e57b10de2c7ee8154dd8596fa7ed7ba5bfe288d6b1816d8"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/duplicados_fusionados.csv",
+      "bytes": 4473,
+      "sha256": "22a5c550817222f3fa47678d78972063225c5ac4c92ad545a5aab8f581ec6708"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/fuentes_originales.csv",
+      "bytes": 1541,
+      "sha256": "4c6b79f9fef16960652ebeb367591e63257bc49458e7f5b0e64cd9d87219e3d4"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/inventario_archivos.csv",
+      "bytes": 1021673,
+      "sha256": "3afdd560a61d31eda2e01b79b2c40fc7f6226f3a56463882c48e87e89ae172c0"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/inventario_archivos.json",
+      "bytes": 1671059,
+      "sha256": "393f512ada8128061f280f989c2816c06583002ea364d8e81ff5cec38f5d815e"
+    },
+    {
+      "path": "02_auditoria/integridad_y_procedencia/seleccion_y_limpieza_S13.json",
+      "bytes": 31386,
+      "sha256": "e569680f2a88402f2669a6a53d20720f4deed450a71d06044d3d9bde3908eb4f"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/S13_L1_2625.md",
+      "bytes": 8320,
+      "sha256": "f9852d33a2b5c34155b4734df2a82e6cf74435d03f2a50753d19e9fd34b32db8"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/S13_L1_2625_mapping.json",
+      "bytes": 91534,
+      "sha256": "47db177e53e590d46b7dc658f154daec92a1ec3aa39eb28fc9a3a0353934922f"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/S13_L1_2625_verificacion.json",
+      "bytes": 3977,
+      "sha256": "4b5cfd0df8b0b76b386b4cb0b3d8aecf0c35822fc877dc1e6aca6c26869efe71"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/codigo_y_hashes_multietiqueta.json",
+      "bytes": 8255,
+      "sha256": "3b9f70c54938443cd5b0282fae2bcf1421f918e5422bfe2563471a91ca6baac4"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/duplicados_exactos_multietiqueta.json",
+      "bytes": 36216,
+      "sha256": "9b95193a81e2032f0ae0b495c6241b859622a5abf747130d446b8f8532960488"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/mapa_multietiqueta.json",
+      "bytes": 229804,
+      "sha256": "6f734926dc338efd330420531363271989162c529dff08ec108f6eb87e4d82a7"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md",
+      "bytes": 28248,
+      "sha256": "b1c6dbfa2eec74db5cc69ce76746490291ff91da6d86bb751c8a6c0dcfa77859"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L1_intersecciones_recalculadas.csv",
+      "bytes": 79,
+      "sha256": "ea455a08b72d6b35629e721f26b482e553e5c65499a738d613be8fe05ac0bb9a"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L1_metricas_por_etiqueta_recalculadas.csv",
+      "bytes": 1482,
+      "sha256": "fe7ea236dd09b84b6b688c456c2f8710fc523855783e4bcd4c10b2ed72d1b805"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L1_particiones_reconstruidas.npz",
+      "bytes": 3056802,
+      "sha256": "554330cfdf23d0d19cf63b40634f4b5a19ed63ec8ad3171273e1c21d145a563d"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L1_verificacion.json",
+      "bytes": 8574,
+      "sha256": "d8eede023eac02ec8951d7a2d04831c8bcb9fd3715faca1807fcf386cf918105"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L2_intersecciones_recalculadas.csv",
+      "bytes": 167,
+      "sha256": "aba80485dd78440a812312dd7ba6b2cbccffca0233d16b4f3a40a7d263bdb240"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L2_metricas_por_etiqueta_recalculadas.csv",
+      "bytes": 1430,
+      "sha256": "9bdb1f380d2e4088cec2e063ddb48e067695f4e65090964b99db631537354063"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L2_particiones_reconstruidas.npz",
+      "bytes": 1766776,
+      "sha256": "c81fbbdc97e0bd49a57f2eff2e0caf13da25a2bf1b41dd97ba06db3f4016132a"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L2_verificacion.json",
+      "bytes": 12318,
+      "sha256": "5610ec840d9465f31be5709fb9dd6ae59a8d36dc77a8d360663201347850e742"
+    },
+    {
+      "path": "02_auditoria/particiones_y_multietiqueta/verificacion_20261010/resumen_verificacion_multietiqueta.json",
+      "bytes": 23987,
+      "sha256": "8595c36cb257336aa8b4b3e3f8577d1695d526cc3102614b80242b3f01307a53"
+    },
+    {
+      "path": "03_datasets/CSIC2010/README.md",
+      "bytes": 4303,
+      "sha256": "bac2e7feffe4e756d8890f25dd110b8a5536555afa22406f7874d84395c9ba67"
+    },
+    {
+      "path": "03_datasets/DSAugmentedV2/README.md",
+      "bytes": 5995,
+      "sha256": "eb0843fc243088cde5445f08a1249cd6a22577d5a813f11058dbaef5e60a3093"
+    },
+    {
+      "path": "03_datasets/README.md",
+      "bytes": 17303,
+      "sha256": "e870db9f21cad16502c3ea986db514b4750eefb5522fb4762cefbdfacd93ef35"
+    },
+    {
+      "path": "03_datasets/SRBH2020/README.md",
+      "bytes": 5306,
+      "sha256": "39e5a17fdc7a460967ff0b678ed9f251ed638634401ab8615d1647d7125840e8"
+    },
+    {
+      "path": "03_datasets/TorpEda2012/README.md",
+      "bytes": 4930,
+      "sha256": "2ccc5cc39e4580843317caa36cc520f83d85ac0ab41501fcaeaf366238aa1385"
+    },
+    {
+      "path": "03_datasets/esquemas/fixed30_orden_documentado.csv",
+      "bytes": 2601,
+      "sha256": "db1cd97a77049aaac80d2146719220757d3952eb29d071ad7e017d407fe7410d"
+    },
+    {
+      "path": "03_datasets/esquemas/huella_peticion_15_campos.json",
+      "bytes": 802,
+      "sha256": "07b9aba9f783f89a37cc053b76490fa9b1289e63f7081a54e5f12938c5d2d8c6"
+    },
+    {
+      "path": "03_datasets/esquemas/request90_orden_documentado.csv",
+      "bytes": 8012,
+      "sha256": "97e359b62cf850e70449c289fe0ea6e29ad482479d20143fda493a77f4f49af6"
+    },
+    {
+      "path": "03_datasets/taxonomias_y_capec/analisis_combinaciones_capec.xlsx",
+      "bytes": 35742,
+      "sha256": "564f816c9109fc00107340c4a6bab0559afd25c26bd836c8196d34e304a5206f"
+    },
+    {
+      "path": "03_datasets/taxonomias_y_capec/ataques.xlsx",
+      "bytes": 9122,
+      "sha256": "5824eb23be88c52cdd33a6f3be11500d7a48e149484a8b4f7d03606646bb2399"
+    },
+    {
+      "path": "03_datasets/taxonomias_y_capec/c7662371-aa01-40c7-9bc3-35200ff5d058.png",
+      "bytes": 7127,
+      "sha256": "6cbdf0da8c01e84f69dff493f28069ce6ae9d6e74ae139b073b58d1d8eef0fd1"
+    },
+    {
+      "path": "03_datasets/taxonomias_y_capec/estadisticas harvard.xlsx",
+      "bytes": 13367,
+      "sha256": "6c81f369fc71c4b5c58f02db5d969550006797ba9f2370fba81bbba76fbdb641"
+    },
+    {
+      "path": "04_experimentos/README.md",
+      "bytes": 13172,
+      "sha256": "3a9d0bf847c1e89487f657d5c8d0a0b4825edd5abdd7beb5790e79beedca6201"
+    },
+    {
+      "path": "05_codigo/README.md",
+      "bytes": 3673,
+      "sha256": "1913e7a2d94f7169d26b9608d4cfbc838eb1e51d4acb420954b76269557918fb"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/README.md",
+      "bytes": 2084,
+      "sha256": "28fa43803c388a63030116327eeac1f06308c2b5343cb74d320e7bdf53e81b38"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/ablacion_features_csic.md",
+      "bytes": 7375,
+      "sha256": "4ee8cb0fc5b70a9292e2851fc0a1dda1cb4de1ffb0d2cd2c4c3d24123770e980"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/configs/config.example.yaml",
+      "bytes": 408,
+      "sha256": "ddac8f5346b3770a180cc845d14ac1658d4ace14cc714684fd789e567d2c9588"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/experimento_sin_registro.md",
+      "bytes": 5644,
+      "sha256": "4c7b47b8172a75f9913b8d7241f6f06f19f1b6f572785cb5009809d7035dd1ea"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/experimentos_binario_cross_dataset.md",
+      "bytes": 7832,
+      "sha256": "0d5eeb482c28231a4a1435e0d1c5bb15af08e2d48e4476fc5e6483e81373789c"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_compare_binary.sh",
+      "bytes": 9093,
+      "sha256": "2daa0d80bd24e06f35550efa878f8495e8162822fc718190d2ec6e64476f9c05"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_global_v2.sh",
+      "bytes": 8931,
+      "sha256": "e3dd83aadbeff228cf4366ab4a81df7f506a7a4038955db75b9036d50098a1ef"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_logreg_nobalanced.sh",
+      "bytes": 8648,
+      "sha256": "b3cac58df1b0b49b38cc50381e6da9568c0ab7757022ed4bd5fbd28412f883b4"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_logreg_threshold.sh",
+      "bytes": 7334,
+      "sha256": "92cffe3ca885a59a3ecf642b0b360ff4c537caf31acce4ac62762e9cd6b51567"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_nicoRalf_nu.sh",
+      "bytes": 9140,
+      "sha256": "efe0b5e4f9d4e2b36126042ecd46b55a6dccdfed97b7443ad0a7244abc6c5a78"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_nicoRalf_nu_1000.sh",
+      "bytes": 4927,
+      "sha256": "3a435a15c82e342bbd7b7db6ab4a7f2c683f57779f659389b2d708ae21f39bec"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_ocsvm.sh",
+      "bytes": 1379,
+      "sha256": "6823f49f01ac98beba8dd94948eb55781bf81e7aa14e736e96728f4b36339e38"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_ocsvm_1000.sh",
+      "bytes": 2711,
+      "sha256": "c0d7d555bda32730f28bfed269e999b86661f1e6192d08cb1d0f0b6d734be0d9"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_random_forest.sh",
+      "bytes": 11596,
+      "sha256": "009dcea69d6411d3341bc311b21646771dfd186745f870b12ad4debd2908de8c"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_rf_25feat.sh",
+      "bytes": 7914,
+      "sha256": "1b658680d41c028ea7c347e3ae4680027105c3e7dbfeeca3ae5b1b5300054316"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_rf_34feat.sh",
+      "bytes": 8517,
+      "sha256": "7415f4a733166cdc5e0c48af97eeb94d14302a6e9aaa5ef4aa1eb11a9481a0d8"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_rf_top10.sh",
+      "bytes": 9969,
+      "sha256": "738ab6c54d0918e23999fc6832ed812f58f9c583f80780d8792b9cb45e6c8e48"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_sin_registro.sh",
+      "bytes": 2608,
+      "sha256": "5534467e0a61b479bce0ead8c22862ad5ce58b545a16873ee5e3a23beec824ea"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_sin_registro_1000.sh",
+      "bytes": 3207,
+      "sha256": "9de99c549ed665382620eeb14f3febbde1ea14d92a09b5fed01374f495c5ee37"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_solo_registro.sh",
+      "bytes": 6529,
+      "sha256": "d975e1ef338641de8a5fc03ae3da2770a5f29aaeedce849fd5af79d0204c18e9"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_solo_registro_entropy.sh",
+      "bytes": 8203,
+      "sha256": "886dbf539ccab7cd5093c4f69e8c5b2264fadc5f61cc913d922bde6b977e4ed0"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_solo_registro_v2.sh",
+      "bytes": 9159,
+      "sha256": "56c7c6386253b92e23fd427a612ddb25894d96594a5037f8b392a607a0c59876"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_csic_supervised_binary.sh",
+      "bytes": 5263,
+      "sha256": "c2bbff08048b9fcc5603aa72479df05585bca83f42ca2c7b2c5688dbd8034cf8"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_harvard_binary_rf.sh",
+      "bytes": 6822,
+      "sha256": "7445f054776d36516b9826ed00532f9c3e453be5279788e42e6a486f98894548"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_torpeda_binary_rf.sh",
+      "bytes": 7191,
+      "sha256": "f841366c28c77b3148dfc0c04e20181e5dd307219f494949bac1844fc86977b9"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/jobs/run_torpeda_rf_multiclass.sh",
+      "bytes": 13749,
+      "sha256": "2f99161f88b227f88788f64b8b487d8d5b7c9ef1271a294a185134cc31a32dd2"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/protocolo_experimental_v1.md",
+      "bytes": 18094,
+      "sha256": "51cb7f572441b4ccf368c91063803f9f4aca5793026b6d37b299dd528de009e1"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/pyproject.toml",
+      "bytes": 287,
+      "sha256": "bbb7b358a4c170b561363d4664a25e6719ea6703b793a2d99c3871143bc54b9d"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/recalibracion_parametros.md",
+      "bytes": 14870,
+      "sha256": "9dda46be17a41dfbef5ede6fe698f942c0d2c2a855fface54b57f101abc8d1ad"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/requirements.txt",
+      "bytes": 180,
+      "sha256": "b615ece0dc3b45af52eb6ba52d6854455f8a95bd8a013ee5bbd7ad1817236bd9"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/resultados_pi1_csic.md",
+      "bytes": 11519,
+      "sha256": "3a3f2f126b46364487a2c516b1e814a2dd785f0d80803dae704566af0873b8ec"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/__init__.py",
+      "bytes": 13,
+      "sha256": "75ad4f4c2943325f88064ad2beae890b59674be2bf0404b30afc5584dc4de4bb"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/data/csic_loader.py",
+      "bytes": 5475,
+      "sha256": "131be53f0a0a0337c79e13995d85c37888534fd73173baf37ec81f48bfe475e8"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/data/srbh_loader.py",
+      "bytes": 7848,
+      "sha256": "509d3e8b398ede007c408512abbf6e274d81972cdd50f2c6f600ded4be143e9a"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/data/torpeda_loader.py",
+      "bytes": 6186,
+      "sha256": "08ea1f09a04ca1b8ad897a791ccba95f09caa12a4a1e238fb7797940cf228f76"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/features/http_features.py",
+      "bytes": 10737,
+      "sha256": "d320da40a47e31629e2223f7e7e9270daed07604337ee728d9e13f41bf891f5c"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/optimo/compare_results.py",
+      "bytes": 10775,
+      "sha256": "e4939c931d91fceb2f24a584d9374596acdbc877f05489ebd463368c6e27c762"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/optimo/generar_reporte_pdf.py",
+      "bytes": 21506,
+      "sha256": "6b635370476e8dab89b6151e0e6ee5abd2266bf2dc378e185239ede4ea700767"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/optimo/ocsvmOptimo.py",
+      "bytes": 79057,
+      "sha256": "bf315569707b48d6e815d09775a8e369bb1e559caf36ef2de18ce3cfd021db54"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/build_features.py",
+      "bytes": 4936,
+      "sha256": "9b2411bd0a98c560a29a95cd73f532474d4d4da8d30eca393a054c6ff880294c"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/build_features_csic.py",
+      "bytes": 6913,
+      "sha256": "92f8985f8d21428dd458549533a4affbaefd663c0cc01e420b93d79f698b9b03"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/build_features_torpeda.py",
+      "bytes": 3999,
+      "sha256": "ca9b1335a83c140ed07b20c1162c16ff4895f795d80238098440d252abdc7aff"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/train_binary_rf.py",
+      "bytes": 19175,
+      "sha256": "998a21fabfaee1cc8ad66bbf31626b69942d097b1e177ca9bb37a445868a3547"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/train_multilabel_lr_harvard_thesis.py",
+      "bytes": 59406,
+      "sha256": "a701799277a6ea7fd3e3a7f289fdd589da52f37f282930fad74735e0dd856508"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/train_ocsvm_updated.py",
+      "bytes": 44752,
+      "sha256": "85b2953772fab033ba19e609955e577565fb4f57bf423f892cd9f81948ba6914"
+    },
+    {
+      "path": "05_codigo/base_binaria_historica/waf-ml-starter/src/waf_ml/scripts/train_supervised.py",
+      "bytes": 55565,
+      "sha256": "da0d1db788cf24991866dd55a50d10c68f805d62574b570da7512ae49e232c85"
+    },
+    {
+      "path": "05_codigo/pipelines/10claseResults.py",
+      "bytes": 152142,
+      "sha256": "840b1496c626587aa2a836b2725417683d1990f8c2d176e20fc71987ea0298e7"
+    },
+    {
+      "path": "05_codigo/pipelines/10claseResults.sh",
+      "bytes": 14459,
+      "sha256": "c8c7645fc5b2001fecc8723ef7a755398dc61b07e808819cdfb0da1a209528cd"
+    },
+    {
+      "path": "05_codigo/pipelines/11claseResults.py",
+      "bytes": 133514,
+      "sha256": "eea4f2b64e68c486da73acd507c0915e78af7fc75eb19a78dbaea3f583b5a245"
+    },
+    {
+      "path": "05_codigo/pipelines/11claseResults.sh",
+      "bytes": 12944,
+      "sha256": "e9f2a12d37483be1fa2052c29cf959e186a021a71a351d3b4aa57e566faf8ac1"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase.py",
+      "bytes": 162579,
+      "sha256": "b97441cf003464d0c5e1a2f05be1d838174e4d433425497b752189a65f27ad98"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase.sh",
+      "bytes": 16499,
+      "sha256": "39aac85a98812beb45c62ec92a0bd18825d8aed4911389bf1c416f74939b5cd7"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase2.py",
+      "bytes": 168703,
+      "sha256": "a76de7b667c504ab309ec8e07398e80cb585ca2137fcec1b251b592859a13f0c"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase2.sh",
+      "bytes": 16654,
+      "sha256": "d132f91bc7e87124ffad6b037eababbee2ea17c768a13e9789974833cc6d37ec"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase3.py",
+      "bytes": 261362,
+      "sha256": "c930f2a2b7a02d054c11d6a2f6693fec915b238fd9513fea25923dcc4b47efb4"
+    },
+    {
+      "path": "05_codigo/pipelines/3datasetsMulticlase3.sh",
+      "bytes": 41362,
+      "sha256": "f1fd7dd76d1edd0d6d1be7826c6561729f8691856b7922cb538775224ff53b7c"
+    },
+    {
+      "path": "05_codigo/pipelines/corrida3mejoresResultadosPosibles.py",
+      "bytes": 125368,
+      "sha256": "d648280b4ae487d69d7a58707c67c4968b9450c0a5e7ec0d7669dc69208f27d8"
+    },
+    {
+      "path": "05_codigo/pipelines/corrida3mejoresResultadosPosibles.sh",
+      "bytes": 13260,
+      "sha256": "5b1d343dc1f97d8196d8a1cee7668380a788b34fc96f2047d38a5b0a970152c7"
+    },
+    {
+      "path": "05_codigo/pipelines/corrida3mejoresResultadosPosibles_featuresUtiles58.py",
+      "bytes": 128593,
+      "sha256": "5cc347d824f7d6f89ce5ff9592e174b9448518154f30104008d0e59e26ac011b"
+    },
+    {
+      "path": "05_codigo/pipelines/corrida3mejoresResultadosPosibles_featuresUtiles58.sh",
+      "bytes": 13494,
+      "sha256": "8659c90dfe0ac15fe36c5b57ef6271b7b46451fb0d9cbdaab960ebed428111e8"
+    },
+    {
+      "path": "05_codigo/pipelines/csic_oneclass_gpu_optimo.py",
+      "bytes": 82399,
+      "sha256": "e8cc64fe34d06aa68eec61bc36864df13ef9cb76b8260e4db6e44c090ba65e40"
+    },
+    {
+      "path": "05_codigo/pipelines/multietiquetaCorrida2.py",
+      "bytes": 277565,
+      "sha256": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb"
+    },
+    {
+      "path": "05_codigo/pipelines/multietiquetaCorrida2.sh",
+      "bytes": 11118,
+      "sha256": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08"
+    },
+    {
+      "path": "05_codigo/pipelines/pipeline14classes.py",
+      "bytes": 101658,
+      "sha256": "e90848fcdf2487bd43a069c6bc3b4406b8c280e2587fc2cb38b57058aac75145"
+    },
+    {
+      "path": "05_codigo/pipelines/pipeline14classes.sh",
+      "bytes": 11751,
+      "sha256": "d6b16179721942eba8985df9d7a12351fd8a27bb5ccb9d746ff823f07d7daa86"
+    },
+    {
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multiclass_histgb_fixed30_arandu_safe.sh",
+      "bytes": 11317,
+      "sha256": "5561574e20ab303e58b1cc30376042fd5556d3675f1e76af66f0615609a19db5"
+    },
+    {
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+      "bytes": 12743,
+      "sha256": "4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57"
+    },
+    {
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+      "bytes": 12686,
+      "sha256": "4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73"
+    },
+    {
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+      "bytes": 12684,
+      "sha256": "90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155"
+    },
+    {
+      "path": "05_codigo/pipelines/run_csic_oneclass_gpu_optimo.sh",
+      "bytes": 6365,
+      "sha256": "faf96529bc11a72ba39cb7fc49d37879b36863f253db9bb2669f3702c43f99b1"
+    },
+    {
+      "path": "05_codigo/pipelines/run_harvard_multiclass_fixed30_allTorpedaModels_noFI_sbatch_v12.sh",
+      "bytes": 12685,
+      "sha256": "19d9e0d4bc81ba8df0d2473649922fc5175a3f4ab4efaa228cc23581640c342e"
+    },
+    {
+      "path": "05_codigo/pipelines/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "bytes": 16245,
+      "sha256": "1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20"
+    },
+    {
+      "path": "05_codigo/pipelines/run_resume_multilabel_xgb_cpu_c2.sh",
+      "bytes": 12710,
+      "sha256": "d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c"
+    },
+    {
+      "path": "05_codigo/pipelines/run_resume_multilabel_xgb_cpu_c3.sh",
+      "bytes": 12725,
+      "sha256": "b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376"
+    },
+    {
+      "path": "05_codigo/pipelines/run_torpeda_multiclass_fixed30_optimo_sbatch_v10_normal_sharedgpu.sh",
+      "bytes": 7463,
+      "sha256": "175bb527772b7870a31a597244f83819fe6f5339b91fef26c052c486ea0d13a4"
+    },
+    {
+      "path": "05_codigo/pipelines/submit_10claseResults_best_node.sh",
+      "bytes": 6989,
+      "sha256": "cf7052792a94bc0cc661f272ef1fd80a68ea135a543d9ece93cb622b9ea0de87"
+    },
+    {
+      "path": "05_codigo/pipelines/train_waf_multiclass_DEFINITIVO_histgb_fixed30.py",
+      "bytes": 91885,
+      "sha256": "95cd696f920481446be30dc5d954641025c679a4cf6f452e75707f4b0a58d055"
+    },
+    {
+      "path": "05_codigo/pipelines/train_waf_multiclass_fixed30_resultsOptimo_sbatch_v12_noFI_allTorpedaModelsHarvard.py",
+      "bytes": 122966,
+      "sha256": "5f423fe5ec45ae1c73dd4db2614a80c550aa4a89fd2933ca8c995636ca9f1d9e"
+    },
+    {
+      "path": "05_codigo/pipelines/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+      "bytes": 184379,
+      "sha256": "7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0"
+    },
+    {
+      "path": "05_codigo/pipelines/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+      "bytes": 159902,
+      "sha256": "4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612"
+    },
+    {
+      "path": "06_resultados_consolidados/README.md",
+      "bytes": 1733,
+      "sha256": "ecbebf6c421421d3ce721f428ffb4ab105dc3d0350c4d59e22ebc257a918cb7d"
+    },
+    {
+      "path": "06_resultados_consolidados/catalogo_corridas.csv",
+      "bytes": 4314,
+      "sha256": "f8e14d02ea27da31ce87c4ee6fcb6dcfd2c32d88bce7be57eca5dd74f99a77e2"
+    },
+    {
+      "path": "06_resultados_consolidados/configuraciones_y_metricas_S07.json",
+      "bytes": 42755,
+      "sha256": "f103807f0cafa9e9e129382e93b958fb14ed452303151df0773810d8a3fa3400"
+    },
+    {
+      "path": "06_resultados_consolidados/metricas_registradas.csv",
+      "bytes": 369268,
+      "sha256": "61b01e46479cc4e1f43c2155f68ab005d29226de241f2824ca08f67e4004ccf6"
+    },
+    {
+      "path": "07_reproducibilidad/ENTORNO_SLURM.md",
+      "bytes": 21230,
+      "sha256": "d584c8c8f42c489eafdd903e61c74d60d30f3fdf0463f44d87f1497feac19e3b"
+    },
+    {
+      "path": "07_reproducibilidad/README.md",
+      "bytes": 6006,
+      "sha256": "bd22e8007ba1a536219f1244a97d494bef1819650e02d21b735d7d6ea01f7868"
+    },
+    {
+      "path": "07_reproducibilidad/VERIFICACION_MULTIETIQUETA.md",
+      "bytes": 5099,
+      "sha256": "fa556bb793ffa198a16239d93424019832b05778fa8a263d5ce988f1ee22581c"
+    },
+    {
+      "path": "07_reproducibilidad/artefactos_externos.csv",
+      "bytes": 102164,
+      "sha256": "201fae432da98f22ab03e218952e21074135d4bf4db7e2a0b174d5554da81213"
+    },
+    {
+      "path": "07_reproducibilidad/catalogo_archivos.json",
+      "bytes": 809938,
+      "sha256": "111ecfddbb7acc94454c69e82514ce27d6269d1eb053a0af873b1ea29a144009"
+    },
+    {
+      "path": "07_reproducibilidad/requirements_auditoria.txt",
+      "bytes": 182,
+      "sha256": "2fcec11fc649480bbfc40dda6efca7ade1997925b402b604125210132eed4adc"
+    },
+    {
+      "path": "07_reproducibilidad/scripts/verificar_integridad.py",
+      "bytes": 4451,
+      "sha256": "2a5d6fef1079d9079c1c1172e74d6c18eba5ae9472f7f54e962f5c3b9888f8a8"
+    },
+    {
+      "path": "07_reproducibilidad/scripts/verificar_multietiqueta.py",
+      "bytes": 31078,
+      "sha256": "6709c17f9fe1259797d361ca5e15adf7457b0e057d8cc6cfa737563f9f2c3676"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6412,
+      "sha256": "5d1cabf7e27676c8c30b0aa1f717a9011b15b36648b086e6aaa0417ec6a424fb"
+    }
+  ]
+}

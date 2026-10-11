@@ -112,12 +112,16 @@
         {
           "source_code": "S13",
           "original_path": "resultsOptimo/multietiqueta/harvard/candidate_validation_summary.csv",
-          "sha256": "657bd6ae879a54745de8e904b8d733df57e0e133ea74a0dac15512a143178975"
+          "sha256": "657bd6ae879a54745de8e904b8d733df57e0e133ea74a0dac15512a143178975",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         },
         {
           "source_code": "S13",
           "original_path": "resultsOptimo/multietiqueta/harvard/selected_model_summary.txt",
-          "sha256": "bae59a4b017b3aca61e64482339929e7ec2e7bdd9d02907a81d4e48d64d31def"
+          "sha256": "bae59a4b017b3aca61e64482339929e7ec2e7bdd9d02907a81d4e48d64d31def",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         }
       ],
       "decision": "Conservar ganador local, todos los refits finales, modelo final, tablas, configuraciones, estados y logs. Descartar solo los joblib de candidatos no seleccionados o incompletos dentro de candidates y label_records/candidate_selection."
@@ -142,12 +146,16 @@
         {
           "source_code": "S13",
           "original_path": "resultsOptimo_extra_lgbm/multietiqueta/harvard/candidate_validation_summary.csv",
-          "sha256": "a4c798cba82a4aad9481a5eae7e979606ceb4353c35f3482b06b6c77b2910aa0"
+          "sha256": "a4c798cba82a4aad9481a5eae7e979606ceb4353c35f3482b06b6c77b2910aa0",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         },
         {
           "source_code": "S13",
           "original_path": "resultsOptimo_extra_lgbm/multietiqueta/harvard/selected_model_summary.txt",
-          "sha256": "34bfba6aa16c663248400c7d368aef0a8c30e0f428581e1db1f8c8183b6723a7"
+          "sha256": "34bfba6aa16c663248400c7d368aef0a8c30e0f428581e1db1f8c8183b6723a7",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         }
       ],
       "decision": "Conservar ganador local, todos los refits finales, modelo final, tablas, configuraciones, estados y logs. Descartar solo los joblib de candidatos no seleccionados o incompletos dentro de candidates y label_records/candidate_selection."
@@ -192,12 +200,16 @@
         {
           "source_code": "S13",
           "original_path": "resultsOptimo_extra_lgbm_weights/multietiqueta/harvard/candidate_validation_summary.csv",
-          "sha256": "5417633718449c397bf7fbb4112b4dceca9c0f2477b204a46a9a4b366049ec03"
+          "sha256": "5417633718449c397bf7fbb4112b4dceca9c0f2477b204a46a9a4b366049ec03",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         },
         {
           "source_code": "S13",
           "original_path": "resultsOptimo_extra_lgbm_weights/multietiqueta/harvard/selected_model_summary.txt",
-          "sha256": "a8524f97bb93f8f12fe479a90be052f99ff577f34e34c896ba23269abdf51771"
+          "sha256": "a8524f97bb93f8f12fe479a90be052f99ff577f34e34c896ba23269abdf51771",
+          "repository_path": null,
+          "availability": "referenciado_no_publicado"
         }
       ],
       "decision": "Conservar ganador local, todos los refits finales, modelo final, tablas, configuraciones, estados y logs. Descartar solo los joblib de candidatos no seleccionados o incompletos dentro de candidates y label_records/candidate_selection."

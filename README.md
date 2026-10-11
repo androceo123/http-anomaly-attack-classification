@@ -1,47 +1,59 @@
-# Tesis: detección y clasificación de ataques en tráfico HTTP
+# Detección y clasificación de ataques HTTP en Arandu / Slurm
 
-Archivo organizado del trabajo **Detección y clasificación de ataques en tráfico HTTP mediante enfoques binario, multiclase y multietiqueta**. La estructura sigue el libro `08282026v4.pdf` y la presentación `cambiosAndres.pptx` aportados por el autor. La auditoría, la evolución experimental y la procedencia de los resultados son partes centrales del repositorio.
+Repositorio de código, documentación y evidencia experimental de la tesis **Detección y clasificación de ataques en tráfico HTTP mediante enfoques binario, multiclase y multietiqueta**. Los experimentos se ejecutaron en **Arandu**, con trabajos gestionados por **Slurm**. El proyecto reúne los lanzadores, las implementaciones, el historial de trabajos y las auditorías que relacionan los resultados con sus datos, configuraciones y condiciones de ejecución.
 
-## Por dónde empezar
+La referencia académica es el [libro de tesis](01_documentacion/libro/08282026v4.pdf), acompañado de la [presentación](01_documentacion/presentacion/cambiosAndres.pptx). Los antecedentes one-class, las etapas B1–B2, M1–M8 y L1–L2, y la extensión posterior de 73 atributos tienen identidades diferenciadas.
 
-| Carpeta | Contenido y propósito |
+## Entorno de ejecución
+
+La [guía de Arandu y Slurm](07_reproducibilidad/ENTORNO_SLURM.md) documenta los nodos y particiones observados, los entornos Python, las variables de los lanzadores y ejemplos de envío con `sbatch`. Se apoya en la [captura del clúster del 3 de agosto de 2026](02_auditoria/historial_slurm/evidencia_20260803) y en los [registros de trabajos](02_auditoria/historial_slurm/catalogo_jobs.csv).
+
+Los logs y las configuraciones conservan las rutas del proyecto utilizadas en el clúster, entre ellas `/home_data/aroman/TFG/waf-ml-starter`. Para una nueva ejecución se configuran las rutas, los datos y los recursos del entorno de destino, y se asigna un directorio de resultados propio. La captura de entorno tiene una fecha concreta; la asociación de cada resultado con un job se detalla en la [auditoría de Slurm](02_auditoria/historial_slurm/REVISION_SLURM_Y_BINARIO.md).
+
+## Datasets: fuentes públicas
+
+Los corpus se descargan por separado. El repositorio contiene sus esquemas, análisis y referencias; las entradas de entrenamiento se preparan en el almacenamiento del entorno de ejecución.
+
+| Dataset | Fuente para obtener los datos | Preparación y alcance |
+| --- | --- | --- |
+| HTTP CSIC 2010 | [Archivos originales HTTP en msudol](https://github.com/msudol/Web-Application-Attack-Datasets/tree/master/OriginalDataSets/csic_2010) | [Ficha CSIC2010](03_datasets/CSIC2010/README.md) |
+| CSIC 2012 / TorpEda | [Repositorio indicado para TorpEda](https://github.com/DuckDuckBug/cnn_waf/tree/master/data), carpeta [XML `torpeda`](https://github.com/DuckDuckBug/cnn_waf/tree/master/data/torpeda) | [Ficha TorpEda2012](03_datasets/TorpEda2012/README.md) |
+| SR-BH 2020 / Harvard | [Harvard Dataverse, DOI 10.7910/DVN/OGOIXX](https://doi.org/10.7910/DVN/OGOIXX) | [Ficha SRBH2020](03_datasets/SRBH2020/README.md) |
+| WAMM / DS-Augmented-v2 | [Repositorio público de Cyshield](https://github.com/CyShield-Security-R-D/WAMM-Dataset-Repository) | [Ficha DS-Augmented-v2](03_datasets/DSAugmentedV2/README.md) |
+
+Las fichas distinguen el formato público del formato preparado para los scripts. Para comparar una ejecución nueva con una histórica hay que registrar versión, tamaño, hash, etiquetas y transformaciones. Los procesados y modelos de una corrida son resultados del pipeline y tienen una identidad distinta de la fuente descargable del dataset.
+
+## Estructura del proyecto
+
+| Carpeta | Contenido |
 | --- | --- |
-| [01_documentacion](01_documentacion/README.md) | Libro, presentación, catálogos de referencias y antecedentes documentales. |
-| [02_auditoria](02_auditoria/README.md) | Duplicados y conflictos, particiones, evidencia Slurm, relación entre código y resultados, hashes y decisiones de limpieza. |
-| [03_datasets](03_datasets/README.md) | Cuatro corpus, alias, universos, taxonomías CAPEC y esquemas ordenados de variables. |
-| [04_experimentos](04_experimentos/README.md) | Una carpeta por etapa B1–B2, M1–M8 y L1–L2; variantes, antecedentes y extensión de 73 variables identificados aparte. |
-| [05_codigo](05_codigo/README.md) | Base binaria histórica y scripts/lanzadores de las demás etapas, con sus nombres y contenido originales. |
-| [06_resultados_consolidados](06_resultados_consolidados/README.md) | Catálogo de corridas y métricas extraídas de los artefactos, conservando campo, unidad y procedencia. |
-| [07_reproducibilidad](07_reproducibilidad/README.md) | Verificación de integridad, comprobación de resultados y catálogo de archivos externos. |
+| [01_documentacion](01_documentacion/README.md) | Libro, presentación, referencias y antecedentes de la tesis. |
+| [02_auditoria](02_auditoria/README.md) | Duplicados, conflictos, particiones, evidencia Slurm, identidad de código y límites de los resultados. |
+| [03_datasets](03_datasets/README.md) | Fuentes públicas, formatos de entrada, universos, taxonomías CAPEC y esquemas de atributos. |
+| [04_experimentos](04_experimentos/README.md) | Índice de etapas, jobs y evidencia disponible. |
+| [05_codigo](05_codigo/README.md) | Base binaria, pipelines y lanzadores Slurm. |
+| [06_resultados_consolidados](06_resultados_consolidados/README.md) | Catálogo de corridas, configuraciones y métricas registradas. |
+| [07_reproducibilidad](07_reproducibilidad/README.md) | Preparación del entorno, integridad del repositorio y comprobación de resultados. |
 
-## Cómo se refleja la contribución de auditoría
+## Comenzar una reproducción
 
-La [guía de auditoría](02_auditoria/README.md) relaciona cada afirmación con el libro, la presentación y los archivos que la sostienen. Distingue las repeticiones de eventos completos, las coincidencias bajo la huella de quince campos HTTP, los conflictos de etiquetas y la separación efectiva de los bloques de L2. Incluye también la reconstrucción del historial de Slurm y las diferencias entre un nombre de script compatible y una identidad de código demostrada por hash.
+1. Obtener los datos siguiendo las fichas de [datasets](03_datasets/README.md).
+2. Preparar el entorno y elegir un lanzador según la [guía Slurm](07_reproducibilidad/ENTORNO_SLURM.md).
+3. Comprobar las entradas, la versión del código y las rutas de salida; utilizar la comprobación previa del lanzador cuando esté disponible.
+4. Enviar la nueva corrida mediante `sbatch` y conservar su configuración, logs, semillas, particiones, hashes y contabilidad de Slurm.
 
-El [inventario](02_auditoria/integridad_y_procedencia/inventario_archivos.csv) conserva **fuente, ruta original, ruta organizada, tamaño, SHA-256, corrida, corpus y decisión de conservación**. Una copia con distinto contenido se trata como variante, aunque su nombre coincida. Los descartes y las fusiones exactas tienen registros separados. La documentación de esta organización está fechada el **10 de octubre de 2026**; no sustituye las fechas históricas de ejecución.
+Para comprobar los archivos publicados, con Python 3.11 o posterior:
 
-Las tablas y particiones identificadas como `verificacion_20261010` fueron reconstruidas durante la revisión. Las fuentes históricas conservan sus bytes. No se ejecutaron entrenamientos ni se cargaron modelos serializados durante la organización.
+```bash
+python 07_reproducibilidad/scripts/verificar_integridad.py --root .
+```
 
-## Corridas y límites que deben acompañar a sus cifras
+La [guía de reproducibilidad](07_reproducibilidad/README.md) separa esta comprobación del recálculo de métricas, que requiere las predicciones y demás artefactos de cada corrida. Los catálogos identifican qué archivos están publicados y cuáles están únicamente referenciados. El índice de experimentos permite navegar la evidencia disponible sin asumir que contiene todas las salidas históricas.
 
-El [historial experimental](04_experimentos/README.md) explica qué cambió en cada etapa. **B1/B2, las etapas multiclase y L1 mantienen el carácter exploratorio descrito por la tesis.** Hubo consultas a prueba durante el desarrollo y cambios de atributos o taxonomías. L2 usa grupos de peticiones y bloques separados de entrenamiento, tuning, calibración y prueba; su resultado no equivale a una validación temporal o a transferencia entre corpus.
+## Auditoría y alcance de los resultados
 
-El [README de L1](04_experimentos/multietiqueta/L1_fixed30/README.md) presenta las métricas recalculadas desde predicciones y sus denominadores. El antecedente GPU job2625 se conserva separado del principal L1/job3151. La extensión de 73 atributos/job3361 queda en `04_experimentos/extensiones/EXP_73_atributos`, porque el libro y la presentación documentan hasta M8.
+La auditoría forma parte de la contribución de la tesis. Distingue eventos completos, identidad de petición mediante quince campos HTTP, conflictos de etiquetas y separación efectiva de particiones. También diferencia una configuración vinculada a un job, una coincidencia de nombre de script y una identidad de código acreditada por hash.
 
-Las metas por clase o etiqueta se conservan junto a los promedios globales. En L2, el recall de NORMAL es 33.925/34.270 (98,9933%); CAPEC-153 y CAPEC-272 quedan por debajo de F1 0,85. La [auditoría](02_auditoria/README.md) explica su alcance sin modificar los resultados originales.
+Las etapas binarias, multiclase y L1 conservan el alcance exploratorio explicado en el libro. L2 agrupa peticiones y separa entrenamiento, selección, calibración y prueba. Las verificaciones fechadas en octubre de 2026 identifican sus particiones como reconstrucciones; sus resultados no equivalen por sí solos a validación temporal, transferencia entre corpus o rendimiento en producción.
 
-## Uso como repositorio de GitHub
-
-La copia preparada para Git contiene documentación, código, configuraciones, métricas y evidencia liviana. Se adopta un umbral de organización de **20 MiB por archivo**; los modelos serializados y la bibliografía de consulta también se mantienen fuera del repositorio. Este umbral es una decisión de este archivo, no un límite oficial de GitHub.
-
-El [catálogo externo](07_reproducibilidad/artefactos_externos.csv) permite recuperar los datos y modelos desde su ubicación en Drive. La [guía de reproducibilidad](07_reproducibilidad/README.md) explica cómo comprobar los archivos y qué se puede repetir con la evidencia conservada.
-
-Cada sección de la carpeta puede reutilizarse por separado, pero la raíz completa conserva los enlaces relativos entre auditoría, código y corridas. El inventario y los manifiestos deben acompañar cualquier subconjunto publicado. La organización no publica automáticamente el contenido en GitHub.
-
-<!-- cierre_documental_20261010:inicio -->
-## Acta y verificación final
-
-El [acta de organización y auditoría](02_auditoria/integridad_y_procedencia/ACTA_DE_ORGANIZACION_20261010.md) reúne el alcance de la revisión, las decisiones de conservación, los límites de las comprobaciones y la disposición final de las fuentes.
-
-La [verificación final de la entrega](07_reproducibilidad/verificacion_drive_20261010.json) registra la integridad de los archivos locales y el cotejo de identidades, estructura y tamaños en Drive. Distingue esas comprobaciones de una comparación de hashes remotos.
-<!-- cierre_documental_20261010:fin -->
+Las metas por clase y etiqueta se consultan junto a las métricas globales. En L2 NORMAL reconoce 33.925 de 34.270 casos (98,9933 %), y CAPEC-153 y CAPEC-272 quedan por debajo de F1 0,85. Los detalles y sus denominadores están en la [guía de auditoría](02_auditoria/README.md) y en la [verificación L2](02_auditoria/particiones_y_multietiqueta/verificacion_20261010/L2_verificacion.json).

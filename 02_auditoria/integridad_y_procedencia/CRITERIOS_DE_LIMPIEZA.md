@@ -1,23 +1,23 @@
-# Criterios y resultado de la limpieza
+# Criterios de conservación de la evidencia experimental
 
-La organización cubre los **13 ZIP completos**, un Excel independiente y los dos documentos rectores aportados por el autor. No se encontraron archivos comprimidos anidados dentro de los paquetes. Cada entrada tiene fuente, ruta original, tamaño, SHA-256, clasificación y decisión en el inventario.
+La auditoría distingue los archivos que permiten revisar resultados, ejecutar programas, entender decisiones metodológicas o comprobar integridad. Las colecciones **S01–S14** mantienen identificadores estables en el [inventario](inventario_archivos.csv). Cada registro describe el material examinado y su decisión de conservación; no constituye por sí solo una promesa de disponibilidad en Git.
 
-## Qué se conservó
+## Evidencia que se conserva
 
-Se mantienen documentos rectores e informes, código y lanzadores originales, configuraciones, métricas, predicciones, modelos finales, estados de las corridas principales, análisis de datos y evidencia de ejecución. Las variantes con contenido distinto se conservan aunque compartan nombre. Los antecedentes de selección se distinguen de las etapas que presentan el libro y la defensa.
+Se conserva la relación entre documentos de la tesis, código, lanzadores Slurm, configuraciones, métricas, análisis de datos y registros de ejecución. Los modelos, predicciones y checkpoints documentados se identifican en los catálogos, aunque un archivo voluminoso pueda no estar publicado. Las variantes con contenido diferente se distinguen incluso cuando comparten nombre. Los antecedentes de selección tienen su propio estado y no se presentan como las corridas principales del libro.
 
-Los originales no se reescribieron. Los nuevos README, catálogos y verificaciones están fechados en 2026 y se identifican como documentación de esta organización. Las tablas históricas que contienen una inconsistencia permanecen junto a su explicación en la auditoría.
+Los registros históricos de ejecución y sus manifiestos se mantienen junto a las aclaraciones de auditoría. Las tablas que contienen una inconsistencia permanecen identificadas con su interpretación verificada. Las nuevas fichas, catálogos y comprobaciones se reconocen como documentación derivada, sin atribuirles el carácter de resultados de entrenamiento.
 
-## Qué se descartó
+## Exclusiones registradas
 
-| Grupo | Archivos | Motivo |
+| Grupo | Archivos | Motivo y alcance |
 | --- | ---: | --- |
-| Auxiliares de compilación LaTeX de S05 | 16 | Son regenerables; permanecen fuentes, bibliografía y documentos relevantes. |
-| Caché Python de S13 | 1 | Bytecode regenerable; se conserva el Python fuente. |
-| Lock vacío de la extensión EXP73 | 1 | Archivo de bloqueo regenerable; se conserva su procedencia en el inventario. |
-| Pesos de candidatos preliminares S13 | 148 | No son los candidatos seleccionados localmente o pertenecen a intentos incompletos. Se conservan sus tablas y trazas. |
+| Auxiliares de compilación LaTeX de S05 | 16 | Material regenerable; permanecen fuentes, bibliografía y documentos relevantes. |
+| Caché Python de S13 | 1 | Bytecode regenerable; no constituye una versión independiente del Python fuente. |
+| Lock vacío de la extensión EXP73 | 1 | Estado de bloqueo regenerable, identificado en el inventario. |
+| Pesos de candidatos preliminares S13 | 148 | Candidatos no seleccionados localmente o intentos incompletos; se conservan sus tablas y trazas. |
 
-Los **166 descartes** suman **5.851.709.924 bytes**. Cada uno está registrado en [archivos_descartados.csv](archivos_descartados.csv), incluido su SHA-256. El descarte de pesos se limita a `*.joblib` en `checkpoints/candidates` y `checkpoints/label_records/candidate_selection` de las tres búsquedas preliminares siguientes:
+Los **166 registros excluidos** y sus SHA-256 figuran en [archivos_descartados.csv](archivos_descartados.csv). La exclusión de pesos se limita a `*.joblib` en `checkpoints/candidates` y `checkpoints/label_records/candidate_selection` de estas tres búsquedas preliminares:
 
 | Búsqueda | Candidato local conservado |
 | --- | --- |
@@ -25,20 +25,18 @@ Los **166 descartes** suman **5.851.709.924 bytes**. Cada uno está registrado e
 | `resultsOptimo_extra_lgbm` | `lightgbm__w_none` |
 | `resultsOptimo_extra_lgbm_weights` | `lightgbm__w_cuberoot` |
 
-Se preservan todos los `final_refit`, los estados del ganador, modelos finales, configuraciones, tablas de candidatos, métricas, predicciones y logs. Los checkpoints de L1 principal, L2 y la variante GPU del job 2625 no se podan. La tabla final de `resultsOptimo` no presenta un candidato ExtraTrees exitoso; no se atribuye a esos pesos un score que la evidencia no contiene. Los resúmenes y hashes de las tablas de selección se conservan en [seleccion_y_limpieza_S13.json](seleccion_y_limpieza_S13.json).
+La decisión retiene los `final_refit`, estados del ganador, modelos finales, configuraciones, tablas de candidatos, métricas, predicciones y logs dentro del conjunto de evidencia conservado. No aplica esta poda a L1 principal, L2 o la variante GPU del job 2625. La tabla final de `resultsOptimo` no presenta un candidato ExtraTrees exitoso; no se asigna a esos pesos un score que la evidencia no contiene. Los resúmenes y hashes de selección constan en [seleccion_y_limpieza_S13.json](seleccion_y_limpieza_S13.json).
 
-## Copias exactas consolidadas
+Las tablas de candidatos permiten revisar la selección, pero no sustituyen los estimadores serializados para reanudar un entrenamiento. Un candidato cuyo estado no se conservó requiere una nueva ejecución para volver a obtener sus pesos. La disponibilidad concreta de modelos y checkpoints debe comprobarse antes de usar una vía de reanudación.
 
-Se consolidaron **8 ocurrencias duplicadas**, que suman **264.731.327 bytes**. Dos son documentos idénticos que coincidían en el destino; las otras seis son archivos pesados idénticos por SHA-256. El [registro de duplicados](duplicados_fusionados.csv) conserva cada origen y la ruta de la única copia física correspondiente. Una coincidencia de tamaño, nombre o CRC sin SHA-256 no se usó para fusionar archivos.
+## Identidad de contenido y copias
 
-La captura S01 de Slurm queda íntegra, incluidos los mensajes de error repetidos por job. Esos pequeños archivos documentan qué recuperación falló en cada ejecución y forman parte de sus manifiestos. Su repetición no se interpreta como material sobrante.
+El [registro de duplicados](duplicados_fusionados.csv) documenta ocho ocurrencias consolidadas mediante igualdad de SHA-256 y mantiene sus referencias de origen. Una coincidencia de nombre, tamaño o CRC no acredita por sí sola identidad de bytes. Los estados `.partial` y las versiones finales sólo se consideran copias cuando la comprobación de contenido lo demuestra.
 
-## Resultado y alcance de verificación
+La [captura S01 de Slurm](../historial_slurm/evidencia_20260803/) queda íntegra, incluidos los mensajes de error repetidos por job. Esos archivos documentan qué consulta falló en cada ejecución y forman parte de los manifiestos. Tampoco se eliminan `__init__.py` o marcadores estructurales por compartir el hash del contenido vacío con un log.
 
-El inventario registra **1.972 ocurrencias de fuente**: 1.969 archivos de los ZIP, el Excel independiente y los dos documentos rectores. Quedan **1.798 archivos originales físicos**, con **4.904.750.553 bytes**. A estos se agrega la documentación derivada de organización y auditoría.
+## Publicación y reproducción
 
-El contenido original destinado a Git ocupa **223.255.900 bytes**. Los **4.681.494.653 bytes** restantes están en `90_artefactos_pesados`, excluido de Git. El umbral de 20 MiB por archivo es una decisión de organización; todos los modelos serializados y la bibliografía de consulta también quedan en ese espejo externo.
+El repositorio publica código, documentación y evidencia seleccionada. Los catálogos permiten distinguir un artefacto documentado de un archivo presente. Los corpus se obtienen desde las [fuentes públicas de datasets](../../03_datasets/README.md); las rutas y dependencias necesarias se describen en la [guía de reproducibilidad](../../07_reproducibilidad/README.md). Los modelos y estados de entrenamiento no se consideran descargables si no existe una ubicación publicada y comprobable.
 
-Todas las entradas ZIP se descomprimieron comprobando CRC y calculando SHA-256. Los pesos grandes descartados se descomprimieron en flujo para registrar su hash sin conservar otra copia. La verificación final de los archivos físicos retenidos está en `07_reproducibilidad/verificacion_integridad_local.json`. La comprobación remota de Drive registra rutas y tamaños; su alcance no debe confundirse con comparar el SHA-256 de todos los contenidos descargados nuevamente.
-
-El archivo permite rastrear y comprobar la evidencia disponible. No se reentrenaron modelos. Los brutos de CSIC, TorpEda y DS-Augmented-v2 y dos scripts preliminares referenciados no aparecieron en los paquetes; su ausencia queda detallada en las guías de datasets y reproducibilidad.
+La auditoría de integridad verifica bytes y relaciones entre artefactos; no acredita por sí sola que un modelo pueda cargarse con cualquier entorno ni que un entrenamiento se reproduzca exactamente. No se reentrenaron modelos durante las comprobaciones documentadas. Los brutos de CSIC, TorpEda y DS-Augmented-v2 y dos scripts preliminares referenciados no aparecieron en las colecciones auditadas; sus ausencias se conservan en las guías de datasets y reproducción.

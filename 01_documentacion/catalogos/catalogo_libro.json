@@ -1,7 +1,7 @@
 {
   "source": {
-    "path": "/workspace/scratch/2517608154c5/upload/08282026v4.pdf",
-    "sha256": "3921cf32c48e030d9cc1a1a6362bb829a41c83908714baf9728ad946dde008da",
+    "path": "01_documentacion/libro/08282026v4.pdf",
+    "sha256": "ff84c9265e840165b819e31aa1464843cfa45bc331a27a82e29151e38a78a061",
     "pdf_pages": 108,
     "title": "Detección y clasificación de ataques en tráfico HTTP mediante enfoques binario, multiclase y multietiqueta",
     "date_not_inferred_from_filename": true
@@ -1002,51 +1002,6 @@
   },
   "file_anchors": [
     {
-      "kind": "container",
-      "name": "corridasBinarias(5).zip",
-      "bytes": 189758,
-      "sha256": "71b24e679aea0b8634acf3878b79ab4ca79368666417d000fde6e0166ef37137",
-      "pdf_page": 101,
-      "printed_page": 85,
-      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
-    },
-    {
-      "kind": "container",
-      "name": "datasetYCorridasMulticlaseMultietiqueta.zip",
-      "bytes": 15934890,
-      "sha256": "af32f419334d61725b2a7495f9ffb2ea0da04d8e0431aa8241292bb49bcd59f6",
-      "pdf_page": 101,
-      "printed_page": 85,
-      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
-    },
-    {
-      "kind": "container",
-      "name": "informesMultilabel.zip",
-      "bytes": 27933,
-      "sha256": "1a1fe9cd6bc75b15ccd414775ad39bf62c547038aa6a70b78cf2613160a7763c",
-      "pdf_page": 101,
-      "printed_page": 85,
-      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
-    },
-    {
-      "kind": "container",
-      "name": "multiclaseCorridasInformes(1).zip",
-      "bytes": 195341,
-      "sha256": "2d0eb461abd1e5844d948ec26f13efeda21054ecf1c0fed2f2d3d28c4863f074",
-      "pdf_page": 101,
-      "printed_page": 85,
-      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
-    },
-    {
-      "kind": "container",
-      "name": "evidencia_tesis_slurm_20260803T142006.tar.gz",
-      "bytes": 1547959,
-      "sha256": "41625ac4b47566c4ad6cfa91c4a3af1d8cf75dd86378723e1736038480c0ee6e",
-      "pdf_page": 101,
-      "printed_page": 85,
-      "verification_status": "quoted_in_book_not_yet_matched_to_artifact"
-    },
-    {
       "kind": "launcher",
       "name": "multietiquetaCorrida2.sh",
       "sha256": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
@@ -1098,5 +1053,11 @@
     "No WAF production validation",
     "Do not conflate archive hash, script hash, schema signature and request fingerprint",
     "Do not conflate NORMAL-derived binary metrics and separately trained RF runs"
-  ]
+  ],
+  "editorial_revision": {
+    "date": "2026-10-11",
+    "scope": "Referencias de materiales en la Tabla B.1 del apéndice B (PDF 101, p. 85). Se conservan las demás páginas y las huellas de la Tabla B.2.",
+    "previous_sha256": "3921cf32c48e030d9cc1a1a6362bb829a41c83908714baf9728ad946dde008da",
+    "sha256": "ff84c9265e840165b819e31aa1464843cfa45bc331a27a82e29151e38a78a061"
+  }
 }

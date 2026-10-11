@@ -1,8 +1,11 @@
 {
-  "checked": 1798,
-  "passed": 1798,
-  "skipped_external": 0,
+  "scope": "Archivos de la revisión publicada; manifiesto e informe excluidos para evitar referencias circulares.",
+  "checked": 574,
+  "passed": 574,
   "failures": [],
-  "scope": "original retained artifacts; generated documentation has a separate manifest",
-  "note": "Todos los retenidos formaban parte de la comprobación SHA-256 previa de 1799 archivos; el cierre solo excluye un lock vacío regenerable."
+  "historical_catalog_checked": 0,
+  "historical_catalog_failures": [],
+  "training_executed": false,
+  "verification_date": "2026-10-11",
+  "base_commit": "483f3db5c64153ae075700d7285f9cea467ec59d"
 }

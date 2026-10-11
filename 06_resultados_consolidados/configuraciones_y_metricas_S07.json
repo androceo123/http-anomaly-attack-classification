@@ -32,9 +32,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M6",
-    "config_path": "extraidos/S07/10claseResults/multiclase/harvard/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/run_config.json",
     "config_sha256": "27ef1cdc3ef09e308352443560b1b32aeb0073bb26a4d45699b395788515eb93",
-    "metrics_path": "extraidos/S07/10claseResults/multiclase/harvard/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/harvard/metrics_flat.csv",
     "metrics_sha256": "925ec78aaf35b3843ff01fb14cfbf6d7bae91eb84b9e48542d55b0afc210d046",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -118,7 +118,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.025479999999999947
     },
-    "loss_curve_metadata_path": "extraidos/S07/10claseResults/multiclase/harvard/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:10claseResults/multiclase/harvard/loss_curve_metadata.json",
     "features_used_count": 58,
     "features_count_matches_config": true
   },
@@ -155,9 +155,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M6",
-    "config_path": "extraidos/S07/10claseResults/multiclase/torpeda/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/run_config.json",
     "config_sha256": "6263fcb91521eb48ca8d6d34a70e3c2b0628fcf2badf12ea2dc4f986d47e18d3",
-    "metrics_path": "extraidos/S07/10claseResults/multiclase/torpeda/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/10claseResults/multiclase/torpeda/metrics_flat.csv",
     "metrics_sha256": "5fe31480ac20bbcc67d842f0e7e204cd7c2adb125ec8c735f8867ca02a761879",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -214,7 +214,7 @@
       "test_sampled": false,
       "final_test_error_rate": 0.003507115397585525
     },
-    "loss_curve_metadata_path": "extraidos/S07/10claseResults/multiclase/torpeda/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:10claseResults/multiclase/torpeda/loss_curve_metadata.json",
     "features_used_count": 58,
     "features_count_matches_config": true
   },
@@ -251,9 +251,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M7",
-    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/run_config.json",
     "config_sha256": "1112027aabff3f3bc9c39363d1b919e5d0506151dac8e716417017ed8633cf41",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/egipcios/metrics_flat.csv",
     "metrics_sha256": "93826001ef40550a9e44552e43c96ddc34d36dd09071d0d0f4c0c8125f1568c0",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -296,7 +296,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.012419999999999987
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/egipcios/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase/multiclase/egipcios/loss_curve_metadata.json",
     "features_used_count": 58,
     "features_count_matches_config": true
   },
@@ -333,9 +333,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M7",
-    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/run_config.json",
     "config_sha256": "58e40f061e555a97862214a71fad4e005df488f571686501cd2d29464fda8713",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/harvard/metrics_flat.csv",
     "metrics_sha256": "efad12ba581565be699bfeebe25b8ac02c70a5e6265b1f494bdfc4b14afa0f03",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -419,7 +419,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.025479999999999947
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/harvard/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase/multiclase/harvard/loss_curve_metadata.json",
     "features_used_count": 58,
     "features_count_matches_config": true
   },
@@ -456,9 +456,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M7",
-    "config_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/run_config.json",
     "config_sha256": "2c8955bf0b72aac861b4f2b04d4ae18b331135ef688c060ef61d50c513572d63",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase/multiclase/torpeda/metrics_flat.csv",
     "metrics_sha256": "246ea0388ec671aa13d1c57fb4b780282a806d4f807775f77559bf44d01e99a7",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -515,7 +515,7 @@
       "test_sampled": false,
       "final_test_error_rate": 0.003507115397585525
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase/multiclase/torpeda/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase/multiclase/torpeda/loss_curve_metadata.json",
     "features_used_count": 58,
     "features_count_matches_config": true
   },
@@ -552,9 +552,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M8",
-    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/run_config.json",
     "config_sha256": "bccee750c2fccf942ed57186ab77e7f9a9711bc750b852df17c1a2e95600ed62",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/egipcios/metrics_flat.csv",
     "metrics_sha256": "6cb39462fb81ccfaa05e046c8a85c21be8684ddfca60fcf2da9b183432b28403",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -597,7 +597,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.008079999999999976
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/egipcios/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase2/multiclase/egipcios/loss_curve_metadata.json",
     "features_used_count": 72,
     "features_count_matches_config": true
   },
@@ -634,9 +634,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M8",
-    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/run_config.json",
     "config_sha256": "f10b0aad3409d3c4f480d2ea9774d008f288c30721a8045b849d0198e9864491",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/harvard/metrics_flat.csv",
     "metrics_sha256": "abaf1ac13f7ccb355fa4aee5f2d6ce8fa6b0dae7ceaf0e17ecc69de0b588c6bb",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -720,7 +720,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.02283999999999997
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/harvard/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase2/multiclase/harvard/loss_curve_metadata.json",
     "features_used_count": 72,
     "features_count_matches_config": true
   },
@@ -757,9 +757,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "M8",
-    "config_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/run_config.json",
     "config_sha256": "5aa156500c3ff25b8d2a5bbcb7b6ce083ba19f327ff72ac50c8d90a805dfa262",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase2/multiclase/torpeda/metrics_flat.csv",
     "metrics_sha256": "7b317409f53dd5f4f83c64edf672925a551989df06cde55b7085ae67c53aa7be",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -816,7 +816,7 @@
       "test_sampled": false,
       "final_test_error_rate": 0.002225669386929252
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase2/multiclase/torpeda/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase2/multiclase/torpeda/loss_curve_metadata.json",
     "features_used_count": 72,
     "features_count_matches_config": true
   },
@@ -853,9 +853,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "EXTENSION_73",
-    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/run_config.json",
     "config_sha256": "423ce83a37c69550ae92afe123404303f91d6d67a722fa56b013c80fe19c3de0",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/egipcios/metrics_flat.csv",
     "metrics_sha256": "d13e1c0abd572e206e55079e9543a32902de13448719067ff05d44c0d5645a70",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -900,7 +900,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.00871999999999995
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/egipcios/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase3/multiclase/egipcios/loss_curve_metadata.json",
     "features_used_count": 73,
     "features_count_matches_config": true
   },
@@ -937,9 +937,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "EXTENSION_73",
-    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/run_config.json",
     "config_sha256": "9f84524234d94a42c906ec5c82124f9fa0c8c8a715fa5d64e1cf8d6351c4774f",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/harvard/metrics_flat.csv",
     "metrics_sha256": "b9db40a9187199cf1af5f674a82cbd7e92a20fee06e24b044913301aa4e874eb",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -1023,7 +1023,7 @@
       "test_sampled": true,
       "final_test_error_rate": 0.021340000000000026
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/harvard/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase3/multiclase/harvard/loss_curve_metadata.json",
     "features_used_count": 73,
     "features_count_matches_config": true
   },
@@ -1060,9 +1060,9 @@
     ],
     "source_code": "S07",
     "book_run_id": "EXTENSION_73",
-    "config_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/run_config.json",
+    "config_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/run_config.json",
     "config_sha256": "e9baa4ced7cac60c58793dff06d43cf1bd9ea21e03198849e8efc36403898edb",
-    "metrics_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/metrics_flat.csv",
+    "metrics_path": "02_auditoria/historial_slurm/evidencia_20260803/proyecto_actual/copias/3datasetsMulticlase3/multiclase/torpeda/metrics_flat.csv",
     "metrics_sha256": "58390fc51e47f8eab54d7cfc5dcfee8ccdd18141d1daf9126cac93ea2a3c566c",
     "verification_status": "saved_configuration_and_metrics_inspected_no_prediction_recalculation",
     "filtering": {
@@ -1119,7 +1119,7 @@
       "test_sampled": false,
       "final_test_error_rate": 0.001146556956902911
     },
-    "loss_curve_metadata_path": "extraidos/S07/3datasetsMulticlase3/multiclase/torpeda/loss_curve_metadata.json",
+    "loss_curve_metadata_path": "S07:3datasetsMulticlase3/multiclase/torpeda/loss_curve_metadata.json",
     "features_used_count": 73,
     "features_count_matches_config": true
   }

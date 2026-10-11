@@ -1,10 +1,10 @@
 # Auditoría portable de L1/L2
 
-Instalar `verificar_multietiqueta_portable.py` como `07_reproducibilidad/scripts/verificar_multietiqueta.py` dentro de `tesis_http_organizada`. El archivo es autónomo: no importa el auditor anterior, entrenadores experimentales ni código del directorio de trabajo original.
+El script publicado es `07_reproducibilidad/scripts/verificar_multietiqueta.py`. Recalcula resultados a partir de artefactos experimentales identificados por el inventario. Las entradas que no están publicadas deben estar disponibles en el almacenamiento de la corrida antes de ejecutar la auditoría.
 
 ## Uso
 
-Desde la raíz organizada:
+Desde la raíz del repositorio:
 
 ```bash
 python 07_reproducibilidad/scripts/verificar_multietiqueta.py \
@@ -19,15 +19,15 @@ Cuando el repositorio documental y los archivos pesados están separados:
 ```bash
 python 07_reproducibilidad/scripts/verificar_multietiqueta.py \
   --root . \
-  --external-root /ruta/al/90_artefactos_pesados \
+  --external-root /ruta/a/artefactos \
   --output ./verificaciones_nuevas
 ```
 
-`--external-root` también acepta el directorio padre del espejo y se puede repetir. No descarga archivos: los originales referidos por el inventario deben estar disponibles localmente. `--inventory` permite indicar otra ubicación del inventario JSON; una ruta relativa se interpreta respecto de `--root`.
+`--external-root` conserva las rutas relativas del inventario y se puede repetir. No descarga archivos: los originales referidos por el inventario deben estar disponibles localmente. `--inventory` permite indicar otra ubicación del inventario JSON; una ruta relativa se interpreta respecto de `--root`.
 
 ## Resolución e integridad
 
-El inventario predeterminado es `02_auditoria/integridad_y_procedencia/inventario_archivos.json`, esquema con lista `entries`. Los artefactos L1/L2 se buscan por `source_code=S06`, `run_id` y nombre original; el CSV raw compartido por `source_code=S11` y nombre. La ubicación física sale de `organized_path`/`logical_path`. Para copias consolidadas, se aceptan alias del inventario con el mismo SHA-256. No se utilizan rutas `local_path` de scratch ni rutas históricas del clúster.
+El inventario predeterminado es `02_auditoria/integridad_y_procedencia/inventario_archivos.json`, esquema con lista `entries`. Los artefactos L1/L2 se buscan por `source_code=S06`, `run_id` y nombre original; el CSV raw compartido por `source_code=S11` y nombre. La ubicación física sale de `organized_path`/`logical_path`. Para copias consolidadas, se aceptan alias del inventario con el mismo SHA-256. Las referencias de colección y las rutas históricas del clúster documentan la evidencia; la resolución usa rutas relativas del inventario.
 
 Antes de utilizar una fuente se comparan su tamaño y SHA-256 con el inventario. Las ubicaciones resueltas, el hash esperado y el observado quedan en `fuentes_resueltas_y_verificadas.json`. Si un archivo no está disponible o cambió, el programa explica qué entrada lo requiere y termina con código 2.
 
@@ -50,4 +50,4 @@ Código de salida: **0** si las comprobaciones efectuadas coinciden, **1** si ha
 
 ## Validación de esta adaptación
 
-Se conservó `verificar_multietiqueta_original.py`, idéntico al auditor original. Para la versión portable se comprobó la sintaxis y se ejecutó `--help`; **no se repitió el análisis completo de los CSV** durante esta adaptación. Los cálculos principales son los ya verificados en el auditor anterior, con rutas resueltas mediante inventario y lectura raw incorporada para quitar la dependencia del NPY temporal.
+La adaptación publicada se comprueba mediante sintaxis, ayuda y resolución de entradas. **No se repitió el análisis completo de los CSV** durante la revisión de esta documentación. Los cálculos principales son los ya verificados en el auditor anterior, con rutas resueltas mediante inventario y lectura raw incorporada para quitar la dependencia del NPY temporal.

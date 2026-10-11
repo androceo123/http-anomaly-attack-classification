@@ -6,34 +6,36 @@ Los artefactos de S06 permiten identificar y verificar dos resultados principale
 
 La reconstrucción de las particiones reproduce los índices y su orden en los archivos de test, los identificadores de muestra, sus etiquetas y los soportes por CAPEC de todos los bloques. En L2, las seis comparaciones entre train, tune, calibration y test tienen **cero índices y cero huellas compartidas**. Los archivos de particiones que produce esta revisión son reconstrucciones nuevas, claramente identificadas: no se encontraron listas históricas completas independientes de los cuatro bloques.
 
-Hay además un antecedente L1 distinto: **job 2625, GPU, junio de 2026**, respaldado inicialmente por uno de los informes TEX y su log Slurm. La revisión posterior de S13 recuperó su configuración, métricas, modelo, checkpoints y entrenador original, y localizó sus predicciones y procesado dentro del ZIP. Su resultado no debe sustituir el de job 3151 ni mezclarse con L2. El complemento `S13_L1_2625.md` incluye el estado final de extracción y hashes, sin presentar un nuevo recálculo de sus predicciones.
+Hay además un antecedente L1 distinto: **job 2625, GPU, junio de 2026**, respaldado inicialmente por uno de los informes TEX y su log Slurm. La revisión posterior de S13 identificó su configuración, métricas, modelo, checkpoints, entrenador, predicciones y datos procesados. Su resultado no debe sustituir el de job 3151 ni mezclarse con L2. El complemento [S13_L1_2625.md](S13_L1_2625.md) documenta las identidades y hashes comprobados, sin presentar un nuevo recálculo de sus predicciones.
 
-La revisión se hizo sin cargar modelos `.joblib`/pickle, sin importar módulos experimentales y sin reentrenar. Se leyeron JSON, CSV, TEX y código; se inspeccionaron constantes mediante AST y se ejecutó únicamente el nuevo programa de auditoría `verificar_multietiqueta.py`.
+La revisión se hizo sin cargar modelos `.joblib`/pickle, sin importar módulos experimentales y sin reentrenar. Se leyeron JSON, CSV, TEX y código; se inspeccionaron constantes mediante AST y se ejecutó únicamente el programa de auditoría [verificar_multietiqueta.py](../../07_reproducibilidad/scripts/verificar_multietiqueta.py).
+
+Este documento conserva los resultados de aquella verificación. Los inventarios describen los materiales examinados; no implican que todos los modelos, predicciones y datos procesados estén publicados en Git. El [índice experimental](../../04_experimentos/README.md) y la [guía de reproducibilidad](../../07_reproducibilidad/README.md) permiten comprobar la evidencia disponible y las entradas necesarias para repetir una verificación o un entrenamiento en Arandu/Slurm.
 
 ## 1. Fuentes y unidades de referencia
 
-Las rutas abreviadas de este documento son relativas a `organizacion_tesis`:
+Los códigos S01–S14 identifican colecciones de evidencia. Las rutas históricas de esta tabla permiten reconocer las salidas de los programas; no son directorios que se creen automáticamente al clonar el repositorio.
 
-| Alias | Ruta de origen | Función |
+| Alias | Colección y referencia | Función |
 |---|---|---|
-| L1 | `extraidos/S06/DEFINITIVO/multietiqueta/multiquetaSalidaXG/` | Artefactos del resultado L1 principal. |
-| L1 padres | `extraidos/S06/DEFINITIVO/` y `.../multietiqueta/` | Manifiestos, comparación consolidada y logs de intentos. |
-| L2 | `extraidos/S06/multietiquetaCorrida2/harvard/` | Artefactos del resultado L2 principal. |
-| L2 padres | `extraidos/S06/multietiquetaCorrida2/` | Checkpoints, manifiestos, comparación consolidada y logs. |
-| Código | `extraidos/S11/` | Diez scripts/lanzadores multietiqueta y CSV raw compartido. |
-| Informes | `extraidos/S04/` | Dos informes TEX correspondientes a variantes L1. |
-| Antecedente recuperado | `extraidos/S13/DEFINITIVO/multietiqueta/` | Variante job 2625 GPU, incorporada en la revisión complementaria. |
-| Evidencia Slurm | `extraidos/S01/evidencia_tesis_slurm_20260803T142006/` | Logs preservados, metadatos y copias exactas de código. |
-| Libro | `analisis/libro_catalogo.json`, fuente PDF `08282026v4.pdf` | Catálogo de identidades y afirmaciones del texto. |
-| Presentación | `analisis/presentacion_corridas.json`, fuente `cambiosAndres (1).pptx` | Diapositivas reales 1–71; L1/L2 en D47–48 y D69. |
+| L1 | S06, `DEFINITIVO/multietiqueta/multiquetaSalidaXG/` | Artefactos del resultado L1 principal. |
+| L1 padres | S06, `DEFINITIVO/` y `DEFINITIVO/multietiqueta/` | Manifiestos, comparación consolidada y logs de intentos. |
+| L2 | S06, `multietiquetaCorrida2/harvard/` | Artefactos del resultado L2 principal. |
+| L2 padres | S06, `multietiquetaCorrida2/` | Checkpoints, manifiestos, comparación consolidada y logs. |
+| Código | S11; [programas publicados](../../05_codigo/pipelines/) | Diez scripts/lanzadores multietiqueta; la identidad del CSV compartido se documenta por separado. |
+| Informes | S04, informes multietiqueta | Dos informes TEX correspondientes a variantes L1. |
+| Antecedente L1 | S13, `DEFINITIVO/multietiqueta/` | Variante job 2625 GPU, documentada en la revisión complementaria. |
+| Evidencia Slurm | S01; [captura del 03/08/2026](../historial_slurm/evidencia_20260803/) | Logs preservados, metadatos y copias de código. |
+| Libro | [Catálogo del libro](../../01_documentacion/catalogos/catalogo_libro.json) | Identidades y afirmaciones del PDF `08282026v4.pdf`. |
+| Presentación | [Catálogo de la presentación](../../01_documentacion/catalogos/catalogo_presentacion.json) | Diapositivas reales 1–71; L1/L2 en D47–48 y D69. |
 
-S06 contiene **165 archivos, 1.084.033.861 bytes** expandidos. De ellos, 75 corresponden a la familia L1 y 90 a L2. El mapa `multietiqueta_mapping.json` cubre los 165, más los diez scripts/lanzadores multietiqueta de S11 y los dos TEX de S04: **177 registros**, sin archivos S06 pendientes de clasificación. S11 raw es compartido y está tratado por la auditoría de datasets. El mapa complementario `S13_L1_2625_mapping.json` incorpora **63 entradas adicionales** de la variante histórica, 54 bajo `harvard/`; las 63 fueron descomprimidas y tienen SHA-256; se conservan 62 y se omite una caché Python regenerable.
+El universo examinado de S06 comprende **165 archivos, 1.084.033.861 bytes**. De ellos, 75 corresponden a la familia L1 y 90 a L2. El [mapa multietiqueta](mapa_multietiqueta.json) cubre los 165, más los diez scripts/lanzadores multietiqueta de S11 y los dos TEX de S04: **177 registros**, sin archivos S06 pendientes de clasificación. El CSV de referencia S11 es compartido y está tratado por la auditoría de datasets. El [mapa complementario S13](S13_L1_2625_mapping.json) incorpora **63 entradas adicionales** de la variante histórica, 54 bajo `harvard/`; registra los SHA-256 y la conservación de 62 archivos, con exclusión de una caché Python regenerable. Estos conteos describen el alcance de la auditoría, no el contenido actual de Git.
 
 ### Fila original y grupo son universos diferentes
 
 | Universo | Conteo | Evidencia |
 |---|---:|---|
-| Filas originales SR-BH del CSV disponible | 907.815 | `analisis/sr_bh_raw_profile.json`; lectura streaming del CSV S11. |
+| Filas originales SR-BH del CSV de referencia auditado | 907.815 | [Perfil del CSV](../datasets_y_multiclase/sr_bh_raw_profile.json); lectura incremental de S11. |
 | Normales / ataques en filas originales | 525.195 / 382.620 | Mismo perfil; NORMAL no coexiste con CAPEC en una fila original. |
 | Filas con los quince campos HTTP vacíos | 2 | Índices originales 0-based 14.410 y 163.884. |
 | Filas válidas utilizadas para agrupar L2 | 907.813 | Auditoría original L2 y suma independiente de tamaños de grupo. |
@@ -53,15 +55,15 @@ L1 trabaja con las 907.815 filas. L2 consolida por huella antes de dividir, une 
 | Informe L1 principal | S04 `informe_DEFINITIVO_multilabel.tex` | Sus resultados coinciden con job 3151 y el árbol actual `multiquetaSalidaXG`. Describe también un antecedente; no convertir esas menciones en artefactos encontrados. |
 | L2 principal, job 3315 | `L2/run_config.json`; log `multietiquetaCorrida2_3315.out`; métricas completas | request90; doce XGBoost con tuning por CAPEC; CPU; nodo c3; sin refit después de calibration. |
 
-El antecedente 2625 queda vinculado por datos precisos: su `.out` S01 identifica el script sin `_gpu_metrics` en la línea 6, el inicio del 16/06 en la 50, el resultado en la 67 y las salidas `DEFINITIVO/multietiqueta/harvard/` en las 71–72. Registra exact-match `0.9648276355865457`, F1 micro `0.9526020129515487`, F1 macro `0.836362595139409` y GPU activa, valores que coinciden con el TEX revisado. Esos artefactos no estaban en S06, pero **S13 recuperó la variante real**: modelo de 15.131.386 bytes, configuración con `SLURM_JOB_ID=2625`, resultados y 26 checkpoints; el ZIP contiene además predicciones de 84.242.821 bytes y Parquet de 29.582.551 bytes, descomprimidos y verificados por SHA-256 al completar la organización. El entrenador original sin sufijo, ausente de los diez archivos S11, también apareció en S13 con SHA-256 `8c48d777281fe325579bc61610aac52c4df969022a8573e19703fc46654d6663`.
+El antecedente 2625 queda vinculado por datos precisos: su `.out` S01 identifica el script sin `_gpu_metrics` en la línea 6, el inicio del 16/06 en la 50, el resultado en la 67 y las salidas `DEFINITIVO/multietiqueta/harvard/` en las 71–72. Registra exact-match `0.9648276355865457`, F1 micro `0.9526020129515487`, F1 macro `0.836362595139409` y GPU activa, valores que coinciden con el TEX revisado. S13 documenta esa variante mediante un modelo de 15.131.386 bytes, configuración con `SLURM_JOB_ID=2625`, resultados y 26 checkpoints. La auditoría registró además los hashes de sus predicciones de 84.242.821 bytes y del Parquet de 29.582.551 bytes. El entrenador original sin sufijo, ausente de los diez archivos S11, se identificó en S13 con SHA-256 `8c48d777281fe325579bc61610aac52c4df969022a8573e19703fc46654d6663`.
 
 El nombre de archivo no determina hardware: L1 principal conserva `gpu` en varios nombres, pero la ejecución seleccionada informa `gpu_used=false`. El alias de log L2 `slurm-multietq_c2-3315.*` tampoco determina el nodo: el contenido registra c3.
 
-El SHA-256 del contenedor S04 `informesMultilabel.zip` coincide con el ancla del libro: `1a1fe9cd6bc75b15ccd414775ad39bf62c547038aa6a70b78cf2613160a7763c`. Que el informe L1 cite otro contenedor antiguo con un inventario mayor no acredita que ese contenedor antiguo sea idéntico al S06 actual.
+La correspondencia de cada informe se establece mediante sus resultados, configuraciones y logs. La coincidencia de un nombre de corrida o de una descripción de inventario no basta para afirmar que dos variantes contienen los mismos modelos o predicciones.
 
 ## 3. Código, versiones e integridad
 
-El archivo `multietiqueta_codigo_y_hashes.json` incluye los diez archivos de código, sus SHA-256 y las rutas de sus copias exactas S01. Los principales son:
+El archivo [codigo_y_hashes_multietiqueta.json](codigo_y_hashes_multietiqueta.json) incluye los diez archivos de código, sus SHA-256 y las rutas de sus copias exactas S01. Los principales son:
 
 | Uso | Archivo S11 | SHA-256 | Estado de vinculación |
 |---|---|---|---|
@@ -77,7 +79,7 @@ Otros cinco lanzadores S11 pertenecen a la familia L1 y apuntan al entrenador pr
 
 La inspección AST confirma que las **30 características L1, las 30 base L2 y sus 60 añadidas coinciden en nombre y orden con el apéndice del libro**. Las noventa de L2 coinciden además con `run_config.json`. La serialización original del esquema sí pudo aclararse leyendo el código: SHA-256 de UTF-8 de `version + "\n" + "\n".join(features_en_orden)`. El resultado es `0bbc812611513de0952653b398f5533afa6933d32faf3cbfa8ac88ac12a8e51f`, igual al de la configuración y el libro. [L2 código, líneas 198–202; libro PDF p. 101.]
 
-**No confundir las firmas.** El `input_signature` L2 `f74df5d8f0787c37b888aa960337450b71a526767120efacfc8d8b951d9eb686` se calcula sobre una lista JSON con ruta resuelta, tamaño y `mtime_ns`; no es el SHA-256 de los bytes del CSV. El CSV raw disponible tiene SHA-256 `9c73c90ce6564ae48b14f7179cd864d037a6a130ef69c68c1626ec5d7ce4a910`, pero ese hash de contenido no aparece como ancla histórica en `run_config` L2. Las firmas de preprocesado, entrenamiento, calibration y esquema también deben conservar su significado separado. [L2 código, líneas 836–845; `analisis/hashes_fuentes_y_S11.json`.]
+**No confundir las firmas.** El `input_signature` L2 `f74df5d8f0787c37b888aa960337450b71a526767120efacfc8d8b951d9eb686` se calcula sobre una lista JSON con ruta resuelta, tamaño y `mtime_ns`; no es el SHA-256 de los bytes del CSV. El CSV de referencia auditado tiene SHA-256 `9c73c90ce6564ae48b14f7179cd864d037a6a130ef69c68c1626ec5d7ce4a910`, pero ese hash de contenido no aparece como ancla histórica en `run_config` L2. Las firmas de preprocesado, entrenamiento, calibration y esquema también deben conservar su significado separado. Véanse el [perfil de Harvard](../datasets_y_multiclase/sr_bh_raw_profile.json) y el código L2, líneas 836–845. La [guía del corpus](../../03_datasets/SRBH2020/README.md) identifica su fuente de descarga.
 
 ## 4. Verificación de métricas desde predicciones
 
@@ -161,7 +163,7 @@ Los estados serializados conservados no son duplicados exactos del modelo final:
 | Checkpoints L2 | 25 | 40.685.211 |
 | Antecedente L1 job 2625, recuperados en S13 | 26 | 55.709.900 |
 
-Se recomienda conservarlos en `90_artefactos_pesados`, manteniendo el árbol interno. L1 guarda candidatos entrenados antes del refit, estados por etiqueta de selección y refit, y bundle de refit final. El log 3151, líneas 52–59, confirma que reutilizó procesado, candidato y refit final. El modelo final permite inferencia, pero no sustituye el estado del candidato evaluado en validación antes del refit.
+Estos estados son dependencias de la reanudación y su disponibilidad debe comprobarse antes de ejecutarla; los catálogos no equivalen a una descarga de los pesos. L1 registra candidatos entrenados antes del refit, estados por etiqueta de selección y refit, y bundle de refit final. El log 3151, líneas 52–59, confirma que reutilizó procesado, candidato y refit final. El modelo final permite inferencia, pero no sustituye el estado del candidato evaluado en validación antes del refit.
 
 L2 conserva candidato, records por etiqueta y pares `progress.json`/`best_estimator.joblib` para los ensayos. El cargador requiere ambos cuando hay ensayos exitosos; borrar el estimador conservando solo progress rompe esa vía de reanudación. Los CSV conservan parámetros y resultados, pero no los árboles entrenados en el formato esperado por la reanudación. Esta conclusión procede de lectura del código, no de deserialización. [L2 código, líneas 3238–3268; construcción del modelo final, líneas 5792–5823.]
 
@@ -185,9 +187,9 @@ L1 guarda tiempos **heredados de checkpoints**: selección original `20343.91803
 
 L2 registra `train_select_seconds=1922.6299338527024`, `final_refit_seconds=0` y `run_total_seconds=2317.4098239205778`. El total del programa, la duración Slurm, tiempos de CPU, extracción, predicción y benchmark son magnitudes distintas. L2 informa 16 hilos asignados y 32 núcleos visibles; su porcentaje CPU calculado sobre todos los visibles no es directamente el porcentaje de la asignación. El nombre histórico de clave `throughput_req_s` se conserva en la fuente, pero al presentar L2 la unidad correcta es **grupos/s**. Estos benchmarks locales no miden solicitudes concurrentes de un WAF desplegado.
 
-## 8. Duplicados exactos y organización recomendada
+## 8. Identidad de archivos y rutas experimentales
 
-`multietiqueta_duplicados_exactos.json` identifica 44 grupos SHA-256 relevantes entre S01/S04/S06/S11. Incluye rutas de todas las copias; las del snapshot Slurm pueden conservarse íntegras para no romper su manifiesto. Los grupos no vacíos repetidos dentro de S06 son:
+[duplicados_exactos_multietiqueta.json](duplicados_exactos_multietiqueta.json) identifica 44 grupos SHA-256 relevantes entre S01/S04/S06/S11. Incluye rutas de todas las copias; las de la captura Slurm se conservan íntegras con su manifiesto. Los grupos no vacíos repetidos dentro de S06 son:
 
 | Corrida | Archivos idénticos |
 |---|---|
@@ -202,7 +204,7 @@ L2 registra `train_select_seconds=1922.6299338527024`, `final_refit_seconds=0` y
 
 Las versiones JSON `.partial` no son idénticas a las definitivas: no descartarlas solo por su nombre. `test_predictions.csv` y `request_level_multilabel_match.csv` L1 tampoco son copias exactas. Los archivos vacíos comparten hash aunque tengan distinto significado; no consolidarlos a ciegas.
 
-Cada corrida debe reunir su README, configuración, métricas globales/por etiqueta, matrices cuando existan, tuning/calibración, cobertura e importancias, medidas operativas, manifiestos y enlaces al código exacto y a los registros Slurm. Los binarios y CSV grandes se conservan en el espejo pesado, con ubicación registrada. Los análisis de contenido y las particiones reconstruidas también deben aparecer en `02_auditoria`, enlazando a sus fuentes y al mapa de la corrida. Mantener los informes TEX separados por variante evita contaminar L1 principal con los números GPU de junio.
+El [índice experimental](../../04_experimentos/README.md) relaciona cada corrida con las configuraciones, métricas, tuning, calibración, medidas operativas, código y registros Slurm documentados, indicando su disponibilidad. Las [particiones reconstruidas y verificaciones](verificacion_20261010/) se publican como productos de auditoría. Una referencia a un binario o CSV grande conserva su identidad histórica, pero no acredita que esté publicado. Los informes de L1 principal y de la variante GPU de junio deben interpretarse por separado.
 
 ## 9. Evidencia faltante o alcance pendiente
 
@@ -210,19 +212,19 @@ Cada corrida debe reunir su README, configuración, métricas globales/por etiqu
 - No se recalcularon huellas de todas las filas raw ni OR por todos los miembros; tampoco el porcentaje de solapamiento histórico L1. Sí se comprobaron unicidad, intersecciones y conciliación del procesado y del catálogo de grupos.
 - No se encontró un mapa histórico completo fila raw → huella/grupo como archivo independiente. El CSV procesado conserva representante, tamaño e identidad; raw, código y auditoría permiten una futura reconstrucción explícita.
 - No se cargó ningún modelo. Los SHA-256 y tamaños comprueban integridad de bytes, no que el pickle pueda cargarse con cualquier versión o que reentrene idénticamente.
-- El Parquet L1 se preservó e inventarió, pero no se decodificó en este entorno. Para reconstruir etiquetas y splits L1 se utilizó la matriz de etiquetas obtenida del CSV raw en orden original, contrastando test y los soportes guardados.
+- El Parquet L1 quedó identificado en el inventario, pero no se decodificó durante esta verificación. Para reconstruir etiquetas y splits L1 se utilizó la matriz de etiquetas obtenida del CSV raw en orden original, contrastando test y los soportes guardados.
 - No hay CSV de probabilidades por caso de tune y calibration entre los artefactos revisados que permita recalcular de manera independiente sus métricas sin ejecutar modelos. Se preservan sus tablas, trazas y resúmenes como evidencia original.
 - El hash histórico de bytes del CSV raw no está en la configuración L2; `input_signature` no cubre esa función. Para L1 tampoco existe allí hash histórico del entrenador.
-- El faltante anterior de job 2625 se resolvió mediante S13: modelo, checkpoints, configuración, resultados y código extraídos; predicciones y procesado localizados en el ZIP. Los dos archivos grandes quedaron descomprimidos y verificados por SHA-256; no se recalculó test desde esas predicciones. El Parquet idéntico al de job 3151 se consolidó por hash, conservando ambas procedencias; las predicciones y modelos distintos siguen separados.
+- La identidad de la variante del job 2625 se completó mediante S13: modelo, checkpoints, configuración, resultados, código, predicciones y procesado registrados en el inventario. La auditoría verificó los SHA-256 de los dos archivos grandes; no recalculó test desde esas predicciones. El Parquet coincide por hash con el de job 3151, mientras que las predicciones y los modelos son distintos. El inventario preserva esas relaciones sin prometer la publicación de los pesos.
 
-## 10. Entregables de esta revisión
+## 10. Informes y verificadores publicados
 
-- `analisis/multietiqueta_mapping.json`: 177 originales con corrida, variante, rol, categoría, unidad, estado, SHA-256 y copias exactas.
-- `analisis/multietiqueta_codigo_y_hashes.json`: identidad de diez archivos, cotejo del apéndice y cálculo del esquema.
-- `analisis/multietiqueta_duplicados_exactos.json`: grupos de identidad binaria y política de alias.
-- `analisis/verificar_multietiqueta.py`: auditor independiente de CSV/JSON y reconstrucción de splits, sin ejecución de entrenadores.
-- `analisis/multietiqueta_verificacion/`: resultados por corrida, resumen con entorno, métricas por CAPEC, tablas de intersección y NPZ de particiones reconstruidas.
-- `analisis/README_L1_fixed30.md` y `analisis/README_L2_request90.md`: textos preparados para las carpetas de experimentos.
-- `analisis/S13_L1_2625.md`, `S13_L1_2625_mapping.json` y `S13_L1_2625_verificacion.json`: recuperación y cotejo de la variante GPU, con estado explícito de extracción y límites de la verificación complementaria.
+- [mapa_multietiqueta.json](mapa_multietiqueta.json): 177 registros con corrida, variante, rol, categoría, unidad, estado, SHA-256 y copias exactas.
+- [codigo_y_hashes_multietiqueta.json](codigo_y_hashes_multietiqueta.json): identidad de diez archivos, cotejo del apéndice y cálculo del esquema.
+- [duplicados_exactos_multietiqueta.json](duplicados_exactos_multietiqueta.json): grupos de identidad binaria y política de alias.
+- [verificar_multietiqueta.py](../../07_reproducibilidad/scripts/verificar_multietiqueta.py): auditor de CSV/JSON y reconstrucción de particiones, sin ejecución de entrenadores; requiere disponer de las entradas descritas en la guía.
+- [verificacion_20261010](verificacion_20261010/): resultados por corrida, resumen con entorno, métricas por CAPEC, tablas de intersección y NPZ de particiones reconstruidas.
+- [Índice experimental](../../04_experimentos/README.md): correspondencias de L1/L2 y disponibilidad de los artefactos.
+- [S13_L1_2625.md](S13_L1_2625.md), [mapa S13](S13_L1_2625_mapping.json) y [verificación S13](S13_L1_2625_verificacion.json): identidad y cotejo de la variante GPU, con límites de la verificación complementaria.
 
-Las fuentes originales permanecen sin cambios. Este documento describe lo verificado y lo que debe conservar la organización; no afirma que los archivos originales inexistentes se hayan recuperado ni que se haya repetido el entrenamiento.
+Los registros de ejecución conservan su contexto histórico. Este documento describe lo verificado y los requisitos de evidencia; no afirma que los archivos faltantes estén publicados ni que se haya repetido el entrenamiento.

@@ -1,0 +1,15 @@
+# Entorno y datos de nuevas ejecuciones
+/.venv/
+/data/
+/runs/
+/logs/
+/scratch/
+/verificaciones_*/
+
+# Cachés y modelos generados localmente
+**/__pycache__/
+*.py[cod]
+*.joblib
+*.pkl
+
+# Las tablas de métricas y particiones de auditoría versionadas se conservan.

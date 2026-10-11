@@ -178,7 +178,7 @@
     }
   },
   "source_prediction_sha256": "b84ab6f2164c82ddebd3d4dabfad6ecb366b6eaf0b2043dc33370d290a1c84f8",
-  "source_folder": "extraidos/S06/DEFINITIVO/multietiqueta/multiquetaSalidaXG",
+  "source_folder": "S06:DEFINITIVO/multietiqueta/multiquetaSalidaXG",
   "run_config_sha256": "633f5f4a12b7a40c4825516816aa7d613929da4c9374e811167e58af11f48417",
   "partitions": {
     "origin": "reconstructed_in_this_audit_not_historical_split_files",

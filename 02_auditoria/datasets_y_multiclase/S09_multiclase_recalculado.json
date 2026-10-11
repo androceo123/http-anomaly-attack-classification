@@ -1,6 +1,6 @@
 [
   {
-    "folder": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S09/11claseResults/multiclase/harvard",
+    "folder": "S09:11claseResults/multiclase/harvard",
     "book_run_id": "M5",
     "dataset": "harvard",
     "created_at": "2026-06-26T20:11:46-04:00",
@@ -339,7 +339,7 @@
     "evidence_status": "metrics_recomputed_from_saved_predictions_no_retraining"
   },
   {
-    "folder": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S09/11claseResults/multiclase/torpeda",
+    "folder": "S09:11claseResults/multiclase/torpeda",
     "book_run_id": "M5",
     "dataset": "torpeda",
     "created_at": "2026-06-26T19:47:44-04:00",
@@ -646,7 +646,7 @@
     "evidence_status": "metrics_recomputed_from_saved_predictions_no_retraining"
   },
   {
-    "folder": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S09/corrida3mejoresResultadosPosibles_featuresUtiles58/multiclase/harvard",
+    "folder": "S09:corrida3mejoresResultadosPosibles_featuresUtiles58/multiclase/harvard",
     "book_run_id": "M4",
     "dataset": "harvard",
     "created_at": "2026-06-21T09:23:09-04:00",
@@ -1010,7 +1010,7 @@
     "evidence_status": "metrics_recomputed_from_saved_predictions_no_retraining"
   },
   {
-    "folder": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S09/corrida3mejoresResultadosPosibles_featuresUtiles58/multiclase/torpeda",
+    "folder": "S09:corrida3mejoresResultadosPosibles_featuresUtiles58/multiclase/torpeda",
     "book_run_id": "M4",
     "dataset": "torpeda",
     "created_at": "2026-06-21T08:39:33-04:00",

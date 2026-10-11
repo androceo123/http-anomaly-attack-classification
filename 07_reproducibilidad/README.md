@@ -1,52 +1,71 @@
-# Reproducibilidad y verificación
+# Reproducibilidad, entorno e integridad
 
-## 1. Verificar el archivo conservado
+## 1. Preparar una ejecución en Slurm
 
-Desde la raíz del repositorio:
+La [guía de Arandu y Slurm](ENTORNO_SLURM.md) relaciona la infraestructura registrada, los entornos Python y los lanzadores publicados. Incluye ejemplos de comprobación previa y envío para L2, multiclase fixed30 y la extensión de 73 atributos.
+
+Los datos se obtienen desde las [fuentes públicas](../03_datasets/README.md). Cada ficha explica el formato original, la entrada que espera el código y las transformaciones que deben registrarse. Las matrices procesadas, predicciones, checkpoints y modelos son artefactos de una corrida; no forman parte de la descarga original del dataset.
+
+## 2. Verificar el contenido del repositorio
+
+Desde la raíz, con Python 3.11 o posterior:
 
 ```bash
 python 07_reproducibilidad/scripts/verificar_integridad.py --root .
 ```
 
-La comprobación usa el catálogo de archivos originales y sus SHA-256. En la copia Git se omiten los artefactos externos; el informe los cuenta de forma separada. Con el espejo pesado disponible se puede usar `--include-external` para verificarlos también. El programa devuelve un error ante un archivo faltante requerido o un hash distinto.
+El comando compara tamaño y SHA-256 de los archivos enumerados en [manifest_repositorio.json](manifest_repositorio.json). Ese manifiesto describe la revisión publicada. Excluye su propio contenido y el informe de verificación para evitar referencias circulares; las exclusiones quedan declaradas. Los archivos adicionales que genere una nueva corrida no se incorporan automáticamente a esta comprobación.
 
-`inventario_archivos.csv/json` registra todas las ocurrencias originales. `catalogo_archivos.json` registra una fila por archivo físico conservado. `archivos_descartados.csv` y `duplicados_fusionados.csv` explican las decisiones de limpieza. Los manifiestos originales de Slurm siguen dentro de su captura; el análisis registra su única diferencia explicada por un cierre de log añadido después de calcular el hash.
+El [informe de integridad](verificacion_integridad_local.json) conserva el resultado de la revisión del repositorio. Para producir otro informe sin sobrescribirlo:
 
-## 2. Restaurar datos y modelos externos
+```bash
+python 07_reproducibilidad/scripts/verificar_integridad.py \
+  --root . --output verificaciones_nuevas/integridad.json
+```
 
-Descargue `90_artefactos_pesados` desde la carpeta de Drive y colóquela junto a las carpetas 01–07. El [catálogo de artefactos externos](artefactos_externos.csv) contiene las rutas, tamaños, hashes, identificadores y enlaces individuales de los 229 archivos conservados en Drive. Su estructura reproduce las rutas lógicas de los datasets y corridas, de modo que ningún modelo o procesado pierda su asociación experimental.
+Códigos de salida: `0` si coinciden los archivos comprobados, `1` si hay faltantes o diferencias, y `2` ante errores de configuración o formato. Esta comprobación no ejecuta entrenamientos ni deserializa modelos.
 
-Se conservan los estados de reanudación L1/L2 porque la ejecución principal de L1 reutilizó artefactos previos y el tuning L2 utiliza estimadores intermedios junto a sus archivos de progreso. La ubicación externa reduce el tamaño de Git y mantiene la evidencia disponible.
+## 3. Catálogos de evidencia histórica
 
-## 3. Repetir la comprobación de resultados multietiqueta
+Los identificadores S01–S14 representan [colecciones de evidencia](../02_auditoria/integridad_y_procedencia/fuentes_originales.csv). Permiten relacionar versiones, resultados, informes y registros del clúster.
+
+| Archivo | Función |
+| --- | --- |
+| [Inventario de evidencia](../02_auditoria/integridad_y_procedencia/inventario_archivos.json) | Mantiene las identidades por colección: ruta original, tamaño, SHA-256, corrida, dataset y decisiones documentadas. |
+| [Catálogo de identidades](catalogo_archivos.json) | Registra los archivos experimentales catalogados y distingue sus copias publicadas de las referencias sin archivo publicado. |
+| [Artefactos externos](artefactos_externos.csv) | Identifica entradas y resultados adicionales requeridos por los análisis; incluye fuentes públicas de datos cuando corresponde. |
+| [Catálogo de corridas](../06_resultados_consolidados/catalogo_corridas.csv) | Relaciona cada etapa con sus auditorías y muestra la disponibilidad de sus artefactos. |
+
+`repository_path` señala una copia publicada con el mismo SHA-256 registrado. Un valor nulo y `availability=referenciado_no_publicado` indican que la identidad está documentada, pero que sus bytes no están en el repositorio. Las referencias `Sxx:ruta` identifican elementos de una colección; no son rutas del sistema de archivos ni enlaces de descarga.
+
+Las rutas relativas del inventario permiten colocar archivos requeridos en un almacenamiento experimental aparte. Si se dispone de todos los artefactos históricos, se puede ampliar la comprobación:
+
+```bash
+python 07_reproducibilidad/scripts/verificar_integridad.py \
+  --root . --include-external --external-root /ruta/a/artefactos
+```
+
+Esta opción exige todos los archivos del catálogo histórico. Su ausencia genera un fallo de la comprobación ampliada y no se considera un defecto del manifiesto de archivos publicados. Las fuentes públicas enlazadas permiten obtener los datasets; no se presentan como descargas de predicciones o modelos históricos.
+
+## 4. Recalcular resultados multietiqueta
+
+El [auditor L1/L2](VERIFICACION_MULTIETIQUETA.md) resuelve las entradas por nombre, colección, corrida y SHA-256. Requiere los CSV de predicciones y métricas, configuraciones, umbrales, tablas de grupos, datos de entrada y modelos finales indicados en el inventario. Los modelos sólo se verifican como archivos: no se cargan para inferencia.
+
+Una vez disponibles las entradas:
 
 ```bash
 python -m pip install -r 07_reproducibilidad/requirements_auditoria.txt
-python 07_reproducibilidad/scripts/verificar_multietiqueta.py --root . --output verificaciones_locales
+python 07_reproducibilidad/scripts/verificar_multietiqueta.py \
+  --root . --external-root /ruta/a/artefactos \
+  --output verificaciones_nuevas
 ```
 
-El auditor usa CSV guardados, etiquetas, índices y umbrales. Resuelve las rutas con el inventario; no carga modelos ni ejecuta los entrenadores. Produce resultados derivados en la carpeta elegida. La verificación realizada durante la organización está en `02_auditoria/particiones_y_multietiqueta/verificacion_20261010`.
+`--output` debe ser una carpeta nueva o vacía. El auditor no descarga archivos y se detiene con un mensaje concreto si falta una entrada o no coincide su huella. No basta con clonar el repositorio y descargar el corpus para repetir el análisis de predicciones históricas.
 
-Las particiones NPZ allí incluidas fueron reconstruidas con las reglas y semillas preservadas. Están identificadas como reconstrucciones de esta revisión, no como manifiestos históricos completos de particiones encontrados. Para L2 se verificaron índices, orden, etiquetas, soportes y las seis intersecciones de huellas. Para L1, separar índices no demuestra ausencia de contenido repetido entre bloques.
+Las [verificaciones L1/L2 publicadas](../02_auditoria/particiones_y_multietiqueta/verificacion_20261010) registran cálculos derivados. Sus particiones NPZ están identificadas como reconstrucciones de las reglas y semillas preservadas. En L2 se comprobaron índices, orden, etiquetas, soportes y seis intersecciones de huellas iguales a cero. En L1, separar índices no acredita ausencia de peticiones repetidas entre bloques.
 
-## 4. Alcance de una nueva ejecución de entrenamiento
+## 5. Identidad de una nueva corrida
 
-El archivo conserva scripts, lanzadores, configuraciones, salidas y evidencia de entorno. Las rutas históricas se mantienen literalmente y requieren adaptación al equipo de destino. Los paquetes capturados en agosto de 2026 no certifican el entorno exacto de cada trabajo anterior; las copias del código tampoco equivalen siempre a un commit histórico del job.
+Una ejecución nueva debe registrar su commit, lanzador y Python, versiones instaladas, hashes de entrada, transformaciones, semillas, particiones, configuración, identificador de job y salidas. Usar un directorio de resultados propio y conservar los estados de reanudación que correspondan al mismo experimento.
 
-La organización verifica integridad y coherencia de resultados existentes. Una ejecución nueva debe identificarse con otra carpeta, fecha, código y hashes de entradas, semillas, particiones, entorno, modelo y salida. No se debe sobrescribir una corrida histórica para presentar una reproducción como si fuera el archivo original.
-
-## 5. GitHub
-
-El umbral local de 20 MiB, los modelos serializados y la bibliografía de consulta determinan el espejo externo. GitHub advierte sobre archivos de más de 50 MiB y bloquea los superiores a 100 MiB en Git ordinario. Documentación oficial consultada el 10/10/2026: [archivos grandes](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github), [límites de repositorios](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits).
-
-El paquete preparado conserva el README del espejo externo; los datos, modelos y ZIP originales ya representados por el inventario permanecen fuera del paquete Git. `.gitignore` conserva estas exclusiones. El contenido se entrega organizado para revisión y uso por el autor.
-
-<!-- cierre_documental_20261010:inicio -->
-## 6. Acta y verificación final de la entrega
-
-El [acta de organización y auditoría](../02_auditoria/integridad_y_procedencia/ACTA_DE_ORGANIZACION_20261010.md) describe el archivo entregado, las decisiones de conservación y el alcance de la revisión. La [verificación final](verificacion_drive_20261010.json) reúne los registros de cierre y la disposición real de los contenedores fuente.
-
-Los SHA-256 documentados corresponden a los archivos locales conservados. En Drive se cotejan identificadores, nombres, tipos, carpetas de destino y tamaños; el servicio no expuso un SHA-256 remoto y no se atribuye a este cotejo una comparación de hashes del servidor.
-
-El manifiesto final excluye su propio contenido para evitar una referencia circular. Su carga y su tamaño se verifican por separado.
-<!-- cierre_documental_20261010:fin -->
+La evidencia del entorno capturada el 03/08/2026 y las verificaciones derivadas de octubre tienen fechas y alcances distintos. Los registros históricos de Slurm y el código experimental mantienen su identidad; los cambios de documentación y catálogos se registran en Git. Consultar el [alcance de auditoría](../02_auditoria/integridad_y_procedencia/ALCANCE_DE_AUDITORIA.md) para interpretar qué se comprobó y qué requiere evidencia adicional.

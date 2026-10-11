@@ -1,7 +1,7 @@
 {
   "scripts": [
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
+      "path": "05_codigo/pipelines/train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
       "name": "train_waf_multilabel_DEFINITIVO_harvard_xgboost_none_fixed30_gpu_metrics.py",
       "sha256_actual": "7d1bb308166aaa83bc61e48e2cee0470fc290279dc7a2534e11e06b9b36212d0",
       "sha256_en_libro": null,
@@ -17,7 +17,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
+      "path": "05_codigo/pipelines/train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
       "name": "train_waf_multilabel_multifamily_resume_resultsOptimo_fixed30.py",
       "sha256_actual": "4be86a0a9c11e6a3fbaa9ea8df6da12ab2f03bf921449224d178404552536612",
       "sha256_en_libro": null,
@@ -33,7 +33,7 @@
       "variant": "antecedente_multifamilia"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_resume_multilabel_xgb_cpu_c3.sh",
+      "path": "05_codigo/pipelines/run_resume_multilabel_xgb_cpu_c3.sh",
       "name": "run_resume_multilabel_xgb_cpu_c3.sh",
       "sha256_actual": "b19649b70aec39c7d7cf96143ffde72cab66b1cd2d5c98443a5b11e99c2a2376",
       "sha256_en_libro": null,
@@ -49,7 +49,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_resume_multilabel_xgb_cpu_c2.sh",
+      "path": "05_codigo/pipelines/run_resume_multilabel_xgb_cpu_c2.sh",
       "name": "run_resume_multilabel_xgb_cpu_c2.sh",
       "sha256_actual": "d9d9e6234e2b551cad3026671c105c7aa06bc56c829940fed7bf7ca5eda85d4c",
       "sha256_en_libro": null,
@@ -65,7 +65,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
+      "path": "05_codigo/pipelines/run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
       "name": "run_multilabel_harvard_multifamily_resume_resultsOptimo_arandu_safe_fixed30.sh",
       "sha256_actual": "1b1f0738afdf028255030135af36179030d81eaa28e87b8a93d2ef2e13fbcb20",
       "sha256_en_libro": null,
@@ -81,7 +81,7 @@
       "variant": "antecedente_multifamilia"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
       "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_nodo3_gpu_metrics.sh",
       "sha256_actual": "90ce4d5bf19b9ebd08b9c53f0715ea5da2a1b9535e6223d89ea60c2988c2a155",
       "sha256_en_libro": null,
@@ -97,7 +97,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
       "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_8cpu_tmp.sh",
       "sha256_actual": "4ec0c1740e85cb8c387f89ab5736ffaa43b4f0aebbcb0c4ab7753cf07c2c3d57",
       "sha256_en_libro": null,
@@ -113,7 +113,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
+      "path": "05_codigo/pipelines/run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
       "name": "run_DEFINITIVO_multilabel_harvard_xgboost_none_fixed30_arandu_c3_cpu_tmp.sh",
       "sha256_actual": "4707b3690ca5462d5ddbcdebcccd9b21f40328f6b884e8701236132c40bc9a73",
       "sha256_en_libro": null,
@@ -129,7 +129,7 @@
       "variant": "principal_job3151"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/multietiquetaCorrida2.sh",
+      "path": "05_codigo/pipelines/multietiquetaCorrida2.sh",
       "name": "multietiquetaCorrida2.sh",
       "sha256_actual": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
       "sha256_en_libro": "ef2891d4cfc1e87626df220661c990b8fe6dab09ed3202ca3695e9f3e810da08",
@@ -145,7 +145,7 @@
       "variant": "principal_job3315"
     },
     {
-      "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/multietiquetaCorrida2.py",
+      "path": "05_codigo/pipelines/multietiquetaCorrida2.py",
       "name": "multietiquetaCorrida2.py",
       "sha256_actual": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",
       "sha256_en_libro": "1120c44776ebd75ad65c98fa2c69a11a4ed086c9f6a6a81d69d2e085c0619ecb",

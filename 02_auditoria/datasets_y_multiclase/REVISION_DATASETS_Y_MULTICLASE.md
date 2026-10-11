@@ -2,26 +2,28 @@
 
 Revisión de solo lectura del 10 de octubre de 2026. Este documento enlaza el libro y la presentación con evidencia primaria preservada. Los números B/M/L son etapas documentales; un job es una ejecución concreta. Los estados «mencionado», «archivo disponible», «configuración leída», «conteo recalculado» y «entrenamiento reproducido» no son intercambiables. En esta revisión no se entrenó ningún modelo ni se cargaron objetos joblib.
 
-Las referencias `PDF x / p. y` usan página física y página impresa del libro `08282026v4.pdf`. `Dxx` identifica el orden real de las 71 diapositivas. Los códigos `Sxx` remiten al inventario original de Drive, con rutas y SHA-256 conservados en `datasets_multiclase_mapa.json`.
+Las referencias `PDF x / p. y` usan página física y página impresa del libro `08282026v4.pdf`. `Dxx` identifica el orden real de las 71 diapositivas. Los códigos **S01–S14 identifican colecciones de evidencia**, con rutas y SHA-256 conservados en [mapa_datasets_y_multiclase.json](mapa_datasets_y_multiclase.json). Un registro de ese mapa describe lo examinado; no garantiza que el archivo original esté publicado en este repositorio.
+
+Los datos crudos se obtienen desde las [fuentes públicas de datasets](../../03_datasets/README.md). Los hashes y recuentos siguientes identifican las versiones empleadas por la auditoría y deben contrastarse al preparar una nueva ejecución en [Arandu/Slurm](../../07_reproducibilidad/ENTORNO_SLURM.md).
 
 ## 1. Fuentes examinadas
 
-| Fuente | Archivo original | Archivos revisados / función |
+| Colección | Evidencia | Archivos revisados / función |
 |---|---|---|
-| S02 | pdfsMulticlase.zip | 9 PDF; informes 01 y 02 son M1, 03–09 son M2–M8 |
-| S03 | multiclaseCorridasInformes.zip | 8 TEX; fuentes de los informes 01–08; no hay TEX M8 en esta fuente |
-| S07 | multiclaseCorridas3datasets.zip | 504 archivos; resultados M6, M7, M8 y extensión73 |
-| S08 | ataques que tenemos que considerar.zip | 3 archivos; dos libros Excel y una captura de taxonomía |
-| S09 | todoMulticlase.zip | 127 archivos; resultados M4 y M5 |
-| S10 | harvard_duplicados.zip | 1 Excel de 102.874.905 bytes; auditoría de repeticiones |
-| S11 | datasetYCorridasMulticlaseMultietiqueta.zip | 35 archivos; 34 scripts/lanzadores y CSV Harvard de 436.437.661 bytes |
+| S02 | Informes multiclase | 9 PDF; informes 01 y 02 son M1, 03–09 son M2–M8 |
+| S03 | Fuentes de informes multiclase | 8 TEX; fuentes de los informes 01–08; no hay TEX M8 en esta colección |
+| S07 | Resultados multiclase de tres corpus | 504 archivos; resultados M6, M7, M8 y extensión 73 |
+| S08 | Taxonomía y estadísticas de ataques | 3 archivos; dos libros Excel y una captura de taxonomía |
+| S09 | Resultados multiclase de 58 atributos | 127 archivos; resultados M4 y M5 |
+| S10 | Auditoría de duplicados Harvard | 1 Excel de 102.874.905 bytes; auditoría de repeticiones |
+| S11 | Código, lanzadores e identidad del corpus Harvard | 35 archivos examinados; 34 scripts/lanzadores y CSV Harvard de 436.437.661 bytes |
 | S14 | analisis_combinaciones_capec.xlsx | Excel independiente de 7 hojas; combinaciones y coocurrencias |
 
-También se cruzaron el libro, el informe Slurm S01 de otro analista y la verificación L1/L2 de S06. Esas verificaciones se identifican por separado; no se presentan como una segunda repetición independiente.
+También se cruzaron el libro, el informe Slurm S01 y la verificación L1/L2 de S06. Esas verificaciones se identifican por separado; no se presentan como una segunda repetición independiente.
 
 ## 2. Harvard: archivo de origen y etapas distintas
 
-El CSV S11 contiene **907.815 registros lógicos, 38 columnas y 60 combinaciones exactas de etiquetas**. Su SHA-256 es `9c73c90ce6564ae48b14f7179cd864d037a6a130ef69c68c1626ec5d7ce4a910`; tamaño 436.437.661 bytes. Coincide además con la huella de entrada registrada en el log de la extensión73, revisada en S01. Leer las etiquetas de todos los registros confirmó 525.195 normales, 382.620 con al menos una CAPEC, cero filas con NORMAL y ataque simultáneos en la fuente y cero filas con las catorce etiquetas a cero. No se encontraron registros CSV mal formados.
+El CSV de referencia SR-BH 2020 auditado como S11 contiene **907.815 registros lógicos, 38 columnas y 60 combinaciones exactas de etiquetas**. Su SHA-256 es `9c73c90ce6564ae48b14f7179cd864d037a6a130ef69c68c1626ec5d7ce4a910`; tamaño 436.437.661 bytes. Coincide además con la huella de entrada registrada en el log de la extensión 73, revisada en S01. Leer las etiquetas de todos los registros confirmó 525.195 normales, 382.620 con al menos una CAPEC, cero filas con NORMAL y ataque simultáneos en la fuente y cero filas con las catorce etiquetas a cero. No se encontraron registros CSV mal formados. El corpus se descarga desde el enlace indicado en [SR-BH 2020](../../03_datasets/SRBH2020/README.md).
 
 El recuento publicado de 907.814 y el recuento del archivo de 907.815 están diferenciados por el propio libro; esta revisión acredita el segundo para este SHA. Las 38 columnas incluyen contexto de captura y respuesta, además de la petición y las etiquetas. La presencia de una columna en el original no acredita que se use como predictor. [Libro PDF 48–52 / pp. 32–36; D20, D26, D45–47; S11 `data_capec_multilabel.csv`; `sr_bh_raw_profile.json`.]
 
@@ -68,7 +70,7 @@ La diferencia S10/L2 es explicable: al retirar los dos eventos vacíos desaparec
 
 ## 5. Historia documental y evidencia por corrida
 
-Los números de PDF no son códigos M: 01 y 02 corresponden a M1 original/corregido; 03=M2, 04=M3, 05=M4, 06=M5, 07=M6, 08=M7 y 09=M8. Los ocho TEX S03 corresponden a los ocho primeros PDF, no existe fuente M8 en S03. Esta ausencia es local a ese paquete, no una afirmación de que nunca existió. Los nombres exactos y SHA están en el mapa JSON. Se extrajo el texto de los nueve PDF y se inspeccionaron visualmente sus portadas05,06 y09 para confirmar representación, corrida y datos de ejecución.
+Los números de PDF no son códigos M: 01 y 02 corresponden a M1 original/corregido; 03=M2, 04=M3, 05=M4, 06=M5, 07=M6, 08=M7 y 09=M8. Los ocho TEX S03 corresponden a los ocho primeros PDF, no existe fuente M8 en S03. Esta ausencia se refiere a la colección examinada, no a toda la historia del experimento. Los nombres exactos y SHA están en el mapa JSON. Se leyó el texto de los nueve PDF y se inspeccionaron visualmente las portadas de los informes 05, 06 y 09 para confirmar representación, corrida y datos de ejecución.
 
 S11 conserva el código de expansión 30→84→58 y los cambios de taxonomía Harvard. Se inspeccionaron listas y constantes por AST sin ejecutar los scripts. `3datasetsMulticlase3.py` termina en **73 variables**: conserva un catálogo legado de93, elimina25 y añade5. Se corrigió el recuento parcial del análisis estático para considerar esa reasignación final (líneas519–521). El manifiesto S07 `features_used.csv` confirma73; no debe catalogarse como93 por una lista intermedia.
 
@@ -101,7 +103,7 @@ La selección58 conserva características con importancia por permutación posit
 | Extensión 73 / 3361 | harvard | 73 | 10 | 180.483 | 98,0103 % | 97,2135 % |
 | Extensión 73 / 3361 | torpeda | 73 | 10 | 14.827 | 99,8853 % | 99,9221 % |
 
-Los once `run_config.json` y los once `metrics_flat.csv` fueron leídos; se cotejaron conteos de `features_used.csv` y reportes de filtrado. No se recalcularon todas las predicciones S07. Las rutas/hash/configs de cada fila están en `S07_multiclase_config_metricas.json`.
+Los once `run_config.json` y los once `metrics_flat.csv` fueron leídos; se cotejaron conteos de `features_used.csv` y reportes de filtrado. No se recalcularon todas las predicciones S07. Las rutas, hashes y configuraciones de cada fila están en [configuraciones_y_metricas_S07.json](../../06_resultados_consolidados/configuraciones_y_metricas_S07.json).
 
 **M6 tiene dos referencias de ejecución:** PDF07 y el TEX respectivo nombran job2966, 27/06/2026; los dos configs S07 nombran job3013, 28/06/2026. S01 también enlaza los resultados a3013 y conserva intentos previos. Registrar ambos, con origen, aunque coincidan valores globales. Nunca sobrescribir el job de un informe histórico por el de la copia posterior.
 
@@ -109,32 +111,27 @@ Los once `run_config.json` y los once `metrics_flat.csv` fueron leídos; se cote
 
 **Extensión73** dispone de resultados reales job3361 y no se introduce como M9. La política es `compact73_cross_dataset_v1`. Harvard conserva10 clases; DS vuelve a9 (CommandInjection2.597 y OSCommandInjection36.114 separados), frente a las8 de M7/M8. Sus métricas DS no constituyen una comparación del mismo objetivo. Las cadenas guardadas de comparación con WAMM son metadatos de la corrida; no acreditan una reproducción del trabajo externo.
 
-## 6. Identidad de artefactos según el libro
+## 6. Identidad de código y esquema según el libro
 
-| Ancla del libro, PDF 101 / p. 85 | Archivo disponible / tipo | Estado |
+| Ancla del libro, PDF 101 / p. 85 | Código o esquema | Estado |
 |---|---|---|
-| corridasBinarias(5).zip | corridasBinarias.zip | coincidencia exacta de bytes |
-| datasetYCorridasMulticlaseMultietiqueta.zip | datasetYCorridasMulticlaseMultietiqueta.zip | coincidencia exacta de bytes |
-| informesMultilabel.zip | informesMultilabel.zip | coincidencia exacta de bytes |
-| multiclaseCorridasInformes(1).zip | multiclaseCorridasInformes.zip | coincidencia exacta de bytes |
-| evidencia_tesis_slurm_20260803T142006.tar.gz | S01 ZIP | no coincidencia de contenedor disponible |
 | multietiquetaCorrida2.sh | multietiquetaCorrida2.sh | coincidencia exacta de bytes |
 | multietiquetaCorrida2.py | multietiquetaCorrida2.py | coincidencia exacta de bytes |
 | sr-bh-request90-v2 | sr-bh-request90-v2 | firma recalculada coincide |
 
-Los cuatro ZIP coincidentes y los dos scripts L2 fueron verificados por SHA-256 exacto; cambios de nombre como `(5)` o `(1)` no cambian contenido. La firma request90 también coincide mediante la serialización de versión y nombres ordenados. SHA de contenedor, SHA del script, firma de esquema y huella BLAKE2b128 de petición responden preguntas distintas. El `input_signature` L2 es un hash de manifiesto de ruta/tamaño/mtime, no prueba identidad del CSV por contenido. [Libro PDF101 / p85; `coincidencias_hash_libro.json`; verificación L2; revisión Slurm S01.]
+Los dos scripts L2 fueron verificados por SHA-256 exacto. La firma request90 también coincide mediante la serialización de versión y nombres ordenados. El SHA del script, la firma de esquema y la huella BLAKE2b128 de petición responden preguntas distintas. El `input_signature` L2 es un hash de manifiesto de ruta, tamaño y mtime; no prueba identidad del CSV por contenido. Las comprobaciones se registran en [coincidencias_hash_libro.json](../integridad_y_procedencia/coincidencias_hash_libro.json) y en la [verificación L2](../particiones_y_multietiqueta/verificacion_20261010/L2_verificacion.json). [Libro PDF 101 / p. 85.]
 
-El contenedor S01 es ZIP, mientras la ancla del libro es TAR.GZ; no hay identidad binaria entre esos formatos. La auditoría interna de S01, realizada por el otro analista, encontró167/167 hashes en el manifiesto del proyecto y389/390 en el global. La excepción del log corresponde exactamente a un agregado posterior de187bytes. Conservar ambos hechos y no sustituirlos por «todo coincide».
+La auditoría interna de S01 encontró 167/167 hashes concordantes en el manifiesto del proyecto y 389/390 en el global. La excepción del log corresponde exactamente a 187 bytes añadidos al cierre. La [revisión Slurm](../historial_slurm/REVISION_SLURM_Y_BINARIO.md) conserva esa explicación y el alcance de cada manifiesto.
 
 ## 7. Criterio de organización y alcance final
 
-La auditoría debe ser una entrada visible en `02_auditoria`, con referencias a fuente cruda, reglas de huella, duplicados, conflictos, particiones, Slurm y límites. `03_datasets` reúne corpus, alias, taxonomías, filtrados y diccionarios. `04_experimentos` debe permitir localizar B1–B2/M1–M8/L1–L2 y la extensión73 separada. `05_codigo` conserva variantes; `06_resultados_consolidados` reúne tablas con denominadores y estados de verificación; `07_reproducibilidad` enlaza comandos, entornos, hashes y esquemas; `90_artefactos_pesados` ofrece acceso a raw/caches/modelos/predicciones voluminosos. `01_documentacion` guarda libro, presentación e informes históricos con sus fuentes.
+La [auditoría](../README.md) relaciona la identidad del corpus, las reglas de huella, duplicados, conflictos, particiones, Slurm y límites. La [guía de datasets](../../03_datasets/README.md) reúne fuentes de descarga, alias, taxonomías, filtrados y diccionarios. El [índice experimental](../../04_experimentos/README.md) identifica B1–B2/M1–M8/L1–L2 y la extensión 73 separada. El [código](../../05_codigo/README.md), los [resultados consolidados](../../06_resultados_consolidados/README.md) y la [reproducibilidad](../../07_reproducibilidad/README.md) permiten consultar programas, tablas, denominadores, comandos, entornos y estados de disponibilidad. Los modelos y archivos de predicción citados por un informe no se consideran presentes sin comprobar su ubicación publicada.
 
 El mapa JSON clasifica todos los archivos de las ocho fuentes de esta revisión y registra categoría semántica, papel, etapa, SHA y decisión de conservación. La categoría semántica no ordena romper árboles: conservar cada raíz de corrida y agregar índices/enlaces cuando un traslado aislado perdería rutas relativas o contexto.
 
-No se verificó aquí una generalización temporal o entre corpus, ni una implantación WAF, ni múltiples semillas. Los cinco porcentajes históricos de solapamiento del libro permanecen como resultados documentados, no fueron todos recalculados desde raw en este análisis. La verificación L2 confirma intersecciones sobre particiones reconstruidas y predicciones concordantes; no recupera manifiestos históricos de entrenamiento que no se guardaron. La fuente bruta Harvard sí está disponible; disponibilidad final de otros corpus se debe completar con el inventario global, incluida S13 cuando se incorpore.
+No se verificó aquí una generalización temporal o entre corpus, ni una implantación WAF, ni múltiples semillas. Los cinco porcentajes históricos de solapamiento del libro permanecen como resultados documentados; no fueron todos recalculados desde datos crudos en este análisis. La verificación L2 confirma intersecciones sobre particiones reconstruidas y predicciones concordantes; no recupera manifiestos históricos de entrenamiento que no se guardaron. La identidad del CSV Harvard está documentada. La [revisión complementaria S13](S13_multiclase_evidencia.md) confirma la ausencia de los brutos identificados de CSIC, TorpEda y DS-Augmented-v2 en las colecciones examinadas; las fuentes públicas y los pasos de preparación se consultan en la guía de datasets.
 
 
 ### Alcance temporal del catálogo inicial del libro
 
-`libro_catalogo.json` conserva el resultado de una lectura inicial exclusivamente documental. Su campo `features.order_not_verified_against_code=true` describe esa lectura y no invalida verificaciones posteriores: `L2_verificacion.json` registra el recálculo concordante de la firma request90, y las verificaciones L1/L2 posteriores contrastan predicciones, métricas y particiones con sus fuentes preservadas. Se mantiene el catálogo inicial sin reescribir su alcance; la evidencia posterior se documenta por separado.
+[catalogo_libro.json](../../01_documentacion/catalogos/catalogo_libro.json) conserva el resultado de una lectura inicial exclusivamente documental. Su campo `features.order_not_verified_against_code=true` describe esa lectura y no invalida verificaciones posteriores: `L2_verificacion.json` registra el recálculo concordante de la firma request90, y las verificaciones L1/L2 posteriores contrastan predicciones, métricas y particiones con sus fuentes preservadas. Se mantiene el catálogo inicial sin reescribir su alcance; la evidencia posterior se documenta por separado.

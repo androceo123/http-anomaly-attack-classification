@@ -1,6 +1,6 @@
 {
-  "source": "cambiosAndres (1).pptx",
-  "reference_basis": "Diapositivas reales 1..71; todas las afirmaciones son extraídas y aún requieren cotejo con los ZIP.",
+  "source": "01_documentacion/presentacion/cambiosAndres.pptx",
+  "reference_basis": "Diapositivas reales 1..71; las afirmaciones documentales se contrastan con las colecciones de evidencia experimental.",
   "runs": [
     {
       "run_id": "B1",
@@ -319,5 +319,11 @@
       },
       "notes": "Cuatro particiones; seis intersecciones cero según la presentación. Sin reentrenamiento tras umbrales. Normal 98.9933% no llega a99%; CAPEC153/272 debajo de85%."
     }
-  ]
+  ],
+  "editorial_revision": {
+    "date": "2026-10-11",
+    "scope": "Rutas de extractores en las notas de las diapositivas 66, 67 y 68. Se conserva el contenido visible de las 71 diapositivas.",
+    "previous_sha256": "b6ed1d7e28a5a67a4cb5875e5d0cd7deb0df340c5f0ed5e788f98bd2a7b322fd",
+    "sha256": "a52ffdcec170611f0cc6f02769f28359885918ac3c1def6495d37e5237662f4e"
+  }
 }

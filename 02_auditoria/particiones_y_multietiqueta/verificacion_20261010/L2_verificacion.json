@@ -179,7 +179,7 @@
     }
   },
   "source_prediction_sha256": "f5e58998c37fad8a6a57a89cb65ccd8e1f209e5b9745693721364fe6b374b8ff",
-  "source_folder": "extraidos/S06/multietiquetaCorrida2/harvard",
+  "source_folder": "S06:multietiquetaCorrida2/harvard",
   "run_config_sha256": "c5e41571999329b8b5747cd97e4d3ec87872bc6e8a1d8b9a5c6bd59703439f42",
   "partitions": {
     "origin": "reconstructed_in_this_audit_not_historical_split_files",

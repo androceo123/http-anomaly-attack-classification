@@ -1,5 +1,5 @@
 {
-  "path": "/workspace/scratch/2517608154c5/organizacion_tesis/extraidos/S11/data_capec_multilabel.csv",
+  "path": "S11:data_capec_multilabel.csv",
   "rows": 907815,
   "columns": [
     "timestamp",
@@ -124,7 +124,6 @@
     163884
   ],
   "malformed_records": [],
-  "label_array_path": "/workspace/scratch/2517608154c5/organizacion_tesis/analisis/sr_bh_raw_labels.npy",
   "top_label_combinations": [
     {
       "column_indices_in14": [],

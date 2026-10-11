@@ -1,20 +1,20 @@
-run_id,title,status,folder,physical_artifacts,external_artifacts
-B1,Ablación binaria RF en CSIC,historico_exploratorio,04_experimentos/binario/B1_ablacion_csic,1,0
-B2,Comparación binaria por corpus,historico_exploratorio,04_experimentos/binario/B2_comparacion_corpus,1,0
-M1,Modelo base de 30 atributos; Harvard 9 familias y TorpEda 10 clases,historico_exploratorio,04_experimentos/multiclase/M1_fixed30,58,4
-M2,Top-14 de combinaciones CAPEC y 30 atributos,historico_exploratorio,04_experimentos/multiclase/M2_top14_30,58,4
-M3,Expansión a 84 atributos,historico_exploratorio,04_experimentos/multiclase/M3_top14_84,66,4
-M4,Poda a 58 atributos y Top-14,historico_exploratorio,04_experimentos/multiclase/M4_top14_58,66,4
-M5,Taxonomía operativa de 11 clases,historico_exploratorio,04_experimentos/multiclase/M5_top11_58,69,4
-M6,10 clases con Request Manipulation,historico_exploratorio,04_experimentos/multiclase/M6_top10_58,116,4
-M7,Tres corpus y 58 atributos,historico_exploratorio,04_experimentos/multiclase/M7_tres_corpus_58,154,7
-M8,Tres corpus y 72 atributos,historico_exploratorio,04_experimentos/multiclase/M8_tres_corpus_72,153,7
-L1,Multietiqueta fixed30; resultado principal job 3151,historico_exploratorio,04_experimentos/multietiqueta/L1_fixed30,93,30
-L1_2625,Variante previa GPU de L1; job 2625,variante_historica,04_experimentos/multietiqueta/L1_fixed30/variantes/job_2625,63,29
-L2,Multietiqueta request90 por grupos; job 3315,resultado_principal_documentado,04_experimentos/multietiqueta/L2_request90,108,28
-EXP73,Extensión posterior de 73 atributos; job 3361,extension_no_incluida_en_libro_y_presentacion,04_experimentos/extensiones/EXP_73_atributos,182,7
-OC,Antecedentes one-class en CSIC,antecedente,04_experimentos/antecedentes/oneclass_csic,37,6
-PRE_MC,Selección multiclase preliminar resultsOptimo,antecedente,04_experimentos/antecedentes/multiclase_resultsOptimo,34,3
-PRE_XGB,Selección multietiqueta preliminar; ganador local XGBoost sin ponderación,antecedente,04_experimentos/antecedentes/multietiqueta_resultsOptimo,72,31
-PRE_LGBM,Selección multietiqueta LightGBM sin ponderación,antecedente,04_experimentos/antecedentes/multietiqueta_lightgbm_none,51,29
-PRE_LGBM_W,Selección multietiqueta LightGBM con ponderaciones; ganador local cuberoot,antecedente,04_experimentos/antecedentes/multietiqueta_lightgbm_weights,51,29
+run_id,title,status,documentation_path,artifact_layout,catalogued_artifacts,published_artifacts,referenced_artifacts,evidence_index
+B1,Ablación binaria RF en CSIC,historico_exploratorio,04_experimentos/README.md#b1,04_experimentos/binario/B1_ablacion_csic,1,0,1,02_auditoria/historial_slurm/REVISION_SLURM_Y_BINARIO.md
+B2,Comparación binaria por corpus,historico_exploratorio,04_experimentos/README.md#b2,04_experimentos/binario/B2_comparacion_corpus,1,0,1,02_auditoria/historial_slurm/REVISION_SLURM_Y_BINARIO.md
+M1,Modelo base de 30 atributos; Harvard 9 familias y TorpEda 10 clases,historico_exploratorio,04_experimentos/README.md#m1,04_experimentos/multiclase/M1_fixed30,58,4,54,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M2,Top-14 de combinaciones CAPEC y 30 atributos,historico_exploratorio,04_experimentos/README.md#m2,04_experimentos/multiclase/M2_top14_30,58,2,56,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M3,Expansión a 84 atributos,historico_exploratorio,04_experimentos/README.md#m3,04_experimentos/multiclase/M3_top14_84,66,2,64,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M4,Poda a 58 atributos y Top-14,historico_exploratorio,04_experimentos/README.md#m4,04_experimentos/multiclase/M4_top14_58,66,5,61,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M5,Taxonomía operativa de 11 clases,historico_exploratorio,04_experimentos/README.md#m5,04_experimentos/multiclase/M5_top11_58,69,5,64,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M6,10 clases con Request Manipulation,historico_exploratorio,04_experimentos/README.md#m6,04_experimentos/multiclase/M6_top10_58,115,35,80,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M7,Tres corpus y 58 atributos,historico_exploratorio,04_experimentos/README.md#m7,04_experimentos/multiclase/M7_tres_corpus_58,154,50,104,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+M8,Tres corpus y 72 atributos,historico_exploratorio,04_experimentos/README.md#m8,04_experimentos/multiclase/M8_tres_corpus_72,153,50,103,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+L1,Multietiqueta fixed30; resultado principal job 3151,historico_exploratorio,04_experimentos/README.md#l1,04_experimentos/multietiqueta/L1_fixed30,93,31,62,02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md
+L1_2625,Variante previa GPU de L1; job 2625,variante_historica,04_experimentos/README.md#l1_2625,04_experimentos/multietiqueta/L1_fixed30/variantes/job_2625,62,1,61,02_auditoria/particiones_y_multietiqueta/S13_L1_2625.md
+L2,Multietiqueta request90 por grupos; job 3315,resultado_principal_documentado,04_experimentos/README.md#l2,04_experimentos/multietiqueta/L2_request90,108,37,71,02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md
+EXP73,Extensión posterior de 73 atributos; job 3361,extension_no_incluida_en_libro_y_presentacion,04_experimentos/README.md#exp73,04_experimentos/extensiones/EXP_73_atributos,182,52,130,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+OC,Antecedentes one-class en CSIC,antecedente,04_experimentos/README.md#oc,04_experimentos/antecedentes/oneclass_csic,37,2,35,02_auditoria/historial_slurm/REVISION_SLURM_Y_BINARIO.md
+PRE_MC,Selección multiclase preliminar resultsOptimo,antecedente,04_experimentos/README.md#pre_mc,04_experimentos/antecedentes/multiclase_resultsOptimo,34,3,31,02_auditoria/datasets_y_multiclase/REVISION_DATASETS_Y_MULTICLASE.md
+PRE_XGB,Selección multietiqueta preliminar; ganador local XGBoost sin ponderación,antecedente,04_experimentos/README.md#pre_xgb,04_experimentos/antecedentes/multietiqueta_resultsOptimo,68,0,68,02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md
+PRE_LGBM,Selección multietiqueta LightGBM sin ponderación,antecedente,04_experimentos/README.md#pre_lgbm,04_experimentos/antecedentes/multietiqueta_lightgbm_none,51,0,51,02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md
+PRE_LGBM_W,Selección multietiqueta LightGBM con ponderaciones; ganador local cuberoot,antecedente,04_experimentos/README.md#pre_lgbm_w,04_experimentos/antecedentes/multietiqueta_lightgbm_weights,51,0,51,02_auditoria/particiones_y_multietiqueta/multietiqueta_evidencia.md
