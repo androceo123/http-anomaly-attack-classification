@@ -32,3 +32,22 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python3 07_reproducibilidad/recuperacion_20261013/recuperar_lote.py --apply
+      - name: Emitir indice compacto para continuar sin repetir transferencias
+        run: |
+          python3 - <<'PY'
+          import base64, hashlib, json, subprocess
+          from pathlib import Path
+          rows = json.loads(Path('07_reproducibilidad/catalogo_archivos.json').read_text(encoding='utf-8'))['physical_files']
+          bits = bytearray((len(rows) + 7) // 8)
+          for i, row in enumerate(rows):
+              if row['availability'] == 'publicado':
+                  bits[i // 8] |= 1 << (i % 8)
+          order = json.dumps([[int(r['bytes']), r['sha256']] for r in rows], separators=(',', ':')).encode()
+          print('RECOVERY_AVAILABILITY=' + json.dumps({
+              'commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip(),
+              'entries': len(rows),
+              'identity_order_sha256': hashlib.sha256(order).hexdigest(),
+              'availability_bits_base64': base64.b64encode(bits).decode(),
+              'bit_order': 'least-significant-bit-first; catalog physical_files order'
+          }, separators=(',', ':')))
+          PY
