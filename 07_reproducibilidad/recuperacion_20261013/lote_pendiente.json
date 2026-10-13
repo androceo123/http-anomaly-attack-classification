@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "batch_id": "002",
-  "expected_parent": "fdad9802d860f9d9dbb40d1742df50ac6df1c3dd",
-  "historical_objects": [
-    {"sha": "733fd787f8a05375c92c99901aabd0d43775885e"},
-    {"sha": "b139b1ae5d4a223a4a212de87cfc394dd72b0766"},
-    {"sha": "fdb00e7663dcf45ddad15a8ff8d5950c28e8d9e8"},
-    {"sha": "eaa4de6133d5e8ed0b58673436c3d4fdb46a7aa6"}
+  "batch_id": "003",
+  "expected_parent": "65a1da17e1c38a77d10502fd8b9040a02c7eaf8a",
+  "historical_objects": [],
+  "payload_objects": [
+    {
+      "sha": "8f6d22f0a1091fa2e18e529f6771aa30d9f5119e",
+      "sha256": "7ca7a4fb764c876ca500d164efc942a17424c496757861e490e43b374ec65653"
+    }
   ],
-  "payload_objects": [],
-  "purpose": "Restore only catalog-matching historical bytes, preserve distinct existing files, reconcile actual availability, and record unresolved artifacts. Do not execute experimental code or deserialize models."
+  "purpose": "Recover eight original M3 source identities, validate against the current catalog, preserve existing distinct content, and reconcile the published repository."
 }
