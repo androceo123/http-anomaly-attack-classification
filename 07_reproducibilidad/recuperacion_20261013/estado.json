@@ -5,11 +5,11 @@
   "rama_destino": "main",
   "commit_base_verificado": "5971fd2ccf49bf294e257f9c281520a9ce5aba16",
   "commit_inicio_reanudacion": "b7f986dfd078942d23a50ec2f3b65af08eeaca62",
-  "ultimo_commit_artefactos_verificado": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
+  "ultimo_commit_artefactos_verificado": "26860ac125a100bb684a4cd479466d8b801d1e29",
   "estado": "recuperacion_parcial_publicada",
   "solicitud": "Recuperar y publicar los artefactos historicos faltantes, incluidos modelos y checkpoints, con lotes reanudables.",
-  "artefactos_experimentales_publicados_en_esta_recuperacion": 10,
-  "bytes_experimentales_publicados": 19167,
+  "artefactos_experimentales_publicados_en_esta_recuperacion": 18,
+  "bytes_experimentales_publicados": 24247,
   "archivos_internos_cotejados_en_esta_recuperacion": 2545,
   "identidades_unicas_cotejadas": 1232,
   "nota_conteo_fuentes": "2545 son ocurrencias verificadas entre siete entregas, incluido un paquete organizado anterior; no son archivos nuevos publicados.",
@@ -71,6 +71,15 @@
       "manifest": "07_reproducibilidad/recuperacion_20261013/lote_002.csv",
       "verificacion": "Tamano, SHA-256 e identidad Git recalculados sobre los objetos del commit.",
       "reporte": "07_reproducibilidad/recuperacion_20261013/verificacion_002.json"
+    },
+    {
+      "lote": "003",
+      "commit": "26860ac125a100bb684a4cd479466d8b801d1e29",
+      "artefactos": 8,
+      "bytes": 5080,
+      "manifest": "07_reproducibilidad/recuperacion_20261013/lote_003.csv",
+      "verificacion": "Tamano, SHA-256 e identidad Git recalculados sobre los objetos del commit.",
+      "reporte": "07_reproducibilidad/recuperacion_20261013/verificacion_003.json"
     }
   ],
   "catalogos_generales_reconciliados": true,
@@ -92,8 +101,8 @@
     "Actualizar este estado y el documento privado despues de cada lote.",
     "Separar recuperados, ya presentes, ausentes, exclusiones acordadas y bloqueos de almacenamiento."
   ],
-  "archivos_publicados_en_esta_recuperacion": 14,
-  "bytes_publicados_en_esta_recuperacion": 9221323,
+  "archivos_publicados_en_esta_recuperacion": 22,
+  "bytes_publicados_en_esta_recuperacion": 9226403,
   "catalogos_reconciliados": [
     "07_reproducibilidad/catalogo_archivos.json",
     "07_reproducibilidad/artefactos_externos.csv",
@@ -101,7 +110,7 @@
     "07_reproducibilidad/manifest_repositorio.json"
   ],
   "inventario_historico_preservado": true,
-  "ultima_verificacion": "07_reproducibilidad/recuperacion_20261013/verificacion_002.json",
-  "pendientes_actuales": "07_reproducibilidad/recuperacion_20261013/pendientes_002.csv",
-  "fecha_verificacion": "2026-10-13T16:56:53.760571+00:00"
+  "ultima_verificacion": "07_reproducibilidad/recuperacion_20261013/verificacion_003.json",
+  "pendientes_actuales": "07_reproducibilidad/recuperacion_20261013/pendientes_003.csv",
+  "fecha_verificacion": "2026-10-13T17:09:18.096126+00:00"
 }

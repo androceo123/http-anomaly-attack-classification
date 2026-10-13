@@ -1,20 +1,21 @@
 {
   "schema_version": 1,
   "revision_date": "2026-10-13",
-  "base_commit": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
+  "base_commit": "26860ac125a100bb684a4cd479466d8b801d1e29",
   "scope": "Archivos publicados tras la recuperacion verificada; no implica que todos los artefactos historicos esten disponibles.",
   "algorithm": "SHA-256",
   "excluded_paths": [
     "07_reproducibilidad/manifest_repositorio.json",
     "07_reproducibilidad/recuperacion_20261013/verificacion_002.json",
+    "07_reproducibilidad/recuperacion_20261013/verificacion_003.json",
     "07_reproducibilidad/verificacion_integridad_local.json"
   ],
   "exclusion_reason": "Se excluyen el manifiesto y su informe para evitar referencias circulares.",
   "files": [
     {
       "path": ".github/workflows/recuperacion_artefactos.yml",
-      "bytes": 1117,
-      "sha256": "d5976fd946a9b59994acddf28c64984bc33afe545070bddc5854e5079fb007d3"
+      "bytes": 2225,
+      "sha256": "2a065a1dc972afa40b58cfe02b82dce9fdb16cd738ac9a51d1ef1580e23c8840"
     },
     {
       "path": ".gitignore",
@@ -2432,6 +2433,21 @@
       "sha256": "3a9d0bf847c1e89487f657d5c8d0a0b4825edd5abdd7beb5790e79beedca6201"
     },
     {
+      "path": "04_experimentos/antecedentes/multiclase_resultsOptimo/artefactos/resultsOptimo/torpeda/multiclass/label_distribution.csv",
+      "bytes": 204,
+      "sha256": "6c8373d9f091d8a126b98f4660d8a8f5bfe54c0f04a0dac125b239aaca3c015d"
+    },
+    {
+      "path": "04_experimentos/extensiones/EXP_73_atributos/artefactos/multiclase/torpeda/dataset_filtering_report.json",
+      "bytes": 1083,
+      "sha256": "e6e0a1737ea8b54f6d0176e3d801a527e0fb7a7bea0788696b2e10ff7e595028"
+    },
+    {
+      "path": "04_experimentos/multiclase/M2_top14_30/artefactos/multiclase/harvard/label_distribution.csv",
+      "bytes": 609,
+      "sha256": "e13b481147845e5e00726fff7d007d31ee8a998d809e6a785f81f181e3bfa25b"
+    },
+    {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/last_invocation.json",
       "bytes": 1721,
       "sha256": "c4335d45dee1d0fa41c2493eda674d167d78e1d23ab9b6cb90b477556317d8b9"
@@ -2480,6 +2496,31 @@
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
       "bytes": 1353,
       "sha256": "fa40f89f67a893f6884065d16c21e10ae2654cfd7a0a9a527b384fed175d0bac"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/torpeda/binary_normal_vs_attack_metrics.csv",
+      "bytes": 475,
+      "sha256": "6147ac08ae50e8cdc0dd11eba857b3f9ce618af5f38b07f490ebe56fcfcec24f"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/torpeda/binary_normal_vs_attack_metrics.json",
+      "bytes": 641,
+      "sha256": "fd675dceb434f901fd4054cd063226f6f945b12948076a9303f1ae982c7eb6f1"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/torpeda/classification_report_test.csv",
+      "bytes": 743,
+      "sha256": "2a4b8fedd6b00c4affd8fb0d8a7b5facf34a520b4c38a8e03445ab66b94e5e7e"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/torpeda/confusion_matrix_test.csv",
+      "bytes": 524,
+      "sha256": "017429e422dfc1984f540bd7d04b4b76b2844c57d9f689dac4f3b519b1cae6e1"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/torpeda/confusion_matrix_test_normalized_true.csv",
+      "bytes": 801,
+      "sha256": "290617b66188b722ea9635a89934fe38fad228c4f546707e9b8efc739b6974a6"
     },
     {
       "path": "05_codigo/README.md",
@@ -2899,7 +2940,7 @@
     {
       "path": "06_resultados_consolidados/catalogo_corridas.csv",
       "bytes": 4315,
-      "sha256": "029891a50ef44d78ad9246d881df211de0d88e4d75d10f4c1cbfd0e08639e7f7"
+      "sha256": "b50bb8053bb86817133b586b3487a20742bd78cbc91a4cc75f96dc8ed393e2c8"
     },
     {
       "path": "06_resultados_consolidados/configuraciones_y_metricas_S07.json",
@@ -2929,17 +2970,17 @@
     {
       "path": "07_reproducibilidad/artefactos_externos.csv",
       "bytes": 102565,
-      "sha256": "634d82089a9cefefa4bc38b02b388753acade3cef14d2b0e546ad4f4453e7a6b"
+      "sha256": "edd1fc522da6b62c7c00ac105120b3ebdc483436c8cbd39dd0830a0a8ff95983"
     },
     {
       "path": "07_reproducibilidad/catalogo_archivos.json",
-      "bytes": 811224,
-      "sha256": "a6ae9b3499517028a343ea7dcb3f1cfb343475738cc8fd9f6c9f43638cfc7709"
+      "bytes": 813659,
+      "sha256": "8323fc741b13f7490a4bc9e9389e6c473800a897ab30f54405e2340569f79dfa"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/estado.json",
-      "bytes": 6006,
-      "sha256": "e648bb7a8087652488f3d3a18f85dbe39ae9e95cc02e60821a1c4a0cf640d6d8"
+      "bytes": 6403,
+      "sha256": "3aca778d08c85dfb4f40642910464e254b324cd7d911a298472985f958965be9"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/lote_001.csv",
@@ -2952,14 +2993,24 @@
       "sha256": "21c2117240c9356edc4f3eff5fb057a7288522e0ad02a2e26d650af9d295aa90"
     },
     {
+      "path": "07_reproducibilidad/recuperacion_20261013/lote_003.csv",
+      "bytes": 2506,
+      "sha256": "edace6738c86f5dc1b25e0b5a7e14afe8369ca442df3d7b631c6369d9e05c45c"
+    },
+    {
       "path": "07_reproducibilidad/recuperacion_20261013/lote_pendiente.json",
-      "bytes": 613,
-      "sha256": "d26eb981040d596edbe06e3771568debf3152b20b7063442e89b78c0951f7fab"
+      "bytes": 495,
+      "sha256": "4ca0ba895f55936c60e1e302fe0f1819a6625712914df02bea87171be2d3dd0e"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/pendientes_002.csv",
       "bytes": 248181,
       "sha256": "c142054588eb316d811877314d61573d455bd6019324ad04f376dc40391737c6"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/pendientes_003.csv",
+      "bytes": 242980,
+      "sha256": "f7683bb43c764f1d0455b0923fef8364caeddd94c8098dc7db46da413f731383"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/recuperar_lote.py",
