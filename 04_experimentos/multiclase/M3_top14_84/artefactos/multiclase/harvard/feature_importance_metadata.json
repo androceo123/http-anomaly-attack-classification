@@ -1,0 +1,63 @@
+{
+  "created_at": "2026-06-20T11:32:42-04:00",
+  "method": "permutation_importance + univariate_eta2",
+  "global_permutation_scoring": "f1_macro",
+  "global_n_repeats": 5,
+  "per_class_enabled": true,
+  "per_class_n_repeats": 3,
+  "binary_normal_attack_enabled": true,
+  "binary_n_repeats": 3,
+  "max_rows": 10000,
+  "fi_rows_effective": 10000,
+  "sampled": true,
+  "min_rows_per_class_requested": 200,
+  "sample_class_counts": {
+    "0": 334,
+    "1": 204,
+    "2": 167,
+    "3": 681,
+    "4": 291,
+    "5": 241,
+    "6": 203,
+    "7": 216,
+    "8": 212,
+    "9": 352,
+    "10": 2227,
+    "11": 214,
+    "12": 209,
+    "13": 4449
+  },
+  "n_features": 84,
+  "feature_policy": "optimized84_intra_request",
+  "feature_set_version": "corrida3_optimized84_v1",
+  "permutation_error": null,
+  "per_class_errors": {
+    "HARVARD-CAPEC126_PathTraversal": null,
+    "HARVARD-CAPEC153_InputDataManipulation": null,
+    "HARVARD-CAPEC16_DictionaryPasswordAttack": null,
+    "HARVARD-CAPEC194_FakeSourceData": null,
+    "HARVARD-CAPEC242_CodeInjection": null,
+    "HARVARD-CAPEC272_ProtocolManipulation": null,
+    "HARVARD-CAPEC272_ProtocolManipulation__CAPEC274_HTTPVerbTampering": null,
+    "HARVARD-CAPEC274_HTTPVerbTampering": null,
+    "HARVARD-CAPEC310_VulnerabilityScanning": null,
+    "HARVARD-CAPEC34_HTTPResponseSplitting": null,
+    "HARVARD-CAPEC66_SQLInjection": null,
+    "HARVARD-CAPEC88_OSCommandInjection": null,
+    "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": null,
+    "NORMAL": null
+  },
+  "binary_errors": {
+    "binary_attack_f1": null,
+    "binary_normal_f1": null
+  },
+  "artifacts": {
+    "feature_importance": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance.csv",
+    "feature_importance_permutation": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance_permutation.csv",
+    "feature_importance_univariate_eta2": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance_univariate_eta2.csv",
+    "feature_importance_per_class": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance_per_class.csv",
+    "feature_importance_per_class_top20": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance_per_class_top20.csv",
+    "feature_importance_binary_normal_vs_attack": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/feature_importance_binary_normal_vs_attack.csv",
+    "features_used": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/features_used.csv"
+  }
+}

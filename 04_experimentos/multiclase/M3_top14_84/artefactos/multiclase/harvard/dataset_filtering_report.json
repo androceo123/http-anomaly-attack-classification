@@ -1,0 +1,85 @@
+{
+  "dataset": "harvard",
+  "rows_before": 907815,
+  "class_distribution_before": {
+    "NORMAL": 525195,
+    "HARVARD-CAPEC66_SQLInjection": 248093,
+    "HARVARD-CAPEC194_FakeSourceData": 55983,
+    "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+    "HARVARD-CAPEC126_PathTraversal": 17595,
+    "HARVARD-CAPEC242_CodeInjection": 13793,
+    "HARVARD-CAPEC272_ProtocolManipulation": 7019,
+    "HARVARD-IGNORED_NOT_TOP14_COMBO": 5404,
+    "HARVARD-CAPEC274_HTTPVerbTampering": 4055,
+    "HARVARD-CAPEC88_OSCommandInjection": 3074,
+    "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+    "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+    "HARVARD-CAPEC153_InputDataManipulation": 1387,
+    "HARVARD-CAPEC272_ProtocolManipulation__CAPEC274_HTTPVerbTampering": 1370,
+    "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+  },
+  "operations": [
+    {
+      "op": "harvard_top14_combo_filter",
+      "removed_rows": 5404,
+      "allowed_labels": [
+        "HARVARD-CAPEC126_PathTraversal",
+        "HARVARD-CAPEC153_InputDataManipulation",
+        "HARVARD-CAPEC16_DictionaryPasswordAttack",
+        "HARVARD-CAPEC194_FakeSourceData",
+        "HARVARD-CAPEC242_CodeInjection",
+        "HARVARD-CAPEC272_ProtocolManipulation",
+        "HARVARD-CAPEC272_ProtocolManipulation__CAPEC274_HTTPVerbTampering",
+        "HARVARD-CAPEC274_HTTPVerbTampering",
+        "HARVARD-CAPEC310_VulnerabilityScanning",
+        "HARVARD-CAPEC34_HTTPResponseSplitting",
+        "HARVARD-CAPEC66_SQLInjection",
+        "HARVARD-CAPEC88_OSCommandInjection",
+        "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal",
+        "NORMAL"
+      ],
+      "allowed_combo_keys": [
+        "NORMAL",
+        "CAPEC-66",
+        "CAPEC-194",
+        "CAPEC-34",
+        "CAPEC-126",
+        "CAPEC-242",
+        "CAPEC-272",
+        "CAPEC-274",
+        "CAPEC-88",
+        "CAPEC-88+CAPEC-126",
+        "CAPEC-310",
+        "CAPEC-153",
+        "CAPEC-272+CAPEC-274",
+        "CAPEC-16"
+      ],
+      "ignored_combination_count": 46,
+      "allowed_classes_path": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
+      "ignored_combinations_path": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles/multiclase/harvard/harvard_ignored_non_top14_combinations.csv"
+    },
+    {
+      "op": "min_class_count",
+      "min_class_count": 20,
+      "removed_rows": 0,
+      "dropped_classes": []
+    }
+  ],
+  "rows_after": 902411,
+  "class_distribution_after": {
+    "NORMAL": 525195,
+    "HARVARD-CAPEC66_SQLInjection": 248093,
+    "HARVARD-CAPEC194_FakeSourceData": 55983,
+    "HARVARD-CAPEC34_HTTPResponseSplitting": 19134,
+    "HARVARD-CAPEC126_PathTraversal": 17595,
+    "HARVARD-CAPEC242_CodeInjection": 13793,
+    "HARVARD-CAPEC272_ProtocolManipulation": 7019,
+    "HARVARD-CAPEC274_HTTPVerbTampering": 4055,
+    "HARVARD-CAPEC88_OSCommandInjection": 3074,
+    "HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal": 2464,
+    "HARVARD-CAPEC310_VulnerabilityScanning": 2413,
+    "HARVARD-CAPEC153_InputDataManipulation": 1387,
+    "HARVARD-CAPEC272_ProtocolManipulation__CAPEC274_HTTPVerbTampering": 1370,
+    "HARVARD-CAPEC16_DictionaryPasswordAttack": 836
+  }
+}

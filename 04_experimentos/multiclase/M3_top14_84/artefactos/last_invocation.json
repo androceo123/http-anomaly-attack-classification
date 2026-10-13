@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-06-20T10:44:38-04:00",
+  "dependency_check": {
+    "missing": [],
+    "parquet_available": true,
+    "python": "/home_data/aroman/TFG/waf-ml-starter/.venv/bin/python"
+  },
+  "args": {
+    "dataset": "both",
+    "project_dir": "/home_data/aroman/TFG/waf-ml-starter",
+    "definitivo_dir": "/home_data/aroman/TFG/waf-ml-starter/corrida3mejoresResultadosPosibles",
+    "inputs": null,
+    "torpeda_inputs": [
+      "/home_data/aroman/TFG/waf-ml-starter/data/raw/torpeda"
+    ],
+    "harvard_inputs": [
+      "/home_data/aroman/TFG/waf-ml-starter/data/raw/harvard"
+    ],
+    "output_dir": null,
+    "sample_n": 0,
+    "keep_absolute_uri": false,
+    "torpeda_only_common_labels": true,
+    "torpeda_min_class_count": 0,
+    "harvard_min_class_count": 20,
+    "max_normal_rows": 0,
+    "keep_labels_regex": "",
+    "drop_labels_regex": "",
+    "sep": "auto",
+    "method_col": "request_http_method",
+    "uri_col": "request_http_request",
+    "body_col": "request_body",
+    "normal_col": "000 - Normal",
+    "label_cols": "",
+    "harvard_label_mode": "top14-combo",
+    "harvard_multiclass_strategy": "severity",
+    "test_size": 0.2,
+    "seed": 42,
+    "histgb_preset": "max",
+    "sample_weight_mode": "",
+    "sample_weight_clip": 20.0,
+    "use_gpu": "auto",
+    "feature_workers": 8,
+    "feature_chunksize": 256,
+    "operational_max_rows": 0,
+    "fi_n_repeats": 5,
+    "fi_max_rows": 10000,
+    "fi_scoring": "f1_macro",
+    "fi_n_jobs": 1,
+    "fi_min_rows_per_class": 200,
+    "fi_per_class": true,
+    "fi_per_class_n_repeats": 3,
+    "fi_per_class_n_jobs": 1,
+    "fi_binary_normal_attack": true,
+    "fi_binary_n_repeats": 3,
+    "clean_output_dir": true,
+    "check_only": false
+  }
+}

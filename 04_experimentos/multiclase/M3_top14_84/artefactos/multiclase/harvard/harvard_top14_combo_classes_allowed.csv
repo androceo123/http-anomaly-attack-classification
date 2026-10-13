@@ -1,0 +1,15 @@
+rank,label_multiclass,combo_key,capec_ids,display,expected_count_full_dataset
+1,NORMAL,NORMAL,0,Sin ataque / Normal,525195
+2,HARVARD-CAPEC66_SQLInjection,CAPEC-66,66,66 - SQL Injection,248093
+3,HARVARD-CAPEC194_FakeSourceData,CAPEC-194,194,194 - Fake the Source of Data,55983
+4,HARVARD-CAPEC34_HTTPResponseSplitting,CAPEC-34,34,34 - HTTP Response Splitting,19134
+5,HARVARD-CAPEC126_PathTraversal,CAPEC-126,126,126 - Path Traversal,17595
+6,HARVARD-CAPEC242_CodeInjection,CAPEC-242,242,242 - Code Injection,13793
+7,HARVARD-CAPEC272_ProtocolManipulation,CAPEC-272,272,272 - Protocol Manipulation,7019
+8,HARVARD-CAPEC274_HTTPVerbTampering,CAPEC-274,274,274 - HTTP Verb Tampering,4055
+9,HARVARD-CAPEC88_OSCommandInjection,CAPEC-88,88,88 - OS Command Injection,3074
+10,HARVARD-CAPEC88_OSCommandInjection__CAPEC126_PathTraversal,CAPEC-88+CAPEC-126,88 + 126,88 - OS Command Injection + 126 - Path Traversal,2464
+11,HARVARD-CAPEC310_VulnerabilityScanning,CAPEC-310,310,310 - Scanning for Vulnerable Software,2413
+12,HARVARD-CAPEC153_InputDataManipulation,CAPEC-153,153,153 - Input Data Manipulation,1387
+13,HARVARD-CAPEC272_ProtocolManipulation__CAPEC274_HTTPVerbTampering,CAPEC-272+CAPEC-274,272 + 274,272 - Protocol Manipulation + 274 - HTTP Verb Tampering,1370
+14,HARVARD-CAPEC16_DictionaryPasswordAttack,CAPEC-16,16,16 - Dictionary-based Password Attack,836
