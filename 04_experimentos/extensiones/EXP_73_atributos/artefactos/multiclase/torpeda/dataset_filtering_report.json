@@ -1,0 +1,47 @@
+{
+  "dataset": "torpeda",
+  "rows_before": 74133,
+  "class_distribution_before": {
+    "TORPEDA-SQLi": 43013,
+    "TORPEDA-ANOMALOUS": 16459,
+    "NORMAL": 8363,
+    "TORPEDA-XSS": 4818,
+    "TORPEDA-SSI": 451,
+    "TORPEDA-BufferOverflow": 412,
+    "TORPEDA-CRLFi": 327,
+    "TORPEDA-XPath": 175,
+    "TORPEDA-LDAPi": 74,
+    "TORPEDA-FormatString": 41
+  },
+  "operations": [
+    {
+      "op": "torpeda_only_common_labels",
+      "removed_rows": 0,
+      "allowed_labels": [
+        "NORMAL",
+        "TORPEDA-ANOMALOUS",
+        "TORPEDA-BufferOverflow",
+        "TORPEDA-CRLFi",
+        "TORPEDA-FormatString",
+        "TORPEDA-LDAPi",
+        "TORPEDA-SQLi",
+        "TORPEDA-SSI",
+        "TORPEDA-XPath",
+        "TORPEDA-XSS"
+      ]
+    }
+  ],
+  "rows_after": 74133,
+  "class_distribution_after": {
+    "TORPEDA-SQLi": 43013,
+    "TORPEDA-ANOMALOUS": 16459,
+    "NORMAL": 8363,
+    "TORPEDA-XSS": 4818,
+    "TORPEDA-SSI": 451,
+    "TORPEDA-BufferOverflow": 412,
+    "TORPEDA-CRLFi": 327,
+    "TORPEDA-XPath": 175,
+    "TORPEDA-LDAPi": 74,
+    "TORPEDA-FormatString": 41
+  }
+}
