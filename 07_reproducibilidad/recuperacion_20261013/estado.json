@@ -5,7 +5,7 @@
   "rama_destino": "main",
   "commit_base_verificado": "5971fd2ccf49bf294e257f9c281520a9ce5aba16",
   "commit_inicio_reanudacion": "b7f986dfd078942d23a50ec2f3b65af08eeaca62",
-  "ultimo_commit_artefactos_verificado": "d33b0ddde770cbbbebaa6116f498ffca4551cc3a",
+  "ultimo_commit_artefactos_verificado": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
   "estado": "recuperacion_parcial_publicada",
   "solicitud": "Recuperar y publicar los artefactos historicos faltantes, incluidos modelos y checkpoints, con lotes reanudables.",
   "artefactos_experimentales_publicados_en_esta_recuperacion": 10,
@@ -24,8 +24,15 @@
   "fuentes": {
     "coleccion_adicional": "S13",
     "entregas_localizadas": 3,
-    "tamanos_bytes_de_las_entregas": [258228002, 221019551, 536315323],
-    "partes_leidas_y_verificadas": [1, 2],
+    "tamanos_bytes_de_las_entregas": [
+      258228002,
+      221019551,
+      536315323
+    ],
+    "partes_leidas_y_verificadas": [
+      1,
+      2
+    ],
     "ocurrencias_en_partes_1_y_2": 367,
     "contenidos_internos_verificados": false,
     "nota": "Las partes 1 y 2 son archivos independientes validos; la tercera no se descargo. No se concatena por el nombre.",
@@ -55,9 +62,18 @@
       "arbol_experimentos_verificado": "1ed3885ebb638ea8847fb992ad00f9a2b0d530de",
       "verificacion": "Tamanos y SHA-256 calculados sobre los bytes fuente y cotejados con el inventario. Identidades Git de esos mismos bytes reconstruidas localmente; el arbol de 04_experimentos retornado por GitHub coincide exactamente. Manifiesto releido desde main con identidad Git coincidente.",
       "actualizacion_rama": "fast-forward con expected_sha; sin force-push"
+    },
+    {
+      "lote": "002",
+      "commit": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
+      "artefactos": 4,
+      "bytes": 9202156,
+      "manifest": "07_reproducibilidad/recuperacion_20261013/lote_002.csv",
+      "verificacion": "Tamano, SHA-256 e identidad Git recalculados sobre los objetos del commit.",
+      "reporte": "07_reproducibilidad/recuperacion_20261013/verificacion_002.json"
     }
   ],
-  "catalogos_generales_reconciliados": false,
+  "catalogos_generales_reconciliados": true,
   "criterios": [
     "Conservar los bytes historicos; no reentrenar, deserializar modelos ni ejecutar codigo de las fuentes para recuperarlos.",
     "No eliminar originales ni excluir todos los archivos .joblib, .partial o checkpoints por extension.",
@@ -67,7 +83,7 @@
     "No sobrescribir un archivo diferente ni alterar resultados, codigo historico o evidencias Slurm.",
     "Revisar archivos grandes y posibles secretos antes de publicar; no habilitar cargos ni exponer ubicaciones privadas."
   ],
-  "siguiente_paso": "Releer HEAD y los manifiestos de lotes, continuar los faltantes verificados de las fuentes disponibles y resolver por separado los binarios grandes y la tercera entrega. Reconciliar el catalogo y el manifiesto general con los archivos efectivamente presentes, sin ocultar pendientes.",
+  "siguiente_paso": "Contrastar pendientes contra las fuentes restantes. Un archivo ausente de estas fuentes no se declara perdido; no se alteran ni se ocultan identidades historicas.",
   "protocolo_reanudacion": [
     "Consultar HEAD actual y verificar los commits confirmados; no asumir que sigue en este estado.",
     "Usar el documento privado de continuidad para recuperar fuentes e indices sin publicar sus ubicaciones.",
@@ -75,5 +91,17 @@
     "Publicar un commit por lote, sin force-push; verificar antes de confirmarlo.",
     "Actualizar este estado y el documento privado despues de cada lote.",
     "Separar recuperados, ya presentes, ausentes, exclusiones acordadas y bloqueos de almacenamiento."
-  ]
+  ],
+  "archivos_publicados_en_esta_recuperacion": 14,
+  "bytes_publicados_en_esta_recuperacion": 9221323,
+  "catalogos_reconciliados": [
+    "07_reproducibilidad/catalogo_archivos.json",
+    "07_reproducibilidad/artefactos_externos.csv",
+    "06_resultados_consolidados/catalogo_corridas.csv",
+    "07_reproducibilidad/manifest_repositorio.json"
+  ],
+  "inventario_historico_preservado": true,
+  "ultima_verificacion": "07_reproducibilidad/recuperacion_20261013/verificacion_002.json",
+  "pendientes_actuales": "07_reproducibilidad/recuperacion_20261013/pendientes_002.csv",
+  "fecha_verificacion": "2026-10-13T16:56:53.760571+00:00"
 }

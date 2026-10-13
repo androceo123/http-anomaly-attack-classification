@@ -1,15 +1,21 @@
 {
   "schema_version": 1,
-  "revision_date": "2026-10-11",
-  "base_commit": "483f3db5c64153ae075700d7285f9cea467ec59d",
-  "scope": "Archivos publicados de esta revisión de código, documentación y evidencia experimental.",
+  "revision_date": "2026-10-13",
+  "base_commit": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
+  "scope": "Archivos publicados tras la recuperacion verificada; no implica que todos los artefactos historicos esten disponibles.",
   "algorithm": "SHA-256",
   "excluded_paths": [
     "07_reproducibilidad/manifest_repositorio.json",
+    "07_reproducibilidad/recuperacion_20261013/verificacion_002.json",
     "07_reproducibilidad/verificacion_integridad_local.json"
   ],
   "exclusion_reason": "Se excluyen el manifiesto y su informe para evitar referencias circulares.",
   "files": [
+    {
+      "path": ".github/workflows/recuperacion_artefactos.yml",
+      "bytes": 1117,
+      "sha256": "d5976fd946a9b59994acddf28c64984bc33afe545070bddc5854e5079fb007d3"
+    },
     {
       "path": ".gitignore",
       "bytes": 262,
@@ -19,6 +25,21 @@
       "path": "01_documentacion/README.md",
       "bytes": 2340,
       "sha256": "839e84c835ef236b8c998a83dc881bccc529d1120a59b97c4d2b052c73f1bdbf"
+    },
+    {
+      "path": "01_documentacion/bibliografia_consulta/Raul_Sidnei_Metodologia.pdf",
+      "bytes": 1368457,
+      "sha256": "28a6549014d3b19d60bdf2349e703b0a714a206ef8dcea86dde45d9bb6bb3f27"
+    },
+    {
+      "path": "01_documentacion/bibliografia_consulta/libroNicoRalf.pdf",
+      "bytes": 3448577,
+      "sha256": "e0a34bce8dbeb7e838b6693451e1aa19593030ae5ac256f9e3e2f660846a3689"
+    },
+    {
+      "path": "01_documentacion/bibliografia_consulta/seminario_investigacion.pdf",
+      "bytes": 4384418,
+      "sha256": "806e498f228430ac5f9afca9d853d8311fde18978a74aef63522ac042b290c82"
     },
     {
       "path": "01_documentacion/catalogos/catalogo_libro.json",
@@ -34,6 +55,11 @@
       "path": "01_documentacion/catalogos/referencias_presentacion.csv",
       "bytes": 1929,
       "sha256": "c7515ee7fb26efee1c7fa868136c3041307b0694723dbd9049eb4d3c2ced34fb"
+    },
+    {
+      "path": "01_documentacion/historial/base_tfg/.gitignore",
+      "bytes": 704,
+      "sha256": "27bb761de4dcdae912a97ae869dfd724590556dbe4974d8c662c5924a4b9091e"
     },
     {
       "path": "01_documentacion/historial/base_tfg/Justificaciones/Logistic Regression multiclase/Explicacion ML multiclase",
@@ -2406,6 +2432,56 @@
       "sha256": "3a9d0bf847c1e89487f657d5c8d0a0b4825edd5abdd7beb5790e79beedca6201"
     },
     {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/last_invocation.json",
+      "bytes": 1721,
+      "sha256": "c4335d45dee1d0fa41c2493eda674d167d78e1d23ab9b6cb90b477556317d8b9"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "bytes": 486,
+      "sha256": "4a46eb81c3662bbed03ff9feeb8542d865f79059fe5918814488280365106d77"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "bytes": 652,
+      "sha256": "981295f0660c0de4dbaf0a089d0357e9348774dc6e08fece1d287b4dd25f75c8"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.csv",
+      "bytes": 1628,
+      "sha256": "15e441b23dc7cb4321ee4298edf7549317e28b25d6b37f7334d3ddbd7af68bba"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.json",
+      "bytes": 2776,
+      "sha256": "7a278631ad1add0d8e81b293cd4cf8e3c41f3435e31c10a7964c9b49cef4c76a"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test.csv",
+      "bytes": 1514,
+      "sha256": "a713d3f70e8f1e055c011df8407e4cac0bdcea58a595a741776e867000b44402"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test_normalized_true.csv",
+      "bytes": 3009,
+      "sha256": "9b955033a837cb1bac77c02c8aa577969d9ce4aa0c5769e4e2b66a7eab375b75"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/dataset_filtering_report.json",
+      "bytes": 3266,
+      "sha256": "3210c6f6a06580f719e394ecbc4b57f988ea846c26f8bafde56fab75413adb83"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/feature_importance_metadata.json",
+      "bytes": 2762,
+      "sha256": "a04197f4026d124fe18a16cb7fadb0c212c567edd33fa06e451a8581cf7846ce"
+    },
+    {
+      "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
+      "bytes": 1353,
+      "sha256": "fa40f89f67a893f6884065d16c21e10ae2654cfd7a0a9a527b384fed175d0bac"
+    },
+    {
       "path": "05_codigo/README.md",
       "bytes": 3673,
       "sha256": "1913e7a2d94f7169d26b9608d4cfbc838eb1e51d4acb420954b76269557918fb"
@@ -2822,8 +2898,8 @@
     },
     {
       "path": "06_resultados_consolidados/catalogo_corridas.csv",
-      "bytes": 4314,
-      "sha256": "f8e14d02ea27da31ce87c4ee6fcb6dcfd2c32d88bce7be57eca5dd74f99a77e2"
+      "bytes": 4315,
+      "sha256": "029891a50ef44d78ad9246d881df211de0d88e4d75d10f4c1cbfd0e08639e7f7"
     },
     {
       "path": "06_resultados_consolidados/configuraciones_y_metricas_S07.json",
@@ -2852,13 +2928,43 @@
     },
     {
       "path": "07_reproducibilidad/artefactos_externos.csv",
-      "bytes": 102164,
-      "sha256": "201fae432da98f22ab03e218952e21074135d4bf4db7e2a0b174d5554da81213"
+      "bytes": 102565,
+      "sha256": "634d82089a9cefefa4bc38b02b388753acade3cef14d2b0e546ad4f4453e7a6b"
     },
     {
       "path": "07_reproducibilidad/catalogo_archivos.json",
-      "bytes": 809938,
-      "sha256": "111ecfddbb7acc94454c69e82514ce27d6269d1eb053a0af873b1ea29a144009"
+      "bytes": 811224,
+      "sha256": "a6ae9b3499517028a343ea7dcb3f1cfb343475738cc8fd9f6c9f43638cfc7709"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/estado.json",
+      "bytes": 6006,
+      "sha256": "e648bb7a8087652488f3d3a18f85dbe39ae9e95cc02e60821a1c4a0cf640d6d8"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/lote_001.csv",
+      "bytes": 2192,
+      "sha256": "74f30cd1393ddb0405c95185a384689fd442be90b4968f33a2a4d9f5bdeede0b"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/lote_002.csv",
+      "bytes": 1109,
+      "sha256": "21c2117240c9356edc4f3eff5fb057a7288522e0ad02a2e26d650af9d295aa90"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/lote_pendiente.json",
+      "bytes": 613,
+      "sha256": "d26eb981040d596edbe06e3771568debf3152b20b7063442e89b78c0951f7fab"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/pendientes_002.csv",
+      "bytes": 248181,
+      "sha256": "c142054588eb316d811877314d61573d455bd6019324ad04f376dc40391737c6"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/recuperar_lote.py",
+      "bytes": 20090,
+      "sha256": "e0846058accc8e0d630552796b9270713fd164915870bb025f902e8a1281b599"
     },
     {
       "path": "07_reproducibilidad/requirements_auditoria.txt",

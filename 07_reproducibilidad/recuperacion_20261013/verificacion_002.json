@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-13T16:56:53.760571+00:00",
+  "source_commit": "c6fa6ae2570f1e64dd0d4b0b2d96b0847fbb5e5b",
+  "artifact_commit": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56",
+  "batch": "002",
+  "new_files": 4,
+  "new_bytes": 9202156,
+  "total_recovered_files": 14,
+  "checked": 595,
+  "passed": 595,
+  "failures": [],
+  "catalogued_entries": 1798,
+  "available_catalogued_entries": 658,
+  "unavailable_catalogued_entries": 1140,
+  "catalog_count_is_not_unique_file_count": true,
+  "source_inspection": {
+    "members_verified": 528,
+    "expanded_bytes": 28747437,
+    "payload_objects": 0
+  },
+  "blocked_in_batch": [
+    {
+      "path": "[source member]",
+      "reason": "bounded_expansion_limit"
+    }
+  ],
+  "training_executed": false,
+  "models_deserialized": false,
+  "original_datasets_published": false,
+  "complete_historical_recovery": false,
+  "scope": "Disponibilidad por identidad en esta revision. Las fuentes no inspeccionadas pueden contener mas faltantes."
+}

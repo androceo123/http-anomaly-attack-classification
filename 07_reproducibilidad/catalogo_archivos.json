@@ -4109,8 +4109,8 @@
       "git_eligible": true,
       "run_id": "",
       "role": "artefacto_auxiliar",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "01_documentacion/historial/base_tfg/.gitignore",
+      "availability": "publicado"
     },
     {
       "path": "01_documentacion/historial/base_tfg/Justificaciones/Logistic Regression multiclase/Explicacion ML multiclase",
@@ -4189,8 +4189,8 @@
       "git_eligible": false,
       "run_id": "",
       "role": "documentacion_o_analisis",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "01_documentacion/bibliografia_consulta/Raul_Sidnei_Metodologia.pdf",
+      "availability": "publicado"
     },
     {
       "path": "01_documentacion/bibliografia_consulta/seminario_investigacion.pdf",
@@ -4199,8 +4199,8 @@
       "git_eligible": false,
       "run_id": "",
       "role": "documentacion_o_analisis",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "01_documentacion/bibliografia_consulta/seminario_investigacion.pdf",
+      "availability": "publicado"
     },
     {
       "path": "01_documentacion/historial/base_tfg/README.md",
@@ -4359,8 +4359,8 @@
       "git_eligible": false,
       "run_id": "",
       "role": "documentacion_o_analisis",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "01_documentacion/bibliografia_consulta/libroNicoRalf.pdf",
+      "availability": "publicado"
     },
     {
       "path": "01_documentacion/historial/base_tfg/libroTFG/version1/CORRECCIONES_JA.md",
@@ -11809,8 +11809,8 @@
       "git_eligible": true,
       "run_id": "M4",
       "role": "auditoria_datos",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M4_top14_58/artefactos/multiclase/harvard/label_distribution.csv",
@@ -16939,8 +16939,8 @@
       "git_eligible": true,
       "run_id": "M2",
       "role": "documentacion_o_analisis",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M2_top14_30/artefactos/multiclase/harvard/label_distribution.csv",
@@ -17339,8 +17339,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "configuracion_y_procedencia",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/last_invocation.json",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/manifest_corrida3mejoresResultadosPosibles.json",
@@ -17359,8 +17359,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/binary_normal_vs_attack_metrics.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/binary_normal_vs_attack_metrics.json",
@@ -17369,8 +17369,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/binary_normal_vs_attack_metrics.json",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.csv",
@@ -17379,8 +17379,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.json",
@@ -17389,8 +17389,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/classification_report_test.json",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test.csv",
@@ -17399,8 +17399,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test_normalized_true.csv",
@@ -17409,8 +17409,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/confusion_matrix_test_normalized_true.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/dataset_filtering_report.json",
@@ -17419,8 +17419,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "artefacto_auxiliar",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/dataset_filtering_report.json",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/features_used.csv",
@@ -17459,8 +17459,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "resultados_y_metricas",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/feature_importance_metadata.json",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/feature_importance_permutation.csv",
@@ -17519,8 +17519,8 @@
       "git_eligible": true,
       "run_id": "M3",
       "role": "documentacion_o_analisis",
-      "repository_path": null,
-      "availability": "referenciado_no_publicado"
+      "repository_path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/harvard_top14_combo_classes_allowed.csv",
+      "availability": "publicado"
     },
     {
       "path": "04_experimentos/multiclase/M3_top14_84/artefactos/multiclase/harvard/label_distribution.csv",
@@ -17982,5 +17982,7 @@
       "repository_path": null,
       "availability": "referenciado_no_publicado"
     }
-  ]
+  ],
+  "verification_date": "2026-10-13T16:56:53.760571+00:00",
+  "verification_source_commit": "1e3bd7c33e1a04c1e4d238e47e701e84fee00f56"
 }
