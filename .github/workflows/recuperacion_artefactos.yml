@@ -1,0 +1,34 @@
+name: Recuperacion verificada de artefactos
+
+# Administracion de archivos historicos: no ejecuta entrenamientos ni sustituye Slurm.
+# Solo se activa al publicar una solicitud de lote nueva en la ruta indicada.
+on:
+  push:
+    branches: [main]
+    paths:
+      - '07_reproducibilidad/recuperacion_20261013/lote_pendiente.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recuperacion-http-artifacts
+  cancel-in-progress: false
+
+jobs:
+  recuperar:
+    if: github.repository == 'androceo123/http-anomaly-attack-classification' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Leer la revision exacta y sus objetos historicos
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+          submodules: false
+          lfs: false
+      - name: Recuperar bytes verificados y guardar puntos de control
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 07_reproducibilidad/recuperacion_20261013/recuperar_lote.py --apply
