@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "verified_at": "2026-10-13T19:12:12.418884+00:00",
+  "source_commit": "59c7b4d7a93b6c6a093366ad07538882fe63b237",
+  "artifact_commit": "724ac3a3833a406d3b5fbba9e153f3246ac38822",
+  "batch": "004",
+  "new_files": 0,
+  "new_bytes": 0,
+  "total_recovered_files": 22,
+  "checked": 608,
+  "passed": 608,
+  "failures": [],
+  "catalogued_entries": 1798,
+  "available_catalogued_entries": 685,
+  "unavailable_catalogued_entries": 1113,
+  "catalog_count_is_not_unique_file_count": true,
+  "source_inspection": {
+    "members_verified": 958,
+    "expanded_bytes": 51403014,
+    "payload_objects": 0,
+    "reachable_history_blobs": 474,
+    "historical_archive_objects": [
+      "19bbfc44da67bf446f95cccee4332127517b3c67",
+      "733fd787f8a05375c92c99901aabd0d43775885e",
+      "b139b1ae5d4a223a4a212de87cfc394dd72b0766",
+      "fdb00e7663dcf45ddad15a8ff8d5950c28e8d9e8",
+      "eaa4de6133d5e8ed0b58673436c3d4fdb46a7aa6"
+    ],
+    "historical_raw_candidates_hashed": 31,
+    "historical_raw_bytes_hashed": 11631805,
+    "historical_raw_matching_identities": 2,
+    "historical_raw_files_restored": 0,
+    "source_scope": "Reachable Git history only; private external sources were not processed by this job."
+  },
+  "blocked_in_batch": [
+    {
+      "path": "[source member]",
+      "reason": "bounded_expansion_limit"
+    },
+    {
+      "path": "01_documentacion/presentacion/cambiosAndres.pptx",
+      "reason": "different_existing_destination"
+    },
+    {
+      "path": "01_documentacion/libro/08282026v4.pdf",
+      "reason": "different_existing_destination"
+    }
+  ],
+  "training_executed": false,
+  "models_deserialized": false,
+  "original_datasets_published": false,
+  "complete_historical_recovery": false,
+  "scope": "Disponibilidad por identidad en esta revision. Las fuentes no inspeccionadas pueden contener mas faltantes.",
+  "missing_classification": {
+    "catalog_entries": 1113,
+    "unique_identities": 944,
+    "unique_bytes": 4832163218,
+    "original_dataset_entries_kept_external": 1,
+    "required_entries_excluding_original_datasets": 1112,
+    "required_unique_identities": 943,
+    "required_unique_bytes": 4395725557,
+    "entries_by_role": {
+      "artefacto_auxiliar": 57,
+      "auditoria_datos": 27,
+      "codigo": 2,
+      "configuracion_y_procedencia": 91,
+      "dataset_original": 1,
+      "datos_procesados": 23,
+      "documentacion_o_analisis": 93,
+      "estado_de_reanudacion": 167,
+      "evidencia_ejecucion": 52,
+      "modelo_serializado": 33,
+      "predicciones": 29,
+      "resultados_y_metricas": 538
+    },
+    "entries_by_run": {
+      "": 4,
+      "B1": 1,
+      "B2": 1,
+      "EXP73": 128,
+      "L1": 62,
+      "L1_2625": 61,
+      "L2": 71,
+      "M1": 52,
+      "M2": 52,
+      "M3": 46,
+      "M4": 57,
+      "M5": 62,
+      "M6": 78,
+      "M7": 102,
+      "M8": 101,
+      "OC": 35,
+      "PRE_LGBM": 51,
+      "PRE_LGBM_W": 51,
+      "PRE_MC": 30,
+      "PRE_XGB": 68
+    },
+    "required_unique_over_100_MiB": 4,
+    "note": "An identity absent from reachable Git history is not declared lost; external sources remain necessary."
+  },
+  "local_source_processing_completed": false
+}

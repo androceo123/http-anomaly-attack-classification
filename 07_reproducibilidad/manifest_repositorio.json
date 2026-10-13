@@ -1,21 +1,22 @@
 {
   "schema_version": 1,
   "revision_date": "2026-10-13",
-  "base_commit": "26860ac125a100bb684a4cd479466d8b801d1e29",
+  "base_commit": "724ac3a3833a406d3b5fbba9e153f3246ac38822",
   "scope": "Archivos publicados tras la recuperacion verificada; no implica que todos los artefactos historicos esten disponibles.",
   "algorithm": "SHA-256",
   "excluded_paths": [
     "07_reproducibilidad/manifest_repositorio.json",
     "07_reproducibilidad/recuperacion_20261013/verificacion_002.json",
     "07_reproducibilidad/recuperacion_20261013/verificacion_003.json",
+    "07_reproducibilidad/recuperacion_20261013/verificacion_004.json",
     "07_reproducibilidad/verificacion_integridad_local.json"
   ],
   "exclusion_reason": "Se excluyen el manifiesto y su informe para evitar referencias circulares.",
   "files": [
     {
       "path": ".github/workflows/recuperacion_artefactos.yml",
-      "bytes": 2225,
-      "sha256": "2a065a1dc972afa40b58cfe02b82dce9fdb16cd738ac9a51d1ef1580e23c8840"
+      "bytes": 2339,
+      "sha256": "e735d693b295914cdb0d6c83205a117133126be2f5770301e47c1b3f9c698e43"
     },
     {
       "path": ".gitignore",
@@ -2970,17 +2971,17 @@
     {
       "path": "07_reproducibilidad/artefactos_externos.csv",
       "bytes": 102565,
-      "sha256": "edd1fc522da6b62c7c00ac105120b3ebdc483436c8cbd39dd0830a0a8ff95983"
+      "sha256": "1a0883744ad52c000fc1865ad549b5b099511117ae136c940cdc7165e0dd1405"
     },
     {
       "path": "07_reproducibilidad/catalogo_archivos.json",
       "bytes": 813659,
-      "sha256": "8323fc741b13f7490a4bc9e9389e6c473800a897ab30f54405e2340569f79dfa"
+      "sha256": "1fae06626a4cbf8e7de475be2032e1bbb1786d7de2bae7a1cf53b4540db67a6a"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/estado.json",
-      "bytes": 6403,
-      "sha256": "3aca778d08c85dfb4f40642910464e254b324cd7d911a298472985f958965be9"
+      "bytes": 7112,
+      "sha256": "234fdc4ebae57d9b305b3749ae2bbd7c58fd847cb126213f7ffdc55cfa0c42b8"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/lote_001.csv",
@@ -2998,9 +2999,14 @@
       "sha256": "edace6738c86f5dc1b25e0b5a7e14afe8369ca442df3d7b631c6369d9e05c45c"
     },
     {
+      "path": "07_reproducibilidad/recuperacion_20261013/lote_004.csv",
+      "bytes": 69,
+      "sha256": "46cf54a7e8ee28a72d323f79952ed2af07b55cfc872b608dec459338252d3ed4"
+    },
+    {
       "path": "07_reproducibilidad/recuperacion_20261013/lote_pendiente.json",
-      "bytes": 495,
-      "sha256": "4ca0ba895f55936c60e1e302fe0f1819a6625712914df02bea87171be2d3dd0e"
+      "bytes": 415,
+      "sha256": "878e8e2e89019ce6598cbd83fa35e0c703c16866512377ece0d323f597ca5dc2"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/pendientes_002.csv",
@@ -3011,6 +3017,16 @@
       "path": "07_reproducibilidad/recuperacion_20261013/pendientes_003.csv",
       "bytes": 242980,
       "sha256": "f7683bb43c764f1d0455b0923fef8364caeddd94c8098dc7db46da413f731383"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/pendientes_004.csv",
+      "bytes": 242980,
+      "sha256": "f7683bb43c764f1d0455b0923fef8364caeddd94c8098dc7db46da413f731383"
+    },
+    {
+      "path": "07_reproducibilidad/recuperacion_20261013/recuperar_historial.py",
+      "bytes": 7301,
+      "sha256": "1062bea497f10a8a1f91c67ea3cda63ab7e1c7ac19f367eb46d7158ab5a406e6"
     },
     {
       "path": "07_reproducibilidad/recuperacion_20261013/recuperar_lote.py",

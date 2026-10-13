@@ -5,7 +5,7 @@
   "rama_destino": "main",
   "commit_base_verificado": "5971fd2ccf49bf294e257f9c281520a9ce5aba16",
   "commit_inicio_reanudacion": "b7f986dfd078942d23a50ec2f3b65af08eeaca62",
-  "ultimo_commit_artefactos_verificado": "26860ac125a100bb684a4cd479466d8b801d1e29",
+  "ultimo_commit_artefactos_verificado": "724ac3a3833a406d3b5fbba9e153f3246ac38822",
   "estado": "recuperacion_parcial_publicada",
   "solicitud": "Recuperar y publicar los artefactos historicos faltantes, incluidos modelos y checkpoints, con lotes reanudables.",
   "artefactos_experimentales_publicados_en_esta_recuperacion": 18,
@@ -40,12 +40,16 @@
   },
   "bloqueos_activos": [
     {
-      "componente": "descarga de la tercera entrega",
-      "detalle": "La materializacion devolvio HTTP 502 y el conector de almacenamiento devolvio SheepDispatchError. No demuestra corrupcion de los bytes originales."
+      "componente": "procesamiento local de las fuentes",
+      "detalle": "En este intento las herramientas de procesamiento devolvieron ClientError tras materializar cinco fuentes; no se verificaron sus bytes internos."
+    },
+    {
+      "componente": "descarga de la tercera entrega adicional",
+      "detalle": "El conector rechazo 536315323 bytes con HTTP 413: limite de descarga 268435456 bytes. No demuestra corrupcion del original."
     },
     {
       "componente": "transporte Git directo del entorno",
-      "detalle": "El intento de clonar fallo al resolver github.com. El conector de GitHub si permite crear arboles, commits y actualizar main con comprobacion del HEAD esperado."
+      "detalle": "La lectura directa fallo por resolucion DNS. El conector y el flujo remoto de GitHub se usan para esta revision."
     }
   ],
   "bloqueo_anterior_resuelto": "El entorno de procesamiento ya ejecuta operaciones locales; el ClientError anterior no se reprodujo.",
@@ -80,6 +84,15 @@
       "manifest": "07_reproducibilidad/recuperacion_20261013/lote_003.csv",
       "verificacion": "Tamano, SHA-256 e identidad Git recalculados sobre los objetos del commit.",
       "reporte": "07_reproducibilidad/recuperacion_20261013/verificacion_003.json"
+    },
+    {
+      "lote": "004",
+      "commit": "724ac3a3833a406d3b5fbba9e153f3246ac38822",
+      "artefactos": 0,
+      "bytes": 0,
+      "manifest": "07_reproducibilidad/recuperacion_20261013/lote_004.csv",
+      "verificacion": "Tamano, SHA-256 e identidad Git recalculados sobre los objetos del commit.",
+      "reporte": "07_reproducibilidad/recuperacion_20261013/verificacion_004.json"
     }
   ],
   "catalogos_generales_reconciliados": true,
@@ -110,7 +123,8 @@
     "07_reproducibilidad/manifest_repositorio.json"
   ],
   "inventario_historico_preservado": true,
-  "ultima_verificacion": "07_reproducibilidad/recuperacion_20261013/verificacion_003.json",
-  "pendientes_actuales": "07_reproducibilidad/recuperacion_20261013/pendientes_003.csv",
-  "fecha_verificacion": "2026-10-13T17:09:18.096126+00:00"
+  "ultima_verificacion": "07_reproducibilidad/recuperacion_20261013/verificacion_004.json",
+  "pendientes_actuales": "07_reproducibilidad/recuperacion_20261013/pendientes_004.csv",
+  "fecha_verificacion": "2026-10-13T19:12:12.418884+00:00",
+  "alcance_ultima_reanudacion": "Historial Git alcanzable y archivos historicos internos; no implica lectura de fuentes privadas externas."
 }
