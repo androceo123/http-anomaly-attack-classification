@@ -31,7 +31,9 @@ jobs:
       - name: Recuperar bytes verificados y guardar puntos de control
         env:
           GH_TOKEN: ${{ github.token }}
-        run: python3 07_reproducibilidad/recuperacion_20261013/recuperar_lote.py --apply
+        run: |
+          python3 -m py_compile 07_reproducibilidad/recuperacion_20261013/recuperar_historial.py
+          python3 07_reproducibilidad/recuperacion_20261013/recuperar_historial.py --apply
       - name: Emitir indice compacto para continuar sin repetir transferencias
         run: |
           python3 - <<'PY'

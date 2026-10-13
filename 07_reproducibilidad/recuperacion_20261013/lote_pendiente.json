@@ -1,13 +1,9 @@
 {
   "schema_version": 1,
-  "batch_id": "003",
-  "expected_parent": "65a1da17e1c38a77d10502fd8b9040a02c7eaf8a",
+  "batch_id": "004",
+  "expected_parent": "06797626aaad9f38790ac4fcf811f625f143d2f7",
+  "scan_reachable_history": true,
   "historical_objects": [],
-  "payload_objects": [
-    {
-      "sha": "8f6d22f0a1091fa2e18e529f6771aa30d9f5119e",
-      "sha256": "7ca7a4fb764c876ca500d164efc942a17424c496757861e490e43b374ec65653"
-    }
-  ],
-  "purpose": "Recover eight original M3 source identities, validate against the current catalog, preserve existing distinct content, and reconcile the published repository."
+  "payload_objects": [],
+  "purpose": "Resume after batch 003: inspect reachable historical archives and raw Git blobs, restore only exact catalog identities, verify committed bytes and distinguish unresolved external-source dependencies."
 }
