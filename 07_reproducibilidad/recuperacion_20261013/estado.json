@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "fecha": "2026-10-13",
+  "repositorio": "androceo123/http-anomaly-attack-classification",
+  "rama_destino": "main",
+  "commit_base_verificado": "5971fd2ccf49bf294e257f9c281520a9ce5aba16",
+  "estado": "bloqueado_antes_de_comparar_bytes",
+  "solicitud": "Recuperar y publicar los artefactos historicos faltantes, incluidos modelos y checkpoints, con lotes reanudables.",
+  "artefactos_experimentales_publicados_en_esta_recuperacion": 0,
+  "archivos_internos_cotejados_en_esta_recuperacion": 0,
+  "publicacion_completa": false,
+  "proceso_en_segundo_plano": false,
+  "inventarios_base": [
+    "07_reproducibilidad/catalogo_archivos.json",
+    "07_reproducibilidad/artefactos_externos.csv",
+    "02_auditoria/integridad_y_procedencia/inventario_archivos.json",
+    "06_resultados_consolidados/catalogo_corridas.csv"
+  ],
+  "fuentes": {
+    "coleccion_adicional": "S13",
+    "entregas_localizadas": 3,
+    "tamanos_bytes_de_las_entregas": [258228002, 221019551, 536315323],
+    "contenidos_internos_verificados": false,
+    "ubicaciones_de_transferencia": "Registradas por separado en el documento privado de continuidad."
+  },
+  "bloqueo": {
+    "tipo": "ClientError",
+    "componentes": ["container.exec", "python.exec"],
+    "detalle": "El entorno de procesamiento fallo incluso en una prueba minima, antes de leer, descomprimir o calcular hashes. No es evidencia de corrupcion de las fuentes ni de fallo de escritura en GitHub."
+  },
+  "lotes_confirmados": [],
+  "criterios": [
+    "Conservar los bytes de los artefactos historicos; no reentrenar ni deserializar modelos para recuperarlos.",
+    "No eliminar originales ni excluir todos los archivos .joblib o checkpoints por extension.",
+    "Mantener los datasets originales mediante sus fuentes publicas, conforme al alcance acordado; distinguirlos de predicciones y datos procesados experimentales.",
+    "No marcar un archivo publicado por estar en un inventario o porque exista una fuente de transferencia.",
+    "Comprobar cada destino por tamano y SHA-256, incluso cuando cambie el nombre o exista una copia duplicada.",
+    "No sobrescribir un archivo diferente ni alterar resultados, codigo historico o evidencias Slurm.",
+    "Revisar de forma explicita los archivos muy grandes y los requisitos de almacenamiento antes de publicarlos."
+  ],
+  "siguiente_paso": "En un entorno de procesamiento operativo, descargar las fuentes registradas en el documento privado, contrastar cada entrada del catalogo contra sus bytes y el arbol actual de main, y publicar solo los faltantes verificados por lotes.",
+  "protocolo_reanudacion": [
+    "Leer este estado y consultar de nuevo el HEAD actual de main; no asumir que sigue en el commit base.",
+    "Recuperar las ubicaciones exactas de las fuentes desde el documento privado de continuidad.",
+    "Generar una tabla por ruta destino, tamano, SHA-256 esperado, fuente encontrada, estado y commit de publicacion.",
+    "Usar un commit por lote; releer y verificar el destino antes de anotar el lote como confirmado.",
+    "Actualizar este estado y el documento privado despues de cada lote; no depender solamente del disco temporal del chat.",
+    "Reconciliar catalogos y regenerar el manifiesto de publicacion solo con archivos efectivamente presentes; conservar separados los informes historicos.",
+    "Informar por separado archivos recuperados, pendientes, excluidos por acuerdo y bloqueados por limite de almacenamiento."
+  ]
+}
